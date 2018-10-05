@@ -1,0 +1,714 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{bravata_systematic_2007}{article}{}
+      \name{author}{10}{}{%
+        {{hash=ca822666a614be106ccd58f89010d4a2}{%
+           family={Bravata},
+           familyi={B\bibinitperiod},
+           given={Dena\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=ae6633045f16b23000c564a2628eac16}{%
+           family={Gienger},
+           familyi={G\bibinitperiod},
+           given={Allison\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=de8a7c0f1958dd429a5837521e5cf368}{%
+           family={McDonald},
+           familyi={M\bibinitperiod},
+           given={Kathryn\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=468761a9f056bb039ff279b3fdd00363}{%
+           family={Sundaram},
+           familyi={S\bibinitperiod},
+           given={Vandana},
+           giveni={V\bibinitperiod}}}%
+        {{hash=25c0a5ee0d30a2c8f6b66f0aca0a96e6}{%
+           family={Perez},
+           familyi={P\bibinitperiod},
+           given={Marco\bibnamedelima V.},
+           giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=d36cd68b8a7fc19eabe54edc69c7f355}{%
+           family={Varghese},
+           familyi={V\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod}}}%
+        {{hash=63c4255012f2418a2ccf82bdc7634055}{%
+           family={Kapoor},
+           familyi={K\bibinitperiod},
+           given={John\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=4a7cc76123270e394114d233edac19b1}{%
+           family={Ardehali},
+           familyi={A\bibinitperiod},
+           given={Reza},
+           giveni={R\bibinitperiod}}}%
+        {{hash=bfa0e5055dbd1c4cba258c884e35869e}{%
+           family={Owens},
+           familyi={O\bibinitperiod},
+           given={Douglas\bibnamedelima K.},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=cdae2b964a6dfd47bf753a38f9b124c8}{%
+           family={Hlatky},
+           familyi={H\bibinitperiod},
+           given={Mark\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{caef8e3749d7c555d525ce6925a23146}
+      \strng{fullhash}{021b91839106ee0666e5cae10af1c981}
+      \strng{bibnamehash}{caef8e3749d7c555d525ce6925a23146}
+      \strng{authorbibnamehash}{caef8e3749d7c555d525ce6925a23146}
+      \strng{authornamehash}{caef8e3749d7c555d525ce6925a23146}
+      \strng{authorfullhash}{021b91839106ee0666e5cae10af1c981}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Background: The comparative effectiveness of coronary artery bypass graft (CABG) surgery and percutaneous coronary intervention (PCI) for patients in whom both procedures are feasible remains poorly understood.Purpose: To compare the effectiveness of PCI and CABG in patients for whom coronary revascularization is clinically indicated.Data Sources: MEDLINE, EMBASE, and Cochrane databases (1966{â}{\texteuro}{“}2006); conference proceedings; and bibliographies of retrieved articles.Study Selection: Randomized, controlled trials (RCTs) reported in any language that compared clinical outcomes of PCI with those of CABG, and selected observational studies.Data Extraction: Information was extracted on study design, sample characteristics, interventions, and clinical outcomes.Data Synthesis: The authors identified 23 RCTs in which 5019 patients were randomly assigned to PCI and 4944 patients were randomly assigned to CABG. The difference in survival after PCI or CABG was less than 1\% over 10 years of follow-up. Survival did not differ between PCI and CABG for patients with diabetes in the 6 trials that reported on this subgroup. Procedure-related strokes were more common after CABG than after PCI (1.2\% vs. 0.6\%; risk difference, 0.6\%; P{Â}~= 0.002). Angina relief was greater after CABG than after PCI, with risk differences ranging from 5\% to 8\% at 1 to 5 years (P {<} 0.001). The absolute rates of angina relief at 5 years were 79\% after PCI and 84\% after CABG. Repeated revascularization was more common after PCI than after CABG (risk difference, 24\% at 1 year and 33\% at 5 years; P {<} 0.001); the absolute rates at 5 years were 46.1\% after balloon angioplasty, 40.1\% after PCI with stents, and 9.8\% after CABG. In the observational studies, the CABG{â}{\texteuro}{“}PCI hazard ratio for death favored PCI among patients with the least severe disease and CABG among those with the most severe disease.Limitations: The RCTs were conducted in leading centers in selected patients. The authors could not assess whether comparative outcomes vary according to clinical factors, such as extent of coronary disease, ejection fraction, or previous procedures. Only 1 small trial used drug-eluting stents.Conclusion: Compared with PCI, CABG was more effective in relieving angina and led to fewer repeated revascularizations but had a higher risk for procedural stroke. Survival to 10 years was similar for both procedures.}
+      \field{issn}{0003-4819}
+      \field{journaltitle}{Annals of Internal Medicine}
+      \field{month}{11}
+      \field{number}{10}
+      \field{shorttitle}{Systematic {Review}}
+      \field{title}{Systematic review: {The} comparative effectiveness of percutaneous coronary interventions and coronary artery bypass graft surgery}
+      \field{urlday}{24}
+      \field{urlmonth}{12}
+      \field{urlyear}{2014}
+      \field{volume}{147}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \field{pages}{703\bibrangedash 716}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.7326/0003-4819-147-10-200711200-00185
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/mcmanigle/Documents/Zotero/storage/M9Q3B44M/Bravata et al. - 2007 - Systematic Review The Comparative Effectiveness o.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.7326/0003-4819-147-10-200711200-00185
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.7326/0003-4819-147-10-200711200-00185
+      \endverb
+    \endentry
+    \entry{foot_demographics_2000}{article}{}
+      \name{author}{4}{}{%
+        {{hash=78f5954f1d2ba246f47ed3f8b3ae6a72}{%
+           family={Foot},
+           familyi={F\bibinitperiod},
+           given={David\bibnamedelima K.},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=0593a542d814f86d43ca2139b90ce1b8}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Richard\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=ba12b8a69565e87e6733aaa5a0f139a7}{%
+           family={Pearson},
+           familyi={P\bibinitperiod},
+           given={Thomas\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=7a9e5947d2b416fba4a9069789a31316}{%
+           family={Beller},
+           familyi={B\bibinitperiod},
+           given={George\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{176b95c63596f2889b929393350cc582}
+      \strng{fullhash}{7b30a939b9e79133510ffed6b332b1dc}
+      \strng{bibnamehash}{176b95c63596f2889b929393350cc582}
+      \strng{authorbibnamehash}{176b95c63596f2889b929393350cc582}
+      \strng{authornamehash}{176b95c63596f2889b929393350cc582}
+      \strng{authorfullhash}{7b30a939b9e79133510ffed6b332b1dc}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Changing demographics, in particular the aging of the North American population, contribute to the understanding of trends in such diverse areas as education, housing, crime, marketing, unemployment, recreation, and health care (1-2). Although annual changes in many of these sectors are influenced by the changing state of the economy and, in some instances, the impact of new legislative or administrative initiatives, longer-term trends are determined to a much greater extent by trends in demographics and technology.}
+      \field{issn}{0735-1097}
+      \field{journaltitle}{Journal of the American College of Cardiology}
+      \field{month}{3}
+      \field{number}{4}
+      \field{title}{Demographics and cardiology, 1950{–}2050}
+      \field{urlday}{24}
+      \field{urlmonth}{12}
+      \field{urlyear}{2014}
+      \field{volume}{35}
+      \field{year}{2000}
+      \field{urldateera}{ce}
+      \field{pages}{1067\bibrangedash 1081}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1016/S0735-1097(00)00561-1
+      \endverb
+      \verb{file}
+      \verb 05611.pdf:/Users/mcmanigle/Documents/Zotero/storage/3D3PEMUC/05611.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/S0735-1097(00)00561-1
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/S0735-1097(00)00561-1
+      \endverb
+      \keyw{aging,demography,Heart Diseases,trend}
+    \endentry
+    \entry{sousa_new_2005}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d21faeb94dfbd69776aaf39fc49404c5}{%
+           family={Sousa},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi Eduardo},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=ab3f0c8e827b57ab9973bc97970488a8}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={Marco\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=04f1c29063dfb860cfef7cabd1990244}{%
+           family={Tuzcu},
+           familyi={T\bibinitperiod},
+           given={E.\bibnamedelimi Murat},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=a1024644fb1ac9121af9e2b784945905}{%
+           family={Yadav},
+           familyi={Y\bibinitperiod},
+           given={Jay\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=e1a63f897e8df927fa3af4620bd57a1a}{%
+           family={Ellis},
+           familyi={E\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{da0cae79ad3714b10fa85effbefa831f}
+      \strng{fullhash}{49ac23dc14e4d706887a49f2b055294f}
+      \strng{bibnamehash}{da0cae79ad3714b10fa85effbefa831f}
+      \strng{authorbibnamehash}{da0cae79ad3714b10fa85effbefa831f}
+      \strng{authornamehash}{da0cae79ad3714b10fa85effbefa831f}
+      \strng{authorfullhash}{49ac23dc14e4d706887a49f2b055294f}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0009-7322, 1524-4539}
+      \field{journaltitle}{Circulation}
+      \field{month}{2}
+      \field{number}{5}
+      \field{title}{New frontiers in interventional cardiology}
+      \field{urlday}{24}
+      \field{urlmonth}{12}
+      \field{urlyear}{2014}
+      \field{volume}{111}
+      \field{year}{2005}
+      \field{urldateera}{ce}
+      \field{pages}{671\bibrangedash 681}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1161/01.CIR.0000153802.70682.22
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/mcmanigle/Documents/Zotero/storage/WSBXX7JD/Sousa et al. - 2005 - New Frontiers in Interventional Cardiology.pdf:application/pdf;Snapshot:/Users/mcmanigle/Documents/Zotero/storage/AEV8D4PD/671.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://circ.ahajournals.org/content/111/5/671
+      \endverb
+      \verb{url}
+      \verb http://circ.ahajournals.org/content/111/5/671
+      \endverb
+      \keyw{angiogenesis,imaging,restenosis,stents,trials}
+    \endentry
+    \entry{von_goethe_wilhelm_1829}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3bd6100cde97ee45844a484f7fc7612b}{%
+           family={Goethe},
+           familyi={G\bibinitperiod},
+           given={Johann\bibnamedelima Wolfgang},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {de}%
+      }
+      \list{publisher}{1}{%
+        {Cotta}%
+      }
+      \strng{namehash}{3bd6100cde97ee45844a484f7fc7612b}
+      \strng{fullhash}{3bd6100cde97ee45844a484f7fc7612b}
+      \strng{bibnamehash}{3bd6100cde97ee45844a484f7fc7612b}
+      \strng{authorbibnamehash}{3bd6100cde97ee45844a484f7fc7612b}
+      \strng{authornamehash}{3bd6100cde97ee45844a484f7fc7612b}
+      \strng{authorfullhash}{3bd6100cde97ee45844a484f7fc7612b}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{shorttitle}{Werke}
+      \field{title}{Wilhelm {Meisters} {Wanderjahre} oder die {Entsagenden}}
+      \field{year}{1829}
+    \endentry
+    \entry{gagliardi_rontgen_1996}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=1c8e3be69cc5272cad5565575ef92842}{%
+           family={Patton},
+           familyi={P\bibinitperiod},
+           given={Dennis\bibnamedelima D.},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=e5da6e450e212999b6ee20a642cd9190}{%
+           family={Gagliardi},
+           familyi={G\bibinitperiod},
+           given={Raymond\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=605e61dc59cb2654210a738cd111e633}{%
+           family={McClennan},
+           familyi={M\bibinitperiod},
+           given={Bruce\bibnamedelima L.},
+           giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Radiology Centennial, Inc.}%
+      }
+      \strng{namehash}{1c8e3be69cc5272cad5565575ef92842}
+      \strng{fullhash}{1c8e3be69cc5272cad5565575ef92842}
+      \strng{bibnamehash}{1c8e3be69cc5272cad5565575ef92842}
+      \strng{authorbibnamehash}{1c8e3be69cc5272cad5565575ef92842}
+      \strng{authornamehash}{1c8e3be69cc5272cad5565575ef92842}
+      \strng{authorfullhash}{1c8e3be69cc5272cad5565575ef92842}
+      \strng{editorbibnamehash}{7097d58c2755d21a8e350649a2b6cee8}
+      \strng{editornamehash}{7097d58c2755d21a8e350649a2b6cee8}
+      \strng{editorfullhash}{7097d58c2755d21a8e350649a2b6cee8}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{A {History} of the {Radiological} {Sciences}: {Diagnosis}}
+      \field{number}{1}
+      \field{series}{A {History} of the {Radiological} {Sciences}}
+      \field{title}{R{ö}ntgen and the {Discovery}}
+      \field{year}{1996}
+      \field{pages}{31\bibrangedash 46}
+      \range{pages}{16}
+      \verb{file}
+      \verb RCI_D_c02.pdf:/Users/mcmanigle/Documents/Zotero/storage/WKK2IDDI/RCI_D_c02.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{gagliardi_cardiac_1996}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=d310e112ec74dab414368207296de3ea}{%
+           family={Abrams},
+           familyi={A\bibinitperiod},
+           given={Herbert\bibnamedelima L.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=e5da6e450e212999b6ee20a642cd9190}{%
+           family={Gagliardi},
+           familyi={G\bibinitperiod},
+           given={Raymond\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=605e61dc59cb2654210a738cd111e633}{%
+           family={McClennan},
+           familyi={M\bibinitperiod},
+           given={Bruce\bibnamedelima L.},
+           giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Radiology Centennial, Inc.}%
+      }
+      \strng{namehash}{d310e112ec74dab414368207296de3ea}
+      \strng{fullhash}{d310e112ec74dab414368207296de3ea}
+      \strng{bibnamehash}{d310e112ec74dab414368207296de3ea}
+      \strng{authorbibnamehash}{d310e112ec74dab414368207296de3ea}
+      \strng{authornamehash}{d310e112ec74dab414368207296de3ea}
+      \strng{authorfullhash}{d310e112ec74dab414368207296de3ea}
+      \strng{editorbibnamehash}{7097d58c2755d21a8e350649a2b6cee8}
+      \strng{editornamehash}{7097d58c2755d21a8e350649a2b6cee8}
+      \strng{editorfullhash}{7097d58c2755d21a8e350649a2b6cee8}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{A {History} of the {Radiological} {Sciences}: {Diagnosis}}
+      \field{number}{1}
+      \field{series}{A {History} of the {Radiological} {Sciences}}
+      \field{title}{Cardiac radiology}
+      \field{year}{1996}
+      \field{pages}{255\bibrangedash 269}
+      \range{pages}{15}
+      \verb{file}
+      \verb RCI_D_c10.pdf:/Users/mcmanigle/Documents/Zotero/storage/7JARNGE5/RCI_D_c10.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{webb_introduction_2002}{book}{}
+      \name{author}{1}{}{%
+        {{hash=cdccaf00b2e1538d85d3363844a1807d}{%
+           family={Webb},
+           familyi={W\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley-IEEE Press}%
+      }
+      \strng{namehash}{cdccaf00b2e1538d85d3363844a1807d}
+      \strng{fullhash}{cdccaf00b2e1538d85d3363844a1807d}
+      \strng{bibnamehash}{cdccaf00b2e1538d85d3363844a1807d}
+      \strng{authorbibnamehash}{cdccaf00b2e1538d85d3363844a1807d}
+      \strng{authornamehash}{cdccaf00b2e1538d85d3363844a1807d}
+      \strng{authorfullhash}{cdccaf00b2e1538d85d3363844a1807d}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0471237663}
+      \field{title}{Introduction to {Biomedical} {Imaging}}
+      \field{year}{2002}
+    \endentry
+    \entry{leeson_cardiovascular_2011}{book}{}
+      \name{editor}{1}{}{%
+        {{hash=fc9f81c936cbf62858ccd56540cba0da}{%
+           family={Leeson},
+           familyi={L\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{fc9f81c936cbf62858ccd56540cba0da}
+      \strng{fullhash}{fc9f81c936cbf62858ccd56540cba0da}
+      \strng{bibnamehash}{fc9f81c936cbf62858ccd56540cba0da}
+      \strng{editorbibnamehash}{fc9f81c936cbf62858ccd56540cba0da}
+      \strng{editornamehash}{fc9f81c936cbf62858ccd56540cba0da}
+      \strng{editorfullhash}{fc9f81c936cbf62858ccd56540cba0da}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A range of cardiac imaging techniques are available, each with a unique approach. Most existing imaging books are predominantly modality focused; however today's clinical cardiologist needs to learn how to apply and integrate information from the different modalities to aid clinical decision-making.In full colour throughout, and based on European Society of Cardiology guidelines, Cardiac Imaging is an essential resource for all clinical trainees, It provides practical hands-on advice for cardiology, medical, radiology and technical personnel who need easily accessible, detailed information on how to use the full range of imaging modalities to investigate cardiac disease. The handbook provides a comparative overview of the different techniques and how they can be applied in different pathologies, acting as a portal to more in-depth, modality focused texts.}
+      \field{edition}{1st}
+      \field{isbn}{9780199568451}
+      \field{month}{8}
+      \field{series}{Oxford {Specialist} {Handbooks} in {Cardiology}}
+      \field{title}{Cardiovascular {Imaging}}
+      \field{year}{2011}
+    \endentry
+    \entry{gagliardi_ultrasonography_1996}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=1bdf85e71a4c28a55574a849a9419fe9}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={Barry\bibnamedelima B.},
+           giveni={B\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=49554959805b6601e213e5308c3db771}{%
+           family={Gramiak},
+           familyi={G\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+        {{hash=17a69d2d2e2c66c9ce71412f0260bc62}{%
+           family={Freimanis},
+           familyi={F\bibinitperiod},
+           given={Atis\bibnamedelima K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=e5da6e450e212999b6ee20a642cd9190}{%
+           family={Gagliardi},
+           familyi={G\bibinitperiod},
+           given={Raymond\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=605e61dc59cb2654210a738cd111e633}{%
+           family={McClennan},
+           familyi={M\bibinitperiod},
+           given={Bruce\bibnamedelima L.},
+           giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Radiology Centennial, Inc.}%
+      }
+      \strng{namehash}{7472833def708a54746ac4b429fb3a62}
+      \strng{fullhash}{7472833def708a54746ac4b429fb3a62}
+      \strng{bibnamehash}{7472833def708a54746ac4b429fb3a62}
+      \strng{authorbibnamehash}{7472833def708a54746ac4b429fb3a62}
+      \strng{authornamehash}{7472833def708a54746ac4b429fb3a62}
+      \strng{authorfullhash}{7472833def708a54746ac4b429fb3a62}
+      \strng{editorbibnamehash}{7097d58c2755d21a8e350649a2b6cee8}
+      \strng{editornamehash}{7097d58c2755d21a8e350649a2b6cee8}
+      \strng{editorfullhash}{7097d58c2755d21a8e350649a2b6cee8}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{A {History} of the {Radiological} {Sciences}: {Diagnosis}}
+      \field{number}{1}
+      \field{series}{A {History} of the {Radiological} {Sciences}}
+      \field{title}{Ultrasonography}
+      \field{year}{1996}
+      \field{pages}{413\bibrangedash 442}
+      \range{pages}{30}
+      \verb{file}
+      \verb RCI_D_c17.pdf:/Users/mcmanigle/Documents/Zotero/storage/X4AR45VH/RCI_D_c17.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{edler_ultrasonic_1957}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c9f2878864a2367afbcfe5c3a1ba1f3a}{%
+           family={Edler},
+           familyi={E\bibinitperiod},
+           given={Inge},
+           giveni={I\bibinitperiod}}}%
+        {{hash=7e5f834568c977a7719b4f32e3885332}{%
+           family={Gustafson},
+           familyi={G\bibinitperiod},
+           given={Arne},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{a21fe17ec149e322cac9073dc4c80384}
+      \strng{fullhash}{a21fe17ec149e322cac9073dc4c80384}
+      \strng{bibnamehash}{a21fe17ec149e322cac9073dc4c80384}
+      \strng{authorbibnamehash}{a21fe17ec149e322cac9073dc4c80384}
+      \strng{authornamehash}{a21fe17ec149e322cac9073dc4c80384}
+      \strng{authorfullhash}{a21fe17ec149e322cac9073dc4c80384}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0954-6820}
+      \field{journaltitle}{Acta Medica Scandinavica}
+      \field{number}{2}
+      \field{title}{Ultrasonic cardiogram in mitral stenosis}
+      \field{urlday}{17}
+      \field{urlmonth}{12}
+      \field{urlyear}{2014}
+      \field{volume}{159}
+      \field{year}{1957}
+      \field{urldateera}{ce}
+      \field{pages}{85\bibrangedash 90}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1111/j.0954-6820.1957.tb00109.x
+      \endverb
+      \verb{file}
+      \verb Snapshot:/Users/mcmanigle/Documents/Zotero/storage/RMCB7KWW/abstract.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://onlinelibrary.wiley.com/doi/10.1111/j.0954-6820.1957.tb00109.x/abstract
+      \endverb
+      \verb{url}
+      \verb http://onlinelibrary.wiley.com/doi/10.1111/j.0954-6820.1957.tb00109.x/abstract
+      \endverb
+    \endentry
+    \entry{bom_ultrasonic_1971}{article}{}
+      \name{author}{4}{}{%
+        {{hash=c4087baf16f3e0a721e8f77ae8943748}{%
+           family={Bom},
+           familyi={B\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=080753de6d49266ebeb3d7f036faf0d1}{%
+           family={Lanc{é}e},
+           familyi={L\bibinitperiod},
+           given={C.\bibnamedelimi T.},
+           giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=88e059dc9dd2dd01814e2e9f44e31830}{%
+           family={Honkoop},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=59dcc17c1912dacbe1d2536a2ebfe74d}{%
+           family={Hugenholtz},
+           familyi={H\bibinitperiod},
+           given={P.\bibnamedelimi G.},
+           giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{90fa43cc875e377214dcdbd8adb5e028}
+      \strng{fullhash}{af785bad6e196b36e9ec066f43d645a1}
+      \strng{bibnamehash}{90fa43cc875e377214dcdbd8adb5e028}
+      \strng{authorbibnamehash}{90fa43cc875e377214dcdbd8adb5e028}
+      \strng{authornamehash}{90fa43cc875e377214dcdbd8adb5e028}
+      \strng{authorfullhash}{af785bad6e196b36e9ec066f43d645a1}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0006-2898}
+      \field{journaltitle}{Biomedical Engineering}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{Ultrasonic viewer for cross-sectional analyses of moving cardiac structures}
+      \field{volume}{6}
+      \field{year}{1971}
+      \field{pages}{500\bibrangedash 505}
+      \range{pages}{6}
+      \keyw{cardiology,Data Display,Echocardiography,Humans,Oscillometry,Transducers,Ultrasonography}
+    \endentry
+    \entry{griffith_sector_1974}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c24f121f3d974e585f0e8a5bc01f8c50}{%
+           family={Griffith},
+           familyi={G\bibinitperiod},
+           given={James\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=e6b15f15f7a13981186f8896c2967af0}{%
+           family={Henry},
+           familyi={H\bibinitperiod},
+           given={Walter\bibnamedelima L.},
+           giveni={W\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{0be678b7ed11e775f75800cd6bc9b845}
+      \strng{fullhash}{0be678b7ed11e775f75800cd6bc9b845}
+      \strng{bibnamehash}{0be678b7ed11e775f75800cd6bc9b845}
+      \strng{authorbibnamehash}{0be678b7ed11e775f75800cd6bc9b845}
+      \strng{authornamehash}{0be678b7ed11e775f75800cd6bc9b845}
+      \strng{authorfullhash}{0be678b7ed11e775f75800cd6bc9b845}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{During the past several years one-dimensional pulse-echo ultrasound techniques have proven extremely useful in cardiac diagnosis. A one-dimensional system, however, only visualizes structures lying along a single straight line. The spatial relationships of the various cardiac structures are therefore not so easily defined as with two-dimensional systems which display the heart by constructing a plane image composed of many straight lines. We have developed a sector scanning system for obtaining two-dimensional echocardiograms in real time using ultrasonic pulse-echo techniques. Images are produced by angling rapidly a single transducer through a 30-degree sector from a fixed spot (between ribs) on the patient's chest. Thirty complete sectors (or frames) are produced per second. The use of a large diameter transducer ensures that signal strength is good and cardiac structures, including endocardium, can be visualized. Other advantages include high transducer sensitivity, real time imaging and easy visualization of various regions of the heart. Experience with more than 100 patients indicates that diagnostic quality two-dimensional echocardiograms can be readily obtained in essentially the same patients from whom one-dimensional echocardiograms are recorded and can usually be performed in less time.}
+      \field{issn}{0009-7322, 1524-4539}
+      \field{journaltitle}{Circulation}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{A sector scanner for real time two-dimensional echocardiography}
+      \field{urlday}{17}
+      \field{urlmonth}{12}
+      \field{urlyear}{2014}
+      \field{volume}{49}
+      \field{year}{1974}
+      \field{urldateera}{ce}
+      \field{pages}{1147\bibrangedash 1152}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1161/01.CIR.49.6.1147
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/mcmanigle/Documents/Zotero/storage/W3VTDC2R/Griffith and Henry - 1974 - A Sector Scanner for Real Time Two-Dimensional Ech.pdf:application/pdf;Snapshot:/Users/mcmanigle/Documents/Zotero/storage/PRNEQFM4/1147.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://circ.ahajournals.org/content/49/6/1147
+      \endverb
+      \verb{url}
+      \verb http://circ.ahajournals.org/content/49/6/1147
+      \endverb
+      \keyw{Cardiac cross-sections,Noninvasive technique,Pulse-echo ultrasound,Ultrasonic imaging}
+    \endentry
+    \entry{harvey_exercitatio_1628}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0eefb1a6075e21c37553d45cf158aeb4}{%
+           family={Harvey},
+           familyi={H\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {Latin}%
+      }
+      \list{location}{1}{%
+        {Frankfort}%
+      }
+      \list{publisher}{1}{%
+        {Sumptibus Guilielmi Fitzeri}%
+      }
+      \strng{namehash}{0eefb1a6075e21c37553d45cf158aeb4}
+      \strng{fullhash}{0eefb1a6075e21c37553d45cf158aeb4}
+      \strng{bibnamehash}{0eefb1a6075e21c37553d45cf158aeb4}
+      \strng{authorbibnamehash}{0eefb1a6075e21c37553d45cf158aeb4}
+      \strng{authornamehash}{0eefb1a6075e21c37553d45cf158aeb4}
+      \strng{authorfullhash}{0eefb1a6075e21c37553d45cf158aeb4}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{WILLIAM HARVEY, whose epoch-making treatise announcing and demonstrating the circulation of the blood is here printed, was born at Folkestone, Kent, England, April 1, 1578. He was educated at the King{’}s School, Canterbury, and at Gonville and Caius College, Cambridge; and studied medicine on the Continent, receiving the degree of M.D. from the University of Padua. He took the same degree later at both the English universities. After his return to England he became Fellow of the College of Physicians, physician to St. Bartholomew{’}s Hospital, and Lumleian lecturer at the College of Physicians. It was in this last capacity that he delivered, in 1616, the lectures in which he first gave public notice of his theories on the circulation of the blood. The notes of these lectures are still preserved in the British Museum. In 1618 Harvey was appointed physician extraordinary to James I, and he remained in close professional relations to the royal family until the close of the Civil War, being present at the battle of Edgehill. By mandate of Charles I, he was, for a short time, Warden of Merton College, Oxford (1645{–}6), and, when he was too infirm to undertake the duties, he was offered the Presidency of the College of Physicians. He died on June 3, 1657. Harvey{’}s famous {“}Exercitatio Anatomica de Motu Cordis et Sanguinis in Animalibus{”} was published in Latin at Frankfort in 1628. The discovery was received with great interest, and in his own country was accepted at once; on the Continent it won favor more slowly. Before his death, however, the soundness of his views was acknowledged by the medical profession throughout Europe, and {“}it remains to this day the greatest of the discoveries of physiology, and its whole honor belongs to Harvey.{”}}
+      \field{edition}{1st}
+      \field{title}{Exercitatio {Anatomica} de {Motu} {Cordis} et {Sanguinis} in {Animalibus}}
+      \field{year}{1628}
+      \verb{file}
+      \verb document.pdf:/Users/mcmanigle/Documents/Zotero/storage/FJZUU2M3/document.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{berlin_hedgehog_2013}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fc81f43284ef1f0a147ae8ab493d56f1}{%
+           family={Berlin},
+           familyi={B\bibinitperiod},
+           given={Isaiah},
+           giveni={I\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=ccb37908f36451a988cc86f6120fa6eb}{%
+           family={Hardy},
+           familyi={H\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{fc81f43284ef1f0a147ae8ab493d56f1}
+      \strng{fullhash}{fc81f43284ef1f0a147ae8ab493d56f1}
+      \strng{bibnamehash}{fc81f43284ef1f0a147ae8ab493d56f1}
+      \strng{authorbibnamehash}{fc81f43284ef1f0a147ae8ab493d56f1}
+      \strng{authornamehash}{fc81f43284ef1f0a147ae8ab493d56f1}
+      \strng{authorfullhash}{fc81f43284ef1f0a147ae8ab493d56f1}
+      \strng{editorbibnamehash}{ccb37908f36451a988cc86f6120fa6eb}
+      \strng{editornamehash}{ccb37908f36451a988cc86f6120fa6eb}
+      \strng{editorfullhash}{ccb37908f36451a988cc86f6120fa6eb}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{"The fox knows many things, but the hedgehog knows one big thing." This ancient Greek aphorism, preserved in a fragment from the poet Archilochus, describes the central thesis of Isaiah Berlin's masterly essay on Leo Tolstoy and the philosophy of history, the subject of the epilogue to War and Peace. Although there have been many interpretations of the adage, Berlin uses it to mark a fundamental distinction between human beings who are fascinated by the infinite variety of things and those who relate everything to a central, all-embracing system. Applied to Tolstoy, the saying illuminates a paradox that helps explain his philosophy of history: Tolstoy was a fox, but believed in being a hedgehog. One of Berlin's most celebrated works, this extraordinary essay offers profound insights about Tolstoy, historical understanding, and human psychology. This new edition features a revised text that supplants all previous versions, English translations of the many passages in foreign languages, a new foreword in which Berlin biographer Michael Ignatieff explains the enduring appeal of Berlin's essay, and a new appendix that provides rich context, including excerpts from reviews and Berlin's letters, as well as a startling new interpretation of Archilochus's epigram.}
+      \field{edition}{2nd}
+      \field{month}{6}
+      \field{shorttitle}{The {Hedgehog} and the {Fox}}
+      \field{title}{The {Hedgehog} and the {Fox}: {An} {Essay} on {Tolstoy}'s {View} of {History}}
+      \field{year}{2013}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
