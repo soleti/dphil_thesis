@@ -23,7 +23,7 @@
 % The most common choices should be below.  You can also do other things, like replacing "a4paper" with "letterpaper", etc.
 
 % This one will format for two-sided binding (ie left and right pages have mirror margins; blank pages inserted where needed):
-\documentclass[a4paper,twoside]{ociamthesis}
+\documentclass[a4paper,nobind]{ociamthesis}
 
 % This one will format for one-sided binding (ie left margin > right margin; no extra blank pages):
 %\documentclass[a4paper]{ociamthesis}
@@ -53,8 +53,11 @@
 % Either way, you'll have to choose and configure an appropriate bibliography format...
 
 % The science-type option: numerical in-text citation with references in order of appearance.
-\usepackage[style=ieee]{biblatex}
+\usepackage[style=ieee,maxcitenames=3,maxbibnames=3]{biblatex}
 \usepackage{physics}
+\usepackage{amsmath}
+\usepackage{subcaption}
+
 \newcommand*{\bibtitle}{References}
 % The humanities-type option: author-year in-text citation with an alphabetical works cited.
 %\usepackage[style=authoryear, sorting=nyt, backend=biber, maxcitenames=2, useprefix, doi=false, isbn=false]{biblatex}
@@ -200,6 +203,9 @@
 \flushbottom
 \include{text/ch1-intro}
 \include{text/ch2-neutrinophysics}
+% \include{text/ch3-anomalies}
+% \include{text/ch4-microboone}
+% \include{text/ch5-microboone}
 
 
 %% APPENDICES %% 
