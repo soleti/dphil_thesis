@@ -93,9 +93,9 @@ The $U$ matrix can be easily extended in the case of the three generations of ne
 \end{equation}
 where the rotation is given by the so-called Pontecorvo–Maki–Nakagawa–Sakata (PMNS) matrix. It is also possible to parametrise the $U$ matrix in the following useful way:
 \begin{align} 
-  U =  \begin{bmatrix} 1 & 0 & 0 \\ 0 & c_{23} & s_{23} \\ 0 & -s_{23} & c_{23} \end{bmatrix}
+  U_{PMNS} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & c_{23} & s_{23} \\ 0 & -s_{23} & c_{23} \end{bmatrix}
  \begin{bmatrix} c_{13} & 0 & s_{13}e^{-i\delta_{CP}} \\ 0 & 1 & 0 \\ -s_{13}e^{i\delta_{CP}} & 0 & c_{13} \end{bmatrix}
- \begin{bmatrix} c_{12} & s_{12} & 0 \\ -s_{12} & c_{12} & 0 \\ 0 & 0 & 1 \end{bmatrix},
+ \begin{bmatrix} c_{12} & s_{12} & 0 \\ -s_{12} & c_{12} & 0 \\ 0 & 0 & 1 \end{bmatrix},\label{eq:pmns}
 \end{align}
 where  $s_{ij}$ ($c_{ij}$) is an abbreviation for $\sin\theta_{ij}$ ($\cos\theta_{ij}$) and $\delta^{CP}$ is the CP-violating phase. The mixing angles $\theta_{12}$, $\theta_{13}$, and $\theta_{23}$ are defined by:
 \begin{equation}
@@ -104,7 +104,7 @@ where  $s_{ij}$ ($c_{ij}$) is an abbreviation for $\sin\theta_{ij}$ ($\cos\theta
     \sin\theta_{13}\equiv U_{e3}e^{i\delta}.
 \end{equation}
 
-With three neutrino flavours the squared mass-splitting terms are $\Delta m_{12}^2$ and $\Delta m_{13}^2$. This cause a degeneracy in the ordering of three masses: it is possible to have $m_3 > m_2 > m_1$ (\emph{normal hierarchy}) or $m_3 > m_1 > m_2$ (\emph{inverted hierarchy}). Customarily, $\Delta m_{12}^2$ and $\Delta m_{13}^2$ are also called $(\Delta m^2)_{sol}$ and $(\Delta m^2)_{atm}$, respectively, since they are usually measured with "solar" and "atmospheric" neutrinos. The situation is illustrated in Figure \ref{fig:masshierarchy}, adapted from \cite{Cahn:2013taa}.
+With three neutrino flavours the squared mass-splitting terms are $\Delta m_{12}^2$ and $\Delta m_{13}^2$. This cause a degeneracy in the ordering of three masses: it is possible to have $m_3 > m_2 > m_1$ (\emph{normal hierarchy}) or $m_3 > m_1 > m_2$ (\emph{inverted hierarchy}). Customarily, $\Delta m_{12}^2$ and $\Delta m_{13}^2$ are also called $(\Delta m^2)_{\mathrm{sol}}$ and $(\Delta m^2)_{\mathrm{atm}}$, respectively, since they are usually measured with "solar" and "atmospheric" neutrinos. The situation is illustrated in Figure \ref{fig:masshierarchy}, adapted from \cite{Cahn:2013taa}.
 
 The mass splittings also determine the $L/E$ ratio at which the oscillation probability is maximised. In the assumption of two-neutrino oscillation, the oscillation frequency in eq. \eqref{eq:prob} becomes:
 \begin{equation}
@@ -126,6 +126,17 @@ In 1962, Lederman and others \cite{PhysRevLett.9.36} first saw evidence of muon 
 However, the experiment by Ray Davis and others at Homestake observed a deficit in the number of solar neutrinos already in 1962, which was later confirmed by several other experiments. Evidence of atmospheric neutrino disappearance was provided by the Super-Kamiokande experiment \cite{Fukuda:1998mi}, while the SNO experiment proved the existence of neutrino oscillations by measuring both the solar $\nu_{e}$ flux and the total solar neutrino flux \cite{Ahmad:2002jz}. In honour of this discovery, the Nobel Prize in Physics 2015 was awarded to Takaaki Kajita (Super-Kamiokande) and Arthur B. McDonald (SNO). 
 
 The propagation of neutrinos in the matter is also determined by the Mikheyev-Smirnov-Wolfenstein (MSW) effect: in presence of a high density of electrons, electron neutrinos experience a charged current coherent forward scattering. This cause the electron neutrinos to have a different effective mass when they propagate in a high-density medium, modifying the oscillation pattern. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/solar.pdf}
+    \caption{The solar neutrino energy spectrum predicted by the solar standard model. Adapted from \cite{Bahcall:2000nu}.}
+    \label{fig:solar}
+\end{figure}
+
+The MSW effect is particularly important to explain the solar neutrino flux (Figure \ref{fig:solar}). Assuming a very high electron density in the sun core and an exponentially decreasing abundance (which are both good approximations in the standard solar model), the probability to observe an electron neutrino when it reaches the Earth is $P_{ee} \approx \sin^2\theta$ for neutrinos above 2~MeV (where the matter effect dominates).
+
+
 
 \begin{figure}[htbp]
     \centering
@@ -158,12 +169,20 @@ Another explanation for the neutrino masses would be the introduction of a Major
 \begin{equation}
     -\mathcal{L}_M = m_M(\bar{\nu}_L\mathcal{C}\bar{\nu}^{T}_L+\nu_{L}\mathcal{C}\nu^T_L) = m_M(\bar{\nu}_M\nu_M),
 \end{equation}
-where $\nu_{M} \equiv \nu_L + \nu^c_R$ is the Majorana spinor and $\mathcal{C}$ is the charge-conjugation operator. 
+where $\nu_{M} \equiv \nu_L + \nu^c_R$ is the Majorana spinor and $\mathcal{C}$ is the charge-conjugation operator. An experimental evidence for Majorana neutrinos would be the observation of the $0\nu\beta\beta$ decay, where a $\nu_{e}$ is emitted and absorbed in the nucleus, producing two electrons and two protons in the final state. This process would also violate the lepton number with $\Delta L = 2$. In this case, the PMNS matrix in eq. \eqref{eq:pmns} acquires two extra Majorana phases in the form:
+\begin{equation}
+    U_{PMNS}^M = U_{PMNS} \begin{bmatrix}
+    e^{i\alpha} & 0 & 0 \\
+    0 & e^{i\beta} & 0 \\
+    0 & 0 & 1
+    \end{bmatrix}.
+\end{equation}
 
-A prcoess which could explain the small masses of the neutrinos, compared to the other fermions, is the so-called \emph{seesaw} mechanism. The addition of right-handed neutrinos to the SM allows to write the neutrino mass matrix in the following form:
+A process which could explain the small masses of the neutrinos, compared to the other fermions, is the so-called \emph{seesaw} mechanism, which here we describe using the approach in \cite{Grossman:2003eb}. The addition of right-handed neutrinos to the SM allows to write the following neutrino mass matrix in $(\nu_L, \nu_R^c)$ basis:
 \begin{equation}
     M = \begin{bmatrix}
-    0 & M_D \\
-    M_D^T & M_R
-    \end{bmatrix}
+    0 & m_D \\
+    m_D & m_M
+    \end{bmatrix},
 \end{equation}
+where $m_D$ is the Dirac mass term and $m_M$ is the Majorana mass term. For large values of $m_M$, this gives $m_{\nu_R}\approx m_M$ and $m_{\nu_L}\approx\frac{m_D^2}{m_M}$. With a value of $m_M$ at the GUT scale, this would \emph{naturally} give a small value for the neutrino masses.
