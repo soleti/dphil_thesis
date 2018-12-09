@@ -8,13 +8,13 @@ This chapter will describe experimental apparatus and the results of the LSND an
 The Liquid Scintillator Neutrino Detector (LSND) was an experiment at the Los Alamos National Laboratory which aimed to detect $\bar{\nu}_e$ interactions in a mainly $\bar{\nu}_{\mu}$ beam. The neutrino beam was produced by firing a 800 MeV proton beam into a target, producing charged pions, which were stopped in a beam dump. The $\pi^-$ part was electromagnetically captured by the nucleus, while the $\pi^+$ component initiated the decay chain:
 \begin{align}
     \pi^+ \rightarrow & \mu^+\nu_{\mu}\\
-    & \rotatebox[origin=c]{180}{$\Lsh$}	 \mu^{+} \rightarrow e^+\bar{\nu}_{\mu}\nu_{e},
+    & \rotatebox[origin=c]{180}{$\Lsh$}	 \mu^{+} \rightarrow e^+\bar{\nu}_{\mu}\nu_{e}.
 \end{align}
-which created an almost pure beam of $\bar{\nu}_{\mu}$, $\nu_{\mu}$, and $\nu_e$.
+Kinematically, it is possible to distinguish between the neutrino beam produced by decays at rest (DAR), and the neutrino beam produced by decay in flight (DIF). In LSND, this was achieved by looking at events with energies above 60~MeV, since the maximum energy for $\bar{\nu}_{\mu}$ is 52.8~MeV ($m_{\mu}/2$).
 
-The $\bar{\nu}_e$ interactions were detected via an inverse $\beta$-decay process in the liquid scintillator and tagged with a delayed coincidence between the positron and the subsequent neutron capture, in a fashion similar to the Cowan and Reines experiment. 
+The $\bar{\nu}_e$ interactions were detected via an inverse $\beta$-decay process in the mineral oil (CH$_2$) and tagged with a delayed coincidence between the positron and the subsequent neutron capture, in a fashion similar to the Cowan and Reines experiment. 
 
-LSND found an excess of $\bar{\nu}_e$ interactions with a significance $>3\sigma$, which could be explained as $\bar{\nu}_\mu$ oscillating into $\bar{\nu}_e$ (Figure \ref{fig:resultlsnd}). Given the $L/E\approx0.75$~m/MeV of the experiment, the mass splitting term obtained with LSND data is $\Delta m_{\mathrm{LSND}}^2\approx1$~eV. This value is one order of magnitude larger than the mass splitting terms obtained with any other reactor, accelerator, atmospheric, or solar experiment \cite{Aguilar:2001ty}. 
+LSND found an excess of $\bar{\nu}_e$ interactions in the DAR $\nu_{\mu}$ beam with a significance of $3.8\sigma$, which could be explained as $\bar{\nu}_\mu$ oscillating into $\bar{\nu}_e$ (Figure \ref{fig:resultlsnd}). Given the $L/E\approx0.75$~m/MeV of the experiment, the mass splitting term obtained with LSND data is $\Delta m_{\mathrm{LSND}}^2\approx1$~eV. This value is one order of magnitude larger than the mass splitting terms obtained with any other reactor, accelerator, atmospheric, or solar experiment \cite{Aguilar:2001ty}. No excess of $\nu_{e}$ was found in the DIF $\nu_{\mu}$ beam. 
 
 \begin{figure}[htbp]
   \begin{subfigure}{0.45\textwidth}
@@ -47,7 +47,7 @@ Several experiments after LSND explored the same region: in particular, the KARM
     \label{fig:globalfit}
 \end{figure}
 
-\section{The MiniBooNE experiment}
+\section{The MiniBooNE experiment}\label{sec:miniboone}
 The MiniBooNE experiment was designed to definitely test the LSND result. It consists of a spherical detector filled with mineral oil and located 541 meters downstream of the Booster Neutrino Beam (BNB) production target at Fermilab. This beam can run both in neutrino mode, producing a mainly $\nu_{\mu}$ beam, and in antineutrino mode, producing a mainly $\bar{\nu}_{\mu}$ beam. The BNB neutrino flux is described in detail by the MiniBooNE collaboration in \cite{AguilarArevalo:2008yp}.
 
 The detector is equipped with 1280 8-inch photomultiplier tubes (PMTs) and employs a separated outer veto region with an extra 240 PMTs for cosmic-ray rejection. Particles interacting in the mineral oil produce Cherenkov light, if above detection threshold. The particle identification is based on the different light patterns that each particle produces in the detector: in particular, high-penetrating, heavy particles such as muons will produce sharp rings of Cherenkov light, while lighter particles like electrons and photons will produce fuzzier rings. Neutral pion will instead produce two fuzzy rings partially overlapping when it decays to two photons ($\pi^{0}\rightarrow 2\gamma$). 
@@ -55,14 +55,17 @@ This technique introduces an irreducible degeneracy of the particles in the fina
 
 Energy calibration at MiniBooNE was performed with \emph{in situ} measurement. Cosmic rays, detected with an external hodoscope, and stopping in the mineral oil will produce the typical Michel electron spectrum peaked around $\approx m_{\mu}/2 = 52.8$~MeV. The invariant mass of $\pi^0$ decays can also be reconstructed to measure the energy response around $\approx135$~MeV. 
 
-The oscillation analysis of the MiniBooNE experiment looked for $\nu_e$ charged-current quasi-elastic (CCQE) interactions, where the $\nu_{e}$ exchanges a charged $W$ boson with a neutron in the nucleus, producing an outgoing electron and a proton.
-However, hadrons exiting the nucleus after the neutrino interaction can re-interact and change identity or eject other hadrons (Final State Interactions, FSI) \cite{Martini:2013sha}. A neutrino experiment as MiniBooNE, however, cannot observe directly the FSI and, as such, the selected events are called \emph{CCQE-like}, since this definition relies only on the particles in the final state \cite{Katori:2013nca}. 
+The oscillation analysis of the MiniBooNE experiment looked for $\nu_e$ charged-current quasi-elastic (CCQE) interactions, where the $\nu_{e}$ exchanges a charged $W$ boson with a neutron in the nucleus, producing an outgoing electron and a proton. This is the dominant interaction type in the sub-GeV region, as shown in Figure \ref{fig:ccqecross}.
 
-The energy of the CCQE-like interaction $E_{\nu}^{QE}$ is determined by the electron scattering angle $\theta$ and energy $E_e$, in the approximation of nucleon at rest, as:
+However, as outlined in Section \ref{sec:modes}, FSI can alter the particles detected by the apparatus. In particular, CC1$\pi$ events with pion absorption represent a source of uncertainty for a CCQE analysis, since they share the same particles in the final state.
+
+In MiniBooNE, the selected events are called \emph{CCQE-like}, since this definition relies only on the particles in the final state \cite{Katori:2013nca}. 
+
+The energy of the CCQE-like interaction $E_{\nu}^{QE}$ is determined by the electron scattering angle $\theta$ and energy $E_e$, assuming the nucleon at rest, as:
 \begin{equation}
-    E_{\nu}^{QE} = \frac{2m_n E_e + m_p^2- m_n^2 - m_e^2}{2(m_n - E_e + \cos\theta\sqrt{E_e^2-m_e^2})},
+    E_{\nu}^{QE} = \frac{2m_n E_e + m_p^2- m_n^2 - m_e^2}{2(m_n - E_e + \cos\theta\sqrt{E_e^2-m_e^2})},\label{eq:ccqe}
 \end{equation}
-where $m_n$, $m_p$, and $m_e$ are the mass of the neutron, the proton, and the electron, respectively.
+where $m_n$, $m_p$, and $m_e$ are the mass of the neutron, the proton, and the electron, respectively. The presence of events with pion absorption or where the pion escapes the detector introduces a distortion in the energy distribution, since the approximation of a 2-body interaction of eq. \ref{eq:ccqe} is no longer valid.
 
 \begin{figure}[htbp]
   \begin{subfigure}{0.48\textwidth}
@@ -83,10 +86,12 @@ where $m_n$, $m_p$, and $m_e$ are the mass of the neutron, the proton, and the e
 \end{figure}
 
 
-The most recent result by the MiniBooNE collaboration \cite{Aguilar-Arevalo:2018gpe} shows a $4.7\sigma$ excess in the combined $\nu_{e}$ and $\bar{\nu}_{e}$ analysis. The energy spectrum of the selected events is shown in Figure \ref{fig:miniboone_spectrum}. The excess of data events is in the sub-GeV energy region and consistent in energy and magnitude with the LSND result. The two excess combined gives a significance of $6.0\sigma$. Figure \ref{fig:miniboone_lsnd} shows the agreement of the appearance probability as a function of the $L/E$ distribution for LSND and MiniBooNE. 
+The most recent result by the MiniBooNE collaboration \cite{Aguilar-Arevalo:2018gpe} shows a $4.7\sigma$ excess in the combined $\nu_{e}$ and $\bar{\nu}_{e}$ analysis, for $12.84\times10^{20}$ ($11.27\times10^{20}$) POT collected in neutrino (antineutrino) mode. The observed excess of data events is $460.5 \pm 99.0$. The energy spectrum of the $\nu_E^{\mathrm{CCQE}}$ selected events in neutrino mode is shown in Figure \ref{fig:miniboone_spectrum}. 
+
+The excess of data events is in the sub-GeV energy region and consistent in energy and magnitude with the LSND result. The two excess combined gives a significance of $6.0\sigma$. Figure \ref{fig:miniboone_lsnd} shows the agreement of the appearance probability as a function of the $L/E$ distribution for LSND and MiniBooNE. 
 
 \subsection*{MiniBooNE backgrounds}
-The background of the MiniBooNE experiment can be divided into four main categories:
+The background events of the MiniBooNE experiment can be divided into four main categories:
 \begin{description}
     \item[Intrinsic $\nu_e$.] The $\nu_e$ component of the beam, coming from $\mu^{\pm}$, $K^{\pm}$, and $K^0$, is the irreducible background of the experiment, since it can't be distinguished from $\nu_{\mu}$ oscillating into $\nu_{e}$. This component of the flux is constrained by measuring the $\nu_{\mu}$ interactions.
     \item[Misidentified $\pi^0$.] The background from misidentified $\pi^0$ events represents the largest component. These events are particularly challenging to reconstruct, since very forward-boosted photons will appear in the detector as a single fuzzy ring. The MiniBooNE collaboration has constrained this contribution by reconstructing the invariant $\pi^0$ mass of the event and obtaining a sample with a purity $>90\%$ of NC $\pi^0$ events. The total uncertainty on the NC background is 7\% \cite{Karagiorgi:2010zz}.
@@ -94,9 +99,15 @@ The background of the MiniBooNE experiment can be divided into four main categor
     \item[Dirt.] The dirt background, meaning neutrino interactions happening outside the detector but where at at least one particle in the final states interacts inside, is also constrained with an \emph{in situ} measurement, where events reconstructed close to the detector boundaries and pointing inwards are selected. 
 \end{description}
 
+Both the $\pi^0$ and the $\Delta\to N\gamma$ backgrounds come from the inability of a Cherenkov detector to distinguish between photons and electrons, which is instead one of the most powerful capabilities of a LArTPC, as it will be described in detail in Section \ref{sec:detector}. MiniBooNE is also not able to distinguish between negative and positive charged particles, making it impossible to distinguish neutrino and antineutrino events.
+
+Non-beam backgrounds (such as cosmic rays) are removed by requiring light in the detector in time with the BNB spill of 1.6~\si{\micro}s and no activity in the outer veto volume, achieving a 99.99\% rejection efficiency. 
+In order to reject the beam-related background events, the MiniBooNE collaboration employed an electron-muon likelihood cut, an electron-pion likelihood cut, and a cut on the invariant $m_{\gamma\gamma}$ mass.
+
+The average selection efficiency for $\nu_e^{\mathrm{CCQE}}$ events is $\sim20$\% \cite{Aguilar-Arevalo:2018gpe}.
 
 \subsection*{MiniBooNE result in the two-neutrino oscillation model}
-
+The MiniBooNE collaboration was able to constrain all the simulated experimental backgrounds with \emph{in situ} measurements. The excess must then come from an unexpected background source or from BSM interactions, such as the existence of one or more sterile neutrinos.
 Several new physics scenarios have been hypothesised which could explain the excess. Figure \ref{fig:miniboone_bestfit} shows the MiniBooNE allowed regions in neutrino and antineutrino mode for the two-neutrino oscillation model. 
 
 \begin{figure}[htbp]
@@ -116,14 +127,29 @@ The LSND and MiniBooNE are not the only two experiments which have observed anom
     \begin{equation}
         \nu_e + ^{71}\mathrm{Ga} \rightarrow e^- + ^{71}\mathrm{Ge}.
     \end{equation}
-    The energy threshold for this reaction is 233~keV, which allows to observe the neutrino interactions produced in the solar $pp$ chain reaction (see Figure \ref{fig:solar}). Both experiments observed a deficit of neutrino interactions, which favours with $2.7\sigma$ significance the hypothesis of short-baseline neutrino oscillation \cite{Giunti:2010zu}. Curiously, during the second data-taking run of SAGE, 2 tons of gallium were stolen from the detector (3.6\% of the total mass) \cite{Abdurashitov:1999zd}.
+    The energy threshold for this reaction is 233~keV, which allows to observe the neutrino interactions produced in the solar $pp$ chain reaction (see Figure \ref{fig:solar}). Both experiments observed a deficit of neutrino interactions from calibration sources. GALLEX used a $^{51}$Cr source, while SAGE used both $^{51}$Cr and $^{37}$Ar. The deficit, observed in all the three cases, favours with $2.7\sigma$ significance the hypothesis of short-baseline neutrino oscillation \cite{Giunti:2010zu}. Curiously, during the second data-taking run of SAGE, 2 tons of gallium were stolen from the detector (3.6\% of the total mass) \cite{Abdurashitov:1999zd}.
     
-    \item[Reactor experiments.]
+    \item[Reactor experiments.] Several reactor neutrino experiments have measured a deficit of events in the antineutrino spectra. This anomaly first appeared in 2011, when an improved calculation of the reactor antineutrino spectra was made available \cite{Mueller:2011nm}. Historical data from several reactor experiments, which before the recalculation were in agreement with the theoretical predictions, all showed a $\sim6\%$ deficit in the spectra, as shown in Figure \ref{fig:reactor}. 
+    
+    \begin{figure}[htbp]
+      \centering
+      \captionsetup{margin=1.3cm}
+      \includegraphics[width=0.75\linewidth]{figures/reactor.pdf}
+      \caption{Fraction between observed and predicted $\bar{\nu}_{e}$ flux at several reactor neutrino experiments. Several models for sterile neutrino oscillation for different mass splitting terms and mixing angles are also shown.}
+    \label{fig:reactor}
+    \end{figure}
+    
+    This anomaly was first confirmed by a blind analysis of the Daya Bay collaboration \cite{An:2015nua} and then observed also by the RENO and Double Chooz detectors. More recently, these three experiments have also observed an excess of events around 5~MeV. 
+    In order to clarify the nature of the flux deficit, the Daya Bay experiment was able to correlate the antineutrino flux with the fuel composition in the reactor. The fuel evolves with time: the main fissile component, $^{235}$U, gets smaller, while the $^{239}$Pu increases. The collaboration verified that the $^{235}$U produced $7.8$\% fewer antineutrinos than predicted, while the deficit was almost absent with $^{239}$Pu \cite{An:2017osx}. If the deficit is caused by sterile neutrinos, then it should not depend on the fissile material. The main hypothesis for the bump origin involves the excess production of some isotope \cite{Fallot:2017php}. 
+    
+    \begin{figure}[htbp]
+      \centering
+      \captionsetup{margin=1.3cm}
+      \includegraphics[width=0.75\linewidth]{figures/dayabay.pdf}
+      \caption{Inverse $\beta$-decay yield per fission, $\sigma_f$, versus effective $^{239}$Pu (lower axis) or $^{235}$U (upper axis) fission fraction. Adapted from \cite{An:2017osx}.}
+    \label{fig:dayabay}
+    \end{figure}
+    
+    A new generation of reactor neutrino experiments should definitely solve the reactor anomaly. In particular, experiments like PROSPECT \cite{Ashenfelter:2015uxt} and SoLi$\partial$ \cite{Abreu:2017bpe}, will be placed very close to small fission cores and they will be sensitive to eventual short-baseline sterile neutrino oscillations.
 \end{description} 
 
-Hints for sterile neutrino states have emerged from several neutrino experiments performed with different sources and detectors. None of these measurements offer conclusive evidence for the existence of neutrino oscillations, and measurements which rule out the parameter space of interest to these positive results have also been conducted [17, 18, 19]. All potential signals, if interpreted
-1Neutrinos from the early universe are commonly referred to as relic neutrinos. 17
- 
-as due to oscillations, are compatible with a mass-splitting of order 1 eV 2. We present a short overview of the three main hints for sterile neutrinos, discussing those obtained from accelerator- based measurements in more detail in the following section. A review of experimental results pertaining to sterile neutrino searches, and the analysis methods employed to search for sterile neutrinos is presented in reference [20].
-
-Reactor Anomaly In reactor neutrino experiments a widely observed deficit of a few percent of 1 − 10 MeV e events, uniform in energy, has been hypothesised to be caused by oscillations to a sterile neutrino. Much of the work in understanding the reactor neutrino anomaly involves studying the systematic errors associated to the prediction of the neutrino flux from reactors. The complex chain of fission fragments produced in nuclear reactors, and difficult modeling of atomic transitions makes this an arduous task. A recent measurement by the Daya Bay collaboration [22] seems to attribute, at least in part, the anomaly to the time-dependent composition of the nuclear fuel. A new generation of reactor-neutrino experiments designed to operate at test reactors, where they can be placed much closer to the source, are soon to come online. By taking advantage of the smaller fission core and shorter distance between the core and the detector in such reactor, experiments such as prospect [23] aim to observe the oscillatory L/E dependence of interactions due to a possible sterile neutrino.

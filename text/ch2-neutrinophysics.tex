@@ -78,7 +78,8 @@ and the oscillation probability of the neutrino with flavour $\alpha$ can be wri
                      & = 1 - \sin^2 2\theta \sin^2\left(\frac{\Delta m^{2}L}{4E}\right),\label{eq:prob}
 \end{split}
 \end{equation}
-where $\Delta m^{2} \equiv m^2_2-m^2_1$ is the mass splitting. Eq. \eqref{eq:prob} shows that the amplitude of the oscillation is regulated by the rotation angle $\theta$, while its frequency depends on the mass splitting, at fixed energy $L/E$.
+where $\Delta m^{2} \equiv m^2_2-m^2_1$ is the mass splitting. 
+Eq. \eqref{eq:prob} shows that the amplitude of the oscillation is regulated by the rotation angle $\theta$, while its frequency depends on the mass splitting, at fixed energy $L/E$.
 
 The $U$ matrix can be easily extended in the case of the three generations of neutrinos $\nu_{e}$, $\nu_{\mu}$, and $\nu_{\tau}$. In this case, the flavour eigenstates mixing is obtained from:
 \begin{equation}
@@ -93,7 +94,7 @@ The $U$ matrix can be easily extended in the case of the three generations of ne
 \end{equation}
 where the rotation is given by the so-called Pontecorvo–Maki–Nakagawa–Sakata (PMNS) matrix. It is also possible to parametrise the $U$ matrix in the following useful way:
 \begin{align} 
-  U_{PMNS} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & c_{23} & s_{23} \\ 0 & -s_{23} & c_{23} \end{bmatrix}
+  U_{\mathrm{PMNS}} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & c_{23} & s_{23} \\ 0 & -s_{23} & c_{23} \end{bmatrix}
  \begin{bmatrix} c_{13} & 0 & s_{13}e^{-i\delta_{CP}} \\ 0 & 1 & 0 \\ -s_{13}e^{i\delta_{CP}} & 0 & c_{13} \end{bmatrix}
  \begin{bmatrix} c_{12} & s_{12} & 0 \\ -s_{12} & c_{12} & 0 \\ 0 & 0 & 1 \end{bmatrix},\label{eq:pmns}
 \end{align}
@@ -106,12 +107,6 @@ where  $s_{ij}$ ($c_{ij}$) is an abbreviation for $\sin\theta_{ij}$ ($\cos\theta
 
 With three neutrino flavours the squared mass-splitting terms are $\Delta m_{12}^2$ and $\Delta m_{13}^2$. This cause a degeneracy in the ordering of three masses: it is possible to have $m_3 > m_2 > m_1$ (\emph{normal hierarchy}) or $m_3 > m_1 > m_2$ (\emph{inverted hierarchy}). Customarily, $\Delta m_{12}^2$ and $\Delta m_{13}^2$ are also called $(\Delta m^2)_{\mathrm{sol}}$ and $(\Delta m^2)_{\mathrm{atm}}$, respectively, since they are usually measured with "solar" and "atmospheric" neutrinos. The situation is illustrated in Figure \ref{fig:masshierarchy}, adapted from \cite{Cahn:2013taa}.
 
-The mass splittings also determine the $L/E$ ratio at which the oscillation probability is maximised. In the assumption of two-neutrino oscillation, the oscillation frequency in eq. \eqref{eq:prob} becomes:
-\begin{equation}
-     \frac{\Delta m^{2}L}{4E} = 1.267\left(\frac{L}{\mathrm{km}}\right)\left(\frac{\Delta m^2}{\mathrm{eV}^2}\right)\left(\frac{\mathrm{GeV}}{E}\right),
-\end{equation} 
-which gives for $\theta_{12}$, $\theta_{13}$, and $\theta_{23}$ a maximum oscillation probability at $\approx 10^4$~km/GeV, $\approx 10^2$~km/GeV, and $\approx 10^2$~km/Gev, respectively. For this reason, $\theta_{12}$, $\theta_{13}$, and $\theta_{23}$ are also known as the \emph{solar}, \emph{reactor}, and \emph{atmospheric} mixing angles.
-
 \begin{figure}
     \centering
     \includegraphics[width=0.75\linewidth]{figures/masshierarchy.pdf}
@@ -119,13 +114,35 @@ which gives for $\theta_{12}$, $\theta_{13}$, and $\theta_{23}$ a maximum oscill
     \label{fig:masshierarchy}
 \end{figure}
 
+The mass splittings also determine the $L/E$ ratio at which the oscillation probability is maximised. In the assumption of two-neutrino oscillation, the oscillation frequency in eq. \eqref{eq:prob} becomes:
+\begin{equation}
+     \frac{\Delta m^{2}L}{4E} = 1.267\left(\frac{L}{\mathrm{km}}\right)\left(\frac{\Delta m^2}{\mathrm{eV}^2}\right)\left(\frac{\mathrm{GeV}}{E}\right),
+\end{equation} 
+which gives for $\theta_{12}$, $\theta_{13}$, and $\theta_{23}$ a maximum oscillation probability at $\approx 10^4$~km/GeV, $\approx 10^2$~km/GeV, and $\approx 10^2$~km/GeV, respectively. For this reason, $\theta_{12}$, $\theta_{13}$, and $\theta_{23}$ are also known as the \emph{solar}, \emph{reactor}, and \emph{atmospheric} mixing angles. In the parametrisation of the $U_{\mathrm{PMNS}}$ matrix of eq. \eqref{eq:pmns}, the product of the matrices can then be written as:
+\begin{equation}
+    U_{\mathrm{PMNS}} = U_{\mathrm{atm}} \cdot U_{\mathrm{reactor}} \cdot U_{\mathrm{sol}}.
+\end{equation}
+
+
+
 \section{Experimental Evidence of Neutrino Oscillation}
 After the first direct detection of electron (anti)neutrinos by Cowan and Reines at the Savannah nuclear reactor, efforts were made in order to observe the other two neutrino flavours.
 In 1962, Lederman and others \cite{PhysRevLett.9.36} first saw evidence of muon neutrinos interacting in the target and producing muons, while the DONUT collaboration finally observed the $\nu_{\tau}$ in 2001 \cite{Kodama:2000mp}.
 
 However, the experiment by Ray Davis and others at Homestake observed a deficit in the number of solar neutrinos already in 1962, which was later confirmed by several other experiments. Evidence of atmospheric neutrino disappearance was provided by the Super-Kamiokande experiment \cite{Fukuda:1998mi}, while the SNO experiment proved the existence of neutrino oscillations by measuring both the solar $\nu_{e}$ flux and the total solar neutrino flux \cite{Ahmad:2002jz}. In honour of this discovery, the Nobel Prize in Physics 2015 was awarded to Takaaki Kajita (Super-Kamiokande) and Arthur B. McDonald (SNO). 
 
+Figure \ref{fig:superk} shows the zenith angle distributions of events detected by the Super-Kamiokande experiment: the data points are in disagreement with the no-oscillation model and they can be interpreted as $\nu_{\mu} \leftrightarrow \nu_{\tau}$ oscillation.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/superk.pdf}
+    \caption{Zenith angle distributions of $\mu$-like and e-like events in the sub-GeV and multi-GeV data sets, as collected by the Super-Kamiokande experiment. The dashed blue line corresponds to the no-oscillation model. The red solid line represent the best fit to $\nu_{\mu} \leftrightarrow \nu_{\tau}$ oscillation. Adapted from \cite{PhysRevD.98.030001}.}
+    \label{fig:superk}
+\end{figure}
+
 The propagation of neutrinos in the matter is also determined by the Mikheyev-Smirnov-Wolfenstein (MSW) effect: in presence of a high density of electrons, electron neutrinos experience a charged current coherent forward scattering. This cause the electron neutrinos to have a different effective mass when they propagate in a high-density medium, modifying the oscillation pattern. 
+
+The MSW effect is particularly important to explain the solar neutrino flux (Figure \ref{fig:solar}). Assuming a very high electron density in the sun core and an exponentially decreasing abundance (which are both good approximations in the standard solar model), the probability to observe an electron neutrino when it reaches the Earth is $P_{ee} \approx \sin^2\theta$ for neutrinos above 2~MeV (where the matter effect dominates).
 
 \begin{figure}[htbp]
     \centering
@@ -134,9 +151,7 @@ The propagation of neutrinos in the matter is also determined by the Mikheyev-Sm
     \label{fig:solar}
 \end{figure}
 
-The MSW effect is particularly important to explain the solar neutrino flux (Figure \ref{fig:solar}). Assuming a very high electron density in the sun core and an exponentially decreasing abundance (which are both good approximations in the standard solar model), the probability to observe an electron neutrino when it reaches the Earth is $P_{ee} \approx \sin^2\theta$ for neutrinos above 2~MeV (where the matter effect dominates).
-
-
+The KamLAND experiment finally spectacularly proved the oscillation pattern and the MSW model by measuring the reactor electron antineutrinos survival probability as a function of $L/E$, shown in Figure \ref{fig:kamland}. 
 
 \begin{figure}[htbp]
     \centering
@@ -144,8 +159,6 @@ The MSW effect is particularly important to explain the solar neutrino flux (Fig
     \caption{Ratio of the observed $\bar{\nu}_{e}$ spectrum to the expectation for no-oscillation versus $L_{0}/E$ for the KamLAND data. $L_{0} = 180$~km is the flux-weighted average reactor baseline. Adapted from \cite{Gando:2010aa}.}
     \label{fig:kamland}
 \end{figure}
-
-The KamLAND experiment finally spectacularly proved the oscillation pattern and the MSW model by measuring the reactor electron antineutrinos survival probability as a function of $L/E$, shown in Figure \ref{fig:kamland}. 
 
 Less than 20 years after the definitive confirmation of neutrino oscillations, the mixing angles and the mass splittings are all known with a relative uncertainty smaller than 5\%. The least-known parameter in the PMNS matrix is the $\delta_{CP}$ phase, which, if different from $0^{\circ}$ (or from $180^{\circ}$), would imply CP-violation in the leptonic sector. This parameter can be measured only with appearance experiments, where it is possible to verify if
 $P(\nu_{\alpha}\rightarrow\nu_{\beta}) \neq P(\bar{\nu}_{\alpha}\rightarrow\bar{\nu}_{\beta})$. Recent results from the T2K and NOVA experiments give a best fit of $\delta_{CP}/^{\circ}=215^{+40}_{-28}$ \cite{Esteban:2018azc}. A definitive measurement of the CP-violating phase would have far-reaching consequences in particle physics and cosmology, since it could explain the matter-antimatter asymmetry and provide an experimental basis for the leptogenesis model \cite{Fukugita:1986hr}.
@@ -169,7 +182,16 @@ Another explanation for the neutrino masses would be the introduction of a Major
 \begin{equation}
     -\mathcal{L}_M = m_M(\bar{\nu}_L\mathcal{C}\bar{\nu}^{T}_L+\nu_{L}\mathcal{C}\nu^T_L) = m_M(\bar{\nu}_M\nu_M),
 \end{equation}
-where $\nu_{M} \equiv \nu_L + \nu^c_R$ is the Majorana spinor and $\mathcal{C}$ is the charge-conjugation operator. An experimental evidence for Majorana neutrinos would be the observation of the $0\nu\beta\beta$ decay, where a $\nu_{e}$ is emitted and absorbed in the nucleus, producing two electrons and two protons in the final state. This process would also violate the lepton number with $\Delta L = 2$. In this case, the PMNS matrix in eq. \eqref{eq:pmns} acquires two extra Majorana phases in the form:
+where $\nu_{M} \equiv \nu_L + \nu^c_R$ is the Majorana spinor and $\mathcal{C}$ is the charge-conjugation operator. An experimental evidence for Majorana neutrinos would be the observation of the neutrinoless double $\beta$ decay ($0\nu\beta\beta$), where a $\nu_{e}$ is emitted and absorbed in the nucleus, producing two electrons and two protons in the final state. Figure \ref{fig:0vbb} shows the Feynman diagram for a $0\nu\beta\beta$ interaction. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.55\linewidth]{figures/0vbb.pdf}
+    \caption{Feynman diagram for a neutrinoless double beta decay interaction, emitting two electron in the final state and no neutrinos.}
+    \label{fig:0vbb}
+\end{figure}
+
+This process would also violate the lepton number with $\Delta L = 2$. In this case, the PMNS matrix in eq. \eqref{eq:pmns} acquires two extra Majorana phases in the form:
 \begin{equation}
     U_{PMNS}^M = U_{PMNS} \begin{bmatrix}
     e^{i\alpha} & 0 & 0 \\
@@ -186,3 +208,30 @@ A process which could explain the small masses of the neutrinos, compared to the
     \end{bmatrix},
 \end{equation}
 where $m_D$ is the Dirac mass term and $m_M$ is the Majorana mass term. For large values of $m_M$, this gives $m_{\nu_R}\approx m_M$ and $m_{\nu_L}\approx\frac{m_D^2}{m_M}$. With a value of $m_M$ at the GUT scale, this would \emph{naturally} give a small value for the neutrino masses.
+
+\section{Neutrino interaction modes}\label{sec:modes}
+The interaction between the neutrino and the nucleon can have different forms and a good understanding of their phenomenology is of fundamental importance for the success of any neutrino experiment.
+Figure \ref{fig:ccqecross} shows the neutrino cross section divided into three main interaction modes: quasi-elastic (QE), resonant (RES), and deep inelastic scattering (DIS). 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figures/ccqecross.pdf}
+    \caption{Total neutrino per nucleon charged-current cross section (for an isoscalar target) divided by neutrino energy and plotted as a function of energy. Adapted from \cite{Formaggio:2013kya}.}
+    \label{fig:ccqecross}
+\end{figure}
+
+\begin{description}
+\item[Quasi-elastic interaction.] In a charged-current quasi-elastic interaction, the neutrino exchange a $W$ boson with a single nucleon, which is knocked out and leaves a \emph{hole} in the nucleus. Hence its name 1p-1h (one particle, one hole). In this case, the incident neutrino does not have enough energy to break up or excite the nucleus. This is the dominant interaction in the sub-GeV energy range. The simulation used in this document employs the GENIE neutrino generator, set up to use the Llewellyn-Smith model for CCQE interactions \cite{LlewellynSmith:1971uhs}.
+
+However, hadrons exiting the nucleus can re-interact and change identity or eject other hadrons (Final State Interactions, FSI), so it is possible to have a CCQE interaction with no protons or with a pion in the final state. It is also possible to have multinucleon excitations, mainly through the so-called meson exchange current (MEC). This interaction is responsible np-nh events, where more than one nucleon is emitted.
+
+\item[Resonant interaction.] In a resonant interaction, the neutrino has enough energy to excite the nucleon to form a resonance, which rapidly decays to a nucleon and one or more mesons, as in:
+\begin{align}
+&\nu_l + p \rightarrow \Delta^{++} \rightarrow l^- + \pi^+ + p \\
+&\nu_l + n \rightarrow \Delta^{+} \rightarrow l^- + \pi^+ + n.
+\end{align}
+
+The GENIE model used here employs the Rein-Sehgal model for the resonance production and the Bodek-Ritchie Relativistic Modes Fermi Gas (RFG) for the interaction of the nucleon within the nucleus. Also in this case, the FSI can cause the absorption of the pion in the nucleus or exchange the charge of the pion.
+
+\item[Deep inelastic scattering.] In this case, the neutrino has enough energy to interact with the single nucleon components, the quarks, and to break up the nucleus. The result of this interaction often consists in several mesons in the final state. This is the dominant interaction mode for high-energy neutrinos ($>5$~GeV). It is simulated by our setup of GENIE using the Bodek-Yang model.
+\end{description}

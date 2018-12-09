@@ -1,1 +1,70 @@
 \chapter{The MicroBooNE experiment}
+
+\minitoc
+
+
+This chapter presents an overview of the MicroBooNE experiment, with a focus on the Liquid Argon Time Projection Chamber technology. A description of the MicroBooNE detector is essential in order to understand the analysis described in the following chapters. The selection efficiency of low-energy electron neutrino events and the rejection of background events directly depends on the detector properties. The analysis is also affected by systematic uncertainties in the detector simulation, which will be partially addressed here. A brief description of the Fermilab accelerator complex will also be provided.
+
+\section{Motivation}
+The MicroBooNE (Micro Booster Neutrino Experiment) experiment is a 89~t active volume Liquid Argon Time Projection (LArTPC) chamber located at the Fermi National Accelerator Laboratory in Batavia, IL and on-axis with the Booster Neutrino Beam (BNB). The experiment was designed to study short-baseline neutrino oscillations and neutrino-argon cross-section. It is the largest neutrino LArTPC detector currently active in the world.
+This technology offers very high spatial resolution and calorimetric capabilities, which allows for detailed tracking, vertexing and particle identification. 
+
+\subsection{Physics goals}
+As described in Section \ref{sec:miniboone}, MiniBooNE, being a Cherenkov detector, is not able to distinguish between photons and electrons in the final state. As such, it is not possible to determine the nature of the excess of low-energy events. If the excess is caused by photons, the best explanation would be provided by an underestimation of one of the background components. An electron nature of the excess, instead, would be a strong hint for BSM physics.
+
+\subsubsection{The MiniBooNE anomaly}
+The MicroBooNE experiment was designed to definitely clarify the MiniBooNE anomaly, since the LArTPC technology allows for powerful electron/photon separation. One way to achieve this goal is to measure the spatial gap between the neutrino interaction vertex and the start of the electromagnetic shower. An electron will start producing a ionising trail almost immediately, whereas a photon will usually leave a visible gap, due to the radiation length in liquid argon $X_0 = 14$~cm.
+A second way to distinguish between electrons and photons is to measure the energy loss per distance travelled ($dE/dx$) of the electromagnetic shower produced in the liquid argon. For electrons above 100~MeV, the theoretical expectation of the most probable $dE/dx$ is 1.77~MeV/cm, while the photon will have a most probable value approximately twice as large, due to the pair-production process $\gamma\rightarrow e^+e^-$ \cite{Acciarri:2016sli}. 
+MicroBooNE is then performing two parallel analyses, one assuming that the excess is caused by photon interactions and one assuming that the excess is caused by electron interactions. The calorimetric and spatial-resolution capabilities will allow to have a sensitivity to the excess similar to MiniBooNE, while having an active detector mass five times smaller.  The search for electron-like low-energy interactions will be described in detail in the following chapters.
+
+\subsubsection{Cross-section measurements}
+MicroBooNE will also provide precise neutrino-nucleon cross-section measurements. The neutrino interactions allowed in the energy range of the BNB span from quasi-elastic to deep inelastic scattering, making it possible to explore several nuclear effects and complex topologies.
+In particular, it is possible to measure the pion production in neutral current (NC) and charged current (CC) interactions. MicroBooNE will be able to solve the tension between the large NC $\pi^0$ component reported by MiniBooNE and the small CC $\pi^+$ component reported by SciBooNE \cite{Hiraide:2008eu} and K2K \cite{Tanaka:2006zm}. A precise measurement of the photon production will also help to constrain the $\Delta\rightarrow N\gamma$ background, important for the MiniBooNE low-energy excess analysis. 
+
+\subsubsection{Supernova and exotic searches}
+The MicroBooNE detector is located just below the surface level and is constantly bombarded by cosmic rays, which interact in the liquid argon leaving ionisation trails. This background and the small active volume of the detector (compared with large-scale water Cherenkov experiments) limits the capabilities to certain physics analyses, such as proton decay searches. However, the kaons produced in the MicroBooNE experiment are in the same energy range of the ones produced in the eventual proton decay channel:
+\begin{equation}
+    p\to K^+\nu.
+\end{equation}
+A lower proton lifetime of $5.9\times10^{33}$ years was set by the Super-Kamiokande experiment looking at this particular channel \cite{Abe:2014mwa}. The kaon decay chain $K\rightarrow\pi\rightarrow\mu\rightarrow e$ represents also an important benchmark for the reconstruction capabilities of the LArTPC.
+
+The MicroBooNE detector is also suited to detect neutrinos produced by a supernova (SN) in the Milky Way or in its immediate surroundings, which would result in around 30 CC $\nu_e$ interactions with an electron energy above 10~MeV. However, being constantly hit by cosmic rays, the detector cannot directly trigger on SN neutrinos and it relies on the SuperNova Early Warning System (SNEWS) to record an eventual SN event. 
+
+
+\subsection{Research and development goals}
+MicroBooNE is currently the largest active neutrino LArTPC in the world, which makes it the first experiment to precisely assess the automated neutrino reconstruction capabilities of this technology. The detection of neutrinos by a large-scale LArTPC was pioneered by the ICARUS collaboration, which designed and assembled the ICARUS T600 detector \cite{Amerio:2004ze}. The detector consists of two LArTPC modules with a total active mass of 476~ton, around five times larger than MicroBooNE. However, it was employed as a long-baseline neutrino detector on the CNGS beam and it detected only four $\nu_e$ interactions \cite{Antonello:2013gut}, compared with the several hundreds expected at MicroBooNE. It was recently refurbished and moved to Fermilab to be placed on the BNB, as a part of the future Short Baseline Neutrino (SBN) program. On a smaller scale, the ArgoNeuT experiment operated a 0.25~ton TPC on the NuMI neutrino beam at Fermilab \cite{Anderson:2012vc} and measured for the first time the neutrino cross-section on argon atoms.
+
+The largest next-generation neutrino experiment will be DUNE (Deep Underground Neutrino Experiment), whose current proposed design includes a 20~kton LArTPC, two orders of magnitude larger than MicroBooNE \cite{Acciarri:2016ooe}. This ambitious program requires a very good understanding of the technology: in particular, the effect of high electric field on long distances, of the ions recombination in the LAr, and of the ions absorption by the impurities must be precisely quantified. 
+MicroBooNE was also the first large-scale LArTPC to have part of the electronics chain operating directly in the liquid argon (\emph{cold electronics}), allowing for higher signal-to-noise ratio. An overview of the MicroBooNE detector will be provided in Section \ref{sec:detector}.
+A small-scale prototype of the DUNE detector, ProtoDUNE, was recently built and commissioned at CERN, with an active mass of 450~ton. The ProtoDUNE detector, however, will run on a test-beam line and will not detect neutrino interactions.
+
+\section{The LArTPC detection technology}
+The concept of a Liquid Argon Time Projection Chamber was first laid out by Willis and Radeka in 1974 \cite{Willis:1974gi} and then adapted by Rubbia in 1977 as a detector for neutrino interactions \cite{Rubbia:1977zz}. 
+
+Generally speaking, a Time Projection Chamber is a volume with a constant electric field applied between two of its sides, the anode (the positive plane) and the cathode (the negative plane). It is possible to fill the volume with a non-conductive material such as inert gases or liquids. A magnetic field can also be applied to measure the charge and the momentum of the particle interacting in the TPC. 
+
+A charged particle traversing the medium inside the TPC will ionise the material: a trail of ionisation electrons will be produced in correspondence with the path of the charged particle. The constant electric field will transport the electrons towards the anode with a constant drift velocity, preserving their topological and calorimetric information and appearing as a projection of the particle trajectory on the anode plane. The distance between the anode and the interaction point will be given by the time the ionisation electron takes to reach the anode.
+
+As the name says, a LArTPC is a TPC filled with liquid argon. This material provides several advantages, which made this technology particularly suitable for neutrino detection. Among the main ones we can enumerate (1) its substantial density (1.4~g/cm$^3$ at 87.3~K), which allows to have a detectable amount of neutrino interactions, (2) its high stability, being a noble gas, and (3) its natural abundance (1\% of the atmosphere), which makes the LArTPC technology highly scalable.
+
+However, the relatively slow drift velocity of the electrons in the liquid argon causes the typical read-out of a large-scale LArTPC to be in the order of the milliseconds (which corresponds to the time a ionisation electron takes to travel from the cathode to the anode), making this technology sub-optimal for high-rate experiments. 
+
+Another fundamental property of the argon, which makes it particularly suitable for high-energy physics experiments, is that it produces scintillation light when excited, being at the same transparent to the wavelength of this scintillation light. In this way, a detector on surface such as MicroBooNE can collect the light (usually with photomultipliers placed inside the LAr) and trigger the TPC readout in coincidence with the neutrino beam, suppressing the background caused by cosmic rays outside the beam time window. 
+
+A LArTPC can achieve a very high spatial resolution, similar to the one of the bubble chambers, allowing at the same time for the digitisation of the signal. For this reason, it has often been called a \emph{fully electronic bubble chamber} \cite{Rubbia:2011zza}. 
+
+\subsubsection{Light production}
+One atom of argon in the ground state can share an electron with one argon of atom in an excited state, forming an Ar$_{2}$ \emph{excimer}. When the excimer decays, the two argon atoms are now both at ground state, and a 128~nm photon is emitted. This small wavelength is typically difficult to the detect with standard photomultipliers. In the MicroBooNE experiment, the PMTs are coated with tetraphenyl butadiene (TPB), which acts as wavelength shifter. The time distribution of the light emission has two components, a fast, 6~ns component produced by the singlet, and a slow, 1.5 \si{\micro}s component produced by the triplet. 
+
+The liquid argon has also a high light yield, comparable to the one of scintillating crystals, with $4\times10^4$~$\gamma$/MeV. The amount of light, however, can be quenched by the presence of nitrogen impurities in the argon, which, in the case of MicroBooNE, are kept below the 2~ppm level.
+
+\subsubsection{Ionisation electrons}
+The work function for ionising an argon atom is $W_{\mathrm{ion}} = 23.6$~eV, which means that a charged particle in the MeV range will leave a ionisation trail of tens of thousands of electrons. These free electrons will travel towards the anode with a constant drift velocity, but during their path they can undergo several attenuation processes, which decrease the actual number of electrons reaching the wire plane. In particular, the electrons can recombine with ionised Ar$^+$ atoms: this recombination effect is usually the main contributor to the signal attenuation and it will be described in detail in Sec. \ref{sec:recombination}. 
+
+The presence of impurities in the liquid argon, such as oxygen, nitrogen, and water can also attenuate the signal. The amount of drifting electrons decline as a function of the distance from the wire plane, since the electrons need to travel a longer path. The attenuation is well modeled by an inverse exponential function and the decay time constant is called \emph{electron lifetime}. MicroBooNE purification system, described in Sec. \ref{sec:detector}, achieved an O$_2$ contamination smaller than 100~ppt and an electron lifetime larger than 11~ms.
+
+
+\section{The accelerator complex at Fermilab}
+
+\section{The MicroBooNE detector}\label{sec:detector}
+
