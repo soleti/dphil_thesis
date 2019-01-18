@@ -1,0 +1,16 @@
+\section{Introduction}
+One of the main physics goals of the MicroBooNE experiment is to clarify the nature of the low-energy excess of $\nu_{e}$-like events observed by the MiniBooNE experiment in 2009 \cite{miniboone}. 
+%The excess was found in the neutrino energy region between 200 to 475 MeV.
+
+However, the MiniBooNE detector was a Cherenkov detector, which does not have the ability to distinguish between single electrons and single photons in the final state, making it very challenging to identify a physics model that  could definitely explain the excess.
+
+The MicroBooNE detector, a liquid argon time projection chamber (LArTPC), provides detailed tracking and calorimetry, which allows for powerful electron/photon identification. A detailed description of the detector is available in \cite{detector}.
+
+In this note we will describe a fully automated $\nu_{e}$ event selection in the MicroBooNE detector for the Booster Neutrino Beam (BNB) at the Fermi National Accelerator Laboratory.
+
+\section{Signal definition}
+The MiniBooNE experiment showed an excess of CCQE-like events in the 200-475~MeV neutrino energy range \cite{miniboone}, therefore this analysis will focus on a similar topology.
+
+Our selection aims to have a sample with one electron, no other leptons or photons, at least one proton, and no other charged hadrons or mesons in the final state. All particles in the final state are required to be above detection thresholds, as defined in Section \ref{sec:eff}. These events are called $\nu_{e}$ CC0$\pi$-Np (where N > 0) \cite{teppei}.
+
+In MicroBooNE, a $\nu_{e}$ CC0$\pi$-Np interaction corresponds to one or more ionisation tracks, produced by the protons, and an electromagnetic shower, produced by the electron. 
