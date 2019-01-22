@@ -15,7 +15,7 @@ As described in Section \ref{sec:miniboone}, MiniBooNE, being a Cherenkov detect
 \subsubsection{The MiniBooNE anomaly}
 The MicroBooNE experiment was designed to definitely clarify the MiniBooNE anomaly, since the LArTPC technology allows for powerful electron/photon separation. One way to achieve this goal is to measure the spatial gap between the neutrino interaction vertex and the start of the electromagnetic shower. An electron will start producing a ionising trail almost immediately, whereas a photon will usually leave a visible gap, due to the radiation length in liquid argon $X_0 = 14$~cm.
 A second way to distinguish between electrons and photons is to measure the energy loss per distance travelled ($dE/dx$) of the electromagnetic shower produced in the liquid argon. For electrons above 100~MeV, the theoretical expectation of the most probable $dE/dx$ is 1.77~MeV/cm, while the photon will have a most probable value approximately twice as large, due to the pair-production process $\gamma\rightarrow e^+e^-$ \cite{Acciarri:2016sli}. 
-MicroBooNE is then performing two parallel analyses, one assuming that the excess is caused by photon interactions and one assuming that the excess is caused by electron interactions. The calorimetric and spatial-resolution capabilities will allow to have a sensitivity to the excess similar to MiniBooNE, while having an active detector mass five times smaller.  The search for electron-like low-energy interactions will be described in detail in the following chapters.
+MicroBooNE is then performing two parallel analyses, one assuming that the excess is caused by photon production in the electromagnetic $\Delta\rightarrow N\gamma$ decay and one assuming that the excess is caused by electron interactions. The calorimetric and spatial-resolution capabilities will allow to have a sensitivity to the excess similar to MiniBooNE, while having an active detector mass five times smaller.  The search for electron-like low-energy interactions will be described in detail in the following chapters.
 
 \subsubsection{Cross-section measurements}
 MicroBooNE will also provide precise neutrino-nucleon cross-section measurements. The neutrino interactions allowed in the energy range of the BNB span from quasi-elastic to deep inelastic scattering, making it possible to explore several nuclear effects and complex topologies.
@@ -128,26 +128,17 @@ The muon neutrinos come from the decay of the pions (and in turns of the muons) 
 \end{figure}
 
 
-The pulsed structure of the neutrino beam is of fundamental importance for on-surface experiments like MiniBooNE and MicroBooNE. In order to suppress non-beam related backgrounds (such as cosmic rays), the detector is triggered only in coincidence with the beam-gate window. In this way, MiniBooNE achieved a cosmic-ray background rejection of 99.987\% \cite{AguilarArevalo:2008qa}. For a LArTPC such as MicroBooNE the cosmic-ray rejection is more challenging, since the data acquisition window must be at least as long as the drift time window (so in the order of the milliseconds)†. The techniques employed to reject cosmic rays will be described in detail in Section \ref{sec:methodology}.
+The pulsed structure of the neutrino beam is of fundamental importance for on-surface experiments like MiniBooNE and MicroBooNE. In order to suppress non-beam related backgrounds (such as cosmic rays), the detector is triggered only in coincidence with the beam-gate window. In this way, MiniBooNE achieved a cosmic-ray background rejection of 99.987\% \cite{AguilarArevalo:2008qa}. For a LArTPC such as MicroBooNE the cosmic-ray rejection is more challenging, since the data acquisition window must be at least as long as the drift time window (so in the order of the milliseconds). The techniques employed to reject cosmic rays will be described in detail in Section \ref{sec:methodology}.
  
 \subsection{Neutrino flux simulation}
-The MiniBooNE collaboration developed a detailed simulation of the BNB flux, described in detail in \cite{AguilarArevalo:2008yp}. Here, we will enumerate the main stages of the simulation, in order to clarify the flux systematic uncertainties assessment in Section \ref{sec:systematics}:
-\begin{description}
-\item[Beamline geometry.] The geometry of the beamline components is simulated in detail, including the beam horn, the target, and the decay pipe. 
-\item[Proton generation.] The number of protons delivered by the beam must be precisely estimated, accounting also for beam optics effects.
-\item[Interactions of protons with the target]. This is the step with the largest uncertainty. The MiniBooNE collaboration estimated the $\pi^+$ and $\pi^-$ production using the data from the HARP experiment \cite{Catanesi:2005rc}, while the $K^+$ component was constrained using the result of the SciBooNE experiment \cite{Cheng:2011wq}. 
-\item[Propagation in the material.] The interaction of the particles in the material is simulated with the \textsc{Geant} toolkit \cite{Brun:1994aa}.
-\item[Particles decay into neutrinos.] The branching ratios and the kinematic properties of the particles which produce the neutrino beam must be assessed with precision.
-\end{description}
-
-Table \ref{tab:flux_syst} shows the uncertainties on the various components of the BNB flux for the MicroBooNE experiment. These uncertainties will be reflected in the flux systematic uncertainties of the analysis described in Section \ref{sec:systematics}.
+The MiniBooNE collaboration developed a detailed simulation of the BNB flux, described in detail in \cite{AguilarArevalo:2008yp}. 
 
 \begin{table}[htbp]
    \centering
      \caption{Systematic uncertainties on the BNB flux calculation. The other category includes uncertainties in pion and nucleon cross-sections on beryllium and aluminium, as well as the horn current calibration uncertainty, and uncertainty in the horn current distribution.}
    \begin{tabular}{p{0.25\linewidth}p{0.1\linewidth}p{0.1\linewidth}p{0.1\linewidth}p{0.1\linewidth}}
      \toprule
-     Systematic uncertainty & $\nu_{\mu}/\%$ & $\nu_{\mu}/\%$ & $\nu_{\mu}/\%$ & $\nu_{\mu}/\%$ \\
+     Systematic uncertainty & $\nu_{\mu}/\%$ & $\bar{\nu}_{\mu}/\%$ & $\nu_e/\%$ & $\bar{\nu}_e/\%$ \\
      \midrule
      Proton delivery & 2.0 & 2.0 & 2.0 & 2.0 \\
      $\pi^+$ & 11.7 & 1.0 & 10.7 & 0.03 \\ 
@@ -163,18 +154,112 @@ Table \ref{tab:flux_syst} shows the uncertainties on the various components of t
 \label{tab:flux_syst}
 \end{table}
 
+Here, we will enumerate the main stages of the simulation, in order to clarify the flux systematic uncertainties assessment in Section \ref{sec:systematics}:
+\begin{description}
+\item[Beamline geometry.] The geometry of the beamline components is simulated in detail, including the beam horn, the target, and the decay pipe. 
+\item[Proton generation.] The number of protons delivered by the beam must be precisely estimated, accounting also for beam optics effects.
+\item[Interactions of protons with the target]. This is the step with the largest uncertainty. The MiniBooNE collaboration estimated the $\pi^+$ and $\pi^-$ production using the data from the HARP experiment \cite{Catanesi:2005rc}, while the $K^+$ component was constrained using the result of the SciBooNE experiment \cite{Cheng:2011wq}. 
+\item[Propagation in the material.] The interaction of the particles in the material is simulated with the \textsc{Geant} toolkit \cite{Brun:1994aa}.
+\item[Particles decay into neutrinos.] The branching ratios and the kinematic properties of the particles which produce the neutrino beam must be assessed with precision.
+\end{description}
+
+Table \ref{tab:flux_syst} shows the uncertainties on the various components of the BNB flux for the MicroBooNE experiment. These uncertainties will be reflected in the flux systematic uncertainties of the analysis described in Section \ref{sec:systematics}.
+
 \section{The MicroBooNE detector}\label{sec:detector}
-The MicroBooNE detector consists of a rectangular LArTPC with
-dimensions of $256~$cm (width) $\times~233~$cm (height) $\times~1037~$cm (length) placed in a cylindrical cryostat and on-axis with the BNB. The mass of liquid argon in the active volume, defined as the portion of the argon encompassed by the TPC, is 89~t. 
+The MicroBooNE detector consists of a rectangular LArTPC with dimensions of $256~$cm (width) $\times~233~$cm (height) $\times~1037~$cm (length) placed in a cylindrical cryostat and on-axis with the BNB. The mass of liquid argon in the active volume, defined as the portion of the argon encompassed by the TPC, is 89~t. 
 
-The TPC consists of three wire planes with 3 mm spacing at angles of $0^{\circ}$, $+60^{\circ}$, and $-60^{\circ}$ with respect to the vertical. The cathode, made of a plane of stainless steel panels, operates at a voltage of -70~kV, which produces an electric field of 273~V/cm.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figures/detector.png}
+    \caption{3D rendering of the MicroBooNE cryostat, showing the TPC wire cage and the feedthroughs.}
+    \label{fig:detector}
+\end{figure}
 
-Drifting electrons induce a bipolar signal in the first two planes at $\pm60^{\circ}$, hence their name \emph{induction planes}, and are then collected by the last plane at $0^{\circ}$, called \emph{collection plane}, where they produce a unipolar signal. The charge deposited in the TPC generates a signal used to create three distinct two-dimensional views (in terms of wire and time) of the event, which can be combined to reconstruct a three-dimensional image of the interaction. Figure \ref{fig:lartpc_diagram} shows the diagram of the operating principle of the MicroBooNE LArTPC.
-The 32 PMTs, which collect the argon scintillation light, are placed behind the anode plane, inside the cryostat.
+Figure \ref{fig:detector} shows a 3D rendering of the cryostat containing the TPC. The main components of the detector (the TPC, the light collection system, the cryogenics, the electronics and readout, and the cosmic-ray tagger) are described in detail in \cite{Acciarri:2016smi} and will be summarised below. 
 
-\begin{figure}
+\subsection{The Time Projection Chamber}
+The TPC consists of three wire planes with 3 mm spacing at angles of $0^{\circ}$, $+60^{\circ}$, and $-60^{\circ}$ with respect to the vertical. The cathode, made of a plane of 9 stainless steel sheets 2.3~mm thick, operates at a voltage of -70~kV.
+
+The field cage, made of 64 stainless steel tubes, creates a uniform electric field of 273~V/cm, stepping down from the -70~kV at the cathode to almost 0~V at the anode. 
+
+The anode consists of three wire readout planes: the drifting electrons induce a bipolar signal in the first two planes (U, V) at $\pm60^{\circ}$, hence their name \emph{induction planes}, and are then collected by the last plane (Y) at $0^{\circ}$, called \emph{collection plane}, where they produce a unipolar signal. The induction planes are made by 2400 wires, while the collection plane consists of 3456 vertical wires. 
+
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\linewidth]{figures/lartpc_diagram.pdf}
-    \caption{Diagram of the operating principle of the MicroBooNE LArTPC.}
+    \caption{Diagram of the operating principle of the MicroBooNE LArTPC, showing the waveforms produced by the ionisation trails in the collection plane (red) and in one induction plane (blue).}
     \label{fig:lartpc_diagram}
 \end{figure}
+
+The wire planes are held at different voltages (U plane at -110~V, V plane at 0~V, and Y plane at 230~V), in order to minimise the amount of charge collected by the induction planes.
+
+The charge deposited in the TPC generates a signal used to create three distinct two-dimensional views (in terms of wire and time) of the event, which can be combined to reconstruct a three-dimensional image of the interaction. Figure \ref{fig:lartpc_diagram} shows the diagram of the operating principle of the MicroBooNE LArTPC.
+
+\subsection{The Light Collection system}
+The MicroBooNE light collection system consists of 32 photomultipliers (PMTs) operating in the liquid argon and placed behind the anode plane, which is 86\% transparent to the light.
+The liquid argon scintillation light has a typical spectrum peaked at 128~nm, which must be shifted to a higher wavelength region, where the PMTs have a higher efficiency.
+MicroBooNE employs tetraphenyl-butadiene (TPB), which absorbs in the UV and emits at $425\pm20$~nm. The efficiency for transmission through PMT borosilicate glass (black) must also be taken into account (around 90\%).
+Figure \ref{fig:light} summarises the light emission and absorption in the MicroBooNE light collection system.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\linewidth]{figures/light.pdf}
+    \caption{Scintillation light emission spectrum (red) and TPB re-emission spectrum (green),  with relevant efficiencies (green) (from \cite{Acciarri:2016sli}).}
+    \label{fig:light}
+\end{figure}
+
+\subsection{Cryogenics}
+The liquid argon needs to be taken at a constant temperature and pressure, since they strongly correlate with the drift velocity and, in turn, with the reconstruction of the $x$ coordinate.
+
+The temperature is monitored by 12 Resistive Thermal Devices (RTDs) placed in various location of the cryostat, which is covered with insulating foam to prevent large temperature variations. 
+
+The purification of the liquid argon is performed by a system of two condensers, two pumps and two filters. The gaseous argon that leaves the detector enters a condenser kept at boiling temperature by liquid nitrogen coils and it is then pumped into the filters which mainly remove water and O$_2$ molecules. 
+
+\subsection{Electronics and readout}
+MicroBooNE readout electronics can be divided into two main parts: one responsible for the digitisation and recording of the TPC wire signals and one responsible for the digitisation of the PMT signals. 
+
+\paragraph{TPC readout and electronics}
+The TPC electronics system can be classified into \emph{cold} electronics, placed inside at the cryostat in the liquid argon and responsible for pre-amplification and shaping, and \emph{warm} electronics, placed outside and responsible for digitisation and compression of the signals. 
+
+The pre-amplication and shaping of the signals happen in the ASIC CMOS chips on cold motherboards placed near the wires, in order to obtain the lowest possible noise. In particular, the wire noise is reduced by a factor of 2 when going from room temperature to liquid argon boiling temperature \cite{Chen:2012kv}. 
+
+The signals are carried through warm wires to the Analog-to-Digital Converters (ADCs) boards and digitised by a 16 MHz clock. The waveforms are then processed in Front-End Modules (FEMs) and down-sampled to 2 MHz. The output consists of a time-ordered waveforms of three 1.6~ms (3200 time-ticks) frames, one preceding and two following the trigger time, for a total of 4.8~ms, which is three times the drift-time window. 
+
+\paragraph{PMTs readout and electronics}
+The signals coming from the 32 PMTs are mainly used in MicroBooNE for the trigger algorithm, as described in Section \ref{sec:trigger}, and to store information on the light emitted by the liquid argon scintillation.
+
+Signals from the PMTs are first split by a dedicated circuit in a high-gain (HG) and low-gain (LG) channel which carry 18\% and 1.8\% of the total signal amplitude respectively.
+
+Then, they are amplified and shaped with a 60~ns rise time and finally digitised at 64 MHz (15.625 ns time-tick). The waveforms are stored over a window of 23.4~\si{\micro}s, starting 4~\si{\micro}s before the beam gate, which is 1.6~\si{\micro}s (10~\si{\micro}s) long for the BNB (NuMI beam). Digitised signal outside this window are stored only if above a certain threshold, in order to reduce the data stream.  
+
+\subsection{The Cosmic-Ray Tagger}
+
+Being located almost on surface, the MicroBooNE detector is constantly subject to a constant $\sim5.5$~kHz cosmic-ray rate \cite{Acciarri:2017rnj}, which corresponds to around 9 cosmic rays for a drift-time window of 1.6~ms. 
+
+In order to study the challenges of cosmic-ray reconstruction, the MicroBooNE detector was also equipped with a small external muon counter stack (MuCS) at the start of operations in 2015. 
+
+This detector was used to measure for the first time the cosmic-ray reconstruction efficiency in a LArTPC. This measurement is described in the publication reported in Appendix \ref{sec:mucs}, whose corresponding author is the author of this document. Triggering on the signal coming from this small muon counter stack was possible to measure the fraction of cosmic-ray tracks effectively reconstructed in the LArTPC. The measured efficiency is 97.1\%, in agreement with the Monte Carlo simulation. 
+
+This study was also used to demonstrate the tagging capabilities of a larger Cosmic-Ray Tagger (CRT), which surrounds the cryostat on four sides and represents and first cosmic-ray tagging system integrated with a LArTPC. Figure \ref{fig:mucs_crt} shows a simulation of the cosmic rays which hit the LArTPC and are tagged by the MuCS and the CRT.
+
+\begin{figure}[htbp]
+\centering
+  \begin{subfigure}{0.48\textwidth}
+    \includegraphics[height=0.7\linewidth]{figures/mucs.png}
+    \caption{Cosmic rays hitting the MuCS. Red lines correspond to cosmic rays hitting the MuCS but missing the LArTPC.}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\textwidth}
+    \begin{center}
+        \includegraphics[height=0.7\linewidth]{figures/crt_panels.png}
+        \caption{Cosmic rays hitting at least of the one of the CRT panels and the LArTPC.}
+    \end{center}
+  \end{subfigure}
+    \caption{3D drawing of simulated cosmic rays (brown lines) hitting the LArTPC and tagged by the MuCS (left) and the CRT (right).}\label{fig:mucs_crt}
+\end{figure}
+
+This sub-system was developed and assembled at the Laboratory for High Energy Physics (LHEP) at the University of Bern and installed at Fermilab in 2017. 
+
+The CRT panels are made of plastic scintillation modules, which provide time and position information for charged particles crossing the panels and hitting the TPC.
+Cosmic-ray rejection in the LArTPC can be improved both by spatially tagging crossing cosmic rays and by vetoing events with a signal in the CRT during the beam-gate window. 
+
+\subsection{Trigger system}\label{sec:trigger}

@@ -140,10 +140,27 @@ which gives for $\theta_{12}$, $\theta_{13}$, and $\theta_{23}$ a maximum oscill
 \section{Experimental Evidence of Neutrino Oscillation}
 After the first direct detection of electron (anti)neutrinos by Cowan and Reines at the Savannah nuclear reactor \cite{Cowan:1992xc}, efforts were made in order to observe the other two neutrino flavours.
 In 1962, Lederman and others \cite{PhysRevLett.9.36} first saw evidence of muon neutrinos interacting in the target and producing muons, while the DONUT collaboration finally observed the $\nu_{\tau}$ in 2001 \cite{Kodama:2000mp}.
+
+The number of \emph{light} neutrino species (meaning $m_{\nu} < m_{Z}/2$) weakly interacting was also determined by precision measurements of the $Z$ boson width at LEP and SLD \cite{ALEPH:2005ab} as:
+\begin{equation}
+   N_{\nu} = \frac{\Gamma_{\mathrm{inv}}}{\Gamma_l}
+   \left(\frac{\Gamma_{l}}{\Gamma_{\nu}}\right)_{\mathrm{SM}}=2.984\pm0.008,
+\end{equation}
+where $\Gamma_{l}$ is the leptonic decay width and $\Gamma_{\mathrm{inv}}$ is the invisible decay width, assumed to be caused by $Z\rightarrow\nu\bar{\nu}$ decays. The lepton universality requires each neutrino flavour to contribute equally. This measurement does not forbid the existence of \emph{heavy} ($m_{\nu} < m_{Z}/2$) or \emph{sterile} (non weakly-interacting) neutrinos.
+
 However, the amount of neutrino interactions observed by several experiments was in disagreement with the one predicted by the theory of three massless neutrinos. In particular, two types of anomalies were identified, one involving the detection of solar neutrinos and one involving the neutrinos produced by cosmic rays in the atmosphere.
 
 \paragraph{Solar neutrino anomaly}
-The experiment by Ray Davis and others at Homestake was the first to directly detect the neutrinos produced in the sun \cite{Davis:1968cp}. However, the number of solar neutrino interactions was lower than expected and this deficit was later confirmed by several other experiments, including the Kamioka Observatory in Japan, the SAGE experiment in Russia, and the GALLEX experiment in Italy. The SNO (Sudbury Neutrino Observatory) experiment finally proved in 2001 that the cause of the deficit was the oscillation of the solar neutrinos into a different flavour eigenstate, by measuring both the solar $\nu_{e}$ flux and the total solar neutrino flux, as shown in Figure \ref{fig:sno} \cite{Ahmad:2002jz}. 
+The experiment by Ray Davis and others at Homestake was the first to directly detect the neutrinos produced in the sun \cite{Davis:1968cp} by the $^7$Be and $^8$B decays (Figure \ref{fig:solar}). 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/solar.pdf}
+    \caption{The solar neutrino energy spectrum predicted by the solar standard model. Adapted from \cite{Bahcall:2000nu}.}
+    \label{fig:solar}
+\end{figure}
+
+However, the number of solar neutrino interactions was lower than expected and this deficit was later confirmed by several other experiments, including the Kamioka Observatory in Japan \cite{Hirata:1989zj}, the SAGE experiment in Russia \cite{Abdurashitov:1994bc}, and the GALLEX experiment in Italy \cite{Hampel:1998xg}. The SNO (Sudbury Neutrino Observatory) experiment finally proved in 2001 that the cause of the deficit was the oscillation of the solar neutrinos into a different flavour eigenstate \cite{Ahmad:2002jz}, by measuring both the solar $\nu_{e}$ flux and the total solar neutrino flux, as shown in Figure \ref{fig:sno}. 
 
 \begin{figure}[htbp]
     \centering
@@ -152,16 +169,10 @@ The experiment by Ray Davis and others at Homestake was the first to directly de
     \label{fig:sno}
 \end{figure}
 
-The propagation of neutrinos in the matter is also determined by the Mikheyev-Smirnov-Wolfenstein (MSW) effect: in presence of a high density of electrons, electron neutrinos experience a charged current coherent forward scattering. This cause the electron neutrinos to have a different effective mass when they propagate in a high-density medium, modifying the oscillation pattern. 
+The propagation of neutrinos in the matter is determined by the Mikheyev-Smirnov-Wolfenstein (MSW) effect \cite{Wolfenstein:1977ue}: in presence of a high density of electrons, electron neutrinos experience a charged current coherent forward scattering. This cause the electron neutrinos to have a different effective mass when they propagate in a high-density medium, modifying the oscillation pattern. 
 
 The MSW effect is particularly important to explain the solar neutrino flux (Figure \ref{fig:solar}). Assuming a very high electron density in the sun core and an exponentially decreasing abundance (which are both good approximations in the standard solar model), the probability to observe an electron neutrino when it reaches the Earth is $P_{ee} \approx \sin^2\theta$ for neutrinos above 2~MeV (where the matter effect dominates).
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.75\linewidth]{figures/solar.pdf}
-    \caption{The solar neutrino energy spectrum predicted by the solar standard model. Adapted from \cite{Bahcall:2000nu}.}
-    \label{fig:solar}
-\end{figure}
 
 \paragraph{Atmospheric neutrino anomaly}
 Cosmic muons decaying in the atmosphere produce a broad flux of muon (antineutrinos). The first underground water Cherenkov detectors, the IMB experiment and the Kamioka observatory, observed a discrepancy in the double ratio of muon to electron neutrinos, measured to expected. The evidence that this discrepancy was caused by the disappearance of atmospheric neutrinos was provided by the Super-Kamiokande experiment in 1998 \cite{Fukuda:1998mi}.
@@ -173,7 +184,7 @@ In honour of these discoveries, the Nobel Prize in Physics 2015 was awarded to T
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\linewidth]{figures/superk.pdf}
-    \caption{Zenith angle distributions of $\mu$-like and e-like events in the sub-GeV and multi-GeV data sets, as collected by the Super-Kamiokande experiment. The dashed blue line corresponds to the no-oscillation model. The red solid line represent the best fit to $\nu_{\mu} \leftrightarrow \nu_{\tau}$ oscillation. Adapted from \cite{PhysRevD.98.030001}.}
+    \caption{Zenith angle distributions of $\mu$-like and e-like events in the sub-GeV and multi-GeV data sets, as collected by the Super-Kamiokande experiment. The dashed blue line corresponds to the no-oscillation model. The red solid line represent the best fit to $\nu_{\mu} \leftrightarrow \nu_{\tau}$ oscillation (from \cite{PhysRevD.98.030001}).}
     \label{fig:superk}
 \end{figure}
 
@@ -184,34 +195,30 @@ The KamLAND experiment finally spectacularly proved the oscillation pattern and 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\linewidth]{figures/kamland.pdf}
-    \caption{Ratio of the observed $\bar{\nu}_{e}$ spectrum to the expectation for no-oscillation versus $L_{0}/E$ for the KamLAND data. $L_{0} = 180$~km is the flux-weighted average reactor baseline. Adapted from \cite{Gando:2010aa}.}
+    \caption{Ratio of the observed $\bar{\nu}_{e}$ spectrum to the expectation for no-oscillation versus $L_{0}/E$ for the KamLAND data. $L_{0} = 180$~km is the flux-weighted average reactor baseline (from \cite{Gando:2010aa}).}
     \label{fig:kamland}
 \end{figure}
 
 Less than 20 years after the definitive confirmation of neutrino oscillations, the mixing angles and the mass splittings are all known with a relative uncertainty smaller than 5\%. The least-known parameter in the PMNS matrix is the $\delta_{CP}$ phase, which, if different from $0^{\circ}$ (or from $180^{\circ}$), would imply CP-violation in the leptonic sector. This parameter can be measured only with appearance experiments, where it is possible to verify if
-$P(\nu_{\alpha}\rightarrow\nu_{\beta}) \neq P(\bar{\nu}_{\alpha}\rightarrow\bar{\nu}_{\beta})$. Recent results from the T2K and NOVA experiments give a best fit of $\delta_{CP}/^{\circ}=215^{+40}_{-28}$ \cite{Esteban:2018azc}. A definitive measurement of the CP-violating phase would have far-reaching consequences in particle physics and cosmology, since it could explain the matter-antimatter asymmetry and provide an experimental basis for the leptogenesis model \cite{Fukugita:1986hr}.
+$P(\nu_{\alpha}\rightarrow\nu_{\beta}) \neq P(\bar{\nu}_{\alpha}\rightarrow\bar{\nu}_{\beta})$. Recent results from the T2K and NOVA experiments give a best fit of $\delta_{CP}/^{\circ}=215^{+40}_{-28}$  ($\delta_{CP}/^{\circ}=284^{+27}_{-29}$) at $1\sigma$ in the normal hierarchy (inverted hierarchy) model \cite{Esteban:2018azc}. A definitive measurement of the CP-violating phase would have far-reaching consequences in particle physics and cosmology, since it could explain the matter-antimatter asymmetry, providing an experimental basis for the leptogenesis model \cite{Fukugita:1986hr}.
 
 A precise estimation of the MSW effect is particularly important for a correct measurement of the CP violation. Since the matter contains electrons and not positrons, the electron neutrinos will experience a MSW effect opposite to the one experienced by antineutrinos. This difference will, in turn, modify the appearance probabilities, leading to $P(\nu_{e}\rightarrow\nu_{\mu}) \neq P(\bar{\nu}_{e}\rightarrow\bar{\nu}_{\mu})$. This effect must the be disentangled from the CP-violating effect caused by the complex phases in the PMNS matrix.
 
 The MSW effect is also dependent on the sign of the mass splitting $\Delta m_{31}$, which offers a way to resolve the hierarchy problem \cite{Smirnov:2013cqa}. 
 In this document, however, we will focus on short-baseline neutrino experiments, where the MSW effect is negligible.
 
-The number of \emph{light} neutrino species (meaning $m_{\nu} < m_{Z}/2$) weakly interacting was also determined by precision measurements of the $Z$ boson width at LEP and SLD \cite{ALEPH:2005ab} as:
-\begin{equation}
-   N_{\nu} = \frac{\Gamma_{\mathrm{inv}}}{\Gamma_l}
-   \left(\frac{\Gamma_{l}}{\Gamma_{\nu}}\right)_{\mathrm{SM}}=2.984\pm0.008,
-\end{equation}
-where $\Gamma_{l}$ is the leptonic decay width and $\Gamma_{\mathrm{inv}}$ is the invisible decay width, assumed to be caused by $Z\rightarrow\nu\bar{\nu}$ decays. The lepton universality requires each neutrino flavour to contribute equally. This measurement, however, does not forbid the existence of \emph{heavy} ($m_{\nu} < m_{Z}/2$) or \emph{sterile} (non weakly-interacting) neutrinos.
-
 \section{Massive neutrinos in the Standard Model}
-In the SM, quarks and leptons can be represented by a four-component Dirac spinor field $\psi_{D}$. This field can be decomposed into left-handed and right-handed two-component spinors with the chirality operators $\chi_{R} = (1+\gamma_5)\psi_D$ and $\chi_{L} = (1-\gamma_5)\psi_D$, respectively. The mass term for these spinors can be generated through the Higgs mechanism, which introduces a Dirac mass term in the Lagrangian:
+The observation of neutrino oscillations poses a challenge for the SM, since it requires a mechanism able to give mass to the neutrinos.
+In the standard formulation of the SM, quarks and leptons can be represented by a four-component Dirac spinor field $\psi_{D}$. This field can be decomposed into left-handed and right-handed two-component spinors with the chirality operators $\chi_{R} = (1+\gamma_5)\psi_D$ and $\chi_{L} = (1-\gamma_5)\psi_D$, respectively. The mass term for these spinors can be generated through the Higgs mechanism, which introduces a Dirac mass term in the Lagrangian:
 \begin{equation}
     -\mathcal{L}_D = m_D\bar{\psi}_D\psi_D = m_D(\bar{\nu}_L\nu_R + \bar{\nu}_R\nu_L).
 \end{equation}
 This term breaks chirality symmetry and makes helicity non-Lorentz-invariant and can be applied also to neutrinos in an extension to the Standard Model. In this case, the neutrino would be a four-component massive Dirac spinor, just as any other fermion, with two components non-interacting.
-However, the current upper limit on the sum of the neutrino masses is $\sum m_{\nu} < 0.12$~eV using cosmological constraints \cite{Aghanim:2018eyx} and $\sum m_{\nu} < 2$~eV from $\beta$-decay experiments \cite{Otten:2008zz}. The KATRIN experiment will directly measure the neutrino mass through a precise reconstruction of the tritium $\beta$-decay spectrum, with an expected sensitivity of 0.2~eV \cite{Osipowicz:2001sq}. These results require a Yukawa coupling six orders of magnitude smaller than the electron one, which is not considered natural.
+However, the current upper limit on the sum of the neutrino masses is $\sum m_{\nu} < 0.12$~eV using cosmological constraints \cite{Aghanim:2018eyx} and $\sum m_{\nu} < 2$~eV from $\beta$-decay experiments \cite{Otten:2008zz}. The KATRIN experiment will directly measure the neutrino mass through a precise reconstruction of the tritium $\beta$-decay spectrum, with an expected sensitivity of 0.2~eV \cite{Osipowicz:2001sq}. These results require a Yukawa coupling six orders of magnitude smaller than the electron one, which is not considered natural. 
 
-Another explanation for the neutrino masses would be the introduction of a Majorana mass term in the Lagrangian:
+Most importantly, right-handed (left-handed) neutrinos (antineutrinos) have never been observed. Their existence would be theoretically motivated, since quarks and leptons have right-handed components and they could explain the small neutrino masses, as described in Section \ref{sec:seesaw}. Right-handed neutrinos would interact only gravitationally and for this reason they are usually called \emph{sterile neutrinos}. Even if not weakly-interacting, the eventual sterile neutrino(s) would still mix with the active flavours, affecting the measured oscillation patterns and providing an experimental detection signature.
+
+Another model for the neutrino masses would be the introduction of a Majorana mass term in the Lagrangian:
 \begin{equation}
     -\mathcal{L}_M = \frac{1}{2}m_M(\bar{\nu}_L\mathcal{C}\bar{\nu}^{T}_L+\nu_{L}\mathcal{C}\nu^T_L) = \frac{1}{2}m_M(\bar{\nu}_M\nu_M), \label{eq:majorana}
 \end{equation}
@@ -240,7 +247,7 @@ This process would also violate the lepton number with $\Delta L = 2$. In this c
 Several experiments are actively looking or planning to look for $0\nu\beta\beta$ decays, using $^{130}$Te (CUORE, SNO+), $^{136}$Xe (KamLAND-Zen, EXO, NEXT), or $^{76}$Ge (GERDA). 
 The KamLAND-Zen collaboration measured the lower limit for $0\nu\beta\beta$ decay half-life at $T_{\frac{1}{2}} > 1.07\times10^{26}$~years, which corresponds to an effective Majorana mass of 61-165 meV \cite{KamLAND-Zen:2016pfg}.
 
-\subsection{The Seesaw mechanism}
+\subsection{The Seesaw mechanism}\label{sec:seesaw}
 A process which could explain the small masses of the neutrinos, compared to the other fermions, is the so-called \emph{seesaw} mechanism, which here we describe using the approach in \cite{Grossman:2003eb}. 
 The most general Lagrangian with right-handed neutrinos can be written as:
 
@@ -277,21 +284,21 @@ Figure \ref{fig:ccqecross} shows the neutrino cross-section for charged-current 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\linewidth]{figures/ccqecross.pdf}
-    \caption{Total neutrino per nucleon charged-current cross section (for an isoscalar target) divided by neutrino energy and plotted as a function of energy. Adapted from \cite{Formaggio:2013kya}.}
+    \caption{Total neutrino per nucleon charged-current cross sections (for an isoscalar target) divided by neutrino energy and plotted as a function of energy (from \cite{Formaggio:2013kya}).}
     \label{fig:ccqecross}
 \end{figure}
 
 \begin{description}
-\item[Quasi-elastic interaction.] In a charged-current quasi-elastic interaction, the neutrino exchange a $W$ boson with a single nucleon, which is knocked out and leaves a \emph{hole} in the nucleus. Hence its name 1p-1h (one particle, one hole). In this case, the incident neutrino does not have enough energy to break up or excite the nucleus. This is the dominant interaction in the sub-GeV energy range. Figure \ref{fig:ccqe_feyn} shows the Feynman diagram for a CCQE neutrino-nucleus interaction.
+\item[Quasi-elastic interaction.] In a charged-current quasi-elastic (CCQE) interaction, the neutrino exchange a $W$ boson with a single nucleon, which is knocked out and leaves a \emph{hole} in the nucleus. Hence its name 1p-1h (one particle, one hole). In this case, the incident neutrino does not have enough energy to break up or excite the nucleus. This is the dominant interaction in the sub-GeV energy range. Figure \ref{fig:ccqe_feyn} shows the Feynman diagram for a CCQE neutrino-nucleus interaction.
 
-The simulation used in this document employs the GENIE neutrino generator, set up to use the Llewellyn-Smith parametrisation for the CCQE interactions \cite{LlewellynSmith:1971uhs} and the Relativistic Fermi Gas model for the nucleus.
-In this model, the interaction is calculated with the impulse approximation (IA): the neutrino interacts with only one nucleon, which can have short-range correlations with other nucleons (\emph{bound but independent}).
+The simulation used in this document employs the GENIE neutrino generator, set up to use the Llewellyn-Smith parametrisation for the CCQE interactions \cite{LlewellynSmith:1971uhs} and the Relativistic Fermi Gas model for the nucleus \cite{Smith:1972xh}.
+In this model, the interaction is calculated with the impulse approximation (IA) \cite{Benhar:2005dj}: the neutrino interacts with only one nucleon, which can have short-range correlations with other nucleons (\emph{bound but independent}).
 
-However, hadrons exiting the nucleus can re-interact and change identity or eject other hadrons (Final State Interactions, FSI), so it is possible to have a CCQE interaction with no protons or with a pion in the final state. It is also possible to have multinucleon excitations, mainly through the so-called meson exchange current (MEC). This interaction is responsible for np-nh events, where more than one nucleon is emitted.
+However, hadrons exiting the nucleus can re-interact and change identity or eject other hadrons (Final State Interactions, FSI), so it is possible to have a CCQE interaction with no protons or with a pion in the final state. It is also possible to have multinucleon excitations, mainly through the so-called meson exchange current (MEC) \cite{Bodek:2011ps}. This interaction is responsible for np-nh events, where more than one nucleon is emitted.
 
 The neutral-current equivalent of a CCQE interaction is neutral-current elastic scattering (NCE), which typically ejects a nucleon.
 
-At low exchanged momentum $Q^2$ the neutrino can also scatter elastically with the entire nucleus (coherent elastic neutrino-nucleus) scattering, CE$\nu$NS), as recently detected by the COHERENT collaboration \cite{Akimov:2017ade}. In this case, the nucleus remains in its initial state and its small recoil represents the only observable.
+At low exchanged momentum $Q^2$ the neutrino can also scatter \emph{elastically} with the entire nucleus (coherent elastic neutrino-nucleus) scattering, CE$\nu$NS), as recently detected by the COHERENT collaboration \cite{Akimov:2017ade}. In this case, the nucleus remains in its initial state and its small recoil represents the only observable.
 
 \begin{figure}[htbp]
     \centering
@@ -307,9 +314,9 @@ At low exchanged momentum $Q^2$ the neutrino can also scatter elastically with t
 \end{align}
 This interaction is allowed both by charged current and neutral current exchange.
 
-The GENIE setup used here employs the Rein-Sehgal model for the resonance production and the Bodek-Ritchie RFG model for the interaction of the nucleon within the nucleus. Also in this case, the FSI can cause the absorption of the pion in the nucleus or exchange the charge of the pion.
+The GENIE setup used here employs the Rein-Sehgal model \cite{Rein:1980wg} for the resonance production and the Bodek-Ritchie RFG model \cite{Bodek:2011ps} for the interaction of the nucleon within the nucleus. Also in this case, the FSI can cause the absorption of the pion in the nucleus or exchange the charge of the pion.
 
-At low $Q^2$, pions can be produced also in coherent neutrino-nucleus processes, where the nucleus is left unchanged and a pion is emitted, as shown in the Feynman diagram of Figure \ref{fig:ccoh_feyn}.
+At low exchanged momentum $Q^2$, pions can be produced also in coherent neutrino-nucleus processes, where the nucleus is left unchanged and a pion is emitted, as shown in the Feynman diagram of Figure \ref{fig:ccoh_feyn}.
 
 \begin{figure}[htbp]
   \begin{subfigure}{0.48\textwidth}
@@ -329,7 +336,7 @@ At low $Q^2$, pions can be produced also in coherent neutrino-nucleus processes,
   \caption{Feynman diagrams of two neutrino interactions which can produce pions in the final state, charged-current resonant (left) and charged-current coherent (right).}
 \end{figure}
 
-\item[Deep inelastic scattering.] In this case, the neutrino has enough energy to interact with the single nucleon components, the quarks, and to break up the nucleus. The result of this interaction often consists in several mesons in the final state. This is the dominant interaction mode for high-energy neutrinos ($>5$~GeV). It is simulated by our setup of GENIE using the Bodek-Yang model.
+\item[Deep inelastic scattering.] In this case, the neutrino has enough energy to interact with the single nucleon components, the quarks, and to break up the nucleus. The result of this interaction often consists in several mesons in the final state. This is the dominant interaction mode for high-energy neutrinos ($>5$~GeV). It is simulated by our setup of GENIE using the Bodek-Yang model \cite{Yang:1998zb}.
 
 Figure \ref{fig:ccdis_feyn} shows the Feynman diagram for this kind of interaction.
 
@@ -345,5 +352,9 @@ Figure \ref{fig:ccdis_feyn} shows the Feynman diagram for this kind of interacti
 
 This rich scenario makes the correct reconstruction of neutrino interactions very challenging for any experiment. Usually, oscillations experiments like MiniBooNE (see Section \ref{sec:miniboone}) look for CCQE interactions, whose signature in the detector is easier to identify, but which also require a precise assessment of the final-state interactions.
 
-\section{Conclusions}
-Several experiments have shown compelling evidence for neutrino oscillations, which in turn require non-null neutrino masses. At the moment, massive neutrinos represent the only portal into BSM physics and, for this reason, neutrino physics is one of the most active sectors in particle physics. In the last decade, the parameters of the PMNS mixing matrix have been constrained to a precision smaller than 5\%, but some neutrino properties still need to measured. In particular, the CP-violating phase, the neutrino mass hierarchy, and the Majorana or Dirac nature of the neutrino are all research topics actively investigated both by present and future experiments. 
+\section{Future research efforts}
+Several experiments have shown compelling evidence for neutrino oscillations, which in turn require non-null neutrino masses. At the moment, massive neutrinos represent the only portal into BSM physics and, for this reason, neutrino physics is one of the most active sectors in particle physics. In the last decade, the parameters of the PMNS mixing matrix of neutrino flavours (see eq. \eqref{eq:pmns}) have been constrained to a precision smaller than 5\%, but some neutrino properties still need to measured. In particular, the CP-violating phase, the neutrino mass hierarchy, and the Majorana or Dirac nature of the neutrino are all research topics actively investigated both by present and future experiments. 
+
+Several experiments are also looking for one of more generations of right-handed neutrinos, which have never been observed and, if existent, would interact only gravitationally and could provide an explanation for the small neutrino masses. Experimentally, they are usually called \emph{sterile neutrinos}.
+
+The following chapters will focus on the search for a low-energy excess of electron neutrinos, which could be a hint of neutrino oscillation into a sterile state. 
