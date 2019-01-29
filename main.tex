@@ -63,7 +63,7 @@
 \usepackage[mathlines]{lineno}
 \usepackage{siunitx}
 \usepackage[permil]{overpic}
-
+\usepackage{url}
 \linenumbers
 
 \newcommand*{\bibtitle}{References}
@@ -112,6 +112,20 @@
 	\renewcommand{\st}{\textsuperscript{st}}
 	\newcommand{\rd}{\textsuperscript{rd}}
 
+\let\oldequation\equation
+\let\oldendequation\endequation
+
+\let\oldalign\align
+\let\oldendalign\endalign
+
+\renewenvironment{equation}
+  {\linenomathNonumbers\oldequation}
+  {\oldendequation\endlinenomath}
+
+
+\renewenvironment{align}
+  {\linenomathNonumbers\oldalign}
+  {\oldendalign\endlinenomath}
 %%%%% THE ACTUAL DOCUMENT STARTS HERE
 \begin{document}
 
@@ -212,9 +226,9 @@
 \include{text/ch2-neutrinophysics}
 \include{text/ch3-anomalies}
 \include{text/ch4-microboone}
-\include{text/ch5-analysis}
+\include{text/ch5-eventreco}
+\include{text/ch6-analysis}
 
-% \include{text/ch5-microboone}
 
 
 %% APPENDICES %% 

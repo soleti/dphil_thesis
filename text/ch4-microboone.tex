@@ -80,11 +80,21 @@ In particular, the electrons can recombine with ionised Ar$^+$ atoms: this recom
 
 The travel of the electrons in the LArTPC is affected by a diffusion effect, caused by their thermal velocity, which spreads out the ionisation electrons while they travel towards the anode. It is a three-dimensional effect, usually separated into its longitudinal and transverse components. 
 
-The presence of impurities in the liquid argon, such as oxygen, nitrogen, and water can also attenuate the signal, absorbing the ionisation electrons during their path in the liquid argon. The amount of drifting electrons decline as a function of the distance from the wire plane, since the electrons need to travel a longer path. The attenuation is well modeled by an inverse exponential function and the decay time constant is called \emph{electron lifetime}. MicroBooNE purification system, described in Sec. \ref{sec:detector}, achieved an O$_2$ contamination smaller than 100~ppt and an electron lifetime larger than 18~ms \cite{Meddage:2017lxo}. In MicroBooNE, the electron lifetime was estimated by measuring the ratio between the charge at the anode and the charge at the cathode with crossing cosmic muons, through the relation:
+LArTPCs placed on surface, such as MicroBooNE, are also constantly hit by an intense flux of cosmic rays, which will produce several ionisation trails. These trails produce ionisation electrons and positive Ar$^+$, which will slowly move towards the cathode until they will recombine with a free electron. The build-up of Ar$^+$ ions leads to a distortion of the electric
+field within the detector, defined as \emph{space-charge effect} (SCE). The SCE causes a displacement in the reconstructed position of ionisation electrons, as well as variations in the amount of charge quenching experienced by ionisation throughout the volume of the TPC. In MicroBooNE, the electric field distortion can be as high as 15\% and was measured using a sample of cosmic rays triggered by a small cosmic-ray counter (briefly described in Section \ref{sec:crt}). The spatial distortions at the top and the bottom of the LArTPC are shown in Figure \ref{fig:spacecharge}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/spacecharge.pdf}
+    \caption{Predicted and measured space-charge distortions as a function of the drift coordinate at both the top and bottom of the TPC. The discrepancy between data and Monte Carlo is caused by the absence of the liquid argon flow in the simulation.}
+    \label{fig:spacecharge}
+\end{figure}
+
+The presence of impurities in the liquid argon, such as oxygen, nitrogen, and water can also attenuate the signal, absorbing the ionisation electrons during their path in the liquid argon. The amount of drifting electrons decline as a function of the distance from the wire plane, since the electrons need to travel a longer path. The attenuation is well modeled by an inverse exponential function and the decay time constant is called \emph{electron lifetime}. MicroBooNE purification system, described in Section \ref{sec:detector}, achieved an O$_2$ contamination smaller than 100~ppt and an electron lifetime larger than 18~ms \cite{Meddage:2017lxo}. In MicroBooNE, the electron lifetime was estimated by measuring the ratio between the charge at the anode and the charge at the cathode with crossing cosmic muons, through the relation:
 \begin{equation}
     \frac{Q_A}{Q_C} = \exp(-t_{\mathrm{drift}}/\tau),
 \end{equation}
-where $t_\mathrm{drift}$ is the drift time and $\tau$ is the electron lifetime. Figure \ref{fig:purity} shows the variation of the $Q_A/Q_C$ ratio over time in the MicroBooNE LArTPC.
+where $t_\mathrm{drift}$ is the drift time (1.6~ms) and $\tau$ is the electron lifetime. Figure \ref{fig:purity} shows the variation of the $Q_A/Q_C$ ratio over time in the MicroBooNE LArTPC.
 
 \begin{figure}[htbp]
     \centering
@@ -175,7 +185,7 @@ The MicroBooNE detector consists of a rectangular LArTPC with dimensions of $256
     \label{fig:detector}
 \end{figure}
 
-Figure \ref{fig:detector} shows a 3D rendering of the cryostat containing the TPC. The main components of the detector (the TPC, the light collection system, the cryogenics, the electronics and readout, and the cosmic-ray tagger) are described in detail in \cite{Acciarri:2016smi} and will be summarised below. 
+Figure \ref{fig:detector} shows a 3D rendering of the cryostat containing the TPC. The main components of the detector (the TPC, the light collection system, the cryogenics, the cosmic-ray tagger, and the electronics and readout) are described in detail in \cite{Acciarri:2016smi} and will be summarised below. 
 
 \subsection{The Time Projection Chamber}
 The TPC consists of three wire planes with 3 mm spacing at angles of $0^{\circ}$, $+60^{\circ}$, and $-60^{\circ}$ with respect to the vertical. The cathode, made of a plane of 9 stainless steel sheets 2.3~mm thick, operates at a voltage of -70~kV.
@@ -194,6 +204,16 @@ The anode consists of three wire readout planes: the drifting electrons induce a
 The wire planes are held at different voltages (U plane at -110~V, V plane at 0~V, and Y plane at 230~V), in order to minimise the amount of charge collected by the induction planes.
 
 The charge deposited in the TPC generates a signal used to create three distinct two-dimensional views (in terms of wire and time) of the event, which can be combined to reconstruct a three-dimensional image of the interaction. Figure \ref{fig:lartpc_diagram} shows the diagram of the operating principle of the MicroBooNE LArTPC.
+
+MicroBooNE started acquiring neutrino data in October 2015. Figure \ref{fig:evd_ccpi0} shows the event display of a $\nu_{\mu}$ CC$\pi^0$ candidate in the collection plane. The excellent granularity of the detector allows to appreciate the electromagnetic showers coming from a $\pi^0\rightarrow\gamma\gamma$ decay and also the small $\delta$-rays produced by the cosmic muons. It is also possible to appreciate the challenge of the pattern recognition, with different topologies and overlapping ionisation trails given by the presence of cosmic rays. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/evd_ccpi0.pdf}
+    \caption{Event display of a $\nu_{\mu}$ CC$\pi^0$ candidate in the collection plane. The color scale corresponds to the amount of charged deposited on the wires.}
+    \label{fig:evd_ccpi0}
+\end{figure}
+
 
 \subsection{The Light Collection system}
 The MicroBooNE light collection system consists of 32 photomultipliers (PMTs) operating in the liquid argon and placed behind the anode plane, which is 86\% transparent to the light.
@@ -219,28 +239,30 @@ The purification of the liquid argon is performed by a system of two condensers,
 MicroBooNE readout electronics can be divided into two main parts: one responsible for the digitisation and recording of the TPC wire signals and one responsible for the digitisation of the PMT signals. 
 
 \paragraph{TPC readout and electronics}
-The TPC electronics system can be classified into \emph{cold} electronics, placed inside at the cryostat in the liquid argon and responsible for pre-amplification and shaping, and \emph{warm} electronics, placed outside and responsible for digitisation and compression of the signals. 
+The TPC electronics system can be classified into \emph{cold} electronics, placed inside the cryostat in the liquid argon and responsible for pre-amplification and shaping, and \emph{warm} electronics, placed outside the cryostat and responsible for digitisation and compression of the signals.
 
-The pre-amplication and shaping of the signals happen in the ASIC CMOS chips on cold motherboards placed near the wires, in order to obtain the lowest possible noise. In particular, the wire noise is reduced by a factor of 2 when going from room temperature to liquid argon boiling temperature \cite{Chen:2012kv}. 
+The pre-amplification and shaping of the signals happen in the ASIC CMOS chips on cold motherboards placed near the wires, in order to obtain the lowest possible noise. In particular, the wire noise is reduced by a factor of 2 when going from room temperature to liquid argon boiling temperature \cite{Chen:2012kv}. 
 
 The signals are carried through warm wires to the Analog-to-Digital Converters (ADCs) boards and digitised by a 16 MHz clock. The waveforms are then processed in Front-End Modules (FEMs) and down-sampled to 2 MHz. The output consists of a time-ordered waveforms of three 1.6~ms (3200 time-ticks) frames, one preceding and two following the trigger time, for a total of 4.8~ms, which is three times the drift-time window. 
 
 \paragraph{PMTs readout and electronics}
-The signals coming from the 32 PMTs are mainly used in MicroBooNE for the trigger algorithm, as described in Section \ref{sec:trigger}, and to store information on the light emitted by the liquid argon scintillation.
+The signals coming from the 32 PMTs are mainly used in MicroBooNE for the software trigger, as described in Section \ref{sec:trigger}, and to store information on the light emitted by the liquid argon scintillation.
 
-Signals from the PMTs are first split by a dedicated circuit in a high-gain (HG) and low-gain (LG) channel which carry 18\% and 1.8\% of the total signal amplitude respectively.
+Signals from the PMTs are first split by a dedicated circuit in a high-gain ($\sim20$~ADC/PE) and a low-gain ($\sim2$~ADC/PE) channel which carry 18\% and 1.8\% of the total signal amplitude, respectively.
 
-Then, they are amplified and shaped with a 60~ns rise time and finally digitised at 64 MHz (15.625 ns time-tick). The waveforms are stored over a window of 23.4~\si{\micro}s, starting 4~\si{\micro}s before the beam gate, which is 1.6~\si{\micro}s (10~\si{\micro}s) long for the BNB (NuMI beam). Digitised signal outside this window are stored only if above a certain threshold, in order to reduce the data stream.  
+Then, they are amplified and shaped with a 60~ns rise time and finally digitised at 64 MHz (15.625 ns time-tick). The waveforms are stored over a window of 1500 time-ticks (23.4~\si{\micro}s), starting 4~\si{\micro}s before the beam gate, which is 1.6~\si{\micro}s (10~\si{\micro}s) long for the BNB (NuMI beam). Digitised waveforms outside this window are stored only if above 130 ADC counts (around 6.5~PE) and for a duration of 40 time-ticks (0.6~\si{\micro}s), in order to reduce the data stream. A dead-time of 45 samples (0.7~\si{\micro}s) follows each recorded out-of-beam-gate digitised waveform.
 
-\subsection{The Cosmic-Ray Tagger}
+
+
+\subsection{The MuCS and the Cosmic-Ray Tagger}\label{sec:crt}
 
 Being located almost on surface, the MicroBooNE detector is constantly subject to a constant $\sim5.5$~kHz cosmic-ray rate \cite{Acciarri:2017rnj}, which corresponds to around 9 cosmic rays for a drift-time window of 1.6~ms. 
 
-In order to study the challenges of cosmic-ray reconstruction, the MicroBooNE detector was also equipped with a small external muon counter stack (MuCS) at the start of operations in 2015. 
+In order to study the challenges of cosmic-ray reconstruction, the MicroBooNE detector was also equipped with a small external muon counter stack (MuCS), installed at the start of operations in 2015. 
 
-This detector was used to measure for the first time the cosmic-ray reconstruction efficiency in a LArTPC. This measurement is described in the publication reported in Appendix \ref{sec:mucs}, whose corresponding author is the author of this document. Triggering on the signal coming from this small muon counter stack was possible to measure the fraction of cosmic-ray tracks effectively reconstructed in the LArTPC. The measured efficiency is 97.1\%, in agreement with the Monte Carlo simulation. 
+This sub-detector was used to measure for the first time the cosmic-ray reconstruction efficiency in a LArTPC. This measurement is described in detail in the publication reported in Appendix \ref{sec:mucs}, whose corresponding author is the author of this document. Triggering on the signal coming from this small muon counter stack allowed to measure the fraction of cosmic-ray tracks effectively reconstructed in the LArTPC. The measured efficiency is 97.1\%, in agreement with the Monte Carlo simulation. 
 
-This study was also used to demonstrate the tagging capabilities of a larger Cosmic-Ray Tagger (CRT), which surrounds the cryostat on four sides and represents and first cosmic-ray tagging system integrated with a LArTPC. Figure \ref{fig:mucs_crt} shows a simulation of the cosmic rays which hit the LArTPC and are tagged by the MuCS and the CRT.
+This study was also used to demonstrate the tagging capabilities of a larger Cosmic-Ray Tagger (CRT), which surrounds the cryostat on four sides and represents and first cosmic-ray tagging system integrated with a LArTPC \cite{Auger:2016tjc}. Figure \ref{fig:mucs_crt} shows a simulation of the cosmic rays which hit the LArTPC and are tagged by the MuCS and the CRT.
 
 \begin{figure}[htbp]
 \centering
@@ -263,3 +285,31 @@ The CRT panels are made of plastic scintillation modules, which provide time and
 Cosmic-ray rejection in the LArTPC can be improved both by spatially tagging crossing cosmic rays and by vetoing events with a signal in the CRT during the beam-gate window. 
 
 \subsection{Trigger system}\label{sec:trigger}
+MicroBooNE employs different triggers in order to minimise the amount of stored data, while keeping a very high neutrino efficiency.
+
+An hardware trigger is fired for each beam spill in the Booster and in the NuMI neutrino beams. When received, a 23.4~\si{\micro}s window is opened in the PMT readout and a 4.8~ms window is opened in the TPC readout. These two triggers (one for the BNB and one for NuMI) have the highest priority, and in case the two beam-gate windows overlap, the precedence is given to the BNB. The beam trigger efficiency is 99.8\%.
+
+Each event in MicroBooNE requires around 30~MB of storage which, for a 5~Hz beam-trigger rate, would correspond to 13~TB/day. However, most beam spills do not produce an effective neutrino interaction in the detector. In order to minimise the number of events containing only cosmic rays, thus reducing the amount of data stored, the beam trigger is required to be in coincidence with a PMT trigger, implemented at software level. In this way, it is possible to achieve a higher level of sophistication and makes the Monte Carlo simulation of the trigger easier. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\linewidth]{figures/pmttrigger.pdf}
+    \caption{Software trigger efficiency as a function of the PE threshold, both for BNB (blue) and NuMI (red) beam-gate windows.}
+    \label{fig:pmttrigger}
+\end{figure}
+
+The software trigger requires 6.5 effective PE (photoelectrons) in the light collection system during the beam gate window, rejecting around 97\% of the beam spills. Figure \ref{fig:pmttrigger} shows the software trigger efficiency as a function of the PE threshold, both for BNB and NuMI beam-gate windows.
+
+Cosmic rays can still produce background events if they cross the TPC during the beam gate window, and produce enough scintillation light. In order to precisely assess this background, a trigger, called EXT, is fired at a 0.1~Hz rate orthogonally to the beam-gate windows, requiring 6.5 PE in a 1.6~\si{\micro}s time window (same as the BNB beam trigger). Events selected by this \emph{off-beam} trigger will then contain only cosmic rays.
+
+Figure \ref{fig:trigger} shows the time-distribution of \emph{optical flashes} recorded from events triggered during the BNB beam-gate window. An optical flash is a group of light pulses recorded by the PMTs within a 100~ns time difference. The excess of events corresponds to the 1.6~\si{\micro}s beam spill width. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\linewidth]{figures/trigger.pdf}
+    \caption{Distribution of optical flash times with respect to the trigger time for BNB triggered events, shown as a ratio to the expected cosmic rate from off-beam data, collected with the EXT trigger.}
+    \label{fig:trigger}
+\end{figure}
+
+The DAQ (data acquisition) system takes as input the triggered TPC and PMT readouts and translates the raw data format into ROOT files, one for each trigger. As of January 2019, MicroBooNE has collected $1.2\times10^{21}$ POT in BNB neutrino mode, which roughly corresponds to the amount of POT collected by MiniBooNE (which collected also $1.1\times10^{21}$ POT in antineutrino mode and $1.9\times10^{20}$ POT in beam dump mode).
+This document will focus on $5\times10^{19}$ POT collected with the BNB trigger between February 23 and May 22, 2016, which corresponds to MicroBooNE \emph{open data sample}.

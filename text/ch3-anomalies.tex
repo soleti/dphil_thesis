@@ -46,8 +46,15 @@ The KARMEN collaboration employed an experimental setup similar to LSND in order
 \section{The MiniBooNE experiment}\label{sec:miniboone}
 The MiniBooNE experiment was designed to definitely test the LSND result. It consists of a spherical detector filled with mineral oil and located 541 meters downstream of the Booster Neutrino Beam (BNB) production target at Fermilab. This beam can run both in neutrino mode, producing a mainly $\nu_{\mu}$ beam, and in antineutrino mode, producing a mainly $\bar{\nu}_{\mu}$ beam. The BNB neutrino flux is described in detail by the MiniBooNE collaboration in \cite{AguilarArevalo:2008yp} and will be summarised in Section \ref{sec:beam}. The beam energy is one order of magnitude larger than LSND (8 GeV vs. 800 MeV), but the two experiments have a comparable $L/E_{\nu}$ ratio.
 
-The detector is equipped with 1280 8-inch photomultiplier tubes (PMTs) and employs a separated outer veto region with an extra 240 PMTs for cosmic-ray rejection. Particles interacting in the mineral oil produce Cherenkov light, if above production threshold. The particle identification is based on the different light patterns that each particle produces in the detector: in particular, high-penetrating, heavy particles such as muons will produce sharp rings of Cherenkov light, while lighter particles like electrons and photons will produce fuzzier rings. Neutral pion will instead produce two fuzzy rings partially overlapping when it decays to two photons ($\pi^{0}\rightarrow 2\gamma$). 
-This technique introduces an irreducible degeneracy of the particles in the final state, since it is not possible to distinguish a single photon from an electron. 
+The detector is equipped with 1280 8-inch photomultiplier tubes (PMTs) and employs a separated outer veto region with an extra 240 PMTs for cosmic-ray rejection. Particles interacting in the mineral oil produce Cherenkov light, if above production threshold. The particle identification is based on the different light patterns that each particle produces in the detector: in particular, high-penetrating, heavy particles such as muons will produce sharp rings of Cherenkov light, while lighter particles like electrons and photons will produce fuzzier rings. Neutral pion will instead produce two fuzzy rings partially overlapping when it decays to two photons ($\pi^{0}\rightarrow \gamma\gamma$). 
+This technique introduces an irreducible degeneracy of the particles in the final state, since it is not possible to distinguish a single photon from an electron. Figure \ref{fig:miniboone_evd} shows three MiniBooNE event displays with a muon, an electron (or photon), and a $\pi^0\rightarrow\gamma\gamma$ decay in the final state.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\linewidth]{figures/miniboone_evd.png}
+    \caption{Schematics and event display for three topologies in the MiniBooNE detector.}
+    \label{fig:miniboone_evd}
+\end{figure}
 
 Energy calibration at MiniBooNE was performed with \emph{in situ} measurements. Cosmic rays, detected with an external hodoscope and stopping in the mineral oil, will produce the typical Michel electron spectrum peaked around $m_{\mu}/2 = 52.8$~MeV. The invariant mass of $\pi^0$ decays can also be reconstructed to measure the energy response around $135$~MeV. 
 
@@ -187,7 +194,6 @@ Several reactor neutrino experiments have measured a deficit of events in the an
     
     \begin{figure}[htbp]
       \centering
-      \captionsetup{margin=1.3cm}
       \includegraphics[width=0.75\linewidth]{figures/reactor.pdf}
       \caption{Fraction between observed and predicted $\bar{\nu}_{e}$ flux at several reactor neutrino experiments. Several models for sterile neutrino oscillation for different mass splitting terms and mixing angles are also shown.}
     \label{fig:reactor}
@@ -198,7 +204,6 @@ Several reactor neutrino experiments have measured a deficit of events in the an
     
     \begin{figure}[htbp]
       \centering
-      \captionsetup{margin=1.3cm}
       \includegraphics[width=0.75\linewidth]{figures/dayabay.pdf}
       \caption{Inverse $\beta$-decay yield per fission, $\sigma_f$, versus effective $^{239}$Pu (lower axis) or $^{235}$U (upper axis) fission fraction. Adapted from \cite{An:2017osx}.}
     \label{fig:dayabay}
@@ -206,7 +211,7 @@ Several reactor neutrino experiments have measured a deficit of events in the an
     
     A new generation of reactor neutrino experiments should definitely solve the reactor anomaly. In particular, experiments like PROSPECT \cite{Ashenfelter:2015uxt} and SoLi$\partial$ \cite{Abreu:2017bpe}, will be placed very close to small fission cores and they will be sensitive to eventual short-baseline sterile neutrino oscillations.
 
-\section{Constraints on the $(3+1)$ model}
+\section{Constraints on the (3+1) model}
 
 In the presence of a sterile neutrino, its mixing with the active flavours would affect the $\nu_e$ appearance, the $\nu_e$ disappearance, and the $\nu_{\mu}$ disappearance probabilities. However, the combined analysis of MINOS, Daya Bay, and Bugey-3 $\nu_{\mu}$ disappearance data \cite{Adamson:2016jku} also excludes the best-fit point. A recent result from IceCube \cite{TheIceCube:2016oqi} further restricts the available parameter space, leaving little room for the $(3+1)$ hypothesis. 
 The tension emerges both by comparing appearance and disappearance experiment (Figure \ref{fig:disapp}) and by comparing $\nu_e$ data ($\nu_e\rightarrow\nu_e$, $\nu_e\rightarrow\nu_{\mu}$) and $\nu_{\mu}$ data ($\nu_{\mu}\rightarrow\nu_{\mu}$) (Figure \ref{fig:nue_vs_numu}) in a global analysis \cite{Dentler:2018sju}.
@@ -228,7 +233,9 @@ The tension emerges both by comparing appearance and disappearance experiment (F
 \end{figure}
 
 
-A proposed solution to these tensions is to introduce more than one sterile neutrinos. As such, other explanations have been proposed for the excess: $3+N$ sterile neutrinos with $N>1$ \cite{Conrad:2012qt}, CPT violation \cite{Kostelecky:2011gq}, and resonant neutrino oscillations \cite{Asaadi:2017bhx} among the others. The explanation of the excess with the presence of a new particle decaying or scattering in the detector is severely constrained by kinematic arguments \cite{Jordan:2018qiy}.
+Other explanations have then been proposed for the excess: $3+N$ sterile neutrinos with $N>1$ \cite{Conrad:2012qt}, CPT violation \cite{Kostelecky:2011gq}, and resonant neutrino oscillations \cite{Asaadi:2017bhx} among the others. The explanation of the excess with the presence of a new particle decaying or scattering in the detector is severely constrained by kinematic arguments \cite{Jordan:2018qiy}.
+
+\vspace{1em}
 
 After the definitive confirmation of neutrino oscillations, achieved by employing different detection techniques, a series of new experiments collected data not fully compatible with a three-flavour scenario. In particular, a combined analysis of the LSND and MiniBooNE data gives a $6.0\sigma$ significance for an excess of electron neutrinos. This result is however in tension with other experiments if interpreted as the oscillation into a sterile neutrino state. 
 

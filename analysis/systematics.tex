@@ -1,7 +1,7 @@
 \section{Systematic uncertainties}\label{sec:systematics}
 In this analysis, the systematic uncertainties of the quantities described in Section \ref{sec:methodology} can be divided into three main categories: 
 \begin{description}
-\item[Neutrino generator.] Our Monte Carlo simulation relies on the neutrino generator provided by the GENIE collaboration \cite{genie}. This generator can be configured to use different physics models, which can affect the relative abundance and the energy of the particles in the final state.
+\item[Neutrino generator.] Our Monte Carlo simulation relies on the neutrino generator provided by the GENIE collaboration \cite{Andreopoulos:2009rq}. This generator can be configured to use different physics models, which can affect the relative abundance and the energy of the particles in the final state.
 \item[Flux simulation.] The amount of $\nu_{\mu}$ and $\nu_{e}$ reaching the MicroBooNE detector is evaluated by an independent simulation of the neutrino flux of the BNB, used also in the MiniBooNE experiment. This simulation is affected by some uncertainties that need to be taken into account.
 \item[Detector simulation.] The detector response (noise removal, signal processing, hit reconstruction) must be carefully simulated in order to achieve a good agreement between data and Monte Carlo in the reconstructed quantities used for background rejection. 
 \end{description}
@@ -26,7 +26,7 @@ The systematic uncertainty for the bin $i$, shown in the plots of Section \ref{s
 \end{equation}
 
 \subsection{GENIE systematic uncertainties}
-In order to estimate the GENIE systematic uncertainties, the standard GENIE parameters described in \cite{genie} are simultaneously varied within their uncertainties in $N_{u} = 100$ simulated universes. To each universe it will correspond a \emph{weight}, which is applied when filling the histograms of the reconstructed quantities.
+In order to estimate the GENIE systematic uncertainties, the standard GENIE parameters described in \cite{Andreopoulos:2009rq} are simultaneously varied within their uncertainties in $N_{u} = 100$ simulated universes. To each universe it will correspond a \emph{weight}, which is applied when filling the histograms of the reconstructed quantities.
 
 Figure \ref{fig:eff_genie} shows the central value of the $\nu_{e}$ CC0$\pi$-Np selection efficiency and the corresponding value for each GENIE variation universe. The variation in this case is expected to be small, since we are essentially dividing two distributions with the same weight. Figure \ref{fig:reco_genie} and Figure \ref{fig:frac_genie} show that the variations in the reconstructed energy spectrum are larger at lower energies, which is the energy region most affected by the GENIE parameters' uncertainties. The GENIE-related uncertainty in the number of selected events from the BNB+cosmic sample is 7.6\%.
 
@@ -51,10 +51,10 @@ Figure \ref{fig:eff_genie} shows the central value of the $\nu_{e}$ CC0$\pi$-Np 
 
 
 \subsection{Flux systematic uncertainties}
-MicroBooNE is using the same simulation of the BNB flux of the MiniBooNE collaboration. The systematic uncertainties of this simulation, thoroughly described in \cite{miniboone_flux}, can be divided into five main categories:
+MicroBooNE is using the same simulation of the BNB flux of the MiniBooNE collaboration. The systematic uncertainties of this simulation, thoroughly described in \cite{AguilarArevalo:2008yp}, can be divided into five main categories:
 \begin{description}
 \item[Proton delivery:] the numbers of protons hitting the target is affected by the uncertainties in the proton beam optics, which in turns affects the amount of neutrinos in the beam.
-\item[Particle production]. The rate and spectrum of secondary particles in the interaction between the protons and the beryllium (the target material) affects the rate and spectrum of the neutrinos. This is main uncertainty in the flux simulation \cite{miniboone_flux}.
+\item[Particle production]. The rate and spectrum of secondary particles in the interaction between the protons and the beryllium (the target material) affects the rate and spectrum of the neutrinos. This is main uncertainty in the flux simulation \cite{AguilarArevalo:2008yp}.
 \item[Hadronic interactions:] the rate and shape of the flux is affected by the rate of hadronic interactions and the hadronic survival probability both in the target and in the horn.
 \item[Horn magnetic field:] uncertainties in the distribution of the magnetic field affect the spectrum of the neutrino flux.
 \item[Beamline geometry:] misalignments or displacements of the beamline with respect to the detector can affect the relative neutrino flavour abundances and the flux rate.
@@ -62,7 +62,7 @@ MicroBooNE is using the same simulation of the BNB flux of the MiniBooNE collabo
 
 In this analysis, the systematic uncertainties related to the flux simulation are evaluated by generating 100 universes, where the flux parameters are varied within their uncertainties. 
 
-Figure \ref{fig:eff_flux} shows the central value of the $\nu_{e}$ CC0$\pi$-Np selection efficiency and the corresponding value for each flux variation universe. Also here, the variation in the efficiency is small, as expected. Figure \ref{fig:reco_flux} shows a bias of the variation samples with respect to the nominal simulation, which does not correspond to the average of the universes. This is caused by an inconsistency of the pion production cross-section used in the generation of the universes \cite{ubxsec, harp}. In this case, the nominal value is considered as the central value in the covariance matrix definition \eqref{eq:covariance}. The flux-related uncertainty in the number of selected events from the BNB+cosmic sample is 7.8\%.
+Figure \ref{fig:eff_flux} shows the central value of the $\nu_{e}$ CC0$\pi$-Np selection efficiency and the corresponding value for each flux variation universe. Also here, the variation in the efficiency is small, as expected. Figure \ref{fig:reco_flux} shows a bias of the variation samples with respect to the nominal simulation, which does not correspond to the average of the universes. This is caused by an inconsistency of the pion production cross-section used in the generation of the universes \cite{ubxsec}. In this case, the nominal value is considered as the central value in the covariance matrix definition \eqref{eq:covariance}. The flux-related uncertainty in the number of selected events from the BNB+cosmic sample is 7.8\%.
 
 \begin{figure}[htbp]
   \begin{center}
@@ -105,6 +105,7 @@ The uncertainty related to the detector systematic effects in the number of sele
 Table \ref{tab:syst} shows the uncertainty in the number of selected events from in the BNB+cosmic sample for the GENIE, flux, and detector systematic variations. The total uncertainty, obtained with eq. \ref{eq:cov_tot}, is 21.9~\%. In the POT-normalized figures of Section \ref{sec:methodology}, the uncertainty on the dirt and the $\nu_{e}$ CC$0\pi$-Np samples is assumed to be the same one of the BNB+cosmic sample. Given the small contribution of these samples to the number of selected events (2.5\% of the total), this approximation is considered good enough at this stage. The statistical uncertainty of the data off-beam sample is 1.0\%. 
 
 \begin{table}[htbp]
+\footnotesize{
    \centering
    \begin{tabular}{p{0.23\linewidth}p{0.33\linewidth}p{0.21\linewidth}p{0.11\linewidth}}
      \toprule
@@ -119,7 +120,7 @@ Table \ref{tab:syst} shows the uncertainty in the number of selected events from
      Saturated channels & Channels that tends to saturate are turned off in the simulation. & Alternate simulation & 4.2~\%\\
      Misconfigured channels & Channels with misconfigured ASIC gains and shaping are turned off in the simulation. & Alternate simulation & 4.1~\%\\
      Electron lifetime & Lifetime of the electron in the detector is reduced to 10~ms. & Alternate model & 3.9~\%\\
-     Recombination model & The Birks model of recombination \cite{birks} is used instead of the modified box model \cite{boxmodel}. & Alternate model & 4.0~\%\\
+     Recombination model & The Birks model of recombination \cite{Amoruso:2004dy} is used instead of the modified box model \cite{Acciarri:2013met}. & Alternate model & 4.0~\%\\
      Longitudinal diffusion & The longitude diffusion is varied within the uncertainty. & $\pm1\sigma$ variation & 4.5~\%\\
      Transverse diffusion & The transverse diffusion is varied within the uncertainty. & $\pm1\sigma$ variation & 4.8~\%\\
      Wire noise & The amount of noise on the wires is varied within the uncertainty. & $\pm1\sigma$ variation & 3.7~\%\\
@@ -130,4 +131,5 @@ Table \ref{tab:syst} shows the uncertainty in the number of selected events from
      \bottomrule
    \end{tabular}
    \caption{Summary of the systematic uncertainties in the number of selected events in the BNB+cosmic sample.}\label{tab:syst}
+}
 \end{table}
