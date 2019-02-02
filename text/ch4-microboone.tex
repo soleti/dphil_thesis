@@ -1,4 +1,4 @@
-\chapter{The MicroBooNE experiment}
+\chapter{\label{ch:4-microboone}The MicroBooNE experiment}
 
 \minitoc
 
@@ -19,10 +19,11 @@ MicroBooNE is then performing two parallel analyses, one assuming that the exces
 
 \subsubsection{Cross-section measurements}
 MicroBooNE will also provide precise neutrino-nucleon cross-section measurements. The neutrino interactions allowed in the energy range of the BNB span from quasi-elastic to deep inelastic scattering, making it possible to explore several nuclear effects and complex topologies.
-In particular, it is possible to measure the pion production in neutral current (NC) and charged current (CC) interactions. MicroBooNE will be able to solve the tension between the large NC $\pi^0$ component reported by MiniBooNE and the small CC $\pi^+$ component reported by SciBooNE \cite{Hiraide:2008eu} and K2K \cite{Tanaka:2006zm}. A precise measurement of the photon production will also help to constrain the $\Delta\rightarrow N\gamma$ background, important for the MiniBooNE low-energy excess analysis. 
+In particular, it is possible to measure the pion production in neutral current (NC) and charged current (CC) interactions. %MicroBooNE will be able to solve the tension between the large NC $\pi^0$ component reported by MiniBooNE and the small CC $\pi^+$ component reported by SciBooNE \cite{Hiraide:2008eu} and K2K \cite{Tanaka:2006zm}. 
+A precise measurement of the photon production will also help to constrain the $\Delta\rightarrow N\gamma$ background, important for the MiniBooNE low-energy excess analysis. 
 
 \subsubsection{Supernova and exotic searches}
-The MicroBooNE detector is located just below the surface level and is constantly bombarded by cosmic rays, which interact in the liquid argon leaving ionisation trails. This background and the small active volume of the detector (compared with large-scale water Cherenkov experiments) limits the capabilities to certain physics analyses, such as proton decay searches. However, the kaons produced in the MicroBooNE experiment are in the same energy range of the ones produced in the eventual proton decay channel:
+The MicroBooNE detector is located just below the surface level and is constantly bombarded by cosmic rays, which interact in the liquid argon leaving ionisation trails. This background, together with the small active volume of the detector (compared with large-scale water Cherenkov experiments) limits the capabilities to certain physics analyses, such as proton decay searches. However, the kaons produced in the MicroBooNE experiment are in the same energy range of the ones produced in the eventual proton decay channel:
 \begin{equation}
     p\to K^+\nu.
 \end{equation}
@@ -36,12 +37,12 @@ MicroBooNE is currently the largest active neutrino LArTPC in the world, which m
 
 The largest next-generation neutrino experiment will be DUNE (Deep Underground Neutrino Experiment), whose current proposed design includes a 20~kton LArTPC, two orders of magnitude larger than MicroBooNE \cite{Acciarri:2016ooe}. This ambitious program requires a very good understanding of the technology: in particular, the effect of high electric field on long distances, of the ions recombination in the LAr, and of the ions absorption by the impurities must be precisely quantified. 
 MicroBooNE was also the first large-scale LArTPC to have part of the electronics chain operating directly in the liquid argon (\emph{cold electronics}), allowing for higher signal-to-noise ratio. An overview of the MicroBooNE detector will be provided in Section \ref{sec:detector}.
-A small-scale prototype of the DUNE detector, ProtoDUNE, was recently built and commissioned at CERN, with an active mass of 450~ton. The ProtoDUNE detector, however, will run on a test-beam line and will not detect neutrino interactions.
+A small-scale prototype of the DUNE detector, ProtoDUNE, was recently built and commissioned at CERN, with an active mass of 450~ton. The ProtoDUNE detector, however, runs on a test-beam line and will not detect neutrino interactions.
 
 \section{The LArTPC detection technology}
 The concept of a Liquid Argon Time Projection Chamber was first laid out by Willis and Radeka in 1974 \cite{Willis:1974gi} and then adapted by Rubbia in 1977 as a detector for neutrino interactions \cite{Rubbia:1977zz}. 
 
-Generally speaking, a Time Projection Chamber is a volume with a constant electric field applied between two of its sides, the anode (the positive plane) and the cathode (the negative plane). It is possible to fill the volume with a non-conductive material such as inert gases or liquids. A magnetic field can also be applied to measure the charge and the momentum of the particle interacting in the TPC. 
+Generally speaking, a Time Projection Chamber is a volume with a constant electric field applied between two of its sides, the anode (the positive plane) and the cathode (the negative plane). It is possible to fill the volume with a non-conductive material such as inert gases or liquids. A magnetic field can also be applied to measure the charge and the momentum of the particle interacting in the TPC (it is not the case of MicroBooNE). 
 
 A charged particle traversing the medium inside the TPC will ionise the material: a trail of ionisation electrons will be produced in correspondence with the path of the charged particle. The constant electric field will transport the electrons towards the anode with a constant drift velocity, preserving their topological and calorimetric information and appearing as a projection of the particle trajectory on the anode plane. The distance between the anode and the interaction point will be given by the time the ionisation electron takes to reach the anode.
 
@@ -49,7 +50,7 @@ As the name says, a LArTPC is a TPC filled with liquid argon. This material prov
 
 However, the relatively slow drift velocity of the electrons in the liquid argon causes the typical read-out of a large-scale LArTPC to be in the order of the milliseconds (which corresponds to the time a ionisation electron takes to travel from the cathode to the anode), making this technology sub-optimal for high-rate experiments. 
 
-Another fundamental property of the argon, which makes it particularly suitable for high-energy physics experiments, is that it produces scintillation light when excited, being at the same transparent to the wavelength of this scintillation light. In this way, a detector on surface such as MicroBooNE can collect the light (usually with photomultipliers placed inside the LAr) and trigger the TPC readout in coincidence with the neutrino beam, suppressing the background caused by cosmic rays outside the beam time window. 
+Another fundamental property of the argon, which makes it particularly suitable for high-energy physics experiments, is that it produces scintillation light when excited, being at the same time transparent to the wavelength of this scintillation light. In this way, a detector on surface such as MicroBooNE can collect the light (in our case with photomultipliers placed inside the LAr) and trigger the TPC readout in coincidence with the neutrino beam, suppressing the background caused by cosmic rays outside the beam time window. 
 
 A LArTPC can achieve a very high spatial resolution, similar to the one of the bubble chambers, allowing at the same time for the digitisation of the signal. For this reason, it has often been called a \emph{fully electronic bubble chamber} \cite{Rubbia:2011zza}. 
 
@@ -58,7 +59,7 @@ The scintillation light is produced when an atom of argon in the ground state sh
 
 The liquid argon has also a high light yield, comparable to the one of scintillating crystals, with $4\times10^4$~$\gamma$/MeV. The amount of light, however, can be quenched by the presence of nitrogen impurities in the argon, which, in the case of MicroBooNE, are kept below the 2~ppm level.
 
-\subsubsection{Ionisation electrons}
+\subsubsection{Ionisation electrons}\label{sec:ionisation}
 The work function for ionising an argon atom is $W_{\mathrm{ion}} = 23.6$~eV, which means that a charged particle in the MeV range will leave a ionisation trail of tens of thousands of electrons. These free electrons will travel towards the anode with a constant drift velocity, but during their path they can undergo several attenuation processes, which decrease the actual number of electrons reaching the wire plane. 
 
 In particular, the electrons can recombine with ionised Ar$^+$ atoms: this recombination effect is usually the main contributor to the signal attenuation. This effect depends on the $dE/dx$ of the particle, on the electric field in the liquid argon, and by the angle of the ionisation particle with respect to the electric field. The ICARUS experiment measured the dependence of the recombination as a function of the $dE/dx$ and the applied electric field \cite{Amoruso:2004dy}, as shown in Figure \ref{fig:recombination}. The ArgoNeuT experiment found the recombination effect in a LArTPC to be well described both by the Birks' model \cite{Birks:1951boa} and by a modified version of the Box model \cite{Thomas:1987zz}. 
@@ -138,10 +139,10 @@ The muon neutrinos come from the decay of the pions (and in turns of the muons) 
 \end{figure}
 
 
-The pulsed structure of the neutrino beam is of fundamental importance for on-surface experiments like MiniBooNE and MicroBooNE. In order to suppress non-beam related backgrounds (such as cosmic rays), the detector is triggered only in coincidence with the beam-gate window. In this way, MiniBooNE achieved a cosmic-ray background rejection of 99.987\% \cite{AguilarArevalo:2008qa}. For a LArTPC such as MicroBooNE the cosmic-ray rejection is more challenging, since the data acquisition window must be at least as long as the drift time window (so in the order of the milliseconds). The techniques employed to reject cosmic rays will be described in detail in Section \ref{sec:methodology}.
+The pulsed structure of the neutrino beam is of fundamental importance for on-surface experiments like MiniBooNE and MicroBooNE. In order to suppress non-beam related backgrounds (such as cosmic rays), the detector is triggered only in coincidence with the beam-gate window. In this way, MiniBooNE achieved a cosmic-ray background rejection of 99.987\% \cite{AguilarArevalo:2008qa}. For a LArTPC such as MicroBooNE the cosmic-ray rejection is more challenging, since the data acquisition window must be at least as long as the drift time window (so in the order of the milliseconds). The techniques employed to reject cosmic rays will be described in Section \ref{sec:methodology}.
  
-\subsection{Neutrino flux simulation}
-The MiniBooNE collaboration developed a detailed simulation of the BNB flux, described in detail in \cite{AguilarArevalo:2008yp}. 
+\subsection{Neutrino flux simulation}\label{sec:flux}
+The MiniBooNE collaboration developed a detailed simulation of the BNB flux, described in \cite{AguilarArevalo:2008yp}. 
 
 \begin{table}[htbp]
    \centering
@@ -176,7 +177,7 @@ Here, we will enumerate the main stages of the simulation, in order to clarify t
 Table \ref{tab:flux_syst} shows the uncertainties on the various components of the BNB flux for the MicroBooNE experiment. These uncertainties will be reflected in the flux systematic uncertainties of the analysis described in Section \ref{sec:systematics}.
 
 \section{The MicroBooNE detector}\label{sec:detector}
-The MicroBooNE detector consists of a rectangular LArTPC with dimensions of $256~$cm (width) $\times~233~$cm (height) $\times~1037~$cm (length) placed in a cylindrical cryostat and on-axis with the BNB. The mass of liquid argon in the active volume, defined as the portion of the argon encompassed by the TPC, is 89~t. 
+The MicroBooNE detector consists of a rectangular LArTPC with dimensions of $256~$cm (width) $\times~233~$cm (height) $\times~1037~$cm (length) placed in a cylindrical cryostat. It sits on-axis with the BNB, 470~m far from the neutrino beam target. The mass of liquid argon in the active volume, defined as the portion of the argon encompassed by the TPC, is 89~t. 
 
 \begin{figure}[htbp]
     \centering
@@ -312,4 +313,4 @@ Figure \ref{fig:trigger} shows the time-distribution of \emph{optical flashes} r
 \end{figure}
 
 The DAQ (data acquisition) system takes as input the triggered TPC and PMT readouts and translates the raw data format into ROOT files, one for each trigger. As of January 2019, MicroBooNE has collected $1.2\times10^{21}$ POT in BNB neutrino mode, which roughly corresponds to the amount of POT collected by MiniBooNE (which collected also $1.1\times10^{21}$ POT in antineutrino mode and $1.9\times10^{20}$ POT in beam dump mode).
-This document will focus on $5\times10^{19}$ POT collected with the BNB trigger between February 23 and May 22, 2016, which corresponds to MicroBooNE \emph{open data sample}.
+This document will focus on $4.3\times10^{19}$ POT collected with the BNB trigger between February 23 and May 22, 2016, which corresponds to MicroBooNE \emph{open data sample}. 

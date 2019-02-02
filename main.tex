@@ -156,8 +156,7 @@
 
 
 %%%%% ABSTRACT SEPARATE
-% This is used to create the separate, one-page abstract that you are required to hand into the Exam
-% Schools.  You can comment it out to generate a PDF for printing or whatnot.
+% This is used to create the separate, one-page abstract that you are required to hand into the Exam Schools.  You can comment it out to generate a PDF for printing or whatnot.
 \begin{abstractseparate}
 	\input{text/abstract} % Create an abstract.tex file in the 'text' folder for your abstract.
 \end{abstractseparate}
@@ -170,6 +169,9 @@
 % Title page is created here
 \maketitle
 
+\begin{originality}
+ 	\input{text/originality}
+\end{originality}
 %%%%% DEDICATION -- If you'd like one, un-comment the following.
 %\begin{dedication}
 %This thesis is dedicated to\\
@@ -206,8 +208,8 @@
 % \mtcaddchapter is needed when adding a non-chapter (but chapter-like) entity to avoid confusing minitoc
 
 % Uncomment to generate a list of tables:
-%\listoftables
-%	\mtcaddchapter
+\listoftables
+	\mtcaddchapter
 
 %%%%% LIST OF ABBREVIATIONS
 % This example includes a list of abbreviations.  Look at text/abbreviations.tex to see how that file is
@@ -228,6 +230,7 @@
 \include{text/ch4-microboone}
 \include{text/ch5-eventreco}
 \include{text/ch6-analysis}
+\include{text/ch7-conclusions}
 
 
 

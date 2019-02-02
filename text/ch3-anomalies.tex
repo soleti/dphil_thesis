@@ -1,12 +1,12 @@
-\chapter{The LSND and MiniBooNE anomalies}
+\chapter{\label{ch:3-anomalies}The LSND and MiniBooNE anomalies}
 
 \minitoc
 
 %This chapter will describe experimental apparatus and the results of the LSND and MiniBooNE experiments.
-The LSND experiment observed an excess of $\bar{\nu}_{e}$ in a primarily $\bar{\nu}_{\mu}$ beam in 2001. The MiniBooNE experiment, built to confirm or rule out the anomaly, observed a significant excess of $\nu_{e}$-like ($\bar{\nu}_{e}$-like) events in a primarily $\nu_{\mu}$ ($\bar{\nu}_{\mu}$) beam. Several other neutrino experiments have shown results not fully compatible with the three-flavour scenario and they will be briefly described.  A discussion of the possible physics explanation for the anomalies will also be provided.
+The LSND experiment observed an excess of $\bar{\nu}_{e}$ in a primarily $\bar{\nu}_{\mu}$ beam in 2001. The MiniBooNE experiment, built to confirm or rule out the anomaly, observed a significant excess of $\nu_{e}$-like ($\bar{\nu}_{e}$-like) events in a primarily $\nu_{\mu}$ ($\bar{\nu}_{\mu}$) beam. Several other neutrino experiments have shown results not fully compatible with the three-flavour scenario and they will be briefly described.  A summary of the global picture of the short-baseline anomalies will also be provided.
 
 \section{The LSND experiment}
-The Liquid Scintillator Neutrino Detector (LSND) was an experiment at the Los Alamos National Laboratory which aimed to detect $\bar{\nu}_e$ interactions in a mainly $\bar{\nu}_{\mu}$ beam. The neutrino beam was produced by firing a 800 MeV proton beam into a target, producing charged pions, which were stopped in a beam dump. The $\pi^-$ part was electromagnetically captured by the nucleus, while the $\pi^+$ component initiated the decay chain:
+The Liquid Scintillator Neutrino Detector (LSND) was an experiment at the Los Alamos National Laboratory which aimed to detect $\bar{\nu}_e$ interactions in a mainly $\bar{\nu}_{\mu}$ beam. The neutrino beam was produced by firing an 800 MeV proton beam into a target, producing charged pions, which were stopped in a beam dump. The $\pi^-$ part was electromagnetically captured by the nucleus, while the $\pi^+$ component initiated the decay chain:
 \begin{align}
     \pi^+ \rightarrow & \mu^+\nu_{\mu}\\
     & \rotatebox[origin=c]{180}{$\Lsh$}	 \mu^{+} \rightarrow e^+\bar{\nu}_{\mu}\nu_{e}.
@@ -41,13 +41,13 @@ LSND found an excess of $\bar{\nu}_e$ interactions in the DAR $\bar{\nu}_{\mu}$ 
 \end{figure}
 
 Figure \ref{fig:lsnd_space} shows the regions in the $(\sin^2 2\theta, \Delta m^2)$ parameter space allowed by the LSND data at 90\%~CL and 99\%~CL. %It is possible to identify two mass-splitting terms and three mixing angles, compatible with a scenario of 3 neutrino flavours, while the LSND allowed region is clearly in a completely different region of the parameter space. 
-The KARMEN collaboration employed an experimental setup similar to LSND in order to explore the same region, but it found no significant excess and ruled out a large subset of the LSND parameter space \cite{Eitel:2000by}. 
+The KARMEN experiment at the Rutherford Appleton Laboratory employed a setup similar to LSND in order to explore the same region, but it found no significant excess and ruled out a large subset of the LSND parameter space \cite{Eitel:2000by}. 
 
 \section{The MiniBooNE experiment}\label{sec:miniboone}
 The MiniBooNE experiment was designed to definitely test the LSND result. It consists of a spherical detector filled with mineral oil and located 541 meters downstream of the Booster Neutrino Beam (BNB) production target at Fermilab. This beam can run both in neutrino mode, producing a mainly $\nu_{\mu}$ beam, and in antineutrino mode, producing a mainly $\bar{\nu}_{\mu}$ beam. The BNB neutrino flux is described in detail by the MiniBooNE collaboration in \cite{AguilarArevalo:2008yp} and will be summarised in Section \ref{sec:beam}. The beam energy is one order of magnitude larger than LSND (8 GeV vs. 800 MeV), but the two experiments have a comparable $L/E_{\nu}$ ratio.
 
 The detector is equipped with 1280 8-inch photomultiplier tubes (PMTs) and employs a separated outer veto region with an extra 240 PMTs for cosmic-ray rejection. Particles interacting in the mineral oil produce Cherenkov light, if above production threshold. The particle identification is based on the different light patterns that each particle produces in the detector: in particular, high-penetrating, heavy particles such as muons will produce sharp rings of Cherenkov light, while lighter particles like electrons and photons will produce fuzzier rings. Neutral pion will instead produce two fuzzy rings partially overlapping when it decays to two photons ($\pi^{0}\rightarrow \gamma\gamma$). 
-This technique introduces an irreducible degeneracy of the particles in the final state, since it is not possible to distinguish a single photon from an electron. Figure \ref{fig:miniboone_evd} shows three MiniBooNE event displays with a muon, an electron (or photon), and a $\pi^0\rightarrow\gamma\gamma$ decay in the final state.
+This technique introduces an irreducible degeneracy in the final-state particles, since it is not possible to distinguish a single photon from an electron. Figure \ref{fig:miniboone_evd} shows three MiniBooNE event displays with a muon, an electron (or photon), and a $\pi^0\rightarrow\gamma\gamma$ decay in the final state.
 
 \begin{figure}[htbp]
     \centering
@@ -56,13 +56,13 @@ This technique introduces an irreducible degeneracy of the particles in the fina
     \label{fig:miniboone_evd}
 \end{figure}
 
-Energy calibration at MiniBooNE was performed with \emph{in situ} measurements. Cosmic rays, detected with an external hodoscope and stopping in the mineral oil, will produce the typical Michel electron spectrum peaked around $m_{\mu}/2 = 52.8$~MeV. The invariant mass of $\pi^0$ decays can also be reconstructed to measure the energy response around $135$~MeV. 
+Energy calibration at MiniBooNE was performed with \emph{in situ} measurements. Cosmic muons, detected with an external hodoscope and stopping in the mineral oil, produce the typical Michel electron spectrum peaked at $m_{\mu}/2 = 52.8$~MeV. The invariant mass of $\pi^0$ decays can also be reconstructed to measure the energy response around $135$~MeV. 
 
 The oscillation analysis of the MiniBooNE experiment looked for $\nu_e$ charged-current quasi-elastic (CCQE) interactions, where the $\nu_{e}$ exchanges a charged $W$ boson with a neutron in the nucleus, producing an outgoing electron and a proton. This is the dominant interaction type in the sub-GeV region, as shown in Figure \ref{fig:ccqecross}.
 
-However, as outlined in Section \ref{sec:modes}, FSI can alter the particles detected by the apparatus. In particular, CC1$\pi$ events with pion absorption represent a source of uncertainty for a CCQE analysis, since they share the same particles in the final state.
+However, as outlined in Section \ref{sec:modes}, FSI can alter the particles produced in the interaction and then detected by the apparatus. In particular, CC1$\pi$ events with pion absorption represent a source of uncertainty for a CCQE analysis, since they share the same particles in the final state.
 
-In MiniBooNE, the selected events are called \emph{CCQE-like}, since this definition relies only on the particles in the final state \cite{Katori:2013nca}. 
+For this reason, in MiniBooNE, the selected events are called \emph{CCQE-like}, since this definition relies only on the particles in the final state \cite{Katori:2013nca}. 
 
 The energy of the CCQE-like interaction $E_{\nu}^{QE}$ is determined by the electron scattering angle $\theta$ and energy $E_e$, assuming the nucleon at rest, as:
 \begin{equation}
@@ -89,7 +89,7 @@ The presence of events with pion absorption or where the pion escapes the detect
     \label{fig:miniboone_lsnd}
     \end{center}
   \end{subfigure}
-  \caption{The MiniBooNE neutrino mode corresponding to the total $12.84\times10^{20}$ POT data, for $\nu_e$ CCQE data (points with statistical errors) and background (histogram with systematic errors). The dashed line represent the two-neutrino model best fit (left). The appearance probability is in agreement with LSND data (right). Adapted from \cite{Aguilar-Arevalo:2018gpe}.}
+  \caption{The MiniBooNE neutrino mode corresponding to the total $12.84\times10^{20}$ POT data, for $\nu_e$ CCQE data (points with statistical errors) and background (histogram with systematic errors). The dashed line represent the two-neutrino model best fit (left). The appearance probability as a function of the $L/E$ ratio is in agreement with LSND data (right). Adapted from \cite{Aguilar-Arevalo:2018gpe}.}
 \end{figure}
 
 
@@ -101,7 +101,7 @@ The $\nu_{e}$ oscillation was measured with a combined fit of the $\nu_{e}$ and 
     & \rotatebox[origin=c]{180}{$\Lsh$}	 \mu^{+} \rightarrow e^+\bar{\nu}_{\mu}\nu_{e}.
 \end{align}
 
-The excess of data events is in the sub-GeV energy region and consistent in energy and magnitude with the LSND result. The two excess combined gives a significance of $6.0\sigma$. Figure \ref{fig:miniboone_lsnd} shows the agreement of the appearance probability as a function of the $L/E$ distribution for LSND and MiniBooNE. 
+The excess of data events is in the sub-GeV energy region and consistent in energy and magnitude with the LSND result. The two excess combined give a significance of $6.0\sigma$. Figure \ref{fig:miniboone_lsnd} shows the agreement of the appearance probability as a function of the $L/E$ distribution for LSND and MiniBooNE. 
 
 \subsection*{MiniBooNE backgrounds}
 The background events of the MiniBooNE experiment can be divided into four main categories:
@@ -155,14 +155,14 @@ The global fit of neutrino oscillations experiments in the 2-neutrino approximat
     \label{fig:globalfit}
 \end{figure}
 
-However, LSND and MiniBooNE results do not agree with the allowed regions, since their mass splitting term is much larger ($\Delta m^2 \sim 1~$eV$^2$). Moreover, they are not the only two experiments which have observed anomalies in the neutrino sector. Several other experiments obtained results not completely in agreement with the theoretical expectations. In particular, it is possible to identify two categories of anomalies, classified according to the experimental technique employed: inverse beta decay from solar neutrinos of gallium into germanium (\emph{radiochemical experiments}) and inverse beta decay from reactor neutrinos (\emph{reactor experiments}).
+However, LSND and MiniBooNE results do not agree with the allowed regions, since their mass splitting term is much larger ($\Delta m^2 \sim 1~$eV$^2$). Moreover, they are not the only two experiments to have observed anomalies in the neutrino sector. Several other experiments obtained results not completely in agreement with the theoretical expectations. In particular, it is possible to identify two categories of anomalies, classified according to the experimental technique employed: inverse beta decay from solar neutrinos of gallium into germanium (\emph{radiochemical experiments}) and inverse beta decay from reactor neutrinos (\emph{reactor experiments}).
 
 \subsection{Radiochemical experiments}
-    The GALLEX experiment at Gran Sasso and the SAGE experiment at Baksan employed a detection technique similar to the one of Ray Davis experiment at Homestake. In this case, solar neutrino interactions were detected through inverse $\beta$ decay of $^{71}$Ga atoms into $^{71}$Ge (instead of $^{37}$Cl into $^{37}$Ar):
+    The GALLEX experiment at Gran Sasso and the SAGE experiment at Baksan employed a detection technique similar to the one of Ray Davis experiment at Homestake. In this case, solar neutrino interactions were detected through inverse $\beta$ decay of $^{71}$Ga atoms into $^{71}$Ge (instead of $^{37}$Cl into $^{37}$Ar at Homestake):
 \begin{equation}
     \nu_e + ^{71}\mathrm{Ga} \rightarrow e^- + ^{71}\mathrm{Ge}.
 \end{equation}
-The energy threshold for this reaction is 233~keV, which allows to observe the neutrino interactions produced in the solar $pp$ chain reaction (see Figure \ref{fig:solar}). Both experiments employed intense radioactive materials for calibration. GALLEX used a $^{51}$Cr source, while SAGE used $^{51}$Cr and $^{37}$Ar. These two sources decay via electron capture, emitting an electron neutrino:
+The energy threshold for this reaction is 233~keV, which allows to observe the neutrino interactions produced in the solar $pp$ chain reaction (see Figure \ref{fig:solar}). Both experiments employed intense radioactive sources for calibration. GALLEX used a $^{51}$Cr source, while SAGE used $^{51}$Cr and $^{37}$Ar. These two sources decay via electron capture, emitting an electron neutrino:
 \begin{equation} 
     ^{A}_{Z}\mathrm{X} + e^{-} \rightarrow ^{A}_{Z-1}\mathrm{Y} + \nu_{e}.
 \end{equation}
@@ -214,7 +214,7 @@ Several reactor neutrino experiments have measured a deficit of events in the an
 \section{Constraints on the (3+1) model}
 
 In the presence of a sterile neutrino, its mixing with the active flavours would affect the $\nu_e$ appearance, the $\nu_e$ disappearance, and the $\nu_{\mu}$ disappearance probabilities. However, the combined analysis of MINOS, Daya Bay, and Bugey-3 $\nu_{\mu}$ disappearance data \cite{Adamson:2016jku} also excludes the best-fit point. A recent result from IceCube \cite{TheIceCube:2016oqi} further restricts the available parameter space, leaving little room for the $(3+1)$ hypothesis. 
-The tension emerges both by comparing appearance and disappearance experiment (Figure \ref{fig:disapp}) and by comparing $\nu_e$ data ($\nu_e\rightarrow\nu_e$, $\nu_e\rightarrow\nu_{\mu}$) and $\nu_{\mu}$ data ($\nu_{\mu}\rightarrow\nu_{\mu}$) (Figure \ref{fig:nue_vs_numu}) in a global analysis \cite{Dentler:2018sju}.
+The tension emerges both by comparing appearance and disappearance experiment (Figure \ref{fig:disapp}) and by comparing $\nu_e$ data ($\nu_e\rightarrow\nu_e$, $\nu_e\rightarrow\nu_{\mu}$) and $\nu_{\mu}$ data ($\nu_{\mu}\rightarrow\nu_{\mu}$) (Figure \ref{fig:nue_vs_numu}). A global analysis \cite{Dentler:2018sju} excludes the $(3+1)$ model at $4.7\sigma$ level.
 
 \begin{figure}[htbp]
   \begin{subfigure}{0.48\textwidth}
@@ -232,11 +232,10 @@ The tension emerges both by comparing appearance and disappearance experiment (F
   \caption{There is a severe tension between appearance and disappearance results within the $(3+1)$ model. The free (fixed) fluxes lines of the plots on the left refer to the constraining (or not) of the reactor fluxes in the fits. Adapted from \cite{Dentler:2018sju}.}
 \end{figure}
 
-
 Other explanations have then been proposed for the excess: $3+N$ sterile neutrinos with $N>1$ \cite{Conrad:2012qt}, CPT violation \cite{Kostelecky:2011gq}, and resonant neutrino oscillations \cite{Asaadi:2017bhx} among the others. The explanation of the excess with the presence of a new particle decaying or scattering in the detector is severely constrained by kinematic arguments \cite{Jordan:2018qiy}.
 
 \vspace{1em}
 
-After the definitive confirmation of neutrino oscillations, achieved by employing different detection techniques, a series of new experiments collected data not fully compatible with a three-flavour scenario. In particular, a combined analysis of the LSND and MiniBooNE data gives a $6.0\sigma$ significance for an excess of electron neutrinos. This result is however in tension with other experiments if interpreted as the oscillation into a sterile neutrino state. 
+In summary, After the definitive confirmation of neutrino oscillations, achieved by employing different detection techniques, a series of new experiments collected data not fully compatible with a three-flavour scenario. In particular, a combined analysis of the LSND and MiniBooNE data gives a $6.0\sigma$ significance for an excess of electron neutrinos. This result is however in tension with other experiments if interpreted as the oscillation into a sterile neutrino state. 
 
 Other experiments have also performed measurements not fully in agreement with the theoretical expectations, using both reactor antineutrinos and neutrinos from radioactive isotopes, but a coherent explanation for these anomalies still has to be provided. 

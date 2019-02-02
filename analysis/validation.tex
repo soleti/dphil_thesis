@@ -58,7 +58,7 @@ Figure \ref{fig:numu_inverted} shows the agreement between data and Monte Carlo 
 % It will help to validate the cosmic background components and also the energy and $dE/dx$ reconstruction procedures.
 
 \subsection{NuMI beam event studies}
-It is possible to run this analysis on the complementary NuMI dataset, acquired with the NuMI beam trigger. The NuMI beam is created from 120 GeV protons hitting a carbon target, while the BNB is created from 8 GeV protons on a beryllium target. The NuMI beam has also a higher intrinsic $\nu_{e}$ component than the BNB (5\% vs. 0.5\%). Figure \ref{fig:numibeam} shows a comparison of the NuMI and BNB beam fluxes for the MicroBooNE detector. Even though it is off-axis, MicroBooNE still receives $\sim2500$ $\nu_{e}$ interactions per year. 
+It is possible to run this analysis on the complementary NuMI dataset, acquired with the NuMI beam trigger. The NuMI beam is created from 120 GeV protons hitting a carbon target \cite{Adamson:2015dkw}, while the BNB is created from 8 GeV protons on a beryllium target. The NuMI beam has also a higher intrinsic $\nu_{e}$ component than the BNB (5\% vs. 0.5\%). Figure \ref{fig:numibeam} shows a comparison of the NuMI and BNB beam fluxes for the MicroBooNE detector. Even though it is around $8^{\circ}$ off-axis, MicroBooNE still receives $\sim2500$ $\nu_{e}$ interactions per year. 
 
 As such, a study of the events selected in the NuMI dataset is of fundamental importance to validate the $\nu_{e}$ CC0$\pi$-Np selection algorithm, since it provides a completely independent set of electron neutrinos with different energy and angular distributions.
 
@@ -74,4 +74,22 @@ As such, a study of the events selected in the NuMI dataset is of fundamental im
   \end{subfigure}
   \caption{NuMI and BNB neutrino fluxes for each neutrino and antineutrino component, when the beams are in neutrino mode.}\label{fig:numibeam}
 \end{figure}
+
+In order to run on this data sample it is necessary to change the requirement on the reconstructed flash, since the beam-gate window is $[6,16]$~\si{\micro}s after the trigger time.
+We apply the same rectangular cuts described in Section \ref{sec:cuts}, plus a threshold of 100~MeV on the reconstructed energy of the leading shower. This last cut allows us to remove a large fraction of cosmogenic background without significantly affecting our $\nu_e$ CC0$\pi$-Np selection efficiency, since the NuMI beam has a higher energy than the BNB.
+
+Figure \ref{fig:numi_nue} shows the number of selected events in data and Monte Carlo for $2.3\times10^{20}$ NuMI POT, collected between February and June 2016 in neutrino mode. Proper systematic uncertainties for NuMI events still need to be assessed, since the off-axis positioning introduces a large uncertainty in the flux that needs to be carefully evaluated. A conservative estimate gives an expected 30\% systematic uncertainty in the number of selected events.
+
+\begin{figure}[htbp]
+\centering
+  \includegraphics[width=0.75\linewidth]{figures/numi_events.pdf}
+  \caption{Number of selected events after selection and rectangular cuts corresponding to an exposure of $2.3\times10^{20}$ NuMI POT in neutrino mode.}\label{fig:numi_nue}
+\end{figure}
+
+We select 46 data events, 39.7 signal ($\nu_e$~CC0$\pi$-Np) events, and 23.1 background events. In order to calculate the significance of the detection of $\nu_e$~CC0$\pi$-Np events, it is necessary to take into account the large size of the signal $s$ with respect to the background $b$. In this case, the usual formula:
+\begin{equation}
+    \sigma = \frac{s}{\sqrt{b}}
+\end{equation}
+is not valid. Thus, we adopt a profile-likelihood ratio test, as described in \cite{Cowan:2010js}.
+Assuming a 30\% systematic uncertainty, the expected (observed) significance for the detection of $\nu_e$~CC0$\pi$-Np events is 3.4$\sigma$ (2.2$\sigma$). The statistical-only significance is $6.8\sigma$ ($4.2\sigma$).
 

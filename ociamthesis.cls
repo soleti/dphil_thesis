@@ -282,6 +282,14 @@
    \setlength{\baselineskip}{\frontmatterbaselineskip}}
 {\end{alwayssingle}}
 
+\newenvironment{originality}%
+{   \begin{alwayssingle}\chapter*{Statement of Originality}
+    \thispagestyle{empty}
+	\pagestyle{empty}
+	\setlength{\baselineskip}{\frontmatterbaselineskip}
+}
+{\end{alwayssingle}}
+
 %The abstractseparate environment is for running of a page with the abstract
 %on including title and author etc as required to be handed in separately
 

@@ -235,6 +235,26 @@ The angular distributions of the reconstructed showers are shown in Figure \ref{
 %   \caption{Area and POT-normalised distributions of the opening angle $\beta$ of the most energetic shower.}
 % \end{figure}
 
+It is also possible to take a look at selected background events, in order to check where our rectangular cuts failed. Figure \ref{fig:evd_bkg_ccpi0} shows a CC$\pi^0$ selected event, which belongs to the \emph{Beam intrinsic $\nu_{\mu}$} category. In this case, the muon in the final state of the CC interaction stops after $\sim20$~cm and decays producing a Michel electron. The muon in this case was classified by the pattern recognition as a shower: its $dE/dx$ is around 2~MeV/cm and it starts ionising at the interaction vertex, so it is not rejected by the shower-gap cut. 
+Figure \ref{fig:evd_bkg_ncpi0} shows a selected NC$\pi^0$ event (\emph{Beam intrinsic NC} category). Here, one photon from the $\pi^0\rightarrow\gamma\gamma$ decay pair-produced within 3~mm the interaction vertex, so it shows as a shower attached to the interaction vertex. The pair-production was also very asymmetric, so the measured $dE/dx$ was around 2~MeV/cm.
+
+\begin{figure}[htbp]
+\centering
+  \begin{subfigure}{0.45\textwidth}
+  \includegraphics[width=\linewidth]{figures/ccpi0.png}
+    \caption{Simulated CC$\pi^0$ event} \label{fig:evd_bkg_ccpi0}
+    \end{subfigure} 
+  \hfill
+  \begin{subfigure}{0.45\textwidth}	
+  \includegraphics[width=\linewidth]{figures/ncpi0.png}
+  \caption{Simulated NC$\pi^0$ event.}  \label{fig:evd_bkg_ncpi0}
+  \end{subfigure}
+  \caption{Event displays of the collection plane of background events not rejected by the rectangular cuts listed in Section \ref{sec:cuts}.}
+  \label{fig:evd_bkg}
+\end{figure}
+
+
+Both these events, which represent a small fraction of the simulated events passing our rectangular cuts, could be rejected by applying a cut on the number of reconstructed showers or a cut on the $dE/dx$ of all the reconstructed showers. However, the pattern recognition tends to split also legit electron showers, so this kind of cuts would sensibly affect also our $\nu_e$~CC0$\pi$-Np selection efficiency.
 
 \subsection{Boosted Decision Trees}\label{sec:bdt}
 \subsubsection*{Introduction}
@@ -286,7 +306,7 @@ In order to maximise our separation power, in this analysis we trained three dif
 \item[CC $\nu_{\mu}$ BDT:] trained with \emph{Beam intrinsic $\nu_{\mu}$} events as background and \emph{$\nu_e$~CC0$\pi$-Np} events as signal. 
 \end{description}
 
-The variables used are the same in all three BDTs and they correspond to the ones described in Section \ref{sec:cuts}. The BDT has been trained on 600 trees, using the Gini coefficient to measure the splitting power, requiring at least 5\% of the training events in each terminal node, and using the AdaBoost boosting algorithm. The training has been performed with the TMVA toolkit \cite{Hocker:2007ht}. 
+The variables used are the same in all three BDTs and they correspond to the ones described in Section \ref{sec:cuts}, plus the angular and spatial distributions of the reconstructed tracks and showers. The BDT has been trained on 600 trees, using the Gini coefficient to measure the splitting power, requiring at least 5\% of the training events in each terminal node, and using the AdaBoost boosting algorithm. The training has been performed with the TMVA toolkit \cite{Hocker:2007ht}. 
 
 The classification power of the BDTs can be compared by looking at the Receiver Operating Characteristic (ROC) curves, which shows the background-rejection power as a function of the signal efficiency. Figure \ref{fig:roc} shows the ROC curves for our three BDTs, in the case of samples with 1000 signal events and 1000 background events. The best-performing BDT is the \emph{Cosmic BDT}. This is expected, since cosmic rays have greatly different angular, topological, and kinematic distributions when compared with neutrino interactions. 
 
@@ -317,12 +337,40 @@ Figure \ref{fig:bdt_datamc} shows the comparison between the data and Monte Carl
   \caption{POT-normalised comparison between the data and Monte Carlo for distributions of the BDTs score.}\label{fig:bdt_datamc}
 \end{figure}
 
-In order to maximise our $\nu_e$ CC0$\pi$-Np purity and at least one event per bin in the $[0.2,1.9]$~GeV range of the $E_{\mathrm{deposited}}$ spectrum (same criterion used for the rectangular cuts), we applied the following cuts:
+In order to maximise our $\nu_e$ CC0$\pi$-Np purity and to have at least one event per bin in the $[0.2,1.9]$~GeV range of the $E_{\mathrm{deposited}}$ spectrum (same criterion used for the rectangular cuts), we applied the following cuts:
 \begin{equation}
     \text{Cosmic BDT} > 0.21,~~~\text{Neutral-current BDT} > 0.18,~~~\text{CC }\nu_{\mu}\text{ BDT} > 0.17.
 \end{equation}
 
-We select 14 data beam-on events, 0.5 beam-off events, and 9.5 Monte Carlo events. The number of selected $\nu_e$ CC0$\pi$-Np events is $4.4$, which corresponds to a final efficiency of $(13.0\pm0.3~\mathrm{(stat)}\pm0.5~\text{(sys)})\%$. The final purity of the sample is $44.3\%$, around twice the one obtained with the rectangular cuts (Figure \ref{fig:purity_bdt}).
+We select 11 data beam-on events, 0.5 beam-off events, and 9.5 Monte Carlo events. The number of selected $\nu_e$ CC0$\pi$-Np events is $4.4$, which corresponds to a final efficiency of $(13.0\pm0.3~\mathrm{(stat)}\pm0.5~\text{(sys)})\%$. The final purity of the sample is $44.3\%$, around twice the one obtained with the rectangular cuts (Figure \ref{fig:purity_bdt}).
+A summary of the selected events with both methods is shown in Table \ref{tab:overview}.
+
+\begin{table}[htbp]
+   \centering
+      \caption{Summary of selected events with rectangular and BDTs cuts for a MicroBooNE exposure of $4.3\times10^{19}$~POT.}\label{tab:overview}
+   \begin{tabular}{
+   p{0.27\linewidth}
+   >{\raggedleft\arraybackslash}p{0.16\linewidth}
+   >{\raggedleft\arraybackslash}p{0.16\linewidth}}
+     \toprule
+     Category & Rectangular & BDTs \\
+     \midrule
+     Data beam-on & 16 & 11 \\
+     Data beam-off & 2.8 & 0.5 \\
+     $\nu_e$~CC0$\pi$-Np & 3.2 & 4.4 \\
+     $\nu_e$~CC & 0.8 & 1.5 \\
+     Beam intrinsic $\nu_{\mu}$ & 4.5 & 1.7 \\
+     Beam intrinsic NC & 2.8 & 1.4 \\
+     Outside fid. vol. & 0.1 & 0.0 \\
+     Cosmic & 0.6 & 0.2 \\
+     Cosmic contaminated & 0.4 & 0.2 \\
+     \midrule
+     Beam-on - beam-off & 13.2 & 10.5 \\
+     Total Monte Carlo & 13.1 & 9.4 \\
+     \bottomrule
+   \end{tabular}
+\end{table}
+
 
 \begin{figure}[htbp]
 \centering
@@ -330,7 +378,7 @@ We select 14 data beam-on events, 0.5 beam-off events, and 9.5 Monte Carlo event
   \caption{Purity of the sample after the event selection (green), after the application of the rectangular cuts (orange), and after the application of the BDTs (purple) as a function of the reconstructed energy $E_{\mathrm{deposited}}$. Error bars are statistical only.}\label{fig:purity_bdt}
 \end{figure}
 
-The distribution of the reconstructed energy spectrum $E_{\mathrm{deposited}}$ after the application of the three BDT cuts is shown in Figure \ref{fig:reco_bdt}. 
+The distribution of the reconstructed energy spectrum $E_{\mathrm{deposited}}$ after the application of the three BDT cuts is shown in Figure \ref{fig:reco_bdt}. The angular distributions of the reconstructed showers are shown in Figure \ref{fig:angle_bdt}. 
 
 \begin{figure}[htbp]
 \centering
@@ -338,9 +386,7 @@ The distribution of the reconstructed energy spectrum $E_{\mathrm{deposited}}$ a
   \caption{Reconstructed energy spectrum $E_{\mathrm{deposited}}$ after the application of the BDTs cuts.}\label{fig:reco_bdt}
 \end{figure}
 
-The angular distributions of the reconstructed showers are shown in Figure \ref{fig:angle_bdt}. 
-
-\begin{figure}
+\begin{figure}[htbp]
 \centering
   \begin{subfigure}{0.48\textwidth}
     \includegraphics[width=\linewidth]{figures/theta_bdt.pdf}
@@ -352,4 +398,22 @@ The angular distributions of the reconstructed showers are shown in Figure \ref{
   \end{subfigure}
   \caption{Angular distribution of the selected Monte Carlo and data events after the application of the BDTs cuts.}
   \label{fig:angle_bdt}
+\end{figure}
+
+\subsection{Interaction types}
+It is also possible to categorise the selected events according to the neutrino interaction which produced the final-state particles. Figure \ref{fig:interaction} shows the selected events after the rectangular and BTDs cuts as a function of the GENIE interaction type. 
+As expected, the majority of $\nu_E$~CC0$\pi$-Np events were produced by a quasi-elastic interaction, while the NC and CC $\nu_{\mu}$ background come mainly from resonant interaction. A significant component of electron neutrinos also interacted via Meson-Exchange Current. This interaction involves the scatter between the neutrino and a correlated pair of nucleons and is accompanied by a 2-nucleon emission from the primary vertex (instead of a single nucleon emission from CCQE interactions). This phenomenological effect is often also called \emph{2 particle-2 hole} (2p-2h) \cite{Katori:2013eoa}.
+
+\begin{figure}[htbp]
+\centering
+  \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{figures/interaction_type_cuts.pdf}
+    \caption{Rectangular cuts.} 
+  \end{subfigure}
+    \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\linewidth]{figures/interaction_type_bdt.pdf}
+    \caption{BDTs cuts.} 
+  \end{subfigure}
+  \caption{Selected events classified according to the type of neutrino interaction which generated them.}
+  \label{fig:interaction}
 \end{figure}
