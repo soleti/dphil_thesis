@@ -3,66 +3,72 @@
 \minitoc
 
 
-This chapter presents an overview of the MicroBooNE experiment, with a focus on the Liquid Argon Time Projection Chamber technology. A description of the MicroBooNE detector is essential in order to understand the analysis described in the following chapters. The selection efficiency of low-energy electron neutrino events and the rejection of background events directly depends on the detector properties. The analysis is also affected by systematic uncertainties in the detector simulation, which will be partially addressed here. A brief description of the Fermilab accelerator complex will also be provided.
+This chapter presents an overview of the MicroBooNE experiment, with a focus on the Liquid Argon Time Projection Chamber technology. A description of the MicroBooNE detector is essential in order to understand the analysis described in the following chapters. The selection efficiency of low-energy electron neutrino events and the rejection of background events can directly depend on the detector properties. The analysis is also affected by systematic uncertainties in the detector simulation, which will be partially addressed here. A brief description of the MicroBooNE neutrino beam will also be provided.
 
 \section{Motivation}
-The MicroBooNE (Micro Booster Neutrino Experiment) experiment is a 89~t active volume Liquid Argon Time Projection (LArTPC) chamber located at the Fermi National Accelerator Laboratory in Batavia, IL and on-axis with the Booster Neutrino Beam (BNB). The experiment was designed to study short-baseline neutrino oscillations and neutrino-argon cross-section. It is the largest neutrino LArTPC detector currently active in the world.
+The MicroBooNE (Micro Booster Neutrino Experiment) experiment is a 89~t active volume Liquid Argon Time Projection Chamber (LArTPC) located at the Fermi National Accelerator Laboratory (FNAL) in Batavia, IL and on-axis with the Booster Neutrino Beam (BNB). The experiment was designed to study short-baseline neutrino oscillations and neutrino-argon cross section. It is the largest neutrino LArTPC detector currently active in the world.
 This technology offers very high spatial resolution and calorimetric capabilities, which allows for detailed tracking, vertexing and particle identification. 
 
 \subsection{Physics goals}
-As described in Section \ref{sec:miniboone}, MiniBooNE, being a Cherenkov detector, is not able to distinguish between photons and electrons in the final state. As such, it is not possible to determine the nature of the excess of low-energy events. If the excess is caused by photons, the best explanation would be provided by an underestimation of one of the background components. An electron nature of the excess, instead, would be a strong hint for BSM physics.
+As described in Section \ref{sec:miniboone}, MiniBooNE, being a Cherenkov detector, is not able to distinguish between single photons and electrons in the final state. As such, it is not possible to determine the nature of the excess of low-energy events. If the excess is caused by photons, one explanation could be provided by an underestimation of one of the background components. An electron nature of the excess, instead, could be a strong hint for BSM physics.
 
-\subsubsection{The MiniBooNE anomaly}
-The MicroBooNE experiment was designed to definitely clarify the MiniBooNE anomaly, since the LArTPC technology allows for powerful electron/photon separation. One way to achieve this goal is to measure the spatial gap between the neutrino interaction vertex and the start of the electromagnetic shower. An electron will start producing a ionising trail almost immediately, whereas a photon will usually leave a visible gap, due to the radiation length in liquid argon $X_0 = 14$~cm.
+\subsubsection{Addressing the MiniBooNE anomaly}
+The MicroBooNE experiment was designed to definitely clarify the MiniBooNE anomaly, since the LArTPC technology allows for powerful electron/photon separation. One way to achieve this goal is to measure the spatial gap between the neutrino interaction vertex and the start of the electromagnetic shower. An electron will start producing a ionising trail immediately, whereas a photon will usually leave a visible gap, due to the radiation length in liquid argon $X_0 = 14$~cm.
 A second way to distinguish between electrons and photons is to measure the energy loss per distance travelled ($dE/dx$) of the electromagnetic shower produced in the liquid argon. For electrons above 100~MeV, the theoretical expectation of the most probable $dE/dx$ is 1.77~MeV/cm, while the photon will have a most probable value approximately twice as large, due to the pair-production process $\gamma\rightarrow e^+e^-$ \cite{Acciarri:2016sli}. 
 MicroBooNE is then performing two parallel analyses, one assuming that the excess is caused by photon production in the electromagnetic $\Delta\rightarrow N\gamma$ decay and one assuming that the excess is caused by electron interactions. The calorimetric and spatial-resolution capabilities will allow to have a sensitivity to the excess similar to MiniBooNE, while having an active detector mass five times smaller.  The search for electron-like low-energy interactions will be described in detail in the following chapters.
 
 \subsubsection{Cross-section measurements}
-MicroBooNE will also provide precise neutrino-nucleon cross-section measurements. The neutrino interactions allowed in the energy range of the BNB span from quasi-elastic to deep inelastic scattering, making it possible to explore several nuclear effects and complex topologies.
-In particular, it is possible to measure the pion production in neutral current (NC) and charged current (CC) interactions. %MicroBooNE will be able to solve the tension between the large NC $\pi^0$ component reported by MiniBooNE and the small CC $\pi^+$ component reported by SciBooNE \cite{Hiraide:2008eu} and K2K \cite{Tanaka:2006zm}. 
+MicroBooNE will also provide precise neutrino-nucleon cross-section measurements. The neutrino interactions in the energy range of the BNB span from quasi-elastic to deep inelastic scattering, making it possible to explore several nuclear effects and complex topologies.
+In particular, it is possible to measure the pion production in neutral current (NC) and charged current (CC) interactions. MicroBooNE should be able to solve the tension between the large NC $\pi^0$ component reported by MiniBooNE \cite{AguilarArevalo:2008xs} and the small CC $\pi^+$ component reported by SciBooNE \cite{Hiraide:2008eu} and K2K \cite{Tanaka:2006zm}. 
 A precise measurement of the photon production will also help to constrain the $\Delta\rightarrow N\gamma$ background, important for the MiniBooNE low-energy excess analysis. 
 
+The measurement of neutrino cross sections in liquid argon is also of fundamental importance for the design of the largest next-generation neutrino experiment, DUNE (Deep Underground Neutrino Experiment). Its current proposed design includes a 40 kton LArTPC, two orders of magnitude larger than MicroBooNE \cite{Acciarri:2016ooe}.
+
 \subsubsection{Supernova and exotic searches}
-The MicroBooNE detector is located just below the surface level and is constantly bombarded by cosmic rays, which interact in the liquid argon leaving ionisation trails. This background, together with the small active volume of the detector (compared with large-scale water Cherenkov experiments) limits the capabilities to certain physics analyses, such as proton decay searches. However, the kaons produced in the MicroBooNE experiment are in the same energy range of the ones produced in the eventual proton decay channel:
-\begin{equation}
-    p\to K^+\nu.
-\end{equation}
-A lower proton lifetime of $5.9\times10^{33}$ years was set by the Super-Kamiokande experiment looking at this particular channel \cite{Abe:2014mwa}. The kaon decay chain $K\rightarrow\pi\rightarrow\mu\rightarrow e$ represents also an important benchmark for the reconstruction capabilities of the LArTPC.
+The MicroBooNE detector is located just below the surface level and is constantly bombarded by cosmic rays, which interact in the liquid argon leaving ionisation trails. This background, together with the small active volume of the detector (compared with large-scale water Cherenkov experiments) can limit the capabilities of certain physics analyses, such as proton decay searches. However, MicroBooNE can study the interaction of charged kaons in the liquid argon, which can represent a background to future proton decay searches in DUNE.
+The existence of proton decay is predicted by several Grand Unification Theories (GUTs) and a lower proton lifetime of $5.9\times10^{33}$ years was set by the Super-Kamiokande experiment looking at this particular channel \cite{Abe:2014mwa}. The kaon decay chain $K\rightarrow\pi\rightarrow\mu\rightarrow e$ represents also an important benchmark for the reconstruction capabilities of the LArTPC.
 
 The MicroBooNE detector is suited to detect neutrinos produced by a supernova (SN) in the Milky Way or in its immediate surroundings, which would result in around 30 CC $\nu_e$ interactions with an electron energy above 10~MeV. However, being constantly hit by cosmic rays, the detector cannot directly trigger on SN neutrinos and it relies on the SuperNova Early Warning System (SNEWS) to record an eventual SN event. 
 
 
 \subsection{Research and development goals}
-MicroBooNE is currently the largest active neutrino LArTPC in the world, which makes it the first experiment to precisely assess the automated neutrino reconstruction capabilities of this technology. The detection of neutrinos by a large-scale LArTPC was pioneered by the ICARUS collaboration, which designed and assembled the ICARUS T600 detector \cite{Amerio:2004ze}. The detector consists of two LArTPC modules with a total active mass of 476~ton, around five times larger than MicroBooNE. However, it was employed as a long-baseline neutrino detector on the CNGS beam and it detected only four $\nu_e$ interactions \cite{Antonello:2013gut}, compared with the several hundreds expected at MicroBooNE. It was recently refurbished and moved to Fermilab to be placed on the BNB, as a part of the future Short Baseline Neutrino (SBN) program. On a smaller scale, the ArgoNeuT experiment operated a 0.25~ton TPC on the NuMI neutrino beam at Fermilab \cite{Anderson:2012vc} and measured for the first time the neutrino cross-section on argon atoms.
+MicroBooNE is currently the largest active neutrino LArTPC in the world, which makes it the first experiment to precisely assess the automated neutrino reconstruction capabilities of this technology. The detection of neutrinos by a large-scale LArTPC was pioneered by the ICARUS collaboration, which designed and assembled the ICARUS T600 detector \cite{Amerio:2004ze}. The detector consists of two LArTPC modules with a total active mass of 476~ton, around five times larger than MicroBooNE. However, it was employed as a long-baseline neutrino detector on the CNGS beam and it detected only four $\nu_e$ interactions \cite{Antonello:2013gut}, compared with the several hundreds expected at MicroBooNE. It was recently refurbished and moved to Fermilab to be placed on the BNB, as a part of the future Short Baseline Neutrino (SBN) program. On a smaller scale, the ArgoNeuT experiment operated a 0.25~ton TPC on the NuMI neutrino beam at Fermilab \cite{Anderson:2012vc} and measured for the first time the neutrino cross section on argon atoms.
 
-The largest next-generation neutrino experiment will be DUNE (Deep Underground Neutrino Experiment), whose current proposed design includes a 20~kton LArTPC, two orders of magnitude larger than MicroBooNE \cite{Acciarri:2016ooe}. This ambitious program requires a very good understanding of the technology: in particular, the effect of high electric field on long distances, of the ions recombination in the LAr, and of the ions absorption by the impurities must be precisely quantified. 
+ This ambitious program of the DUNE experiment requires a very good understanding of the technology: in particular, the effect of high electric field on long distances, of the ions recombination in the LAr, and of the ions absorption by the impurities must be precisely quantified. 
 MicroBooNE was also the first large-scale LArTPC to have part of the electronics chain operating directly in the liquid argon (\emph{cold electronics}), allowing for higher signal-to-noise ratio. An overview of the MicroBooNE detector will be provided in Section \ref{sec:detector}.
 A small-scale prototype of the DUNE detector, ProtoDUNE, was recently built and commissioned at CERN, with an active mass of 450~ton. The ProtoDUNE detector, however, runs on a test-beam line and will not detect neutrino interactions.
 
 \section{The LArTPC detection technology}
 The concept of a Liquid Argon Time Projection Chamber was first laid out by Willis and Radeka in 1974 \cite{Willis:1974gi} and then adapted by Rubbia in 1977 as a detector for neutrino interactions \cite{Rubbia:1977zz}. 
 
-Generally speaking, a Time Projection Chamber is a volume with a constant electric field applied between two of its sides, the anode (the positive plane) and the cathode (the negative plane). It is possible to fill the volume with a non-conductive material such as inert gases or liquids. A magnetic field can also be applied to measure the charge and the momentum of the particle interacting in the TPC (it is not the case of MicroBooNE). 
+Generally speaking, a Time Projection Chamber is a volume with a constant electric field applied between two of its sides, the anode (the positive plane) and the cathode (the negative plane). It is possible to fill the volume with a non-conductive material such as inert gases or liquids. %A magnetic field can also be applied to measure the charge and the momentum of the particle interacting in the TPC (it is not the case of MicroBooNE). 
 
-A charged particle traversing the medium inside the TPC will ionise the material: a trail of ionisation electrons will be produced in correspondence with the path of the charged particle. The constant electric field will transport the electrons towards the anode with a constant drift velocity, preserving their topological and calorimetric information and appearing as a projection of the particle trajectory on the anode plane. The distance between the anode and the interaction point will be given by the time the ionisation electron takes to reach the anode.
+A charged particle traversing the medium inside the TPC will ionise the material: a trail of ionisation electrons will be produced in correspondence with the path of the charged particle. The constant electric field will transport the electrons towards the anode with a constant drift velocity, preserving their topological and calorimetric information and appearing as a projection of the particle trajectory on the anode plane. The distance between the anode and the interaction point will be given by the time the ionisation electron takes to reach the anode. Figure \ref{fig:lartpc_diagram} shows the operating principle of a TPC in the case of the MicroBooNE detector. 
 
-As the name says, a LArTPC is a TPC filled with liquid argon. This material provides several advantages, which made this technology particularly suitable for neutrino detection. Among the main ones we can enumerate (1) its substantial density (1.4~g/cm$^3$ at 87.3~K), which allows to have a detectable amount of neutrino interactions, (2) its high stability, being a noble gas, and (3) its natural abundance (1\% of the atmosphere), which makes the LArTPC technology highly scalable.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figures/lartpc_diagram.pdf}
+    \caption{Diagram of the operating principle of the MicroBooNE LArTPC, showing the waveforms produced by the ionisation trails in the collection plane (red) and in one induction plane (blue).}
+    \label{fig:lartpc_diagram}
+\end{figure}
+
+As the name says, a LArTPC is a TPC filled with liquid argon. This material provides several advantages, which made this technology particularly suitable for neutrino detection. Among the main ones we can enumerate (1) its substantial density (1.4~g/cm$^3$ at 87.3~K), which allows to have a detectable amount of neutrino interactions, (2) its high stability, being a noble gas, and (3) its natural abundance (1\% of the atmosphere), which makes the LArTPC technology highly scalable and affordable.
 
 However, the relatively slow drift velocity of the electrons in the liquid argon causes the typical read-out of a large-scale LArTPC to be in the order of the milliseconds (which corresponds to the time a ionisation electron takes to travel from the cathode to the anode), making this technology sub-optimal for high-rate experiments. 
 
-Another fundamental property of the argon, which makes it particularly suitable for high-energy physics experiments, is that it produces scintillation light when excited, being at the same time transparent to the wavelength of this scintillation light. In this way, a detector on surface such as MicroBooNE can collect the light (in our case with photomultipliers placed inside the LAr) and trigger the TPC readout in coincidence with the neutrino beam, suppressing the background caused by cosmic rays outside the beam time window. 
+Another fundamental property of the argon, which makes it particularly suitable for high-energy physics experiments, is that it produces scintillation light when excited, being at the same time transparent to the wavelength of this scintillation light, described below. In this way, a detector on surface such as MicroBooNE can collect the light (in our case with photomultipliers placed inside the LAr) and trigger the TPC readout in coincidence with the neutrino beam, suppressing the background caused by cosmic rays outside the beam time window. 
 
 A LArTPC can achieve a very high spatial resolution, similar to the one of the bubble chambers, allowing at the same time for the digitisation of the signal. For this reason, it has often been called a \emph{fully electronic bubble chamber} \cite{Rubbia:2011zza}. 
 
 \subsubsection{Light production}
-The scintillation light is produced when an atom of argon in the ground state shares an electron with one argon of atom in an excited state, forming an Ar$_{2}$ \emph{excimer}. When the excimer decays, the two argon atoms are now both at ground state, and a 128~nm photon is emitted. This small wavelength is typically difficult to the detect with standard photomultipliers. In the MicroBooNE experiment, the PMTs are coated with tetraphenyl butadiene (TPB), which acts as wavelength shifter. The time distribution of the light emission has two components, a fast, 6~ns component produced by the singlet, and a slow, 1.5 \si{\micro}s component produced by the triplet. 
+The scintillation light is produced when an atom of argon in the ground state shares an electron with one argon of atom in an excited state, forming an Ar$_{2}$ \emph{excimer}. When the excimer decays and a 128~nm photon is emitted, the two argon atoms are both left in the ground state. This small wavelength is typically difficult to the detect with standard photomultipliers. In the MicroBooNE experiment, the PMT plates are coated with tetraphenyl butadiene (TPB), which acts as wavelength shifter. The time distribution of the scintillation light emission has two characteristics times at 6~ns and 1.5 \si{\micro}s.
 
 The liquid argon has also a high light yield, comparable to the one of scintillating crystals, with $4\times10^4$~$\gamma$/MeV. The amount of light, however, can be quenched by the presence of nitrogen impurities in the argon, which, in the case of MicroBooNE, are kept below the 2~ppm level.
 
 \subsubsection{Ionisation electrons}\label{sec:ionisation}
-The work function for ionising an argon atom is $W_{\mathrm{ion}} = 23.6$~eV, which means that a charged particle in the MeV range will leave a ionisation trail of tens of thousands of electrons. These free electrons will travel towards the anode with a constant drift velocity, but during their path they can undergo several attenuation processes, which decrease the actual number of electrons reaching the wire plane. 
+The work function for ionising an argon atom is $W_{\mathrm{ion}} = 23.6$~eV, which means that a charged particle in the MeV range will leave a ionisation trail of tens of thousands of electrons. Under an electric field, these free electrons will travel towards the anode with a constant drift velocity, but during their path they can undergo several attenuation processes, which decrease the actual number of electrons reaching the wire plane. 
 
-In particular, the electrons can recombine with ionised Ar$^+$ atoms: this recombination effect is usually the main contributor to the signal attenuation. This effect depends on the $dE/dx$ of the particle, on the electric field in the liquid argon, and by the angle of the ionisation particle with respect to the electric field. The ICARUS experiment measured the dependence of the recombination as a function of the $dE/dx$ and the applied electric field \cite{Amoruso:2004dy}, as shown in Figure \ref{fig:recombination}. The ArgoNeuT experiment found the recombination effect in a LArTPC to be well described both by the Birks' model \cite{Birks:1951boa} and by a modified version of the Box model \cite{Thomas:1987zz}. 
+In particular, the electrons can recombine with ionised Ar$^+$ atoms: this recombination effect is usually the main contributor to the signal attenuation. This effect depends on the $dE/dx$ of the particle, on the electric field in the liquid argon, and on the angle of the ionisation particle with respect to the electric field. The ICARUS experiment measured the dependence of the recombination as a function of the $dE/dx$ and the applied electric field \cite{Amoruso:2004dy}, as shown in Figure \ref{fig:recombination}. The ArgoNeuT experiment found the recombination effect in a LArTPC to be well described both by the Birks' model \cite{Birks:1951boa} and by a modified version of the Box model \cite{Thomas:1987zz}. 
 
 \begin{figure}[htbp]
 \centering
@@ -76,12 +82,12 @@ In particular, the electrons can recombine with ionised Ar$^+$ atoms: this recom
         \caption{Recombination factor as a function of the electric field in the detector.}
     \end{center}
   \end{subfigure}
-    \caption{The ICARUS collaboration measured the recombination factor \emph{R}, defined as the ratio between the measured and the theoretical stopping power, as a function of the $dE/dx$ (left) and of the electric field (right). Adapted from \cite{Amoruso:2004dy}.}\label{fig:recombination}
+    \caption{The ICARUS collaboration measured the recombination factor \emph{R}, defined as the ratio between the measured and the theoretical stopping power, as a function of the $dE/dx$ (left) and of the electric field (right). From \cite{Amoruso:2004dy}.}\label{fig:recombination}
 \end{figure}
 
-The travel of the electrons in the LArTPC is affected by a diffusion effect, caused by their thermal velocity, which spreads out the ionisation electrons while they travel towards the anode. It is a three-dimensional effect, usually separated into its longitudinal and transverse components. 
+The transport of the electrons in the LArTPC is affected by diffusion, caused by their thermal velocity, which spreads out the ionisation electrons while they travel towards the anode. It is a three-dimensional effect, usually separated into its longitudinal and transverse components. 
 
-LArTPCs placed on surface, such as MicroBooNE, are also constantly hit by an intense flux of cosmic rays, which will produce several ionisation trails. These trails produce ionisation electrons and positive Ar$^+$, which will slowly move towards the cathode until they will recombine with a free electron. The build-up of Ar$^+$ ions leads to a distortion of the electric
+LArTPCs placed on surface, such as MicroBooNE, are also constantly hit by an intense flux of cosmic rays, which will produce several ionisation trails. These trails produce ionisation electrons and positive Ar$^+$, with the ions slowly moving towards the cathode until they will recombine with a free electron. The build-up of Ar$^+$ ions leads to a distortion of the electric
 field within the detector, defined as \emph{space-charge effect} (SCE). The SCE causes a displacement in the reconstructed position of ionisation electrons, as well as variations in the amount of charge quenching experienced by ionisation throughout the volume of the TPC. In MicroBooNE, the electric field distortion can be as high as 15\% and was measured using a sample of cosmic rays triggered by a small cosmic-ray counter (briefly described in Section \ref{sec:crt}). The spatial distortions at the top and the bottom of the LArTPC are shown in Figure \ref{fig:spacecharge}.
 
 \begin{figure}[htbp]
@@ -100,12 +106,12 @@ where $t_\mathrm{drift}$ is the drift time (1.6~ms) and $\tau$ is the electron l
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\linewidth]{figures/purity.pdf}
-    \caption{Variation of the $Q_A/Q_C$ charge ratio between February and April 2016 in the MicroBooNE LArTPC. Adapted from \cite{Meddage:2017lxo}.}
+    \caption{Variation of the $Q_A/Q_C$ charge ratio between February and April 2016 in the MicroBooNE LArTPC. From \cite{Meddage:2017lxo}.}
     \label{fig:purity}
 \end{figure}
  
 \section{The neutrino beams at Fermilab}\label{sec:beam}
-The use of an artificial neutrino source presents two main advantages: (1) the neutrino energy spectrum and its flavour components can be precisely characterised and tuned for the specific physics goal, and (2) the position of the detector can be optimised to observe the oscillation peak (or dip). The design of a neutrino beam generally follows the same pattern: it starts with a proton beam, which hits a target and produces hadrons. These hadrons are focused by a magnetic horn into an empty pipe, where they decay, producing the neutrinos. The neutrino beam then travels through the ground and hits one or more neutrino detectors.
+The use of an artificial neutrino source presents two main advantages: (1) the neutrino energy spectrum and its flavour components can be precisely characterised and tuned for the specific physics goals, and (2) the position of the detector can be optimised to observe the oscillation peak (or dip). The design of a neutrino beam generally follows the same pattern: it starts with a proton beam, which hits a target and produces hadrons. These hadrons are focused by a magnetic horn into an empty pipe, where they decay, producing the neutrinos. The neutrino beam then travels through the ground and hits one or more neutrino detectors.
 
 At Fermilab, there are two neutrino beams currently active: the Booster Neutrino Beam (BNB) and the Neutrinos from the Main Injector (NuMI) beam, with different energy, flavour composition, and direction. MicroBooNE is placed on-axis with the BNB and 470~m far from the target. While it is also able to detect off-axis neutrinos from the NuMI beam, the analysis presented in this document will use only the neutrinos coming from the BNB.
 
@@ -125,7 +131,7 @@ The BNB target is made of a beryllium disk 0.51~cm in radius and 71.1~cm long, w
     \label{fig:neutrinobeam}
 \end{figure}
 
-The hadrons produced in the p-Be interactions are then focused by the electromagnetic horn, which allows to switch between neutrino and antineutrino mode. The horn is a pulsed toroidal electromagnet with a peak current of 170~kA and a magnetic field at the centre of 1.5~T. It  focuses the secondary hadrons along the horn axis: depending on the direction of the current, the positive (negative) charged particles are focused (deflected), producing a neutrino (antineutrino) beam. 
+The hadrons produced in the p-Be interactions are then focused by the electromagnetic horn. The horn is a pulsed toroidal electromagnet with a peak current of 170~kA and a magnetic field at the centre of 1.5~T. It  focuses the secondary hadrons along the horn axis: depending on the direction of the current, the positive (negative) charged particles are focused (deflected), producing a neutrino (antineutrino) beam. 
 
 The hadrons with the right charge, mainly kaons and pions, travel through the decay pipe filled with air and are then stopped by a concrete absorber. The neutrinos produced in the decays travel through the ground and hit the detector, which in the case of MicroBooNE is placed 470~m far from the target. Figure \ref{fig:neutrinobeam} shows a schematic of the Booster Neutrino Beam stages in the neutrino mode. 
 
@@ -182,36 +188,38 @@ The MicroBooNE detector consists of a rectangular LArTPC with dimensions of $256
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\linewidth]{figures/detector.png}
-    \caption{3D rendering of the MicroBooNE cryostat, showing the TPC wire cage and the feedthroughs.}
+    \caption{3D rendering of the MicroBooNE cryostat, showing the TPC wire cage and the feedthroughs, which takes the signals from the wires and the PMTs (not shown) to the DAQ. In this rendering, the cathode is on the right and the wire planes on the anode side are not shown.}
     \label{fig:detector}
 \end{figure}
 
 Figure \ref{fig:detector} shows a 3D rendering of the cryostat containing the TPC. The main components of the detector (the TPC, the light collection system, the cryogenics, the cosmic-ray tagger, and the electronics and readout) are described in detail in \cite{Acciarri:2016smi} and will be summarised below. 
 
 \subsection{The Time Projection Chamber}
-The TPC consists of three wire planes with 3 mm spacing at angles of $0^{\circ}$, $+60^{\circ}$, and $-60^{\circ}$ with respect to the vertical. The cathode, made of a plane of 9 stainless steel sheets 2.3~mm thick, operates at a voltage of -70~kV.
+The TPC consists of a cathode, an anode, and a field cage. 
+%three wire planes with 3 mm spacing at angles of $0^{\circ}$, $+60^{\circ}$, and $-60^{\circ}$ with respect to the vertical. 
+The cathode, made of a plane of 9 stainless steel sheets 2.3~mm thick, operates at a voltage of -70~kV.
 
-The field cage, made of 64 stainless steel tubes, creates a uniform electric field of 273~V/cm, stepping down from the -70~kV at the cathode to almost 0~V at the anode. 
+The field cage, made of 64 stainless steel tubes, creates a uniform electric field of 273~V/cm, stepping down from the -70~kV at the cathode to almost 0~V at the anode, using a resistor chain made of eight 10~M$\Omega$ resistors.
 
-The anode consists of three wire readout planes: the drifting electrons induce a bipolar signal in the first two planes (U, V) at $\pm60^{\circ}$, hence their name \emph{induction planes}, and are then collected by the last plane (Y) at $0^{\circ}$, called \emph{collection plane}, where they produce a unipolar signal. The induction planes are made by 2400 wires, while the collection plane consists of 3456 vertical wires. 
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.7\linewidth]{figures/lartpc_diagram.pdf}
-    \caption{Diagram of the operating principle of the MicroBooNE LArTPC, showing the waveforms produced by the ionisation trails in the collection plane (red) and in one induction plane (blue).}
-    \label{fig:lartpc_diagram}
-\end{figure}
+The anode consists of three wire readout planes separated by 3~mm: the drifting electrons induce a bipolar signal in the first two planes (U, V) at $\pm60^{\circ}$, hence their name \emph{induction planes}, and are then collected by the last plane (Y) at $0^{\circ}$, called \emph{collection plane}, where they produce a unipolar signal. The induction planes are made by 2400 wires, while the collection plane consists of 3456 vertical wires. The wires are separated by a pitch of 3~mm.
 
 The wire planes are held at different voltages (U plane at -110~V, V plane at 0~V, and Y plane at 230~V), in order to minimise the amount of charge collected by the induction planes.
 
-The charge deposited in the TPC generates a signal used to create three distinct two-dimensional views (in terms of wire and time) of the event, which can be combined to reconstruct a three-dimensional image of the interaction. Figure \ref{fig:lartpc_diagram} shows the diagram of the operating principle of the MicroBooNE LArTPC.
+The charge deposited in the TPC generates a signal used to create three distinct two-dimensional views (in terms of wire and time) of the event, which can be combined to reconstruct a three-dimensional image of the interaction. Figure \ref{fig:tpc_coordinates} shows a diagram of the MicroBooNE TPC, with the coordinate system used in the experiment.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/tpc_coordinates.pdf}
+    \caption{Drawing of the MicroBooNE TPC showing the coordinate system and the size of each side. The anode and the cathode are respectively on the right and the left, as seen from the beam.}
+    \label{fig:tpc_coordinates}
+\end{figure}
 
 MicroBooNE started acquiring neutrino data in October 2015. Figure \ref{fig:evd_ccpi0} shows the event display of a $\nu_{\mu}$ CC$\pi^0$ candidate in the collection plane. The excellent granularity of the detector allows to appreciate the electromagnetic showers coming from a $\pi^0\rightarrow\gamma\gamma$ decay and also the small $\delta$-rays produced by the cosmic muons. It is also possible to appreciate the challenge of the pattern recognition, with different topologies and overlapping ionisation trails given by the presence of cosmic rays. 
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\linewidth]{figures/evd_ccpi0.pdf}
-    \caption{Event display of a $\nu_{\mu}$ CC$\pi^0$ candidate in the collection plane. The color scale corresponds to the amount of charged deposited on the wires.}
+    \caption{Event display of a $\nu_{\mu}$ CC$\pi^0$ candidate in the collection plane. The colour scale corresponds to the amount of charged deposited on the wires.}
     \label{fig:evd_ccpi0}
 \end{figure}
 
@@ -225,16 +233,16 @@ Figure \ref{fig:light} summarises the light emission and absorption in the Micro
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\linewidth]{figures/light.pdf}
-    \caption{Scintillation light emission spectrum (red) and TPB re-emission spectrum (green),  with relevant efficiencies (green) (from \cite{Acciarri:2016sli}).}
+    \caption{Scintillation light emission spectrum (red) and TPB re-emission spectrum (green), with efficiencies relevant for the MicroBooNE experiment (green). From \cite{Acciarri:2016sli}.}
     \label{fig:light}
 \end{figure}
 
-\subsection{Cryogenics}
-The liquid argon needs to be taken at a constant temperature and pressure, since they strongly correlate with the drift velocity and, in turn, with the reconstruction of the $x$ coordinate.
+\subsection{Cryogenics and purification}
+The liquid argon needs to be kept at a constant temperature and pressure, since they strongly correlate with the drift velocity and, in turn, with the reconstruction of the $x$ coordinate.
 
 The temperature is monitored by 12 Resistive Thermal Devices (RTDs) placed in various location of the cryostat, which is covered with insulating foam to prevent large temperature variations. 
 
-The purification of the liquid argon is performed by a system of two condensers, two pumps and two filters. The gaseous argon that leaves the detector enters a condenser kept at boiling temperature by liquid nitrogen coils and it is then pumped into the filters which mainly remove water and O$_2$ molecules. 
+The purification of the liquid argon is performed by a system of two condensers, two pumps and two filters. The gaseous argon that leaves the detector enters a condenser kept at boiling temperature by liquid nitrogen coils and it is then pumped into the filters which mainly remove water and O$_2$ molecules. The performances of the purification system can be quantified by measuring the electron lifetime ratio, as shown in Figure \ref{fig:purity}.
 
 \subsection{Electronics and readout}
 MicroBooNE readout electronics can be divided into two main parts: one responsible for the digitisation and recording of the TPC wire signals and one responsible for the digitisation of the PMT signals. 
@@ -261,9 +269,9 @@ Being located almost on surface, the MicroBooNE detector is constantly subject t
 
 In order to study the challenges of cosmic-ray reconstruction, the MicroBooNE detector was also equipped with a small external muon counter stack (MuCS), installed at the start of operations in 2015. 
 
-This sub-detector was used to measure for the first time the cosmic-ray reconstruction efficiency in a LArTPC. This measurement is described in detail in the publication reported in Appendix \ref{sec:mucs}, whose corresponding author is the author of this document. Triggering on the signal coming from this small muon counter stack allowed to measure the fraction of cosmic-ray tracks effectively reconstructed in the LArTPC. The measured efficiency is 97.1\%, in agreement with the Monte Carlo simulation. 
+This sub-detector was used to measure for the first time the cosmic-ray reconstruction efficiency in a LArTPC. This measurement is described in detail in the publication reported in Appendix \ref{sec:mucs}, whose corresponding author is the author of this thesis. Triggering on the signal coming from this small muon counter stack allowed to measure the fraction of cosmic-ray tracks effectively reconstructed in the LArTPC. The measured efficiency is 97.1\%, in agreement with the Monte Carlo simulation. 
 
-This study was also used to demonstrate the tagging capabilities of a larger Cosmic-Ray Tagger (CRT), which surrounds the cryostat on four sides and represents and first cosmic-ray tagging system integrated with a LArTPC \cite{Auger:2016tjc}. Figure \ref{fig:mucs_crt} shows a simulation of the cosmic rays which hit the LArTPC and are tagged by the MuCS and the CRT.
+This study was also used to demonstrate the tagging capabilities of a larger Cosmic-Ray Tagger (CRT), which surrounds the cryostat on four sides and represents the first cosmic-ray tagging system integrated with a LArTPC \cite{Auger:2016tjc}. Figure \ref{fig:mucs_crt} shows a simulation of the cosmic rays which hit the LArTPC and are tagged by the MuCS and the CRT.
 
 \begin{figure}[htbp]
 \centering
@@ -280,7 +288,7 @@ This study was also used to demonstrate the tagging capabilities of a larger Cos
     \caption{3D drawing of simulated cosmic rays (brown lines) hitting the LArTPC and tagged by the MuCS (left) and the CRT (right).}\label{fig:mucs_crt}
 \end{figure}
 
-This sub-system was developed and assembled at the Laboratory for High Energy Physics (LHEP) at the University of Bern and installed at Fermilab in 2017. 
+This sub-system was installed at Fermilab in 2017 and was not present when the data used in this thesis was acquired. 
 
 The CRT panels are made of plastic scintillation modules, which provide time and position information for charged particles crossing the panels and hitting the TPC.
 Cosmic-ray rejection in the LArTPC can be improved both by spatially tagging crossing cosmic rays and by vetoing events with a signal in the CRT during the beam-gate window. 

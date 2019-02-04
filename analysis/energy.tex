@@ -14,11 +14,11 @@ where:
 
 \item the correction factor $1.01\frac{e^-}{e^{-}_{\mathrm{reco}}}$ is obtained measuring the true number of collected electrons $e^{-}$ on the wires using a sample of stopping muons, fitting the $dE/dx$ vs. residual range to values for argon as tabulated by the PDG \cite{PhysRevD.98.030001};
 \item $\frac{23.6~\mathrm{eV}}{e^-}$ is the work function for ionizing an argon atom \cite{Shibamura:1975zz};
-\item $R = 0.62$ is the recombination factor obtained with the Modified Box Model \cite{Acciarri:2013met} at MicroBooNE's electric field of 270~V/cm.
+\item $R = 0.62$ is the recombination factor obtained with the Modified Box Model \cite{Acciarri:2013met} at MicroBooNE's electric field of 270~V/cm assuming an energy loss per length $dE/dx=2.3$~MeV/cm.
 \end{itemize}
 
 The reconstructed energy is obtained summing the energy of each hit from the reconstructed showers produced by a simulated electron in the collection plane, produced by a $\nu_{e}$ CC0$\pi$-Np interaction. The starting point of the simulated electron and the starting point of the reconstructed showers are required to be within the fiducial volume. 
-Figure \ref{fig:ecalib} shows the calibration slope necessary to convert the electron reconstructed energy $E_{\mathrm{reco}}^{e}$ into true electron energy $E^{e}$. The true energy spectrum has been divided in 10 bins of equal size in the 30-2030~MeV range. Since the reconstructed energy distributions in each true energy bin are asymmetric, the data points are obtained fitting the distributions with a GaussExp function \cite{Das:2016stf}, in order to estimate the most probable value (MPV). The GaussExp function consists of an exponential tail stitched to a Gaussian core and it is often use to measure lossy processes such as the energy reconstructed in a calorimeter. The coordinate on the $E^{e}$ axis are given by the mean of the true energy distribution for each bin. The vertical error bars correspond to the full width at half maximum (FWHM) of the fitted function. The true energy distribution and the reconstruction energy distribution for every bin are shown in Figure \ref{fig:e_spectra}.
+Figure \ref{fig:ecalib} shows the calibration slope necessary to convert the electron reconstructed energy $E_{\mathrm{reco}}^{e}$ into true electron energy $E^{e}$. The true energy spectrum has been divided into 10 bins of equal size in the 30-2030~MeV range. Since the reconstructed energy distributions in each true energy bin are asymmetric, the data points are obtained fitting the distributions with a GaussExp function \cite{Das:2016stf}, in order to estimate the most probable value (MPV). The GaussExp function consists of an exponential tail stitched to a Gaussian core and it is often use to measure lossy processes such as the energy reconstructed in a calorimeter. The coordinate on the $E^{e}$ axis are given by the mean of the true energy distribution for each bin. The vertical error bars correspond to the full width at half maximum (FWHM) of the fitted function. The true energy distribution and the reconstruction energy distribution for every bin are shown in Figure \ref{fig:e_spectra}.
 
 \begin{figure}[htbp]
 \centering
@@ -44,7 +44,7 @@ E_{\mathrm{corr}}^{e} = (E_{\mathrm{reco}}^{e} + 34.7~\mathrm{MeV})/0.77.
 \begin{overpic}[width=0.7\linewidth]{figures/ecalib.pdf}
 \end{overpic}
 % \includegraphics[width=0.65\columnwidth]{figures/ecalib.pdf}
-\caption{Bi-dimensional histogram of true electron energy $E^{e}$ vs. reconstructed electron energy $E_{\mathrm{reco}}^{e}$. The reconstructed electron energy is measured summing the energy of each hit associated to reconstructed showers produced by the simulated electron. The black points are obtained measuring the most probable value of the $E_{\mathrm{reco}}^{e}$ distribution for each $E^{e}$ bin, measured by a GaussExp fit.}
+\caption{Bi-dimensional histogram of true electron energy $E^{e}$ vs. reconstructed electron energy $E_{\mathrm{reco}}^{e}$. The reconstructed electron energy is measured summing the energy of each hit associated to reconstructed showers produced by the simulated electron. The black points correspond to the most probable value of the $E_{\mathrm{reco}}^{e}$ distribution for each $E^{e}$ bin, calculated with a GaussExp fit.}
 \label{fig:ecalib}
 \end{figure}
 
@@ -63,14 +63,14 @@ Figure \ref{fig:electron_res} shows the $E_{\mathrm{frac}}$ distribution for 10 
 \label{fig:electron_res}
 \end{figure}
 
-The fractional energy resolution can be defined as the ratio between the standard deviation of the Gaussian core $\sigma$ of the GaussExp function and the true electron energy $E_e$. Figure \ref{fig:sigma_e} shows the fractional energy resolution as a function of the true electron energy. The points can be fitted with the classic calorimeter resolution formula \cite{Fabjan:2003aq}:
+The fractional energy resolution can then be defined as the ratio between the standard deviation of the Gaussian core $\sigma$ of the GaussExp function and the true electron energy $E_e$. Figure \ref{fig:sigma_e} shows the fractional energy resolution as a function of the true electron energy. The points can be fitted with the classic calorimeter resolution formula \cite{Fabjan:2003aq}:
 \begin{equation}
     \frac{\sigma}{E} = \frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus c,\label{eq:calo}
 \end{equation}
 where:
 \begin{itemize}
     \item $a = 2.30\%$ is the stochastic term, which is caused by the intrinsic fluctuations of the development of the electromagnetic shower;
-    \item $b = 7.53\%$ is the noise term, which comes from the electronics noise of the readout chain and represent the dominant contribution;
+    \item $b = 7.53\%$ is the noise term, which comes from the electronics noise of the readout chain and represents the dominant contribution;
     \item $c = 1.21\%$ is the constant term, which is caused by detector non-uniformities (e.g. the presence of missing or unresponsive wires).
 \end{itemize} 
 
@@ -87,7 +87,7 @@ Another effect which contributes to the broadening of the energy resolution in M
 It is also important to underline that the energy resolution quoted here does not correspond to the intrinsic MicroBooNE energy resolution, but only to the energy resolution for the selected $\nu_e$ CC0$\pi$-Np events.
 
 \subsection{Single proton energy reconstruction and calibration}\label{sec:protonenergy}
-Proton energy reconstruction is obtained converting the reconstructed track length $L$ into deposited energy using the proton stopping power in liquid argon, as tabulated in \cite{pstar}. Liquid argon density $\rho_{\mathrm{LAr}}$ is assumed to be constant at 1.4~g/ml. Figure \ref{fig:proton} shows the proton kinetic energy as a function of the range of the proton in liquid argon (measured as $L \times \rho_{\mathrm{LAr}}$).
+Proton energy reconstruction is performed by converting the reconstructed track length $L$ into deposited energy using the proton stopping power in liquid argon tabulated in \cite{pstar}. Liquid argon density $\rho_{\mathrm{LAr}}$ is assumed to be constant at 1.4~g/ml. Figure \ref{fig:proton} shows the proton kinetic energy as a function of the range of the proton in liquid argon (measured as $L \times \rho_{\mathrm{LAr}}$).
 
 \begin{figure}[htbp]
 \centering
@@ -166,7 +166,7 @@ The mean energy loss per length of charged particles $\left\langle dE/dx\right\r
 \end{equation}
 where $T_{\mathrm{max}}$ is the maximum possible energy transfer in a single collision, $I$ is the mean excitation energy, and $\delta(\beta\gamma)$ is a density correction. 
 
-In material of moderate thickness such as LAr, the energy loss probability distribution is described by the asymmetric Landau distribution \cite{Landau:1944if}, which drives the mean of the energy loss of eq. \eqref{eq:bethe} into the tail of the distribution. For this reason, ``the
+In materials of moderate thickness such as LAr, the energy loss probability distribution is described by the asymmetric Landau distribution \cite{Landau:1944if}, which drives the mean of the energy loss of eq. \eqref{eq:bethe} into the tail of the distribution. For this reason, ``the
 mean of the energy loss given by the Bethe equation [\dots] is thus ill-defined
 experimentally and is not useful for describing energy loss by single particles'' (Section 30.2.7 of \cite{PhysRevD.98.030001}).
 The most probable value of the Landau distribution, which should be used instead, is given by: 
@@ -175,14 +175,14 @@ The most probable value of the Landau distribution, which should be used instead
 \end{equation}
 where $\xi = (K/2)\langle Z/A \rangle (x/b^2)$~MeV, $j=0.2$, and $x$ is the thickness of the material in $\mathrm{g}\cdot\mathrm{cm}^2$ (Section 30.2.7 of \cite{PhysRevD.98.030001}). 
 
-An important feature of LArTPC technology is their ability to distinguish between electrons and photons in the final state by measuring their $dE/dx$. Photons that undergo pair-production, which is the dominant process above 10~MeV, produce a $e^+e^-$ pair. If the pair is boosted, the trajectories of the positron and the electron overlap, producing an average $dE/dx$ which is twice the one of a single, minimum-ionising electron. 
+An important feature of the LArTPC technology is its ability to distinguish between electrons and photons in the final state by measuring their $dE/dx$. Photons that undergo pair-production, which is the dominant process above 10~MeV, produce a $e^+e^-$ pair. If the pair is boosted, the trajectories of the positron and the electron overlap, producing an average $dE/dx$ which is twice the one of a single, minimum-ionising electron. 
 
 In MicroBooNE, the $dE/dx$ for electromagnetic showers is measured with a procedure analogous to the one developed by the ArgoNeuT collaboration and described in \cite{Acciarri:2016sli}. In this document, neutrinos were produced by the NuMI neutrino beam and the events were visually inspected to select electron and photon showers.
 
 \begin{figure}[htbp]
 \centering
 \begin{overpic}[width=0.75\linewidth]{figures/evd_dedx.pdf}
-\end{overpic}\caption{Event display of an electron shower candidate, showing the $1\times4$~cm area used for the $dE/dx$ calculation. Each small black rectangle corresponds to a reconstructed shower hit.}
+\end{overpic}\caption{Event display of an electron shower candidate, showing the $1\times4$~cm$^2$ area used for the $dE/dx$ calculation. Each small black rectangle corresponds to a reconstructed shower hit.}
 \label{fig:evd_dedx}
 \end{figure}
 
@@ -215,7 +215,7 @@ Figure \ref{fig:dedx_gamma_e} shows the area-normalised histograms of the $dE/dx
    \caption{Electromagnetic showers aligned with the wire orientation will have a large pitch value and their measured $dE/dx$ will be shifted towards low values.}\label{fig:pitch}
 \end{figure}
 
-The electron showers have a peak around 2~MeV/cm, as expected. The photon showers, instead, have a peak around 4~MeV/cm and a second peak around 2~MeV/cm, which represent a limitation to our $e/\gamma$ separation capabilities. This peak is caused by mainly two effects:
+The electron showers have a peak around 2~MeV/cm, as expected. The photon showers, instead, have a peak around 4~MeV/cm and a second peak around 2~MeV/cm, which represents a limitation to our $e/\gamma$ separation capabilities. This peak is caused by mainly two effects:
 \begin{itemize}
     \item photons that undergo Compton scattering will transfer most of their energy to the electron, producing a shower with the same $dE/dx$ of an electron. This effect decreases with the photon energy and is dominant below 10~MeV, as shown in Figure \ref{fig:compton};
     
@@ -226,7 +226,7 @@ The electron showers have a peak around 2~MeV/cm, as expected. The photon shower
     \label{fig:compton}
     \end{figure}
     
-    \item very asymmetric $\gamma\rightarrow e^+e^-$ pair production. When the positron and the electron do not overlap, the measured $dE/dx$ distribution will be peaked around 2~MeV/cm. The electron and the positron can also be produced with very different energies, as shown in Figure \ref{fig:asymmetry}. In this case, the distribution of the $dE/dx$ values in the $1\times4$ will have a mean value close to 2~MeV/cm. 
+    \item very asymmetric $\gamma\rightarrow e^+e^-$ pair production. When the positron and the electron do not overlap, the measured $dE/dx$ distribution will be peaked around 2~MeV/cm. The electron and the positron can also be produced with very different energies, as shown in Figure \ref{fig:asymmetry}. In this case, the distribution of the $dE/dx$ values in the $1\times4$~cm$^2$ box will be shifted towards 2~MeV/cm. 
     
     \begin{figure}[htbp]
     \centering

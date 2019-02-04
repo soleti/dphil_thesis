@@ -1,5 +1,10 @@
-\section{Sensitivity to the MiniBooNE low-energy excess}\label{sec:sensitivity}
-\subsection{Estimation of the MiniBooNE signal in MicroBooNE}
+\chapter{Sensitivity to the MiniBooNE low-energy excess}\label{sec:sensitivity}
+
+\minitoc
+
+In this Chapter we will evaluate the current sensitivity of the $\nu_e$~CC0$\pi$-Np selection to the MiniBooNE low-energy excess in the electron hypothesis. First, the process to estimate the MiniBooNE excess in the MicroBooNE experiment will be described. Then, the sensitivity of the selection will be calculated, taking into account the systematic uncertainties. Thus, the improvements in the selection efficiency and background rejection needed to reach $5\sigma$ sensitivity will be calculated.
+
+\section{Estimation of the MiniBooNE signal in MicroBooNE}
 In order to assess the sensitivity of our analysis to the MiniBooNE low-energy excess in the electron hypothesis, it is necessary to remove the effects of the MiniBooNE detector response, event reconstruction, and selection from the estimation of the excess. This procedure is usually defined as \emph{unfolding} \cite{lee_unfolding}. 
 Figure \ref{fig:excess} shows the MiniBooNE low-energy excess result used in this section: it includes the $6.46\times10^{20}$~POT collected in neutrino mode and analysed in \cite{AguilarArevalo:2007it} (does not include the latest data run used for the result in \cite{Aguilar-Arevalo:2018gpe}).
 
@@ -38,6 +43,7 @@ The regularisation introduces a small bias (usually motivated by physics argumen
 
 The result of the unfolding of the distributions in Figure \ref{fig:excess} is shown in Figure \ref{fig:lee_scaling}: in the electron hypothesis, the MiniBooNE low-energy excess correspond to a scaling of the beam intrinsic $\nu_e$ component as a function of the true $E_{\nu}$ energy. The ratio between the unfolded data spectrum and the unfolded Monte Carlo spectrum is slightly lower than 1 at $600~\mathrm{MeV} < E_{\nu} < 1000$~MeV. In this case, we do not scale our beam intrinsic $\nu_e$ component.
 
+\section{Sensitivity to the excess}
 Once we have unfolded the MiniBooNE low-energy excess, it is possible to process a sample of beam intrinsic $\nu_e$, scaled by the factors shown in Figure \ref{fig:lee_scaling}, through the entire MicroBooNE simulation and reconstruction chain. Figure \ref{fig:lee_after} shows the reconstructed energy spectra $E_{\mathrm{deposited}}$ after the application of the rectangular cuts (left) and of the BDTs cuts (right), including the simulated low-energy excess signal. We select 0.56 (0.40) low-energy excess events after the application of the rectangular cuts (BDTs cuts) for an exposure of the MicroBooNE detector of $4.4\times10^{19}$~POT. When scaled to the expected amount of collected POT ($13.2\times10^{20}$), the selected events become 17.3 (12.3).
 
 \begin{figure}[htbp]
@@ -63,7 +69,7 @@ where $\vec{S}$ is a vector of length $n$ containing the number of signal events
 
 \begin{table}[htbp]
    \centering
-      \caption{Summary of the sensitivities to the MiniBooNE low-energy excess in the electron hypothesis for an exposure of the MicroBooNE detector of $13.2\times10^{20}$~POT.}\label{tab:sensitivity}
+      \caption{Summary of the sensitivities to the MiniBooNE low-energy excess in the electron hypothesis for an exposure of the MicroBooNE detector of $13.2\times10^{20}$~POT. The uncertainties in the number of events include the systematic effects described in Section \ref{sec:systematics}.}\label{tab:sensitivity}
    \begin{tabular}{
    p{0.12\linewidth}
    >{\raggedleft\arraybackslash}p{0.18\linewidth}
@@ -73,13 +79,13 @@ where $\vec{S}$ is a vector of length $n$ containing the number of signal events
      \toprule
      Method & Exp. signal events & Exp. bkg. events & Stat. only significance $[\sigma]$ & Sys. and stat. significance $[\sigma]$ \\
      \midrule
-     Rectangular & 17.3 & 462.7 & 1.25 & 0.83 \\
-     BDTs & 12.3 & 298.9 & 2.08 & 1.76 \\
+     Rectangular & $17.3\pm4.2$ & $462.7\pm111.1$ & 1.25 & 0.83 \\
+     BDTs & $12.3\pm3.0$ & $298.9\pm71.7$ & 2.08 & 1.76 \\
      \bottomrule
    \end{tabular}
 \end{table}
 
-While being informative, these values must be anyway carefully interpreted for several reasons, listed below.
+While being informative, these values must be anyway interpreted carefully for several reasons, listed below.
 \begin{itemize}
     \item The values of the rectangular cuts were not optimised on the low-energy excess signal, but on the $\nu_e$~CC0$\pi$-Np component. This result reflects our choice to be as agnostic as possible on the shape of the eventual low-energy excess signal.
     \item For the same reason, the BDTs were not trained on the low-energy excess signal. Their performances are then not optimised to select low-energy electron neutrinos.
@@ -88,27 +94,27 @@ While being informative, these values must be anyway carefully interpreted for s
     \item Several improvements in the signal reconstruction, cosmic-ray rejection, and pattern recognition have just been implemented in the software or will be implemented soon. An overview of these changes will be given in Section \ref{sec:improvements}.
 \end{itemize}
 
-\subsection{Future improvements}\label{sec:improvements}
-\subsubsection*{Cosmic Ray Tagger}
-As seen in Section~\ref{sec:numu}, the dominant source of events passing the pre-selection is cosmic-ray interactions.  The Cosmic Ray Tagger (CRT), described extensively in \cite{Auger:2016tjc}, offers several ways to reject these events at the pre-selection stage. First, a coincidence veto of in-time flashes in the PMTs and CRT would allow us to reject a significant background of data beam-off events.  There is some danger that neutrino interactions are also vetoed by this coincidence, but that is unlikely for $\nu_{e}$ events - most particles that exit the TPC and can hit the CRT are muons.
+\section{Future improvements}\label{sec:improvements}
+\subsection*{Cosmic Ray Tagger}
+As seen in Section~\ref{sec:numu}, the dominant source of events passing the pre-selection is cosmic-ray interactions.  The Cosmic Ray Tagger (CRT), described extensively in \cite{Auger:2016tjc}, offers several ways to reject these events at the pre-selection stage. First, a coincidence veto of in-time flashes in the PMTs and CRT would allow us to reject a significant background of data beam-off events.  There is some danger that neutrino interactions are also vetoed by this coincidence, but that is unlikely for $\nu_{e}$ events, since most of the particles which exit the TPC and can hit the CRT are muons.
 
 Additionally, for events where an out-of-TPC neutrino interaction creates a flash in time with the beam, but a cosmic interaction is matched to that flash, the CRT can also be useful.  TPC-to-CRT matching of muon tracks can mitigate this background by flagging a TPC neutrino candidate object, and allowing us to reject out-of-time cosmic rays matched to an in-time, out-of-TPC neutrino flash.
 
-Cosmic-ray rejection is particularly important at low energy, where a Michel electron can often mimic the topology of an electron neutrino. %For example, the shower energy distribution in Figure \ref{fig:showere_pot} shows a pile-up of cosmic-induced events at low energy and improved Michel and cosmic-ray tagging could help lowering the 50 MeV threshold.
+Cosmic-ray rejection is also particularly important at low energy, where a Michel electron can often mimic the topology of an electron neutrino. %For example, the shower energy distribution in Figure \ref{fig:showere_pot} shows a pile-up of cosmic-induced events at low energy and improved Michel and cosmic-ray tagging could help lowering the 50 MeV threshold.
 
 The CRT was not used in this analysis because was not yet installed when the data sample analysed here was recorded. At as of January 2019, there are \num{5e20} POT collected without the CRT and more than \num{6e20} POT collected with the CRT. With the full approved running of MicroBooNE (\num{13.2e20} POT), we anticipate we will collect \num{8.2e20} POT with the CRT.
 
-\subsubsection*{Reconstruction improvements}
-As shown in Section \ref{sec:ineff}, the selection inefficiency depends on several factors. In particular, a better object reconstruction will allow to recover the events where reconstruction issues did not allow to satisfy the topology requirement (13.5\% of the events do not have showers reconstructed and 3.4\% have only one shower) or in which a cosmic ray is wrongly selected as neutrino candidate (8.5\%). 
+\subsection*{Reconstruction improvements}
+As shown in Section \ref{sec:ineff}, the selection inefficiency depends on several factors. In particular, a better object reconstruction will allow to recover the events where reconstruction issues did not allow to satisfy the topology requirement (13.7\% of the events do not have showers reconstructed and 3.5\% have only one shower) or in which a cosmic ray is wrongly selected as neutrino candidate (7.9\%). 
 Further improvements in reconstruction and selection can be made to reduce the cosmic contamination in the selected events (\emph{cosmic contaminated} background).
 In particular, changes in the Pandora framework have been implemented which will improve the cosmic rejection and the neutrino selection efficiency. A preliminary study on the data beam-off sample shows an improvement in the cosmic rejection by a factor of 5.
 
-\subsubsection*{Proton and electron particle identification}
+\subsection*{Proton and electron particle identification}
 The current status of the analysis relies essentially on the measured $dE/dx$ of the reconstructed showers to identify the electron in the event and on the measured $dE/dx$ of the reconstructed tracks to identify the protons. An improvement in the shower clustering and vertexing will directly cause an increase of the signal efficiency, since more electron showers will have a correctly measured $dE/dx$. 
 At the moment, only the collection plane is used for calorimetric measurements. However, when the showers or the tracks are aligned to the collection plane, the number of reconstructed hits is not sufficient for the measurement of the $dE/dx$. A preliminary simulation shows that, using the induction planes, it is possible to have 30\% more showers with a correctly measured $dE/dx$.
 
-\subsubsection{Improvements and sensitivity}
-It is possible to quantify the effect of selection-efficiency and background-rejection improvements on the sensitivity to the low-energy excess. In Figure \ref{fig:improvements} we show the expected sensitivity (with and without systematic uncertainties) obtained by varying our efficiency and our background-rejection power by a constant amount, both for the rectangular and the BDTs cuts. 
+\section{Improvements and sensitivity}
+It is possible to quantify the effect of selection efficiency and background-rejection improvements on the sensitivity to the low-energy excess. In Figure \ref{fig:improvements} we show the expected sensitivity (with and without systematic uncertainties) obtained by varying our efficiency and our background-rejection power by a constant amount, both for the rectangular and the BDTs cuts. 
 
 \begin{figure}[htbp]
   \begin{center}

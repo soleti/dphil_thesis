@@ -1,4 +1,9 @@
-\section{Systematic uncertainties}\label{sec:systematics}
+\chapter{Systematic uncertainties}\label{sec:systematics}
+\minitoc
+
+In this chapter we will describe and evaluate the main systematic uncertainties which affect the selection of $\nu_e$~CC0$\pi$-Np events.
+
+\section{Introduction}
 In this analysis, the systematic uncertainties of the quantities described in Section \ref{sec:methodology} can be divided into three main categories: 
 \begin{description}
 \item[Cross-section modeling.] Our Monte Carlo simulation relies on the neutrino generator provided by the GENIE collaboration \cite{Andreopoulos:2009rq}. This generator can be configured to use different physics models, which can affect the relative abundance and the energy of the particles in the final state.
@@ -29,7 +34,7 @@ The linear correlation matrix $\rho$ is defined as:
     \rho_{ij} = \frac{E_{ij}}{\sqrt{E_{ii}E_{jj}}}.
 \end{equation}
 
-\subsection{Cross-section systematic uncertainties}
+\section{Cross-section systematic uncertainties}
 In order to estimate the cross-section systematic uncertainties, the standard GENIE parameters described in \cite{Andreopoulos:2009rq} are simultaneously varied within their uncertainties in $N_{u} = 100$ simulated universes. A calculated \emph{weight} gets assigned to each universe, which is applied when filling the histograms of the reconstructed quantities. The uncertainties shown here do not include systematic effects associated with Random Phase Approximation (RPA) and with Meson Exchange Current (MEC) interactions. RPA refers to long-range multi-nucleon correlations which suppress the neutrino-nucleon cross-section at low-exchanged momentum $Q^2$. MEC interactions involve the scatter between the neutrino and a correlated pairs of nucleons. These two systematic effects will be quantified in a future version of the analysis.
 
 Figure \ref{fig:eff_genie} shows the central value of the $\nu_{e}$ CC0$\pi$-Np selection efficiency and the corresponding value for each GENIE variation universe. The variation in this case is expected to be small, since we are essentially dividing two distributions with the same weight. Figure \ref{fig:reco_genie} and Figure \ref{fig:frac_genie} show that the variations in the reconstructed energy spectrum are larger at lower energies, which is the energy region most affected by the GENIE parameters' uncertainties. The GENIE-related uncertainty in the number of selected events from the BNB+cosmic sample is 7.9\%.
@@ -57,7 +62,7 @@ Figure \ref{fig:eff_genie} shows the central value of the $\nu_{e}$ CC0$\pi$-Np 
 \end{figure}
 
 
-\subsection{Flux systematic uncertainties}
+\section{Flux systematic uncertainties}
 MicroBooNE is using the same simulation of the BNB flux as the MiniBooNE collaboration. The different contributions to the systematic uncertainties of this simulation are thoroughly described in \cite{AguilarArevalo:2008yp} and summarised in Section \ref{sec:flux}.
 
 In this analysis, the systematic uncertainties related to the flux simulation are evaluated by generating 100 universes, where the flux parameters are varied within their uncertainties. 
@@ -98,7 +103,7 @@ The flux-related uncertainty in the number of selected events from the BNB+cosmi
 	\end{center}
 \end{figure}
 
-\subsection{Detector systematic uncertainties}
+\section{Detector systematic uncertainties}
 The detector systematic uncertainties have been measured by simulating several samples where a single detector parameter is varied by its estimated $\pm1\sigma$ uncertainty or a different physics model is used. The detector variations taken into consideration are:
 \begin{description}
 \item[Space-charge effect.] The $x$-dependence of the space-charge effect is estimated with a data-driven procedure and its magnitude is scaled by 0.7.
@@ -154,7 +159,7 @@ The sample with an improved simulation of the charge induced on the neighbouring
    \caption{Summary of the detector uncertainties variations in the BNB+cosmic sample, break down by event category.}\label{tab:det_bkg}
    \vspace{1em}
    \begin{tabular}{
-   p{0.16\linewidth}
+   p{0.15\linewidth}
    >{\raggedleft\arraybackslash}p{0.11\linewidth}
    >{\raggedleft\arraybackslash}p{0.11\linewidth}
    >{\raggedleft\arraybackslash}p{0.11\linewidth}
@@ -163,26 +168,26 @@ The sample with an improved simulation of the charge induced on the neighbouring
    >{\raggedleft\arraybackslash}p{0.11\linewidth}
    }
      \toprule
-     Variation & Beam intrinsic $\nu_{\mu}$ & Beam intrinsic NC & Outside fid. vol. & Cosmic contaminated & Cosmic & Total \\
+     Sample & Beam intrinsic $\nu_{\mu}$ [\%]& Beam intrinsic NC [\%]& Outside fid. vol. [\%]& Cosmic contam. [\%]& Cosmic [\%]& Total [\%]\\
      \midrule
-     Space-charge & 8.5\% & 2.9\% & 32.5\% & 42.0\% & 28.0\% & 20.3\%\\
-     Reco. model & 3.2\% & 4.9\% & 14.4\% & 4.0\% & -3.5\% &2.5\%\\
-     Induced charge & -19.0\% & 2.8\% & 15.9\% & -7.3\% & -11.5\% & -8.8\%\\
-     Light sim. & 3.6\% & 0.4\% & 7.0\% & 20.1\% & -4.9\% & 4.5\%\\
-     Saturated chan. & -6.9\% & 3.6\% & 4.2\% & -0.4\% & -5.5\% & -1.4\%\\
-     $e^-$ lifetime & 9.1\% & 5.2\% & 21.1\% & 4.0\% & 6.3\% & 7.0\%\\
-     Long. diff. & 3.2\% & 0.2\% & 12.0\% & 11.9\% & -4.3\% & -0.4\%\\
-     Trans. diff. & 1.5\% & 2.2\% & 5.0\% & 3.9\% & -3.1\% & 1.1\%\\
-     Misconf. chan. & -4.6\% & 4.0\% & 4.2\% & 0.5\% & -2.4\% & -0.8 \%\\
-     Wire noise & 3.4\% & 3.7\% & 6.0\% & 5.9\% & -3.0\% & 0.5\%\\
-     PE noise & -0.7\% & 2.4\% & 14.4\% & 5.1\% & -8.6\% & -0.2\%\\
-     Cryostat light & 2.9\% & 2.1\% & 14.3\% & 3.5\% & -2.9\% & 1.1\%\\
-     Wire response & 3.9\% & 4.3\% & 5.0\% & 3.7\% & -1.1\% & 2.7\%\\
+     SCE & 8.5 & 2.9 & 32.5 & 42.0 & 28.0 & 20.3\\
+     Reco. model & 3.2 & 4.9 & 14.4 & 4.0 & -3.5 &2.5\\
+     DIC & -19.0 & 2.8 & 15.9 & -7.3 & -11.5 & -8.8\\
+     Light sim. & 3.6 & 0.4 & 7.0 & 20.1 & -4.9 & 4.5\\
+     Sat. chan. & -6.9 & 3.6 & 4.2 & -0.4 & -5.5 & -1.4\\
+     $e^-$ lifetime & 9.1 & 5.2 & 21.1 & 4.0 & 6.3 & 7.0\\
+     Long. diff. & 3.2 & 0.2 & 12.0 & 11.9 & -4.3 & -0.4\\
+     Trans. diff. & 1.5 & 2.2 & 5.0 & 3.9 & -3.1 & 1.1\\
+     Mis. chan. & -4.6 & 4.0 & 4.2 & 0.5 & -2.4 & -0.8 \\
+     Wire noise & 3.4 & 3.7 & 6.0 & 5.9 & -3.0 & 0.5\\
+     PE noise & -0.7 & 2.4 & 14.4 & 5.1 & -8.6 & -0.2\\
+     Cryo. light & 2.9 & 2.1 & 14.3 & 3.5 & -2.9 & 1.1\\
+     Wire res. & 3.9 & 4.3 & 5.0 & 3.7 & -1.1 & 2.7\\
      \bottomrule
    \end{tabular}
 \end{table}
 
-\vspace{1em}
+\section{Summary}
 Table \ref{tab:syst_bkg} shows the uncertainty in the number of selected events for the cross-section, flux, and detector systematic variations, break down by event category. There are no detector variations available for the $\nu_e$+cosmic and dirt samples. As such, the uncertainty on these samples samples is assumed to be the same one of the BNB+cosmic sample. Given the small contribution of these samples to the number of selected events (2.5\% of the total), this approximation is considered sufficient at this stage. The statistical uncertainty of the data off-beam sample is 1.0\%. 
 The total uncertainty on the number of selected events, obtained with eq. \ref{eq:cov_tot}, is 27.2~\%.
 
@@ -195,25 +200,25 @@ The cross-section and flux uncertainties have been evaluated also for the events
    \caption{Summary of the systematic uncertainties variations in the BNB+cosmic sample, break down by event category.}\label{tab:syst_bkg}
    \vspace{1em}
    \begin{tabular}{
-   p{0.23\linewidth}
-   >{\raggedleft\arraybackslash}p{0.15\linewidth}
-   >{\raggedleft\arraybackslash}p{0.15\linewidth}
-   >{\raggedleft\arraybackslash}p{0.15\linewidth}
+   p{0.26\linewidth}
+   >{\raggedleft\arraybackslash}p{0.22\linewidth}
+   >{\raggedleft\arraybackslash}p{0.18\linewidth}
+   >{\raggedleft\arraybackslash}p{0.18\linewidth}
    }
      \toprule
-     Category & Cross-section & Flux & Detector \\
+     Category & Cross-section [\%]& Flux [\%]& Detector [\%]\\
      \midrule
-     $\nu_e$ CC0$\pi$-Np & 16.8\% & 13.0\% & -\\
-     $\nu_e$ CC & 11.1\% & 10.9\% & -\\
+     $\nu_e$ CC0$\pi$-Np & 16.8 & 13.0 & -\\
+     $\nu_e$ CC & 11.1 & 10.9 & -\\
      \midrule
-     Beam intrinsic $\nu_{\mu}$ & 10.4\% & 12.1\% & 25.6\%\\
-     Beam intrinsic NC & 9.5\% & 12.7\% & 11.9\%\\
-     Outside fid. vol. & 8.6\% & 11.0\% & 51.9~\%\\
-     Cosmic & 9.3\% & 9.3\% & 34.0\%\\
-     Cosmic contaminated & 8.6\% & 11.0\% & 49.5\%\\
+     Beam intrinsic $\nu_{\mu}$ & 10.4 & 12.1 & 25.6\\
+     Beam intrinsic NC & 9.5 & 12.7 & 11.9\\
+     Outside fid. vol. & 8.6 & 11.0 & 51.9~\\
+     Cosmic & 9.3 & 9.3 & 34.0\\
+     Cosmic contaminated & 8.6 & 11.0 & 49.5\\
 
      \midrule
-     Total & 7.9\% & 12.3\% & 24.0\%\\
+     Total & 7.9 & 12.3 & 24.0\\
      \bottomrule
    \end{tabular}
 \end{table}
