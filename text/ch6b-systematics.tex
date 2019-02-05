@@ -1,14 +1,14 @@
 \chapter{Systematic uncertainties}\label{sec:systematics}
 \minitoc
 
-In this chapter we will describe and evaluate the main systematic uncertainties which affect the selection of $\nu_e$~CC0$\pi$-Np events.
+In this chapter we will describe and evaluate the main systematic uncertainties which affect the selection of $\nu_e$~CC0$\pi$-Np events and the sensitivity to the low-energy excess of electron-like events.
 
 \section{Introduction}
-In this analysis, the systematic uncertainties of the quantities described in Section \ref{sec:methodology} can be divided into three main categories: 
+In this analysis, the systematic uncertainties which affect the measurements of the quantities described in Section \ref{sec:methodology} can be divided into three main categories: 
 \begin{description}
-\item[Cross-section modeling.] Our Monte Carlo simulation relies on the neutrino generator provided by the GENIE collaboration \cite{Andreopoulos:2009rq}. This generator can be configured to use different physics models, which can affect the relative abundance and the energy of the particles in the final state.
-\item[Flux simulation.] The amount of $\nu_{\mu}$ and $\nu_{e}$ reaching the MicroBooNE detector is evaluated by an independent simulation of the neutrino flux of the BNB, used also in the MiniBooNE experiment. This simulation is affected by uncertainties that need to be taken into account.
-\item[Detector simulation.] The detector response (noise removal, signal processing, hit reconstruction) must be carefully simulated in order to achieve a good agreement between data and Monte Carlo in the reconstructed quantities used for background rejection. 
+\item[Cross-section modelling.] Our Monte Carlo simulation relies on the neutrino generator provided by the GENIE collaboration \cite{Andreopoulos:2009rq}. This generator can be configured to use different physics models, which can affect the relative abundance and the energy of the particles in the final state.
+\item[Flux simulation.] The amount of $\nu_{\mu}$ and $\nu_{e}$ reaching the MicroBooNE detector is evaluated by an independent simulation of the neutrino flux of the BNB, used also in the MiniBooNE experiment. This simulation is affected by uncertainties which need to be taken into account.
+\item[Detector simulation.] The detector response (noise removal, signal processing, hit reconstruction) must be carefully simulated in order to achieve a good agreement between data and Monte Carlo in the reconstructed quantities used for background rejection. Several detector parameters are not perfectly understood and the effect of these uncertainties must be assessed. 
 \end{description}
 
 The systematic uncertainties related to the neutrino generator and the flux are evaluated by simulating several \emph{universes}, where the GENIE and flux parameters are varied within their uncertainties. The covariance matrix is defined as:
@@ -24,8 +24,8 @@ where $v$ is the number of detector variations samples and $x^{s}$ is the value 
 \begin{equation}
     E = E^{\mathrm{stat}} + E^{\mathrm{GENIE}} + E^{\mathrm{flux}} + E^{\mathrm{det}},\label{eq:cov_tot}
 \end{equation}
-where $E^{\mathrm{stat}}$ corresponds to the statistical uncertainty of the Monte Carlo and data off-beam samples, given their limited size. 
-The systematic uncertainty for bin $i$, shown in the plots of Section \ref{sec:methodology}, corresponds to $\sqrt{E_{ii}}$. The fractional covariance matrix $F$ is directly obtained from the covariance matrix and the central values as:
+where $E^{\mathrm{stat}}$ corresponds to the statistical uncertainty of the Monte Carlo and data beam-off samples, given their limited size. 
+The systematic uncertainty for the bin $i$, shown in the plots of Section \ref{sec:methodology}, corresponds to $\sqrt{E_{ii}}$. The fractional covariance matrix $F$ is directly obtained from the covariance matrix and the central values as:
 \begin{equation} 
     F_{ij} = \frac{E_{ij}}{x_{i}^{cv} x_{j}^{cv}}.
 \end{equation}
@@ -35,9 +35,9 @@ The linear correlation matrix $\rho$ is defined as:
 \end{equation}
 
 \section{Cross-section systematic uncertainties}
-In order to estimate the cross-section systematic uncertainties, the standard GENIE parameters described in \cite{Andreopoulos:2009rq} are simultaneously varied within their uncertainties in $N_{u} = 100$ simulated universes. A calculated \emph{weight} gets assigned to each universe, which is applied when filling the histograms of the reconstructed quantities. The uncertainties shown here do not include systematic effects associated with Random Phase Approximation (RPA) and with Meson Exchange Current (MEC) interactions. RPA refers to long-range multi-nucleon correlations which suppress the neutrino-nucleon cross-section at low-exchanged momentum $Q^2$. MEC interactions involve the scatter between the neutrino and a correlated pairs of nucleons. These two systematic effects will be quantified in a future version of the analysis.
+In order to estimate the cross-section systematic uncertainties, the standard GENIE parameters described in \cite{Andreopoulos:2009rq} are simultaneously varied within their uncertainties in $N_{u} = 100$ simulated universes. A calculated \emph{weight} gets assigned to each universe, which is applied when filling the histograms of the reconstructed quantities. The uncertainties shown here do not include systematic effects associated with Random Phase Approximation (RPA) and with Meson Exchange Current (MEC) interactions. RPA refers to long-range multi-nucleon correlations which suppress the neutrino-nucleon cross-section at low-exchanged momentum $Q^2$ \cite{Nieves:2011pp}. MEC interactions involve the scatter between the neutrino and a correlated pair of nucleons (\emph{2p-2h}) \cite{Bodek:2011ps}. These two systematic effects will be quantified in a future version of the analysis.
 
-Figure \ref{fig:eff_genie} shows the central value of the $\nu_{e}$ CC0$\pi$-Np selection efficiency and the corresponding value for each GENIE variation universe. The variation in this case is expected to be small, since we are essentially dividing two distributions with the same weight. Figure \ref{fig:reco_genie} and Figure \ref{fig:frac_genie} show that the variations in the reconstructed energy spectrum are larger at lower energies, which is the energy region most affected by the GENIE parameters' uncertainties. The GENIE-related uncertainty in the number of selected events from the BNB+cosmic sample is 7.9\%.
+Figure \ref{fig:eff_genie} shows the central value of the $\nu_{e}$ CC0$\pi$-Np selection efficiency and the corresponding value for each GENIE variation universe. The variation in this case is expected to be small, since we are essentially dividing two distributions (passed and total) with similar weights Figure \ref{fig:reco_genie} and Figure \ref{fig:frac_genie} show that the variations in the reconstructed energy spectrum are larger at lower energies, which is the energy region most affected by the GENIE parameters uncertainties. The GENIE-related uncertainty in the number of selected events is 7.9\%.
 
 \begin{figure}[htbp]
   \begin{center}
@@ -63,13 +63,13 @@ Figure \ref{fig:eff_genie} shows the central value of the $\nu_{e}$ CC0$\pi$-Np 
 
 
 \section{Flux systematic uncertainties}
-MicroBooNE is using the same simulation of the BNB flux as the MiniBooNE collaboration. The different contributions to the systematic uncertainties of this simulation are thoroughly described in \cite{AguilarArevalo:2008yp} and summarised in Section \ref{sec:flux}.
+MicroBooNE is using the same simulation of the BNB flux developed by the MiniBooNE collaboration. The different contributions to the systematic uncertainties of this simulation are thoroughly described in \cite{AguilarArevalo:2008yp} and summarised in Section \ref{sec:flux}.
 
 In this analysis, the systematic uncertainties related to the flux simulation are evaluated by generating 100 universes, where the flux parameters are varied within their uncertainties. 
 
 Figure \ref{fig:eff_flux} shows the central value of the $\nu_{e}$ CC0$\pi$-Np selection efficiency and the corresponding value for each flux variation universe. Also here, the variation in the efficiency is small, as expected. 
 Figure \ref{fig:reco_flux} shows a bias of the variation samples with respect to the nominal simulation, which does not correspond to the average of the universes. This is caused by an inconsistency of the pion production cross-section used in the generation of the universes. 
-Figure \ref{fig:harp} shows the pion production cross-section as measured by HARP \cite{Catanesi:2007ab} and the fit with the Sanford-Wang parametrisation \cite{Sanford:1967zza}, which are not in agreement at low momentum. The nominal Monte Carlo simulation uses the result of the Sanford-Wang fit, while the systematic uncertainties are evaluated with a splined fit of the HARP data.
+Figure \ref{fig:harp} shows the pion production cross-section as measured by HARP \cite{Catanesi:2007ab} and the fit with the Sanford-Wang parametrisation \cite{Sanford:1967zza}, which are not in agreement at low momentum. The nominal Monte Carlo simulation uses the result of the Sanford-Wang fit, while the systematic uncertainties are evaluated with a spline interpolation of the HARP data.
 
 \begin{figure}[htbp]
 \centering  
@@ -77,8 +77,8 @@ Figure \ref{fig:harp} shows the pion production cross-section as measured by HAR
 \caption{Pion production at a fixed angle as measured by the HARP experiment and fit with the Sanford-Wang parametrisation.}\label{fig:harp}
 \end{figure}
 
-In this case, the nominal value is considered as the central value in the covariance matrix definition \eqref{eq:covariance}.
-The flux-related uncertainty in the number of selected events from the BNB+cosmic sample is 12.3\%.
+In this case, the nominal value is considered as the central value in the covariance matrix definition of eq. \eqref{eq:covariance}.
+The flux-related uncertainty in the number of selected events is 12.3\%.
 
 \begin{figure}[htbp]
   \begin{center}
@@ -104,25 +104,25 @@ The flux-related uncertainty in the number of selected events from the BNB+cosmi
 \end{figure}
 
 \section{Detector systematic uncertainties}
-The detector systematic uncertainties have been measured by simulating several samples where a single detector parameter is varied by its estimated $\pm1\sigma$ uncertainty or a different physics model is used. The detector variations taken into consideration are:
+The detector systematic uncertainties have been measured by simulating several samples where a single detector parameter is varied by its estimated $\pm1\sigma$ uncertainty or when a different physics model is used. The detector variations taken into consideration are:
 \begin{description}
 \item[Space-charge effect.] The $x$-dependence of the space-charge effect is estimated with a data-driven procedure and its magnitude is scaled by 0.7.
 \item[Dynamic Induced Charge.] Improved simulation of the induction of charge on the neighbouring wires.
 \item[Light simulation.] Improved simulation of the light production in the detector.
 \item[Saturated channels.] Channels that tend to saturate are turned off in the simulation.
 \item[Misconfigured channels.] Channels with misconfigured ASIC gains and shaping are turned off in the simulation.
-\item[Electron lifetime.] Lifetime of the electron in the detector is reduced to 10~ms.
+\item[Electron lifetime.] Lifetime of the electron in the detector is reduced to 10~ms, which corresponds to a lower LAr purity.
 \item[Recombination model.] The Birks model of recombination \cite{Amoruso:2004dy} is used instead of the modified box model \cite{Acciarri:2013met}. 
-\item[Longitudinal diffusion.] The longitude diffusion is varied to $\pm1~\sigma$ of its estimated uncertainty.
-\item[Transverse diffusion.] The transverse diffusion is varied to $\pm1~\sigma$ of its estimated uncertainty.
-\item[Wire noise.] The amount of noise on the wires is varied to $\pm1~\sigma$ of its estimated uncertainty.
-\item[PE noise.] The amount of single-PE noise in the PMTs is varied to $\pm1~\sigma$ of its estimated uncertainty.
+\item[Longitudinal diffusion.] The longitude diffusion is varied by $\pm1~\sigma$ of its estimated uncertainty.
+\item[Transverse diffusion.] The transverse diffusion is varied by $\pm1~\sigma$ of its estimated uncertainty.
+\item[Wire noise.] The amount of noise on the wires is varied by $\pm1~\sigma$ of its estimated uncertainty.
+\item[PE noise.] The amount of single-PE noise in the PMTs is varied by $\pm1~\sigma$ of its estimated uncertainty.
 \item[Cryostat light.] The light outside the TPC but inside the cryostat is increased by 20\%.
 \item[Wire response.] The wire response functions are squeezed by 20\%.
 \end{description}
 
-In this case, the covariance matrix is evaluated using the definition in eq. \eqref{eq:cov_det}. The fractional covariance matrix and the reconstructed energy spectrum are shown in Figure \ref{fig:frac_det} and Figure \ref{fig:reco_det}, respectively.
-The uncertainty related to the detector systematic effects in the number of selected events from the BNB+cosmic sample is 24.0\%. Given the limited size of the detector variation samples, a flat 24.0\% uncertainty is applied to the event distributions after the rectangular and BDTs cuts.
+In this case, the covariance matrix is calculated using the definition in eq. \eqref{eq:cov_det}. The fractional covariance matrix and the reconstructed energy spectrum are shown in Figure \ref{fig:frac_det} and Figure \ref{fig:reco_det}, respectively.
+The uncertainty related to the detector systematic effects in the number of selected events is 24.0\%. Given the limited size of the detector variation samples, a flat 24.0\% uncertainty is applied to the event distributions also after the rectangular and BDTs cuts. %Detector variations samples with a higher statistics of $\nu_e$ interactions are not currently available and the detector uncertainty for the $\nu_e$~CC0$\pi$-Np and $\nu_e$~CC categories is assumed to be 24.0\%.
 
 The details of the detector systematic uncertainties are listed in Table \ref{tab:det_bkg}. In this case, the detector variations $\sigma_{\mathrm{det}}$ are defined as:
 \begin{equation}
@@ -188,8 +188,10 @@ The sample with an improved simulation of the charge induced on the neighbouring
 \end{table}
 
 \section{Summary}
-Table \ref{tab:syst_bkg} shows the uncertainty in the number of selected events for the cross-section, flux, and detector systematic variations, break down by event category. There are no detector variations available for the $\nu_e$+cosmic and dirt samples. As such, the uncertainty on these samples samples is assumed to be the same one of the BNB+cosmic sample. Given the small contribution of these samples to the number of selected events (2.5\% of the total), this approximation is considered sufficient at this stage. The statistical uncertainty of the data off-beam sample is 1.0\%. 
-The total uncertainty on the number of selected events, obtained with eq. \ref{eq:cov_tot}, is 27.2~\%.
+Table \ref{tab:syst_bkg} shows the uncertainty in the number of selected events for the cross-section, flux, and detector systematic variations, break down by event category. There are no detector variations available for the $\nu_e$+cosmic and dirt samples. As such, at this stage, the uncertainty on these samples is assumed to be the same one of the BNB+cosmic sample.
+% Given the small contribution of these samples to the number of selected events (2.5\% of the total), this approximation is considered sufficient at this stage. 
+The statistical uncertainty of the data off-beam sample after the selection is 1.0\%. 
+The total uncertainty on the number of selected events after the selection, obtained with eq. \ref{eq:cov_tot}, is 27.2~\%.
 
 The cross-section and flux systematic uncertainties do not show a large variation among the background categories of the BNB+cosmic sample. The smallest cross-section variation is 8.6\% for the \emph{Cosmic contaminated} and \emph{Outside fid. vol.} component, while the largest is 10.4\% for the \emph{Beam intrinsic $\nu_{\mu}$} category. The flux variations span from 10.9\% for the \emph{Cosmic} events to 12.7\% for the \emph{Beam intrinsic NC} component. The flux and cross-section variations for the \emph{Cosmic} and the \emph{Cosmic contaminated} categories refer to simulated neutrino interaction in the event.
 

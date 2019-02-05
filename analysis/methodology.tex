@@ -1,6 +1,6 @@
 \section{Analysis Methodology}
 \label{sec:methodology}
-The goal of the event selection is to obtain a sample enriched with $\nu_{e}$ CC0$\pi$-Np interactions. The results of the event selection is described in detail in Section \ref{sec:numu}. In order to increase the purity, two parallel background rejection strategies have been developed: one with rectangular cuts on kinematic and calorimetric variables, described in Section \ref{sec:cuts}, and one with Boosted Decision Trees, described in Section \ref{sec:bdt}.
+The goal of the event selection is to obtain a sample enriched with $\nu_{e}$ CC0$\pi$-Np interactions. The results of the event selection are described in detail in Section \ref{sec:numu}. In order to increase the purity, two parallel background rejection strategies have been developed: one with rectangular cuts on kinematic and calorimetric variables, described in Section \ref{sec:cuts}, and one with Boosted Decision Trees, described in Section \ref{sec:bdt}.
 The measurement of the systematic uncertainties is described in Section \ref{sec:systematics}. The full covariance matrix has then be used to measure the sensitivity to the MiniBooNE low-energy excess signal in the electron hypothesis, in Section \ref{sec:sensitivity}.
 
 \subsection{Data and Monte Carlo samples}\label{sec:data}
@@ -12,8 +12,8 @@ The data used for this analysis correspond to two separate samples: the \emph{da
 In order to increase the simulated statistics of our $\nu_e$ CC0$\pi$-Np events, two different Monte Carlo samples were produced:
 \begin{description}
 \item[$\nu_{e}$ CC0$\pi$-Np + cosmic sample.] Each event has a simulated $\nu_{e}$ CC0$\pi$-Np interaction in the MicroBooNE cryostat and simulated cosmic rays hitting the detector in the same readout window. {The interaction is defined as $\nu_{e}$ CC0$\pi$-Np if it has one electron, at least one proton, no photons, and no mesons (pions, kaons) above detection threshold. The start and end points of the protons and the start point of the electron are required to be contained within the fiducial volume, as defined in Section \ref{sec:precuts}};
-\item[BNB + cosmic sample.] Each event has a simulated neutrino interaction inside the MicroBooNE cryostat, where the neutrino flavors are weighted according to the BNB neutrino flux composition (see Section \ref{sec:beam}), and simulated cosmic rays hitting the detector in the same readout window.
-\item[Dirt sample] {Each event has a simulated neutrino interaction outside the MicroBooNE cryostat, where the neutrino flavors are weighted according to the BNB neutrino flux composition, and simulated cosmic rays hitting the detector in the same readout window.}
+\item[BNB + cosmic sample.] Each event has a simulated neutrino interaction inside the MicroBooNE cryostat, where the neutrino flavours are weighted according to the BNB neutrino flux composition (see Section \ref{sec:beam}), and simulated cosmic rays hitting the detector in the same readout window.
+\item[Dirt sample] {Each event has a simulated neutrino interaction outside the MicroBooNE cryostat, where the neutrino flavours are weighted according to the BNB neutrino flux composition, and simulated cosmic rays hitting the detector in the same readout window.}
 \end{description}
 
 Neutrino events have been generated using the GENIE Neutrino Monte Carlo generator version 2.8.6 \cite{Andreopoulos:2009rq} and cosmic rays have been generated using the CORSIKA Monte Carlo generator version 7.4003 \cite{Heck:1998vt}. Simulated secondary particle propagation utilises GEANT version 4.9.6 \cite{Brun:1994aa}, and detector response simulation and reconstruction employs LArSoft version 6.26.01.10 \cite{Church:2013hea}.
@@ -50,7 +50,7 @@ The hits in the TPC, reconstructed with the procedure described in Section \ref{
 In order to reject the cosmogenic background, Pandora is first run in cosmic mode over all the reconstructed hits. This reconstruction is track-oriented, and the delta rays are reconstructed as showers and considered as daughters of the closest cosmic muon. The starting point of the reconstructed tracks in this mode is assumed to be the highest $y$ coordinate \cite{Acciarri:2017hat}.
 These reconstructed high-level objects are fed to a series of cosmic-ray tagging algorithms, which we will briefly describe below.
 \begin{description}
-\item[Geometry and timing algorithm.] This algorithm checks if the reconstructed hits have a time compatible with the drift-time window. If a track or a shower have more than four hits outside the allowed drift-time window, then they are tagged as cosmic rays. Then, the algorithm loops over all the reconstructed objects and tag them if they have a trajectory that enters and exits the TPC borders, within a fiducial volume. The fiducial volume has been chosen by taking into account the magnitude of the space charge effect (Section \ref{sec:ionisation}).
+\item[Geometry and timing algorithm.] This algorithm checks if the reconstructed hits have a time compatible with the drift-time window. If a track or a shower has more than four hits outside the allowed drift-time window, then they are tagged as cosmic rays. Then, the algorithm loops over all the reconstructed objects and tag them if they have a trajectory that enters and exits the TPC borders, within a fiducial volume. The fiducial volume has been chosen by taking into account the magnitude of the space charge effect (Section \ref{sec:ionisation}).
 \item[Optical algorithm.]{This algorithm takes into account the information provided by the optical system to reject cosmic rays interacting during the readout window. The algorithm first requires the presence of a reconstructed flash during the beam-spill window of 1.6~\si{\micro}s. Then, for each reconstructed particle a \emph{flash hypothesis} is built, meaning that we create a distribution of the light collected by each PMT compatible with the charge distribution of the reconstructed particle. The reconstructed particle is tagged as a cosmic ray if its hypothetical flash satisfies two requirements:
 \begin{enumerate}
     \item at least one PMT sees an amount of PE $3\sigma$ larger than the reconstructed one.
@@ -68,7 +68,7 @@ However, for the subset of cosmic rays piercing the cathode (or the anode) we wi
 \end{align}
 where $t_S$ ($t_E$) is the time of the track start point (end point), $t_F$ is the time of the flash corresponding to the track, and $t_C$ ($t_A$) is the time corresponding to the position of the cathode (anode). Thus, for each track we loop over all reconstructed flash and we consider the track of cosmic origin if there is a flash which satisfies condition \eqref{eq:acpt}.
 
-\item[Stopping-muon algorithms.] Cosmic muons which enters the TPC and stop in the liquid argon can be reconstructed as a track (the cosmic muon) and a shower (the Michel electron). Figure \ref{fig:michel_evd} shows a data event display of the collection plane with a muon stopping and decaying, producing a Michel electron. 
+\item[Stopping-muon algorithms.] Cosmic muons which enter the TPC and stop in the liquid argon can be reconstructed as a track (the cosmic muon) and a shower (the Michel electron). Figure \ref{fig:michel_evd} shows a data event display of the collection plane with a muon stopping and decaying, producing a Michel electron. 
 
 \begin{figure}[htbp]
 \centering
@@ -86,21 +86,21 @@ They are tagged in two ways:
 
 \end{description}
 
-The hits associated to the tagged reconstructed objects (and to their daughters) are removed from the collection of reconstructed hits. The remaining hits are then fed to Pandora in \emph{neutrino mode}, which provides one or more neutrino interaction candidate per event. 
+The hits associated with the tagged reconstructed objects (and to their daughters) are removed from the collection of reconstructed hits. The remaining hits are then fed to Pandora in \emph{neutrino mode}, which provides one or more neutrino interaction candidate per event. 
 
 \subsection{Optical selection}\label{sec:optical_pre_cuts}
 The optical selection serves two purposes: (1) it ensures that the optical flash which triggered the detector readout is compatible with the neutrino candidates from the Pandora neutrino mode, and (2) it provides a way to discriminate between multiple Pandora neutrino candidate objects (most of which are of cosmic origin) by selecting the one most compatible with the flash in the optical detection system in time with the beam-gate window.
 
 The optical selection algorithm consists of three major stages:
 \begin{enumerate}
-\item cuts applied to optical properties of the reconstructed flash object (number of photoelectrons an TPC charge/PMT photoelectrons ratio);
+\item cuts applied to optical properties of the reconstructed flash object (number of photoelectrons a TPC charge/PMT photoelectrons ratio);
 \item cuts on the compatibility of the reconstructed flash with the Pandora neutrino candidate (position of the flash compared with the position of the centre of the collected charge);
 \item the Pandora neutrino candidate which is most compatible with the flash is picked using a likelihood method.
 \end{enumerate}
 
 The effects of the optical selection have been studied in detail using the $\nu_{e}$~CC0$\pi$-Np + cosmic Monte Carlo sample, here our \emph{signal}, and the data beam-off sample, the \emph{background}.
 
-We first require a reconstructed flash in the optical system within the beam spill window of \SI{1.6}{\micro\s}. This requirement select the 99.6\% of the signal events ($\nu_{e}$ CC0$\pi$-Np) and 18.5\% of the background events (data beam-off). 
+We first require a reconstructed flash in the optical system within the beam spill window of \SI{1.6}{\micro\s}. This requirement selects the 99.6\% of the signal events ($\nu_{e}$ CC0$\pi$-Np) and 18.5\% of the background events (data beam-off). 
 The reconstructed flash must also correspond to at least 50 PE recorded by the optical system. This is a very conservative requirement and keeps 99.95\% of the signal and 95.2\% of the background (Figure \ref{fig:pe_cut}).
 
 \begin{figure}[htbp]
@@ -110,7 +110,7 @@ The reconstructed flash must also correspond to at least 50 PE recorded by the o
 \label{fig:pe_cut}
 \end{figure}
 
-These two cuts ensures that the event has a properly reconstructed flash. A flash object has a time and a PE count for each of the 32 PMTs. From this information, two coordinates $z\pm \sigma_z$ and $y\pm \sigma_y$ are calculated, where the positive $z$ axis corresponds to the beam direction and $y$ coordinate corresponds to the detector height. These two values can be compared with the centre of the deposited charge of the reconstructed neutrino candidate in the TPC. This comparison has the implicit assumption that the light will be emitted in the same relative fraction as the charge deposited by the particles in the final state. This is not completely correct since the amount of scintillation light produced per deposited energy unit depends on the particle. Nevertheless, the coarse resolution given by the PMT grid allows to use this approximation.
+These two cuts ensure that the event has a properly reconstructed flash. A flash object has a time and a PE count for each of the 32 PMTs. From this information, two coordinates $z\pm \sigma_z$ and $y\pm \sigma_y$ are calculated, where the positive $z$ axis corresponds to the beam direction and $y$ coordinate corresponds to the detector height. These two values can be compared with the centre of the deposited charge of the reconstructed neutrino candidate in the TPC. This comparison has the implicit assumption that the light will be emitted in the same relative fraction as the charge deposited by the particles in the final state. This is not completely correct since the amount of scintillation light produced per deposited energy unit depends on the particle. Nevertheless, the coarse resolution given by the PMT grid allows to use this approximation.
 
 A cut of \SI{105}{\cm} is placed on the difference between the reconstructed flash position and the centre of the deposited charge on the $z$ axis. This cut keeps at least one neutrino candidate in 98.1\% of the signal events, and it removes all neutrino candidates in 20\% of the background events (Figure \ref{fig:z_cut}). 
 Similar cuts are placed taking into account the width of the flash and its position on the $y$ axis. 
@@ -122,7 +122,7 @@ Similar cuts are placed taking into account the width of the flash and its posit
 \label{fig:z_cut}
 \end{figure}
 
-The last rectangular cut exploits the fact that several neutrino candidates reconstructed by Pandora originate from remnants of cosmic activity which were not tagged by the cosmic-removal algorithms. Those neutrino candidates often consist of a small amounts of fragmented charge, incompatible with the brightness of the flash. Placing a very conservative cut at 3.0 on the ratio between the charge in the collection plane associated to the neutrino candidate and the number of PEs reduces the signal events with a properly reconstructed flash by 1.7\%, while removing all neutrino candidates in 15.4\% of the background events (Figure \ref{fig:light_ratio}).
+The last rectangular cut exploits the fact that several neutrino candidates reconstructed by Pandora originate from remnants of cosmic activity which were not tagged by the cosmic-removal algorithms. Those neutrino candidates often consist in a small amount of fragmented charge, incompatible with the brightness of the flash. Placing a very conservative cut at 3.0 on the ratio between the charge in the collection plane associated to the neutrino candidate and the number of PEs reduces the signal events with a properly reconstructed flash by 1.7\%, while removing all neutrino candidates in 15.4\% of the background events (Figure \ref{fig:light_ratio}).
 
 \begin{figure}[htbp]
 \centering
@@ -150,7 +150,7 @@ An example of this procedure for a Monte Carlo generated $\nu_e$ event with 4 ne
 \end{figure}
 
 \subsection{Topological pre-selection} \label{sec:topological_pre_selection}
-A perfect reconstruction of a $\nu_{e}$ CC0$\pi$-Np event in a LArTPC will produce as many reconstructed tracks as the number of protons above the detection threshold in the final state and a single reconstructed shower (the electron), sharing a common vertex. However, mis-reconstruction and mis-classification issues can significantly lower the selection efficiency. The current status of the event reconstruction, which depends on the quality of the event (e.g. the number of hits \cite{Acciarri:2017hat}), affects the efficiency of selecting these events. For example, the presence of dead or unresponsive wires can affect the reconstruction by causing the splitting of an ionisation track or an electromagnetic shower into two distinct reconstructed object. Also, the selection currently implemented relies on the classification of the reconstructed objects as track-like or shower-like, separation that contains an inherent inefficiency associated, specially when the number of reconstructed hits is low.
+A perfect reconstruction of a $\nu_{e}$ CC0$\pi$-Np event in a LArTPC will produce as many reconstructed tracks as the number of protons above the detection threshold in the final state and a single reconstructed shower (the electron), sharing a common vertex. However, mis-reconstruction and mis-classification issues can significantly lower the selection efficiency. The current status of the event reconstruction, which depends on the quality of the event (e.g. the number of hits \cite{Acciarri:2017hat}), affects the efficiency of selecting these events. For example, the presence of dead or unresponsive wires can affect the reconstruction by causing the splitting of an ionisation track or an electromagnetic shower into two distinct reconstructed objects. Also, the selection currently implemented relies on the classification of the reconstructed objects as track-like or shower-like, a separation that contains an inherent inefficiency associated, especially when the number of reconstructed hits is low.
 
 In order to maximise our efficiency we currently require (1) \emph{at least} one track and \emph{at least} one shower sharing a common vertex, or (2) \emph{at least} two showers sharing a common vertex, to account for proton mis-classification as a shower-like object. For these cases we measure the $\chi^2$ score of the $dE/dx$ vs. residual range profile of the reconstructed objects in the proton hypothesis, as described in Section \ref{sec:proton_id}. The object with the lowest $\chi^2$ score is considered as a track, while the remaining ones are considered as showers.
 
@@ -283,7 +283,7 @@ Table \ref{tab:result} shows a summary of the selection algorithm results, with 
 
 \begin{table}[htbp]
    \centering
-      \caption{Summary of the selection results, showing the contribution of each event category, for a MicroBooNE exposure of \num{4.34e19} POT. Uncertainties are statistical only. {For the \emph{Cosmic contaminated} category the number of generated events correspond to the number of neutrino interactions inside the cryostat. For the \emph{Cosmic} category, it corresponds to the total number of simulated neutrino interactions, bot inside and outside the cryostat.}}\label{tab:result}
+      \caption{Summary of the selection results, showing the contribution of each event category, for a MicroBooNE exposure of \num{4.34e19} POT. Uncertainties are statistical only. {For the \emph{Cosmic contaminated} category the number of generated events correspond to the number of neutrino interactions inside the cryostat. For the \emph{Cosmic} category, it corresponds to the total number of simulated neutrino interactions, both inside and outside the cryostat.}}\label{tab:result}
    \begin{tabular}{llrrrrr}
      \toprule
      Category & Generated & Selected & Efficiency \\
@@ -303,7 +303,7 @@ Table \ref{tab:result} shows a summary of the selection algorithm results, with 
 
 \end{table}
 
-Each selected event has a neutrino interaction candidate with one or more tracks and one or more showers associated to the interaction vertex. Since we use two different methods to measure the energy of the tracks and the energy of the showers (see Section \ref{sec:energyreco}), it is necessary to verify the agreement between the shower multiplicity and track multiplicity distributions in data and Monte Carlo. Figure \ref{fig:multiplicity} shows that the two distributions agree within the systematic uncertainties, whose evaluation is described in Section \ref{sec:systematics}.
+Each selected event has a neutrino interaction candidate with one or more tracks and one or more showers associated with the interaction vertex. Since we use two different methods to measure the energy of the tracks and the energy of the showers (see Section \ref{sec:energyreco}), it is necessary to verify the agreement between the shower multiplicity and track multiplicity distributions in data and Monte Carlo. Figure \ref{fig:multiplicity} shows that the two distributions agree within the systematic uncertainties, whose evaluation is described in Section \ref{sec:systematics}.
 
 \begin{figure}[htbp]
 \centering
@@ -318,7 +318,7 @@ Each selected event has a neutrino interaction candidate with one or more tracks
   \caption{Distributions of the track and shower multiplicities in data and Monte Carlo simulation.}\label{fig:multiplicity}
 \end{figure}
 
-Figure \ref{fig:spectrum} shows the reconstructed deposited energy spectrum of the selected events. The reconstructed deposited energy $E_{\mathrm{deposited}}$ has been measured with the procedure described in Section \ref{sec:depositedenergy}. Both the $\chi^2$ and Kolmogorov-Sminorv tests give a probability of 1.00 (rounded up at the second decimal digit) of the null hypothesis, which is the data distribution being compatible with the Monte Carlo simulation.
+Figure \ref{fig:spectrum} shows the reconstructed deposited energy spectrum of the selected events. The reconstructed deposited energy $E_{\mathrm{deposited}}$ has been measured with the procedure described in Section \ref{sec:depositedenergy}. Both the $\chi^2$ and Kolmogorov-Smirnov tests give a probability of 1.00 (rounded up at the second decimal digit) of the null hypothesis, which is the data distribution being compatible with the Monte Carlo simulation.
 %This plot shows that our selection procedure has similar performances in data and Monte Carlo and that there is no evident bias in the energy reconstruction. 
 
 \begin{figure}[htbp]
@@ -358,7 +358,7 @@ Figure \ref{fig:thetaphi_pdg} shows the angular distributions classified accordi
   \caption{{Distributions of the inclination angle $\theta$ and the azimuthal angle $\phi$ of the reconstructed showers, classified according to the primary particle that generated them.}}\label{fig:thetaphi_pdg}
 \end{figure}
 
-A small fraction of the data events were also visually inspected: Figure \ref{fig:evds} shows three event displays of data events compatible with a $\nu_{e}$ CC0$\pi$-Np interaction. 
+A small fraction of the data events was also visually inspected: Figure \ref{fig:evds} shows three event displays of data events compatible with a $\nu_{e}$ CC0$\pi$-Np interaction. 
 
 \begin{figure}[htbp]
 \centering

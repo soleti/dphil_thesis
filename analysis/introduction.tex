@@ -3,9 +3,9 @@ One of the main physics goals of the MicroBooNE experiment is to clarify the nat
 
 However, the MiniBooNE detector is a Cherenkov detector, which does not have the ability to distinguish between single electrons and single photons in the final state. This technology limitation makes it very challenging to identify a physics model that could definitely explain the excess.
 
-The MicroBooNE detector, being a LArTPC, provides detailed  calorimetry, which makes it possible to measure the $dE/dx$ of ionisation tracks and electromagnetic showers, and excellent spatial resolution, which allows to measure the gap between the neutrino interaction vertex and the start of the electromagnetic shower. These two methods provide powerful electron/photon separation, and are not normally available in a Cherenkov detector. 
+The MicroBooNE detector, being a LArTPC, provides detailed  calorimetry, which makes it possible to measure the $dE/dx$ of ionisation tracks and electromagnetic showers, and excellent spatial resolution, which allows to measure the gap between the neutrino interaction vertex and the start of the electromagnetic shower. These two methods provide powerful electron/photon separation and are not normally available in a Cherenkov detector. 
 
-In this chapter we will describe a fully automated $\nu_{e}$ event selection using the Pandora multi-algorithm pattern recognition. This is the first fully-automated electron neutrino search in a LArTPC. The selection will be validated with two orthogonal side-bands and with and independent sample of events acquired with the NuMI beam. The current sensitivity to the MiniBooNE low-energy excess in the electron hypothesis will be estimated.
+In this chapter we will describe a fully automated $\nu_{e}$ event selection using the Pandora multi-algorithm pattern recognition. This is the first fully-automated electron neutrino search in a LArTPC. The selection will be validated with two orthogonal side-bands and with an independent sample of events acquired with the NuMI beam. The current sensitivity to the MiniBooNE low-energy excess in the electron hypothesis will be estimated.
 
 \section{Signal definition}
 The MiniBooNE experiment showed an excess of CCQE-like events in the 200-475~MeV neutrino energy range \cite{Aguilar-Arevalo:2018gpe}, therefore this analysis will focus on a similar topology.
@@ -19,7 +19,7 @@ However, the choice of the CC0$\pi$-Np channel presents several advantages, desc
 \begin{description}
     \item[Easier pattern recognition.] The presence of a proton in the final state makes vertexing and pattern recognition easier, since there will be typically a \emph{kink} between the ionisation track and the electromagnetic shower.
     \item[Improved energy resolution.] As shown in Section \ref{sec:energyreco}, the length of the ionisation tracks can be used to estimate the energy deposited by the protons. This method provides a higher energy resolution than the one obtained by collecting the deposited charge.
-    \item[Improved background rejection.] Requiring a ionisation track allows to reject NC$\pi^0$ e CC$\pi^0$ interactions with no protons in the final state and where one of the $\pi^0\rightarrow\gamma\gamma$ is not reconstructed or escapes the detector. These events represent a large background of our analysis. Also, the presence of the proton allows to reject events with a photon converting far from the interaction vertex.
+    \item[Improved background rejection.] Requiring an ionisation track allows to reject NC$\pi^0$ e CC$\pi^0$ interactions with no protons in the final state and where one of the $\pi^0\rightarrow\gamma\gamma$ is not reconstructed or escapes the detector. These events represent a large background of our analysis. Also, the presence of the proton allows to reject events with a photon converting far from the interaction vertex.
 \end{description}
 
 
