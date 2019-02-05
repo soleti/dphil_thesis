@@ -1,34 +1,34 @@
 \section{Analysis Methodology}
 \label{sec:methodology}
 The goal of the event selection is to obtain a sample enriched with $\nu_{e}$ CC0$\pi$-Np interactions. The results of the event selection are described in detail in Section \ref{sec:numu}. In order to increase the purity, two parallel background rejection strategies have been developed: one with rectangular cuts on kinematic and calorimetric variables, described in Section \ref{sec:cuts}, and one with Boosted Decision Trees, described in Section \ref{sec:bdt}.
-The measurement of the systematic uncertainties is described in Section \ref{sec:systematics}. The full covariance matrix has then be used to measure the sensitivity to the MiniBooNE low-energy excess signal in the electron hypothesis, in Section \ref{sec:sensitivity}.
+The measurement of the systematic uncertainties affecting the variables used in the background rejection is described in Chapter \ref{sec:systematics}. The full covariance matrix has then be used to measure the sensitivity to the MiniBooNE low-energy excess signal in the electron hypothesis, in Chapter \ref{sec:sensitivity}.
 
 \subsection{Data and Monte Carlo samples}\label{sec:data}
 In this document, we will analyse a sub-sample of the data collected by the detector between February 23 and May 22, 2016. This sub-sample corresponds to an exposure of the MicroBooNE detector of \num{4.34e19} POT. This is MicroBooNE unblinded sample for reconstruction, event selection development, and performance measurement. The sample is statistically too small to be sensitive to a MiniBooNE-like low-energy excess signal. 
 %The entire dataset will be open once we are satisfied with the reconstruction, analysis chain, and future sensitivity estimates.
 
-The data used for this analysis correspond to two separate samples: the \emph{data on-beam}, obtained with the BNB beam trigger, and the \emph{data off-beam}, obtained with the EXT trigger. The two triggers criteria are described in Section \ref{sec:trigger}.
+The data used for this analysis correspond to two separate samples: the \emph{data beam-on}, obtained with the BNB beam trigger, and the \emph{data beam-off}, obtained with the EXT trigger. The two triggers criteria are described in Section \ref{sec:trigger}.
 
-In order to increase the simulated statistics of our $\nu_e$ CC0$\pi$-Np events, two different Monte Carlo samples were produced:
+In order to increase the simulated statistics of our $\nu_e$ CC0$\pi$-Np events, three different Monte Carlo samples were produced:
 \begin{description}
-\item[$\nu_{e}$ CC0$\pi$-Np + cosmic sample.] Each event has a simulated $\nu_{e}$ CC0$\pi$-Np interaction in the MicroBooNE cryostat and simulated cosmic rays hitting the detector in the same readout window. {The interaction is defined as $\nu_{e}$ CC0$\pi$-Np if it has one electron, at least one proton, no photons, and no mesons (pions, kaons) above detection threshold. The start and end points of the protons and the start point of the electron are required to be contained within the fiducial volume, as defined in Section \ref{sec:precuts}};
+\item[$\nu_{e}$ CC0$\pi$-Np + cosmic sample.] Each event has a simulated $\nu_{e}$~CC0$\pi$-Np interaction in the MicroBooNE cryostat and simulated cosmic rays hitting the detector in the same readout window. {The interaction is defined as $\nu_{e}$ CC0$\pi$-Np if it has one electron, at least one proton, no photons, and no mesons (pions, kaons) above detection threshold. The start and end points of the protons and the start point of the electron are required to be contained within the fiducial volume, as defined in Section \ref{sec:precuts}};
 \item[BNB + cosmic sample.] Each event has a simulated neutrino interaction inside the MicroBooNE cryostat, where the neutrino flavours are weighted according to the BNB neutrino flux composition (see Section \ref{sec:beam}), and simulated cosmic rays hitting the detector in the same readout window.
-\item[Dirt sample] {Each event has a simulated neutrino interaction outside the MicroBooNE cryostat, where the neutrino flavours are weighted according to the BNB neutrino flux composition, and simulated cosmic rays hitting the detector in the same readout window.}
+\item[Dirt sample.] Each event has a simulated neutrino interaction outside the MicroBooNE cryostat, where the neutrino flavours are weighted according to the BNB neutrino flux composition, and simulated cosmic rays hitting the detector in the same readout window.
 \end{description}
 
-Neutrino events have been generated using the GENIE Neutrino Monte Carlo generator version 2.8.6 \cite{Andreopoulos:2009rq} and cosmic rays have been generated using the CORSIKA Monte Carlo generator version 7.4003 \cite{Heck:1998vt}. Simulated secondary particle propagation utilises GEANT version 4.9.6 \cite{Brun:1994aa}, and detector response simulation and reconstruction employs LArSoft version 6.26.01.10 \cite{Church:2013hea}.
+Neutrino events have been generated using the GENIE Neutrino Monte Carlo generator version 2.8.6 \cite{Andreopoulos:2009rq} and cosmic rays have been generated using the CORSIKA Monte Carlo generator version 7.4003 \cite{Heck:1998vt}. Simulated secondary particle propagation employs GEANT version 4.9.6 \cite{Brun:1994aa}, and detector response simulation and reconstruction is performed with the LArSoft framework version 6.26.01.10 \cite{Church:2013hea}.
 
 \subsection{Overview}
 The reconstruction and selection chain to identify $\nu_{e}$~CC0$\pi$-Np electron neutrino candidate events for this analysis is divided into several stages:
 
 \begin{description}
-\item[Cosmic-ray removal.] In order to suppress the cosmogenic background, two different Pandora reconstruction paths run with different sets of algorithms \cite{Acciarri:2017hat}, a first one optimised for the reconstruction of cosmic-ray muons, and a second one optimised for the reconstruction of neutrino interactions. In between both reconstruction paths, hits associated with objects deemed as cosmic-induced by several tagging algorithms, external to Pandora and described in Section \ref{sec:cosmicremoval}, are removed from the event. The remaining hit collection provides the input to the Pandora neutrino reconstruction path, which outputs a list of candidate neutrinos.
+\item[Cosmic-ray removal.] In order to suppress the cosmogenic background, two different Pandora reconstruction paths run with different pattern recognition settings \cite{Acciarri:2017hat}, a first one optimised for the reconstruction of cosmic-ray muons, and a second one optimised for the reconstruction of neutrino interactions. In between the two reconstruction paths, hits associated with objects deemed as cosmic-induced by several tagging algorithms, external to Pandora and described in Section \ref{sec:cosmicremoval}, are removed from the event. The remaining hit collection provides the input to the Pandora neutrino reconstruction path, which outputs a list of candidate neutrinos.
 
 \item[Optical selection.] A minimum amount of coincident photoelectrons in the optical detection system is required and at least one of the neutrino candidates provided by the Pandora framework must be compatible with the flash in the optical detection system. These requirements are described in detail in Section \ref{sec:optical_pre_cuts}.
 
 \item[Electron neutrino topological pre-selection.] One of the neutrino candidates must be compatible with the topology of a $\nu_{e}$ CC0$\pi$-Np interaction. Rather than accepting strictly $N$ tracks and one shower, at least one track and at least one shower or at least two showers sharing a common vertex are accepted, due to the presence of split showers and split tracks. Multiple showers without reconstructed tracks are accepted due to a current track/shower identification inefficiency.
 
-\item[CC $\nu_{\mu}$ neutrino candidates removal.] Events tagged as CC $\nu_{\mu}$ neutrino candidates are rejected by an independent CC $\nu_{\mu}$ selection module \cite{ubxsec}. 
+\item[CC $\nu_{\mu}$ neutrino candidates removal.] Events tagged as CC $\nu_{\mu}$ neutrino candidates are rejected by an independent CC $\nu_{\mu}$ selection module, described in \cite{ubxsec}. 
 
 \item[Calorimetric variables reconstruction.] The energy of the electron showers is measured with a calorimetric procedure, converting the collected charge into deposited energy, while the energy deposited by the proton tracks is calculated from the length of the reconstructed track. The $dE/dx$ of the ionisation tracks and electromagnetic showers is also measured for particle identification purposes.
 
@@ -156,7 +156,15 @@ In order to maximise our efficiency we currently require (1) \emph{at least} one
 
 \subsection{Minimum quality requirements}\label{sec:precuts}
 A minimal set of cuts is applied to the selected events, in order to ensure that they are well reconstructed.
-First, to avoid border effects, the reconstructed neutrino vertex, the start point of the reconstructed showers and the start and end points of the reconstructed tracks are required to lie within a fiducial volume. Our fiducial volume cut is 10~cm from each side on the $x$ axis, 15~cm from each side on the $y$ axis, and 10~cm (40~cm) from the upstream (downstream) side on the $z$ axis. 
+First, to avoid border effects, the reconstructed neutrino vertex, the start point of the reconstructed showers and the start and end points of the reconstructed tracks are required to lie within a fiducial volume. Our fiducial volume cut is 10~cm from each side on the $x$ axis, 15~cm from each side on the $y$ axis, and 10~cm (40~cm) from the upstream (downstream) side on the $z$ axis (Figure \ref{fig:fidvol}). The fiducial volume corresponds to 76.4\% of the total TPC volume. 
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.95\linewidth]{figures/fidvol.pdf}
+  \caption{Schematic of the fiducial volume used in this analysis. The solid line corresponds to the TPC borders and the dashed red line corresponds to the fiducial volume borders.}
+  \label{fig:fidvol}
+\end{figure}
+
 Since electromagnetic showers develop mainly in the forward direction with respect to the beam, the asymmetric cut on the $z$ axis (which corresponds to the beam direction) helps reject non-fully contained events which begin too close to the downstream end of the TPC.
 We also require, for each event, (1) at least 5 hits in the three planes associated to shower-like objects, (2) at least 5 hits in the three planes associated to track-like objects, and (3) at least one hit in every plane.
 
