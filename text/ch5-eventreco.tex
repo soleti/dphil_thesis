@@ -36,13 +36,13 @@ These reconstructed hits are finally passed to the pattern recognition framework
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/evd_wires.png}
+    \includegraphics[width=0.8\linewidth]{figures/evd_wires.png}
     \caption{Data event display with the waveform collected in a wire of the collection plane. The white box corresponds to the waveform in the bottom part. The units of the x-axis are in 500 ns time-ticks.}
     \label{fig:evd_wires}
 \end{figure}
 
 \section{The Pandora multi-algorithm pattern recognition}
-The results shown in this document were produced using the Pandora Software Development Kit for pattern recognition. This general-purpose framework was specifically developed to identify energy deposits in high-granularity detectors, such as LArTPCs \cite{Marshall:2015rfa}.
+The results shown in this thesis were produced using the Pandora Software Development Kit for pattern recognition. This general-purpose framework was specifically developed to identify energy deposits in high-granularity detectors, such as LArTPCs \cite{Marshall:2015rfa}.
 
 Several algorithms are applied in sequence to the input information (in our case the reconstructed hits), which gradually build up a complete picture of the event.
 
@@ -54,7 +54,7 @@ As a first step, input hits are separated into three different lists, one for ea
     \caption{Pandora pattern recognition output of a simulated CC $\nu_{\mu}$ event with a muon, a proton and a charged pion in the final state. Each particle is reconstructed as a separate cluster and the positron coming from the $\pi^+\rightarrow\mu^+\rightarrow e^+$ decay chain is classified as a daughter of the pion. From \cite{Acciarri:2017hat}.}\label{fig:evd_pandora}
 \end{figure}
 
-Once the topological algorithms deem the clustering in each plane as complete, the 3D reconstruction algorithms take as input the clusters from the three planes and aim to reconstruct the three-dimensional objects, which in Pandora are called \emph{PFParticles}.
+Once the topological algorithms deem the clustering in each plane as complete, the 3D reconstruction algorithms take as input the clusters from the three planes and aim to reconstruct the three-dimensional objects, which in Pandora are called \emph{PFParticles} (Particle Flow Particles).
 Subsequently, a Support Vector Machine trained on Monte Carlo uses the topological and geometrical properties of the object to classify it as \emph{track} or as a \emph{shower}. 
 An important feature of the Pandora pattern recognition is its ability to create a hierarchy of reconstructed PFParticles. As an example, the reconstructed shower corresponding to a Michel electron will be considered as the daughter of the reconstructed track corresponding to the stopping muon. This capability is particularly important for the reconstruction of complex neutrino interactions, as exemplified in Figure \ref{fig:evd_pandora}.
 
