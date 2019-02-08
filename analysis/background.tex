@@ -91,7 +91,7 @@ The POT-normalised plots (Figure \ref{fig:dedx_pot}, \ref{fig:dedx_pdg}) show a 
 \end{figure}
 
 \subsubsection*{Track distance $d_{t} < 5$~cm}
-A well-reconstructed event with a proton in the final state will have a reconstructed track attached to the reconstructed neutrino vertex. This conservative cut can be tightened as the understanding of the spatial resolution improves. The track with the lowest proton $\chi^2$ score is required to be within 5~cm of the reconstructed neutrino vertex.
+A well-reconstructed event with a proton in the final state will have a reconstructed track attached to the reconstructed neutrino vertex. This conservative cut can be tightened as the understanding of the spatial resolution improves. The track with the lowest proton $\chi_{p}^2$ score is required to be within 5~cm of the reconstructed neutrino vertex.
 Figure \ref{fig:trackd_norm} shows that the distributions of the distance between the start point of the reconstructed tracks and the reconstructed neutrino vertex for signal and background are very similar. The cut $d_{t} < 5$~cm, then, mainly ensures that the event is well reconstructed. 
 
 \begin{figure}[htbp]
@@ -132,8 +132,8 @@ Figure \ref{fig:showerd_norm} shows the distributions of the distance between th
   \caption{Area and POT-normalised distributions of the distance between the reconstructed showers and the reconstructed neutrino vertex.}
 \end{figure}
 
-\subsubsection*{Track proton $\chi^2 < 80$}
-It is possible to perform a $\chi^2$ test on the $dE/dx$ vs. the residual range of the reconstructed track under the hypothesis of a proton stopping in the detector. Low values of the $\chi^2$ score will correspond to proton-like tracks, while a high value will correspond to a MIP-like track. Figure \ref{fig:proton_norm} shows the distributions of the $\chi^2$ score for background and signal events. Figure \ref{fig:proton_pdg} shows that the protons reconstructed as tracks are peaked around 0 as expected, while the long tail includes showers misclassified as tracks and events with a misplaced vertex. The comparison between data and Monte Carlo shown in Figure \ref{fig:proton_pot} and Figure \ref{fig:proton_pdg} shows some discrepancies, especially for very low and very high $\chi^2$ scores. This quantity requires a careful simulation of the signal processing and a correct evaluation of the recombination effect. Our cut is in a region with a good data/Monte Carlo agreement once the systematic uncertainties are taken into account and it is as such deemed safe.
+\subsubsection*{Track proton $\chi_{p}^2 < 80$}
+It is possible to perform a $\chi^2$ test on the $dE/dx$ vs. the residual range of the reconstructed track under the hypothesis of a proton stopping in the detector, using the parametrisation of Section \ref{sec:proton_id}. Low values of the $\chi_{p}^2$ score will correspond to proton-like tracks, while a high value will correspond to a MIP-like track. Figure \ref{fig:proton_norm} shows the distributions of the $\chi_{p}^2$ score for background and signal events. Figure \ref{fig:proton_pdg} shows that the protons reconstructed as tracks are peaked around 0 as expected, while the long tail includes muon tracks, photon and electron showers misclassified as tracks, and objects with a misplaced vertex. The comparison between data and Monte Carlo shown in Figure \ref{fig:proton_pdg} and Figure \ref{fig:proton_pot} shows some discrepancies, especially for very low and very high $\chi_{p}^2$ scores. This quantity requires a careful simulation of the signal processing and a correct evaluation of the recombination effect. Our cut is in a region with a good data/Monte Carlo agreement once the systematic uncertainties are taken into account and it is as such deemed safe.
 
 \begin{figure}[htbp]
 \centering
@@ -149,12 +149,12 @@ It is possible to perform a $\chi^2$ test on the $dE/dx$ vs. the residual range 
     \includegraphics[width=\linewidth]{figures/h_track_pidchipr_norm.pdf}
     \caption{Area-normalised.} \label{fig:proton_norm}
   \end{subfigure}
-  \caption{Area and POT-normalised distributions of the proton $\chi^2$ score of the reconstructed tracks, classified according to the event category and to the primary particle generating the shower.}\label{fig:proton_bkg}
+  \caption{Area and POT-normalised distributions of the proton $\chi_{p}^2$ score of the reconstructed tracks, classified according to the event category and to the primary particle generating the shower.}\label{fig:proton_bkg}
 \end{figure}
 
 \subsubsection*{Track-shower angle $\mathrm{cos}\alpha > -0.95$}
-Electrons start producing an appreciable shower in the detector after several centimetres. In this case, the reconstruction framework often identifies the first part of the shower as a track-like object and the latter part of the shower as a shower-like object. 
-Furthermore, high-energy cosmic rays can produce a shower in the detector, which will be mostly aligned to a cosmic muon track. In order to remove these mis-reconstructed events and reduce this kind of cosmogenic background we require $\mathrm{cos}\alpha > -0.95$, where $\alpha$ is the angle between the most energetic shower and the track with the lowest proton $\chi^2$ score.
+Electrons start producing an appreciable shower in the detector after several centimetres. In this case, the patter recognition often identifies the first part of the shower as a track-like object and the latter part of the shower as a shower-like object. 
+Furthermore, high-energy cosmic rays can produce a shower in the detector, which will be mostly aligned to a cosmic muon track. In order to remove these mis-reconstructed events and reduce this kind of cosmogenic background we require $\mathrm{cos}\alpha > -0.95$, where $\alpha$ is the angle between the most energetic shower and the track with the lowest proton $\chi_{p}^2$ score.
 Figure \ref{fig:angle_integral} shows that there are, in proportion, more background events with a high angular separation between the tracks and the most energetic shower. This cut allows to reject these events while also ensuring that the signal events are well-reconstructed. In fact, signal events with $\mathrm{cos}\alpha \approx -1$ have almost always an electron shower reconstructed as a track-like object in the first part. The agreement shown in Figure \ref{fig:angle_pot} and Figure \ref{fig:angle_pdg} is good. Future improvements in the shower reconstruction will allow for an increased selection efficiency.
 
 \begin{figure}[htbp]
@@ -176,7 +176,7 @@ Figure \ref{fig:angle_integral} shows that there are, in proportion, more backgr
 \end{figure}
 
 \subsubsection*{Most proton-like track length $L < 80~\mathrm{cm}$}
-The tracks in our $\nu_e$~CC0$\pi$-Np sample should correspond to protons in the final state. Protons in liquid argon have a higher stopping power than muons, which will correspond on average to shorter tracks. The track with the lowest $\chi^{2}$ proton score is required to be shorter than 80 cm. This cut helps to reject mainly CC $\nu_{\mu}$ events with high-energy muons in the final state. 
+The tracks in our $\nu_e$~CC0$\pi$-Np sample should correspond to protons in the final state. Protons in liquid argon have a higher stopping power than muons, which will correspond on average to shorter tracks. The track with the lowest $\chi_{p}^{2}$ proton score is required to be shorter than 80 cm. This cut helps to reject mainly CC $\nu_{\mu}$ events with high-energy muons in the final state. 
 Both neutrino and cosmic background events have on average longer reconstructed tracks than signal events, as shown in Figure \ref{fig:length_norm}. The cut $L < 80~$cm increases the signal purity without significantly affecting the signal efficiency. The agreement between data and Monte Carlo distributions is good (Figures \ref{fig:length_pdg}, \ref{fig:length_pot}). %A dedicated particle identification algorithm currently under development will replace this cut in the future.
 
 \begin{figure}[htbp]
@@ -213,7 +213,7 @@ Figure \ref{fig:purity_sel} shows the purity before and after the application of
   \caption{Purity of the selected sample before (green) and after (orange) the application of the rectangular cuts as a function of the reconstructed energy $E_{\mathrm{deposited}}$. Error bars are statistical only.}\label{fig:purity_sel}
 \end{figure}
 
-It is also possible to calculate the overall purity and the efficiency after each cut, to analyse the effect of each cut (Figure \ref{fig:effpurity_cuts}). The largest purity increase is given by the application of the proton $\chi^2$ score cut. 
+It is also possible to calculate the overall purity and the efficiency after each cut, to analyse the effect of each cut (Figure \ref{fig:effpurity_cuts}). The largest purity increase is given by the application of the proton $\chi_{p}^2$ score cut. 
 
 \begin{figure}[htbp]
 \centering
@@ -279,7 +279,7 @@ A classical decision tree algorithm can be divided into four stages, as listed i
     \item repeat iteratively until the stopping condition is reached. The same variable can be used multiple times. The terminal node is called \emph{signal leaf} if it contains mostly signal events or \emph{background leaf} if it contains mostly background events.
 \end{enumerate}
 
-In this document, the separation is measured using the Gini coefficient $G$, defined as:
+In this analysis, the separation is measured using the Gini coefficient $G$, defined as:
 \begin{equation}
     G = P(1-P)\sum_i W_i,
 \end{equation}
@@ -302,11 +302,18 @@ A disadvantage of a classical decision tree is its intrinsic instability: a smal
 \begin{equation}
     T(i) = \frac{1}{\sum^m_{k=1} \alpha_k} \sum^m_{k=1}\alpha_k T_k(i).
 \end{equation}
-In this document, we will use the \emph{adaptive boosting}, or AdaBoost. In this algorithm, the $\alpha$ coefficient is defined as:
+In this document, we will use the \emph{adaptive boosting}, or AdaBoost \cite{freund1999short}. In this algorithm, the $\alpha$ coefficient is defined as:
 \begin{equation}
-    \alpha = \beta \log[(1-\epsilon)/\epsilon],
+    \alpha = \beta \log[(1-\epsilon)/\epsilon],\label{eq:adaboost}
 \end{equation}
-where $\epsilon$ is the weighted sum of the misclassified events and $\beta$ is constant (in our case is set at 0.5). The events in the $k$ tree have their weight multiplied by $e^{a_k}$.
+where $\epsilon$ is the weighted sum of the misclassified events and $\beta$ is constant (in our case is set at 0.5). Figure \ref{fig:adaboost} shows function \eqref{eq:adaboost} for different values of $\beta$. The events in the $k$ tree have their weight multiplied by $e^{\alpha_k}$.
+
+\begin{figure}[htbp]
+\centering
+  \includegraphics[width=0.75\linewidth]{figures/adaboost.pdf}
+  \caption{Coefficient function \eqref{eq:adaboost} of the AdaBoost boosting technique for different values of the $\beta$ parameter.}
+  \label{fig:adaboost}
+\end{figure}
 
 \subsubsection{Background rejection with Boosted Decision Trees}
 In order to maximise our separation power, in this analysis we trained three different BDTs, each one tuned on a different background category:
@@ -347,7 +354,7 @@ Figure \ref{fig:bdt_datamc} shows the comparison between the data and Monte Carl
   \caption{POT-normalised comparison between the data and Monte Carlo for distributions of the BDTs score.}\label{fig:bdt_datamc}
 \end{figure}
 
-In order to maximise our $\nu_e$ CC0$\pi$-Np purity and to have at least one event per bin in the $[0.2,1.9]$~GeV range of the $E_{\mathrm{deposited}}$ spectrum (same criterion used for the rectangular cuts), we applied the following cuts:
+In order to maximise our $\nu_e$ CC0$\pi$-Np purity and have at least one event per bin in the $[0.2,1.9]$~GeV range of the $E_{\mathrm{deposited}}$ spectrum (same criterion used for the rectangular cuts), we applied the following cuts:
 \begin{equation}
     \text{Cosmic BDT} > 0.21,~~~\text{Neutral-current BDT} > 0.18,~~~\text{CC }\nu_{\mu}\text{ BDT} > 0.17.
 \end{equation}

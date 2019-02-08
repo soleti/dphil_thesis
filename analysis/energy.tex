@@ -41,7 +41,7 @@ E_{\mathrm{corr}}^{e} = (E_{\mathrm{reco}}^{e} + 34.7~\mathrm{MeV})/0.77.
 
 \begin{figure}[htbp]
 \centering
-\begin{overpic}[width=0.7\linewidth]{figures/ecalib.pdf}
+\begin{overpic}[width=0.8\linewidth]{figures/ecalib.pdf}
 \end{overpic}
 % \includegraphics[width=0.65\columnwidth]{figures/ecalib.pdf}
 \caption{Bi-dimensional histogram of true electron energy $E^{e}$ vs. reconstructed electron energy $E_{\mathrm{reco}}^{e}$. The reconstructed electron energy is measured summing the energy of each hit associated to reconstructed showers produced by the simulated electron. The black points correspond to the most probable value of the $E_{\mathrm{reco}}^{e}$ distribution for each $E^{e}$ bin, calculated with a GaussExp fit.}
@@ -56,9 +56,8 @@ Figure \ref{fig:electron_res} shows the $E_{\mathrm{frac}}$ distribution for 10 
 
 \begin{figure}[htbp]
 \centering
-\begin{overpic}[width=0.95\linewidth]{figures/electron_res.pdf}
+\begin{overpic}[width=0.98\linewidth]{figures/electron_res.pdf}
 \end{overpic}
-% \includegraphics[width=0.65\columnwidth]{figures/ecalib.pdf}
 \caption{Normalised energy difference $E_{\mathrm{frac}}$ for 10 intervals of equal size in the 30-2030 MeV energy range. The normalised energy difference distributions have been fitted with a GaussExp function (red line).}
 \label{fig:electron_res}
 \end{figure}
@@ -76,7 +75,7 @@ where:
 
 \begin{figure}[htbp]
 \centering
-\begin{overpic}[width=0.85\linewidth]{figures/sigma_e.pdf}
+\begin{overpic}[width=0.8\linewidth]{figures/sigma_e.pdf}
 \end{overpic}
 \caption{Fractional energy resolution for 10 intervals of equal size in the 30-2030 MeV energy range. The points have been fitted the classic calorimeter energy resolution formula \eqref{eq:calo}.}
 \label{fig:sigma_e}
@@ -91,19 +90,10 @@ Proton energy reconstruction is performed by converting the reconstructed track 
 
 \begin{figure}[htbp]
 \centering
-  \begin{subfigure}{0.49\textwidth}
-  \begin{overpic}[width=\linewidth]{figures/proton.pdf}
-\put(120,640){\tiny{\textsf{\textbf{MicroBooNE Simulation Preliminary}}}}
-\end{overpic}
-%     \includegraphics[width=\linewidth]{figures/proton.pdf}
-    \caption{Proton kinetic energy as a function of the range of the proton in liquid argon.}\label{fig:proton}
-  \end{subfigure}
-  \begin{subfigure}{0.49\textwidth}
-    \begin{overpic}[width=\linewidth]{figures/pcalib.pdf}\end{overpic}
-% 	\includegraphics[width=\linewidth]{figures/pcalib.pdf}
-     \caption{Bi-dimensional histogram of true proton energy $E^{p}$ vs. reconstructed proton energy $E_{\mathrm{reco}}^{p}$.}\label{fig:pcalib}
-   \end{subfigure}
-   \caption{The reconstructed proton energy is measured converting the reconstructed track length $L$ into deposited energy using the proton stopping power in liquid argon, as tabulated in \cite{pstar} (left). The calibration is calculated from a linear fit of the most probable values of the $E_{\mathrm{reco}}^{p}$ distribution for each $E^{p}$ bin (right).}
+  \begin{overpic}[width=0.8\linewidth]{figures/proton.pdf}
+   \put(120,640){\tiny{\textsf{\textbf{MicroBooNE Simulation Preliminary}}}}
+   \end{overpic}
+    \caption{Proton kinetic energy as a function of the range of the proton in liquid argon, as tabulated in \cite{pstar}.}\label{fig:proton}
 \end{figure}
 
 The calibration constant has been obtained comparing the reconstructed energy of the proton with the true kinetic energy of the simulated proton, in a CC $\nu_{e}$ sample with only one proton in the final state. The true proton and the reconstructed tracks are required to be fully contained within the fiducial volume. Since protons are not minimum-ionising particles, in the case of two or more tracks (\emph{split tracks}) associated to the same proton, the reconstructed length of the tracks has been summed before calculating the corresponding kinetic energy.
@@ -116,13 +106,19 @@ The energy of the track, corrected by the calibration factor is then defined as:
 E_{\mathrm{corr}}^{p} = (E_{\mathrm{reco}}^{p} + 2.9~\mathrm{MeV})/1.00
 \end{equation}
 
+\begin{figure}[htbp]
+\centering
+   \includegraphics[width=0.8\linewidth]{figures/pcalib.pdf}
+    \caption{Bi-dimensional histogram of true proton energy $E^{p}$ vs. reconstructed proton energy $E_{\mathrm{reco}}^{p}$. The calibration is calculated from a linear fit of the most probable values of the $E_{\mathrm{reco}}^{p}$ distribution for each $E^{p}$ bin.}\label{fig:pcalib}
+\end{figure}
+
 \subsection{Deposited Energy Reconstruction}\label{sec:deposited}
 It is possible to compare the total visible energy in the event $E_{\mathrm{k}}$, defined as the sum of the kinetic energies of the visible particles in the final state, with the sum of the reconstructed energies for shower-like ($E_{\mathrm{corr}}^{e}$) and track-like objects ($E_{\mathrm{corr}}^{p}$) for the selected $\nu_{e}$ CC0$\pi$-Np events. This quantity $E_{\mathrm{corr}}$ is defined as:
 \begin{equation}
 E_{\mathrm{corr}} = \sum^{N_{p}} E_{\mathrm{corr}}^{p} + \sum^{N_{e}} E_{\mathrm{corr}}^{e},
 \end{equation}
 where $N_{p}$ is the number of reconstructed tracks and $N_{e}$ is the number of reconstructed showers in the event. For events where we have two or more shower-like objects and no track-like objects, the shower-like object with the lowest proton $\chi^2$ score is chosen as proton candidate (see Section \ref{sec:proton_id}). In these cases we have $N_{p} = 1$ by definition.
-The reconstructed energy does not include particles that do not interact in the liquid argon (such as neutrons) and charged particles with a kinetic energy below the detection threshold, defined in Section \ref{sec:eff}. Figure \ref{fig:nucalib} shows the calibration slope necessary to convert the the total reconstructed energy $E_{\mathrm{corr}}$ into visible energy $E_{\mathrm{k}}$. The plot has been obtained using the $\nu_{e}$ CC0$\pi$-Np + cosmic sample. A linear fit of the data points gives:
+The reconstructed energy does not include particles that do not interact in the liquid argon (such as neutrons) and charged particles with a kinetic energy below the detection threshold, defined in Section \ref{sec:eff}. Figure \ref{fig:nucalib} shows the calibration slope necessary to convert the total reconstructed energy $E_{\mathrm{corr}}$ into visible energy $E_{\mathrm{k}}$. The plot has been obtained using the $\nu_{e}$ CC0$\pi$-Np + cosmic sample. A linear fit of the data points gives:
 \begin{equation}
 E_{\mathrm{k}} = 0.98~E_{\mathrm{corr}} - 28.5~\mathrm{MeV}.
 \end{equation}
@@ -148,13 +144,13 @@ The binning of the deposited energy distribution must be carefully evaluated, si
     E_{\mathrm{deposited}}\text{~bins} = [0, 0.2, 0.4, 0.6, 0.9, 1.25, 1.9, 3]~\text{GeV},
 \end{equation}
 which is then chosen as our binning for the $E_{\mathrm{deposited}}$ distributions.
-Figure \ref{fig:migration} shows the migration matrix between $E_{\mathrm{deposited}}$ and $E_{\mathrm{k}}$. It shows the probability that an event with a true energy $E_{\mathrm{k}}$ in the $i$ bin has a reconstructed energy $E_{\mathrm{deposited}}$ in the same $i$ bin. Our binning criteria ensures that each element on the diagonal has a value larger than 0.50.
+Figure \ref{fig:migration} shows the migration matrix between $E_{\mathrm{deposited}}$ and $E_{\mathrm{k}}$. It shows the probability that an event with a true energy $E_{\mathrm{k}}$ in the $i$ bin has a reconstructed energy $E_{\mathrm{deposited}}$ in the $j$ bin. Our binning criteria ensures that each element on the diagonal has a value larger than 0.50.
 
 \begin{figure}[htbp]
 \centering
 \begin{overpic}[width=0.85\linewidth]{figures/migration.pdf}
 \end{overpic}
-\caption{Migration matrix between $E_{\mathrm{deposited}}$ and $E_{\mathrm{k}}$. It shows the probability that an event with a true energy $E_{\mathrm{k}}$ in the $i$ bin has a reconstructed energy $E_{\mathrm{deposited}}$ in the same $i$ bin.}
+\caption{Migration matrix between $E_{\mathrm{deposited}}$ and $E_{\mathrm{k}}$. It shows the probability that an event with a true energy $E_{\mathrm{k}}$ in the $i$ bin has a reconstructed energy $E_{\mathrm{deposited}}$ in the $j$ bin.}
 \label{fig:migration}
 \end{figure}
 
@@ -196,7 +192,7 @@ Since the Landau distribution of the $dE/dx$ hit values has an asymmetric tail, 
 \begin{figure}[htbp]
 \centering
 \begin{overpic}[width=0.75\linewidth]{figures/dedx.pdf}
-\end{overpic}\caption{Area-normalised distributions for the measured $dE/dx$ for simulated electrons and photons.}
+\end{overpic}\caption{Area-normalised distributions for the measured $dE/dx$ for simulated electrons and photons produced in neutrino interactions.}
 \label{fig:dedx_gamma_e}
 \end{figure}
 
@@ -257,7 +253,7 @@ Figure \ref{fig:range} shows the $dE/dx$ as a function of the residual range $R$
 
 \begin{table}[htbp]
    \centering
-   \caption{Stopping power parametrisation for various particle types in liquid argon (from \cite{Acciarri:2013met}.)}\label{tab:range}
+   \caption{Stopping power parametrisation for various particle types in liquid argon (from \cite{Acciarri:2013met}).}\label{tab:range}
    \begin{tabular}{lcr}
      \toprule
      Particle type & $A$ [MeV/cm$^{1-b}$] & $b$ \\

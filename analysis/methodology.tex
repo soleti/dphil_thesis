@@ -152,7 +152,7 @@ An example of this procedure for a Monte Carlo generated $\nu_e$ event with 4 ne
 \subsection{Topological pre-selection} \label{sec:topological_pre_selection}
 A perfect reconstruction of a $\nu_{e}$ CC0$\pi$-Np event in a LArTPC will produce as many reconstructed tracks as the number of protons above the detection threshold in the final state and a single reconstructed shower (the electron), sharing a common vertex. However, mis-reconstruction and mis-classification issues can significantly lower the selection efficiency. The current status of the event reconstruction, which depends on the quality of the event (e.g. the number of hits \cite{Acciarri:2017hat}), affects the efficiency of selecting these events. For example, the presence of dead or unresponsive wires can affect the reconstruction by causing the splitting of an ionisation track or an electromagnetic shower into two distinct reconstructed objects. Also, the selection currently implemented relies on the classification of the reconstructed objects as track-like or shower-like, a separation that contains an inherent inefficiency associated, especially when the number of reconstructed hits is low.
 
-In order to maximise our efficiency we currently require (1) \emph{at least} one track and \emph{at least} one shower sharing a common vertex, or (2) \emph{at least} two showers sharing a common vertex, to account for proton mis-classification as a shower-like object. For these cases we measure the $\chi^2$ score of the $dE/dx$ vs. residual range profile of the reconstructed objects in the proton hypothesis, as described in Section \ref{sec:proton_id}. The object with the lowest $\chi^2$ score is considered as a track, while the remaining ones are considered as showers.
+In order to maximise our efficiency we currently require (1) \emph{at least} one track and \emph{at least} one shower sharing a common vertex, or (2) \emph{at least} two showers sharing a common vertex, to account for proton mis-classification as a shower-like object. For these cases we measure the $\chi^2$ score of the $dE/dx$ vs. residual range profile of the reconstructed objects in the proton hypothesis, as described in Section \ref{sec:proton_id}. The object with the lowest proton $\chi^2$ score is considered as a track, while the remaining ones are considered as showers.
 
 \subsection{Minimum quality requirements}\label{sec:precuts}
 A minimal set of cuts is applied to the selected events, in order to ensure that they are well reconstructed.
@@ -246,7 +246,7 @@ Our current selection algorithm can fail for several reasons: in particular, we 
 \item[No data products (0.7\%).] {The event does not have any neutrino candidate}.
 \end{description}
 
-Figure \ref{fig:ineff} shows a stacked histogram of the true neutrino energy for the $\nu_e$~CC0$\pi$-Np generated events, divided into the categories described above. The events without a reconstructed shower are the dominant inefficiency at low energy. The fraction of events where at least one reconstructed object is not contained in the detector (\emph{not contained} in the legend) increases with the energy. This is expected, since the probability to have large electromagnetic showers split in two or more object increases, and these objects can have a vertex reconstructed outside the fiducial volume. The \emph{passed} category (filled grey histogram) corresponds to the efficiency plot shown in Figure \ref{fig:effpurity}.
+Figure \ref{fig:ineff} shows a stacked histogram of the true neutrino energy for the $\nu_e$~CC0$\pi$-Np generated events, divided into the categories described above. The events without a reconstructed shower are the dominant inefficiency at low energy. Low-energy showers correspond in general to a smaller number of reconstructed hits, which makes the pattern recognition more challenging \cite{Acciarri:2017hat}. The fraction of events where at least one reconstructed object is not contained in the detector (\emph{not contained} in the legend) increases with the energy. This is expected, since the probability to have large electromagnetic showers split in two or more object increases, and these objects can have a vertex reconstructed outside the fiducial volume. The \emph{passed} category (filled grey histogram) corresponds to the efficiency plot shown in Figure \ref{fig:effpurity}.
 
 \begin{figure}
 \centering
@@ -255,13 +255,13 @@ Figure \ref{fig:ineff} shows a stacked histogram of the true neutrino energy for
   \label{fig:ineff}
 \end{figure}
 
-The selection outcomes as a function of the lepton true angular variables $\theta$ and $\phi$ are shown in Figure \ref{fig:ineff_angles}. The efficiency is mostly constant as a function of the azimuthal angle $\phi$, while the fraction of events without reconstructed showers increases as a function of the $\theta$ angle. This is because backwards-going electrons are more difficult to reconstruct, since they are often low-energetic and pattern recognition groups the electron hits together with the forward-going proton track.
+The selection outcomes as a function of the lepton true angular variables $\theta$ and $\phi$ are shown in Figure \ref{fig:ineff_angles}. The efficiency is mostly constant as a function of the azimuthal angle $\phi$, while the fraction of events without reconstructed showers increases as a function of the $\theta$ angle. This is because backwards-going electrons are more difficult to reconstruct, since they are often low-energetic, and the pattern recognition tends to group the electron hits together with the forward-going proton track.
 
 \begin{figure}
 \centering
   \begin{subfigure}{0.48\textwidth}
     \includegraphics[width=\linewidth]{figures/ineff_theta.pdf}
-    \caption{$\theta$ efficiency} 
+    \caption{$\theta$ efficiency.} 
   \end{subfigure}
     \begin{subfigure}{0.48\textwidth}
     \includegraphics[width=\linewidth]{figures/ineff_phi.pdf}
@@ -287,24 +287,24 @@ We divide the selected events (signal and background) into 8 categories:
 \end{description}
 
 Table \ref{tab:result} shows a summary of the selection algorithm results, with the corresponding number of events for each category.
-%The numbers correspond to an exposure of the MicroBooNE detector of \num{4.34e19} protons on target (POT). This is equivalent to the amount of data analyzed here, which is a subset of the data collected from February to April 2016.
+%The numbers correspond to an exposure of the MicroBooNE detector of \num{4.34e19} protons on target (POT). This is equivalent to the amount of data analysed here, which is a subset of the data collected from February to April 2016.
 
 \begin{table}[htbp]
    \centering
-      \caption{Summary of the selection results, showing the contribution of each event category, for a MicroBooNE exposure of \num{4.34e19} POT. Uncertainties are statistical only. {For the \emph{Cosmic contaminated} category the number of generated events correspond to the number of neutrino interactions inside the cryostat. For the \emph{Cosmic} category, it corresponds to the total number of simulated neutrino interactions, both inside and outside the cryostat.}}\label{tab:result}
-   \begin{tabular}{llrrrrr}
+      \caption{Summary of the selection results, showing the contribution of each event category, for a MicroBooNE exposure of \num{4.34e19} POT. Efficiency uncertainties are statistical only. {For the \emph{Cosmic contaminated} category the number of generated events correspond to the number of neutrino interactions inside the cryostat. For the \emph{Cosmic} category, it corresponds to the total number of simulated neutrino interactions, both inside and outside the cryostat.}}\label{tab:result}
+   \begin{tabular}{lrrr}
      \toprule
-     Category & Generated & Selected & Efficiency \\
+     Category & Generated & Selected & Efficiency [\%]\\
      \midrule
 
-     \textbf{$\nu_{e}$ CC0$\pi$-Np (signal)}  & $33.8$    & $15.4$  & $(45.5\pm0.5)$~\%\\
-     $\nu_{e}$ CC                             & $39.5$    & $15.4$  & $(39.0\pm0.5)$~\%\\
-     Beam intrinsic $\nu_{\mu}$               & $10905.9$ & $488.9$ & $(4.5\pm0.2)$~\%\\
-     Beam intrinsic NC                        & $3532.8$  & $329.5$ & $(9.3\pm0.2)$~\%\\
-     Outside fid. vol.                        & $36634.6$ & $79.0$  & $(0.2\pm0.1)$~\%\\
-     Data off-beam                            & $123070.2$ & $1593.4$ & $(1.3\pm0.1)$~\%\\
-     Cosmic contaminated                      & $14706.4$  & $376.1$  & $(2.5\pm0.1)$~\%\\ 
-     Cosmic                                   & $51356.1$  & $489.4$  & $(0.8\pm0.1)$~\%\\
+     \textbf{$\nu_{e}$ CC0$\pi$-Np (signal)}  & $33.8$    & $15.4$  & $45.5\pm0.5$\\
+     $\nu_{e}$ CC                             & $39.5$    & $15.4$  & $39.0\pm0.5$\\
+     Beam intrinsic $\nu_{\mu}$               & $10905.9$ & $488.9$ & $4.5\pm0.2$\\
+     Beam intrinsic NC                        & $3532.8$  & $329.5$ & $9.3\pm0.2$\\
+     Outside fid. vol.                        & $36634.6$ & $79.0$  & $0.2\pm0.1$\\
+     Data off-beam                            & $123070.2$ & $1593.4$ & $1.3\pm0.1$\\
+     Cosmic contaminated                      & $14706.4$  & $376.1$  & $2.5\pm0.1$\\ 
+     Cosmic                                   & $51356.1$  & $489.4$  & $0.8\pm0.1$\\
 
      \bottomrule
    \end{tabular}
@@ -326,7 +326,7 @@ Each selected event has a neutrino interaction candidate with one or more tracks
   \caption{Distributions of the track and shower multiplicities in data and Monte Carlo simulation.}\label{fig:multiplicity}
 \end{figure}
 
-Figure \ref{fig:spectrum} shows the reconstructed deposited energy spectrum of the selected events. The reconstructed deposited energy $E_{\mathrm{deposited}}$ has been measured with the procedure described in Section \ref{sec:depositedenergy}. Both the $\chi^2$ and Kolmogorov-Smirnov tests give a probability of 1.00 (rounded up at the second decimal digit) of the null hypothesis, which is the data distribution being compatible with the Monte Carlo simulation.
+Figure \ref{fig:spectrum} shows the reconstructed deposited energy spectrum of the selected events. The reconstructed deposited energy $E_{\mathrm{deposited}}$ has been measured with the procedure described in Section \ref{sec:depositedenergy}. Both the $\chi^2$ and Kolmogorov-Smirnov \cite{massey1951kolmogorov} tests give a probability of 1.00 (rounded up at the second decimal digit) of the null hypothesis, which is the data distribution being compatible with the Monte Carlo simulation.
 %This plot shows that our selection procedure has similar performances in data and Monte Carlo and that there is no evident bias in the energy reconstruction. 
 
 \begin{figure}[htbp]
