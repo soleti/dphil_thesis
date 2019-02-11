@@ -19,7 +19,7 @@ Figure \ref{fig:dedx_after} shows the $dE/dx$ distributions for data and Monte C
     \includegraphics[width=\linewidth]{figures/dedx_bdt.pdf}
     \caption{BDTs.} 
   \end{subfigure}
-  \caption{Distribution of the reconstructed showers $dE/dx$ after rectangular cuts (left) and BDTs cuts (right).}
+  \caption{Distribution of the reconstructed showers $dE/dx$ after rectangular cuts (left) and BDTs cuts (right). The black points represent the statistical subtraction of the data beam-off events from the data beam-on events. The coloured stacked histograms represent the simulated events, classified according to the particle which generated the shower.}
   \label{fig:dedx_after}
 \end{figure}
 
@@ -29,13 +29,13 @@ In this section we will study the agreement between data and Monte Carlo for sel
 It is possible to enhance the neutral-current component (defined as \emph{beam intrinsic NC} in our analysis) by (1) inverting the cut on the shower $dE/dx$, and (2) removing the cut on the shower distance (see Figures \ref{fig:dedx_norm}, \ref{fig:showerd_norm}). The $dE/dx$ of the most energetic shower must be within 3.2~MeV/cm and 5~MeV/cm to select electromagnetic cascades that were initiated by a photon. It also ensures that this NC-enhanced sample is orthogonal to the $\nu_{e}$ CC0$\pi$-Np selected sample. The cut on the shower distance is removed to include events where the photon conversion is far from the neutrino interaction vertex.
 Thus, our final sample will mainly contain NC events, with some contamination of $\nu_{\mu}$ CC$\pi^{0}$ events where the muon track was tagged as a proton-like track.
 
-Figure \ref{fig:photon} shows the comparison between data and Monte Carlo for the reconstructed energy spectrum $E_{deposited}$ of the photon-enhanced event spectrum. 
+Figure \ref{fig:photon} shows the comparison between data and Monte Carlo for the reconstructed energy spectrum $E_{deposited}$ of the NC-enhanced event spectrum. The agreement is good both in shape and normalisation: the data points are within the systematic uncertainties of the simulation in every bin.
 %The reconstructed energy $E_{corr}$ here corresponds to the sum of the reconstructed energies of the shower-like objects and the reconstructed energies of the track-like objects $E_{corr} = E_{corr}^{p}+E_{corr}^{e}$.
 
 \begin{figure}[htbp]
 \centering
   \includegraphics[width=0.7\linewidth]{figures/nc_reco.pdf}
-  \caption{Reconstructed energy spectrum of the events selected with the NC-enhanced reverse cuts.}\label{fig:photon}
+  \caption{Reconstructed energy spectrum of the events selected with the NC-enhanced reverse cuts. The black points represent the data with statistical uncertainties. The coloured stacked histograms represent the simulated events, with the hatched histogram corresponding to the data beam-off sample. The shaded area represents the systematic uncertainty.}\label{fig:photon}
 \end{figure}
 
 \subsubsection{CC \texorpdfstring{$\nu_{\mu}$}{numu}-enhanced selection}
@@ -43,11 +43,12 @@ It is possible to enhance the presence of the CC $\nu_{\mu}$ background (defined
 A CC $\nu_{\mu}$ event has, by definition, a muon in the final state: as such, requiring a track length larger than 20~cm and changing the cut on the proton $\chi^2_p$ score decreases our muon-rejection power. The goal of the external analysis is to select CC $\nu_{\mu}$ events, so instead of vetoing those events as described in Section \ref{sec:numu}, we invert this requirement by allowing only these events.
 
 Figure \ref{fig:numu_inverted} shows the agreement between data and Monte Carlo for the reconstructed energy spectrum of the CC $\nu_{\mu}$-enhanced event sample.
+The agreement is good both in shape and normalisation: the data points are within the systematic uncertainties of the simulation in every bin.
 
 \begin{figure}[htbp]
 \centering
   \includegraphics[width=0.7\linewidth]{figures/numu_reco.pdf}
-  \caption{Reconstructed energy spectrum of the events selected with the CC~$\nu_{\mu}$-enhanced reverse cuts.}\label{fig:numu_inverted}
+  \caption{Reconstructed energy spectrum of the events selected with the CC~$\nu_{\mu}$-enhanced reverse cuts. The black points represent the data with statistical uncertainties. The coloured stacked histograms represent the simulated events, with the hatched histogram corresponding to the data beam-off sample. The shaded area represents the systematic uncertainty. The bottom part of the plot shows the ratio between the data beam-on events and the stacked histograms.}\label{fig:numu_inverted}
 \end{figure}
 
 % \subsection{Future Validation Studies}
@@ -58,9 +59,10 @@ Figure \ref{fig:numu_inverted} shows the agreement between data and Monte Carlo 
 % It will help to validate the cosmic background components and also the energy and $dE/dx$ reconstruction procedures.
 
 \subsection{NuMI beam event studies}
-It is possible to run this analysis on the complementary and independent NuMI dataset, acquired with the NuMI beam trigger. The NuMI beam is created from 120 GeV protons hitting a carbon target \cite{Adamson:2015dkw}, while the BNB is created from 8 GeV protons on a beryllium target. The NuMI beam has also a higher intrinsic $\nu_{e}$ component than the BNB (5\% vs. 0.5\%). Figure \ref{fig:numibeam} shows a comparison of the NuMI and BNB beam fluxes for the MicroBooNE detector. Even though it is around $8^{\circ}$ off-axis, MicroBooNE still receives $\sim2500$ $\nu_{e}$ interactions per year. 
+It is possible to run this analysis on the complementary and independent neutrino dataset, acquired with the NuMI beam trigger. The NuMI beam is created from 120 GeV protons hitting a carbon target \cite{Adamson:2015dkw}, while the BNB is created from 8 GeV protons on a beryllium target. The NuMI beam has also a higher intrinsic $\nu_{e}$ component than the BNB (5\% vs. 0.5\%). Figure \ref{fig:numibeam} shows a comparison of the NuMI and BNB beam fluxes for the MicroBooNE detector. Even though it is around $8^{\circ}$ off-axis, MicroBooNE still receives $\sim2500$ $\nu_{e}$ interactions per year. 
 
-As such, a study of the events selected in the NuMI dataset is of fundamental importance to validate the $\nu_{e}$ CC0$\pi$-Np selection algorithm, since it provides a completely independent set of electron neutrinos with different energy and angular distributions.
+As such, a study of the events selected in the NuMI dataset is of fundamental importance to validate the $\nu_{e}$ CC0$\pi$-Np selection algorithm, since it provides a completely independent set of electron neutrinos with different energy and angular distributions. 
+However, the price to pay is the poor understanding of the flux at such off-axis angle. This does not affect the validation, but it makes a search for an excess extremely challenging. 
 
 \begin{figure}[htbp]
 \centering
@@ -76,7 +78,7 @@ As such, a study of the events selected in the NuMI dataset is of fundamental im
 \end{figure}
 
 In order to run on this data sample, it is necessary to change the requirement on the reconstructed flash, since the beam-gate window is $[6,16]$~\si{\micro}s after the trigger time.
-We apply the same rectangular cuts described in Section \ref{sec:cuts}, plus a threshold of 100~MeV on the reconstructed energy of the leading shower. This last cut allows us to remove a large fraction of cosmogenic background without significantly affecting our $\nu_e$ CC0$\pi$-Np selection efficiency, since the NuMI beam has a higher energy than the BNB.
+We apply the same rectangular cuts described in Section \ref{sec:cuts}, plus a threshold of 100~MeV on the reconstructed energy of the leading shower. This last cut allows us to remove a large fraction of cosmogenic background without significantly affecting our $\nu_e$ CC0$\pi$-Np selection efficiency.
 
 \begin{figure}[htbp]
 \centering
@@ -93,3 +95,4 @@ We select 46 data events, $39.7\pm11.9$ signal ($\nu_e$~CC0$\pi$-Np) events, and
 is not valid. Thus, we adopt a profile-likelihood ratio test, as described in \cite{Cowan:2010js}.
 Assuming a 30\% systematic uncertainty, the expected (observed) significance for the detection of $\nu_e$~CC0$\pi$-Np events is 3.4$\sigma$ (2.2$\sigma$). The statistical-only significance is $6.8\sigma$ ($4.2\sigma$).
 
+This result represents a very important cross-check for the analysis, since it gives us confidence that we are indeed selecting $\nu_e$~CC0$\pi$-Np interactions. It also provides a larger sample of electron neutrinos, allowing us to study in detail the shower properties, which will lead to improved cuts and selection efficiencies.

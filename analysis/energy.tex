@@ -1,11 +1,13 @@
 
 \section{Calorimetry}\label{sec:energyreco}
 \subsection{Scope of the energy reconstruction}
-In this analysis we restrict ourselves to the measurement of the deposited energy in the TPC of the visible particles in the final state of the $\nu_e$ CC0$\pi$-Np neutrino interaction. Our signal has in its final state, by definition, one electron and at least one proton, with no other visible particles. The energy of the electron is measured by converting the reconstructed charge of all the shower-like objects into deposited energy, as described in Section \ref{sec:showerenergy}. The energy of the protons, instead, can be measured by converting the track length of the reconstructed tracks into deposited energy, using the tabulated stopping power of protons in the liquid argon, with the procedure described in \ref{sec:protonenergy}. The total reconstructed energy corresponds to the sum of the reconstructed energies, corrected by the calibration factors calculated below, and is referred to as $E_{\mathrm{corr}}$. This quantity is then compared with the total kinetic energy of the particles above detection thresholds and corrected by a calibration factor to obtain an estimate of the deposited energy $E_{\mathrm{deposited}}$ (Section \ref{sec:deposited}).
+In this analysis we restrict ourselves to the measurement of the deposited energy in the TPC of the visible particles in the final state of the $\nu_e$ CC0$\pi$-Np neutrino interaction. We will not attempt to reconstruct the interacting neutrino energy. Our signal has in its final state, by definition, one electron and at least one proton, with no other visible particles. The energy of the showers, expected to be from an electron, is measured by converting the reconstructed charge of all the shower-like objects into deposited energy, as described in Section \ref{sec:showerenergy}. The energy of the tracks, expected to be from protons instead, can be measured by converting the track length of the reconstructed tracks into deposited energy, using the tabulated stopping power of protons in the liquid argon, with the procedure described in \ref{sec:protonenergy}. Thus, object classification issues, such as proton classified as showers or electrons classified as tracks can have a direct effect on the energy reconstruction.
+
+The total reconstructed energy corresponds to the sum of the reconstructed energies, corrected by the calibration factors calculated below, and is referred to as $E_{\mathrm{corr}}$. This quantity is then compared with the total kinetic energy of the particles above detection thresholds and corrected by a calibration factor to obtain an estimate of the deposited energy $E_{\mathrm{deposited}}$ (Section \ref{sec:deposited}).
 
 
 \subsection{Electron energy reconstruction and calibration}\label{sec:showerenergy}
-The reconstructed energy $E_{\mathrm{reco}}^{e}$ of a shower-like object is measured converting the charge of the associated hits into deposited energy in the TPC. It is calculated by multiplying the reconstructed charge ($e^{-}_{\mathrm{reco}}$) from hits associated with the reconstructed shower by the calibration factor \cite{Acciarri:2017sjy}:
+The reconstructed energy $E_{\mathrm{reco}}^{e}$ of a shower-like object is measured by converting the charge of the associated hits into deposited energy in the TPC. It is calculated by multiplying the reconstructed charge ($e^{-}_{\mathrm{reco}}$) from hits associated with the reconstructed shower by the calibration factor \cite{Acciarri:2017sjy}:
 \begin{equation}
 \frac{E_{\mathrm{reco}}^{e} \mathrm{(MeV)}}{e^{-}_{\mathrm{reco}}} = 1.01\frac{e^-}{e^{-}_{\mathrm{reco}}} \times \frac{23.6~\mathrm{eV}}{e^-} \times 10^{-6} \frac{\mathrm{MeV}}{\mathrm{eV}} \times \frac{1}{R} = 3.85\times10^{-5},\label{eq:calib}
 \end{equation}
@@ -17,15 +19,15 @@ where:
 \item $R = 0.62$ is the recombination factor obtained with the Modified Box Model \cite{Acciarri:2013met} at MicroBooNE's electric field of 270~V/cm assuming an energy loss per length $dE/dx=2.3$~MeV/cm.
 \end{itemize}
 
-The reconstructed energy is obtained summing the energy of each hit from the reconstructed showers produced by a simulated electron in the collection plane, produced by a $\nu_{e}$ CC0$\pi$-Np interaction. The starting point of the simulated electron and the starting point of the reconstructed showers are required to be within the fiducial volume. 
-Figure \ref{fig:ecalib} shows the calibration slope necessary to convert the electron reconstructed energy $E_{\mathrm{reco}}^{e}$ into true electron energy $E^{e}$. The true energy spectrum has been divided into 10 bins of equal size in the 30-2030~MeV range. Since the reconstructed energy distributions in each true energy bin are asymmetric, the data points are obtained fitting the distributions with a GaussExp function \cite{Das:2016stf}, in order to estimate the most probable value (MPV). The GaussExp function consists of an exponential tail stitched to a Gaussian core and it is often used to measure lossy processes such as the energy reconstructed in a calorimeter. The coordinate on the $E^{e}$ axis is given by the mean of the true energy distribution for each bin. The vertical error bars correspond to the full width at half maximum (FWHM) of the fitted function. The true energy distribution and the reconstruction energy distribution for every bin are shown in Figure \ref{fig:e_spectra}.
+The reconstructed energy is obtained by summing the energy of each hit on the collection plane from reconstructed and electron showers with their starting point contained in the fiducial volume. %from the reconstructed showers produced by a simulated electron in the collection plane, produced by a $\nu_{e}$ CC0$\pi$-Np interaction. The starting point of the simulated electron and the starting point of the reconstructed showers are required to be within the fiducial volume. 
+Figure \ref{fig:ecalib} shows the calibration slope necessary to convert the electron reconstructed energy $E_{\mathrm{reco}}^{e}$ into true electron deposited energy $E^{e}$. The true energy spectrum has been divided into 10 bins of equal size in the 30-2030~MeV range. Since the reconstructed energy distributions in each true energy bin are asymmetric, the data points are obtained fitting the distributions with a GaussExp function \cite{Das:2016stf}, in order to estimate the most probable value (MPV). The GaussExp function consists of an exponential tail stitched to a Gaussian core and it is often used to measure lossy processes such as the energy reconstructed in a calorimeter. The coordinate on the $E^{e}$ axis is given by the mean of the true energy distribution for each bin. The vertical error bars correspond to the full width at half maximum (FWHM) of the fitted function. The true energy distribution and the reconstruction energy distribution for every bin are shown in Figure \ref{fig:e_spectra}.
 
 \begin{figure}[htbp]
 \centering
 \begin{overpic}[width=0.95\linewidth]{figures/e_spectra.pdf}
 \end{overpic}
 % \includegraphics[width=0.65\columnwidth]{figures/ecalib.pdf}
-\caption{Reconstructed and true energy distribution for 10 intervals of equal size in the 30-2030 MeV energy range. The reconstructed energy distribution have been fitted with a GaussExp function.}
+\caption{Reconstructed (blue) and true (black) energy distribution for 10 intervals of equal size in the 30-2030 MeV energy range. The reconstructed energy distribution have been fitted with a GaussExp function (red line).}
 \label{fig:e_spectra}
 \end{figure}
 
@@ -44,7 +46,7 @@ E_{\mathrm{corr}}^{e} = (E_{\mathrm{reco}}^{e} + 34.7~\mathrm{MeV})/0.77.
 \begin{overpic}[width=0.8\linewidth]{figures/ecalib.pdf}
 \end{overpic}
 % \includegraphics[width=0.65\columnwidth]{figures/ecalib.pdf}
-\caption{Bi-dimensional histogram of true electron energy $E^{e}$ vs. reconstructed electron energy $E_{\mathrm{reco}}^{e}$. The reconstructed electron energy is measured summing the energy of each hit associated to reconstructed showers produced by the simulated electron. The black points correspond to the most probable value of the $E_{\mathrm{reco}}^{e}$ distribution for each $E^{e}$ bin, calculated with a GaussExp fit.}
+\caption{Bi-dimensional histogram of reconstructed electron energy $E_{\mathrm{reco}}^{e}$ vs. true electron deposited energy $E^{e}$ . The reconstructed electron energy is measured summing the energy of each hit associated to reconstructed showers produced by the simulated electron. The black points correspond to the most probable value of the $E_{\mathrm{reco}}^{e}$ distribution for each $E^{e}$ bin, calculated with a GaussExp fit, as illustrated in Figure \ref{fig:e_spectra}. The red line represents a linear fit of the black points.}
 \label{fig:ecalib}
 \end{figure}
 
@@ -58,7 +60,7 @@ Figure \ref{fig:electron_res} shows the $E_{\mathrm{frac}}$ distribution for 10 
 \centering
 \begin{overpic}[width=0.98\linewidth]{figures/electron_res.pdf}
 \end{overpic}
-\caption{Normalised energy difference $E_{\mathrm{frac}}$ for 10 intervals of equal size in the 30-2030 MeV energy range. The normalised energy difference distributions have been fitted with a GaussExp function (red line).}
+\caption{Normalised energy difference $E_{\mathrm{frac}}$ for 10 intervals of equal size in the 30-2030 MeV energy range. The normalised energy difference distributions (blue) have been fitted with a GaussExp function (red line).}
 \label{fig:electron_res}
 \end{figure}
 
@@ -70,14 +72,14 @@ where:
 \begin{itemize}
     \item $a = 2.30\%$ is the stochastic term, which is caused by the intrinsic fluctuations of the development of the electromagnetic shower;
     \item $b = 7.53\%$ is the noise term, which comes from the electronics noise of the readout chain and represents the dominant contribution;
-    \item $c = 1.21\%$ is the constant term, which is caused by detector non-uniformities (e.g. the presence of missing or unresponsive wires).
+    \item $c = 1.21\%$ is the constant term, which is caused by detector non-uniformities (e.g. the presence of unresponsive wires).
 \end{itemize} 
 
 \begin{figure}[htbp]
 \centering
 \begin{overpic}[width=0.8\linewidth]{figures/sigma_e.pdf}
 \end{overpic}
-\caption{Fractional energy resolution for 10 intervals of equal size in the 30-2030 MeV energy range. The points have been fitted the classic calorimeter energy resolution formula \eqref{eq:calo}.}
+\caption{Fractional energy resolution for 10 intervals of equal size in the 30-2030 MeV energy range. The points, extracted from simulated events, have been fitted the classic calorimeter energy resolution equation \ref{eq:calo} (red line).}
 \label{fig:sigma_e}
 \end{figure}
 
@@ -109,7 +111,7 @@ E_{\mathrm{corr}}^{p} = (E_{\mathrm{reco}}^{p} + 2.9~\mathrm{MeV})/1.00
 \begin{figure}[htbp]
 \centering
    \includegraphics[width=0.8\linewidth]{figures/pcalib.pdf}
-    \caption{Bi-dimensional histogram of true proton energy $E^{p}$ vs. reconstructed proton energy $E_{\mathrm{reco}}^{p}$. The calibration is calculated from a linear fit of the most probable values of the $E_{\mathrm{reco}}^{p}$ distribution for each $E^{p}$ bin.}\label{fig:pcalib}
+    \caption{Bi-dimensional histogram of true proton energy $E^{p}$ vs. reconstructed proton energy $E_{\mathrm{reco}}^{p}$. The calibration is calculated from a linear fit of the most probable values of the $E_{\mathrm{reco}}^{p}$ distribution for each $E^{p}$ bin. The black points correspond to the most probable value of the $E_{\mathrm{reco}}^{p}$ distribution for each $E^{p}$ bin, calculated with a GaussExp fit. The red line represents a linear fit of the black points.}\label{fig:pcalib}
 \end{figure}
 
 \subsection{Deposited Energy Reconstruction}\label{sec:deposited}
@@ -118,25 +120,25 @@ It is possible to compare the total visible energy in the event $E_{\mathrm{k}}$
 E_{\mathrm{corr}} = \sum^{N_{p}} E_{\mathrm{corr}}^{p} + \sum^{N_{e}} E_{\mathrm{corr}}^{e},
 \end{equation}
 where $N_{p}$ is the number of reconstructed tracks and $N_{e}$ is the number of reconstructed showers in the event. For events where we have two or more shower-like objects and no track-like objects, the shower-like object with the lowest proton $\chi^2$ score is chosen as proton candidate (see Section \ref{sec:proton_id}). In these cases we have $N_{p} = 1$ by definition.
-The reconstructed energy does not include particles that do not interact in the liquid argon (such as neutrons) and charged particles with a kinetic energy below the detection threshold, defined in Section \ref{sec:eff}. Figure \ref{fig:nucalib} shows the calibration slope necessary to convert the total reconstructed energy $E_{\mathrm{corr}}$ into visible energy $E_{\mathrm{k}}$. The plot has been obtained using the $\nu_{e}$ CC0$\pi$-Np + cosmic sample. A linear fit of the data points gives:
+The reconstructed energy does not include particles that do not interact in the liquid argon (such as neutrons) and charged particles with a kinetic energy below the detection threshold, defined in Section \ref{sec:eff}. Figure \ref{fig:nucalib} shows the calibration slope necessary to convert the total reconstructed energy $E_{\mathrm{corr}}$ into visible energy $E_{\mathrm{k}}$. The plot has been obtained using the $\nu_{e}$ CC0$\pi$-Np + cosmic simulation sample. A linear fit of the data points gives:
 \begin{equation}
 E_{\mathrm{k}} = 0.98~E_{\mathrm{corr}} - 28.5~\mathrm{MeV}.
 \end{equation}
 The reconstructed visible energy, corrected by the calibration factor is then defined as:
 \begin{equation}
-E_{\mathrm{deposited}} = (E_{\mathrm{corr}} + 28.5~\mathrm{MeV})/0.98
+E_{\mathrm{deposited}} = (E_{\mathrm{corr}} + 28.5~\mathrm{MeV})/0.98\label{eq:deposited}
 \end{equation}
 
-Several effects can contribute to this calibration factor: among the others, the presence of regions with unresponsive of missing wires can cause an underestimation of the deposited energy. In the future, this effect can be limited by the use of the other two planes for calorimetric measurements.
+Several effects can contribute to this calibration factor: among others, the presence of regions with unresponsive wires can cause an underestimation of the deposited energy. In the future, this effect can be limited by the use of the other two planes for calorimetric measurements.
 
 \begin{figure}[htbp]
 \centering
 \begin{overpic}[width=0.85\linewidth]{figures/nucalib.pdf}
-\end{overpic}\caption{Bi-dimensional histogram of total visible energy $E^{\mathrm{k}}$ vs. the total reconstructed energy $E_{\mathrm{corr}}$. Black points are obtained measuring the most probable value of the $E_{\mathrm{corr}}$ distribution for each $E_{\mathrm{k}}$ bin.} 
+\end{overpic}\caption{Bi-dimensional histogram of the total reconstructed energy $E_{\mathrm{corr}}$ vs. the total visible energy $E^{\mathrm{k}}$ vs. Black points are obtained measuring the most probable value of the $E_{\mathrm{corr}}$ distribution for each $E_{\mathrm{k}}$ bin, obtained with a GaussExp fit.} 
 \label{fig:nucalib}
 \end{figure}
 
-In this analysis, we will use the quantity $E_{\mathrm{deposited}}$ as an estimate of the total visible energy in the event.
+In this analysis, we will use the quantity $E_{\mathrm{deposited}}$ defined in Eq. \ref{eq:deposited} as estimate of the total visible energy in the event.
 
 \subsection{Deposited energy binning}\label{sec:depositedenergy}
 The binning of the deposited energy distribution must be carefully evaluated, since it is of fundamental importance in the calculation of the significance of an eventual excess. In this analysis, we require the events in a true $E_{\mathrm{k}}$ bin to fall in the same reconstructed $E_{\mathrm{deposited}}$ bin in at least 50\% of the cases for $\nu_e$~CC0$\pi$-Np events. A combination which satisfies this condition and maximises the number of bins in the $[0,3]$~GeV range is:
@@ -156,24 +158,24 @@ Figure \ref{fig:migration} shows the migration matrix between $E_{\mathrm{deposi
 
 
 \subsection{Measurement of the electromagnetic shower energy loss}\label{sec:dedx}
-The mean energy loss per length of charged particles $\left\langle dE/dx\right\rangle$ can be described by the \emph{Bethe equation} as defined in Section 30.2.2 of \cite{PhysRevD.98.030001}:
+The mean energy loss per length of charged particles $\left\langle dE/dx\right\rangle$ can be described by the \emph{Bethe equation} as defined in \cite{PhysRevD.98.030001}:
 \begin{equation}
     -\left\langle\frac{dE}{dx}\right\rangle = Kz^2\frac{Z}{A}\frac{1}{\beta^2}\left[\frac{1}{2}\ln\frac{2m_e c^2\beta^2\gamma^2 T_{\mathrm{max}}}{I^2}-\beta^2-\frac{\delta(\beta\gamma)}{2}\right],\label{eq:bethe}
 \end{equation}
 where $T_{\mathrm{max}}$ is the maximum possible energy transfer in a single collision, $I$ is the mean excitation energy, and $\delta(\beta\gamma)$ is a density correction. 
 
-In materials of moderate thickness such as LAr, the energy loss probability distribution is described by the asymmetric Landau distribution \cite{Landau:1944if}, which drives the mean of the energy loss of eq. \eqref{eq:bethe} into the tail of the distribution. For this reason, ``the
+In materials of moderate thickness such as LAr, the energy loss probability distribution is described by the asymmetric Landau distribution \cite{Landau:1944if}, which drives the mean of the energy loss of Eq. \ref{eq:bethe} into the tail of the distribution. For this reason, ``the
 mean of the energy loss given by the Bethe equation [\dots] is thus ill-defined
-experimentally and is not useful for describing energy loss by single particles'' (Section 30.2.7 of \cite{PhysRevD.98.030001}).
+experimentally and is not useful for describing energy loss by single particles'' \cite{PhysRevD.98.030001}.
 The most probable value of the Landau distribution, which should be used instead, is given by: 
 \begin{equation}
     \Delta_p = \xi\left[\ln\frac{2mc^2\beta^2\gamma^2}{I}+\ln\frac{\xi}{I}+j-\beta^2-\delta(\beta\gamma)\right],\label{eq:landau}
 \end{equation}
-where $\xi = (K/2)\langle Z/A \rangle (x/b^2)$~MeV, $j=0.2$, and $x$ is the thickness of the material in $\mathrm{g}\cdot\mathrm{cm}^2$ (Section 30.2.7 of \cite{PhysRevD.98.030001}). 
+where $\xi = (K/2)\langle Z/A \rangle (x/b^2)$~MeV, $j=0.2$, and $x$ is the thickness of the material in $\mathrm{g}\cdot\mathrm{cm}^2$ \cite{PhysRevD.98.030001}. 
 
 An important feature of the LArTPC technology is its ability to distinguish between electrons and photons in the final state by measuring their $dE/dx$. Photons that undergo pair-production, which is the dominant process above 10~MeV, produce a $e^+e^-$ pair. If the pair is boosted, the trajectories of the positron and the electron overlap, producing an average $dE/dx$ which is twice the one of a single, minimum-ionising electron. 
 
-In MicroBooNE, the $dE/dx$ for electromagnetic showers is measured with a procedure analogous to the one developed by the ArgoNeuT collaboration and described in \cite{Acciarri:2016sli}. In this document, neutrinos were produced by the NuMI neutrino beam and the events were visually inspected to select electron and photon showers.
+In MicroBooNE, the $dE/dx$ for electromagnetic showers is measured with a procedure analogous to the one developed by the ArgoNeuT collaboration and described in \cite{Acciarri:2016sli}. %In this document, neutrinos were produced by the NuMI neutrino beam and the events were visually inspected to select electron and photon showers.
 
 \begin{figure}[htbp]
 \centering
@@ -182,17 +184,17 @@ In MicroBooNE, the $dE/dx$ for electromagnetic showers is measured with a proced
 \label{fig:evd_dedx}
 \end{figure}
 
-In our implementation, as a first step, all the hits of the collection plane within a rectangle of 4~cm along the direction of the shower and 1~cm perpendicular to the shower are collected, as shown in the event display in Figure \ref{fig:evd_dedx}.
+In our electromagnetic shower study, as a first step, all the hits on the collection plane within a rectangle of 4~cm along the direction of the shower and 1~cm perpendicular to the shower are collected, as shown in the event display in Figure \ref{fig:evd_dedx}.
 
-Subsequently, the $dQ/dx$ for each hit is measured dividing the collected charge ($dQ$) by the pitch ($dx$) between each hit and the next one along the shower direction. The pitch corresponds to the distance in the TPC that a particle travels between its two projections  on adjacent wires, which is \emph{at least} the wire spacing (3~mm for MicroBooNE \cite{Acciarri:2016smi}). Electromagnetic showers aligned with the wire direction correspond to a large value of the pitch. 
+Subsequently, the $dQ/dx$ for each hit is measured dividing the collected charge ($dQ$) by the pitch ($dx$) between each hit and the next one along the shower direction. The pitch corresponds to the distance in the TPC that a particle travels between its two projections  on adjacent wires, which is \emph{at least} the wire spacing (3~mm for MicroBooNE \cite{Acciarri:2016smi}). Electromagnetic showers aligned with the wire direction correspond to a much larger value of the pitch. 
 
-The $dE/dx$ is calculated from the $dQ/dx$ using the calibration factor measured in Section \ref{sec:showerenergy}, eq. \eqref{eq:calib}.
-Since the Landau distribution of the $dE/dx$ hit values has an asymmetric tail, we assign to the shower the median (and not the mean) of the $dE/dx$ hit distribution, as an estimation the most probable value. The median metric has been proved in \cite{Acciarri:2016sli} to be to most robust over a variety of box lengths.
+The $dE/dx$ is calculated from the $dQ/dx$ using the calibration factor measured in Section \ref{sec:showerenergy}, Eq. \ref{eq:calib}.
+Since the Landau distribution of the $dE/dx$ hit values has an asymmetric tail, we assign to the shower the median (and not the mean) of the $dE/dx$ hit distribution, as an estimation the most probable value. The median metric has been demonstrated in \cite{Acciarri:2016sli} to be to most robust over a variety of box lengths.
 
 \begin{figure}[htbp]
 \centering
 \begin{overpic}[width=0.75\linewidth]{figures/dedx.pdf}
-\end{overpic}\caption{Area-normalised distributions for the measured $dE/dx$ for simulated electrons and photons produced in neutrino interactions.}
+\end{overpic}\caption{Area-normalised distributions for the measured $dE/dx$ for simulated electrons (red) and photons (blue) produced in neutrino interactions.}
 \label{fig:dedx_gamma_e}
 \end{figure}
 
@@ -206,12 +208,12 @@ Figure \ref{fig:dedx_gamma_e} shows the area-normalised histograms of the $dE/dx
   \end{subfigure}\hfill
   \begin{subfigure}{0.49\textwidth}
     \begin{overpic}[width=\linewidth]{figures/dedx_vs_pitch.pdf}\end{overpic}
-     \caption{Bi-dimensional histogram of measured $dE/dx$ vs. pitch for photon showers.}
+     \caption{Bi-dimensional histogram of the pitch vs the measured $dE/dx$ photon showers.}
    \end{subfigure}
    \caption{Electromagnetic showers aligned with the wire orientation will have a large pitch value and their measured $dE/dx$ will be shifted towards low values.}\label{fig:pitch}
 \end{figure}
 
-The electron showers have a peak around 2~MeV/cm, as expected. The photon showers, instead, have a peak around 4~MeV/cm and a second peak around 2~MeV/cm, which represents a limitation to our $e/\gamma$ separation capabilities. This peak is caused by mainly two effects:
+The electron showers have a peak around 2~MeV/cm as this is the value for MIPs in LAr. The photon showers, instead, have a peak around 4~MeV/cm (as expected from the $e^+e^-$ pairs) and a second peak around 2~MeV/cm. The 2~MeV/cm peak for photons is caused by mainly two effects:
 \begin{itemize}
     \item photons that undergo Compton scattering will transfer most of their energy to the electron, producing a shower with the same $dE/dx$ of an electron. This effect decreases with the photon energy and is dominant below 10~MeV, as shown in Figure \ref{fig:compton};
     
@@ -227,17 +229,18 @@ The electron showers have a peak around 2~MeV/cm, as expected. The photon shower
     \begin{figure}[htbp]
     \centering
     \begin{overpic}[width=0.75\linewidth]{figures/asymmetry.pdf}
-    \end{overpic}\caption{Pair production relative cross-section as a function of the fraction of the photon energy $k$ transferred to either the electron or positron with energy $\epsilon$. From \cite{Caratelli:2018nob}.}
+    \end{overpic}\caption{Pair production relative cross section as a function of the fraction of the photon energy $k$ transferred to either the electron or positron with energy $\epsilon$ for different photon energies. From \cite{Caratelli:2018nob}.}
     \label{fig:asymmetry}
     \end{figure}
 \end{itemize}
 
-A comparison between the data and Monte Carlo distributions of the reconstructed showers $dE/dx$ is shown in Figure \ref{fig:dedx_datamc} of Section \ref{sec:bkg}.
+Figure \ref{fig:dedx_gamma_e} represents the limitation to the $e/\gamma$ separation capabilities in the current version of the analysis
+A comparison between the data and Monte Carlo distributions of the reconstructed showers $dE/dx$ is shown in Figure \ref{fig:dedx_datamc}.
 
 \subsection{Particle identification of reconstructed tracks}\label{sec:proton_id}
-The measurement of the $dE/dx$ along the reconstructed tracks allows to perform powerful particle identification, as demonstrated by a the ArgoNeuT collaboration in \cite{Acciarri:2013met}. 
+The measurement of the $dE/dx$ along a reconstructed track allows to perform powerful particle identification, as demonstrated by a the ArgoNeuT collaboration in \cite{Acciarri:2013met}. 
 
-This capability is particularly important for the search of low-energy electron neutrinos. A $\nu_e$ CC0$\pi$-1p neutrino interaction is topologically identical to a cosmic muon stopping in the LAr, since they both appear as a track with a small shower attached. However, the energy loss of a proton produced in a neutrino interaction is sensibly different from the one of a cosmic muon, for two main reasons:
+This capability is particularly important in the search of low-energy electron neutrinos. A $\nu_e$ CC0$\pi$-1p neutrino interaction is topologically identical to a cosmic muon stopping in the LAr, since they both appear as a track with a small shower attached. However, the energy loss of a proton produced in a neutrino interaction is sensibly different from the one of a cosmic muon, for two main reasons:
 \begin{itemize}
     \item the Bragg peak of the stopping cosmic muon corresponds to the starting point of the Michel electron shower, while the Bragg peak of the proton track is far from the interaction vertex;
     \item the proton $dE/dx$ profile for protons differs from the $dE/dx$ profile for muons.
@@ -269,7 +272,7 @@ Figure \ref{fig:range} shows the $dE/dx$ as a function of the residual range $R$
 \begin{figure}[htbp]
 \centering
 \begin{overpic}[width=0.75\linewidth]{figures/range.pdf}
-\end{overpic}\caption{Parametrised $dE/dx$ in liquid argon for various particles as a function of the residual range $R$. Parameters values can be found in Table \ref{tab:range}.}
+\end{overpic}\caption{Parametrised $dE/dx$ in liquid argon for various particles as a function of the residual range $R$ \cite{Acciarri:2013met}. Parameters values can be found in Table \ref{tab:range}.}
 \label{fig:range}
 \end{figure}
 
@@ -278,8 +281,19 @@ The measured $dE/dx$ vs. $R$ profile can be compared with the theoretical expect
 \begin{figure}[htbp]
 \centering
 \begin{overpic}[width=0.75\linewidth]{figures/chi2.pdf}
-\end{overpic}\caption{Area-normalised distributions for the $\chi^2$ score in the proton hypothesis for reconstructed proton tracks and reconstructed muon tracks in a Monte Carlo simulation.}
+\end{overpic}\caption{Area-normalised distributions for the $\chi^2$ score in the proton hypothesis for reconstructed proton tracks (yellow) and reconstructed muon tracks (blue) in Monte Carlo simulations.}
 \label{fig:chi2}
 \end{figure}
 
-A comparison between the data and Monte Carlo distributions of the $\chi^2$ score in the proton hypothesis is shown in Figure \ref{fig:proton_bkg} of Section \ref{sec:bkg}.
+A comparison between the data and Monte Carlo distributions of the $\chi^2$ score in the proton hypothesis is shown in Figure \ref{fig:proton_bkg}.
+
+\subsubsection{Selected event spectrum}
+Figure \ref{fig:spectrum} shows the reconstructed deposited energy spectrum of the selected events. The reconstructed deposited energy $E_{\mathrm{deposited}}$ has been measured with the procedure described in Section \ref{sec:depositedenergy}. Both the $\chi^2$ and Kolmogorov-Smirnov \cite{massey1951kolmogorov} tests give a probability of 1.00 (rounded up at the second decimal digit) of the null hypothesis, which is the data distribution being compatible with the Monte Carlo simulation.
+%This plot shows that our selection procedure has similar performances in data and Monte Carlo and that there is no evident bias in the energy reconstruction. 
+
+\begin{figure}[htbp]
+\centering
+  \includegraphics[width=0.65\linewidth]{figures/h_fixed_energy.pdf}
+  \caption{Reconstructed energy spectrum after the event selection algorithm and the veto of the events selected by the CC $\nu_{\mu}$ module. The histograms of the event categories are stacked.}
+  \label{fig:spectrum}
+\end{figure}

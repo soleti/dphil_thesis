@@ -6,11 +6,13 @@ In this section we will describe the process which transforms the raw digitised 
 
 \section{Signal processing}
 \subsection{Noise removal}
+The ionisation electrons moving towards the anode induce a bipolar signal on the induction planes and produce a unipolar signal on the collection plane, as described in Section \ref{sec:tpc}. These signals need to be extracted and processed after the noise sources, described below, have been removed or mitigated.
+
 The ASIC chips placed in the liquid argon produce an inherent irreducible noise, caused by thermal fluctuations and charge trapping and de-trapping in the input transistor \cite{Acciarri:2017sde}. 
 
-However, MicroBooNE is also affected by excess noise beyond the expected inherent one. This excess noise has three main sources, whose identification and mitigation is thoroughly described in \cite{Acciarri:2017sde}. Here we provide a brief overview for informative reasons.
+The MicroBooNE readout electronics is also affected by excess from three main sources, whose identification and mitigation is thoroughly described in \cite{Acciarri:2017sde}. Here we provide a brief overview for informative reasons.
 \begin{description}
-\item[Noise induced by the low-voltage regulators.] The low-voltage regulators which feed the ASIC chips introduce a noise across all channels at around 30~kHz in the frequency spectrum. This component represents the most significant excess noise source. To mitigate it, a \emph{correction waveform} is constructed on a per sample basis and subtracted from each channel.
+\item[Low-voltage regulators noise.] The ASIC chips are fed by low-voltage regulators which introduce a noise across all channels at around 30~kHz in the frequency spectrum. This component represents the most significant excess noise source. To mitigate it, a \emph{correction waveform} is constructed on a per sample basis and subtracted from each channel.
 \item[HV power supply noise.] This noise is induced by the cathode high-voltage power supply around 36 kHz and 108 kHz. An offline filter directly removes this harmonic noise in the frequency domain.
 \item[900 kHz burst noise.] The source of this noise is still unknown. It is position-dependent and has a burst nature. The main hypothesis points towards the PMT high-voltage supply. This noise is attenuated by the anti-alias filter and at the moment is not actively mitigated.
 \end{description}
@@ -19,7 +21,7 @@ The entire noise-reduction filtering chain allows to increase the peak signal-to
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\linewidth]{figures/evd_noise.pdf}
-    \caption{Data event display of the V induction plane showing the raw signal before (a) and after (b) offline noise filtering. From \cite{Acciarri:2017sde}.}
+    \caption{Data event display of the V induction plane showing the raw signal before (a) and after (b) offline noise filtering. The horizontal axis corresponds to the wire coordinate and the vertical axis correspond to the drift time. The colour scale represents the ADC counts from the baseline in arbitrary units. From \cite{Acciarri:2017sde}.}
     \label{fig:evd_noise}
 \end{figure}
 
@@ -46,16 +48,16 @@ The results shown in this thesis were produced using the Pandora Software Develo
 
 Several algorithms are applied in sequence to the input information (in our case the reconstructed hits), which gradually build up a complete picture of the event.
 
-As a first step, input hits are separated into three different lists, one for each plane. Then, for each list, an algorithm group together continuous and unambiguous lines of hits. These two-dimensional clusters are then examined by a series of topological algorithms. Given the presence of missing or unresponsive wires in the MicroBooNE detector, a continuous ionisation trail can be reconstructed as two or more separate clusters. The topological algorithms try to stitch different clusters together, if e.g. they point towards the same direction or if they are in close proximity. 
+As a first step, input hits are separated into three different lists, one for each plane. Then, for each list, an algorithm groups together continuous and unambiguous lines of hits. These two-dimensional clusters are then examined by a series of topological algorithms. Given the presence of unresponsive wires in the MicroBooNE detector, a continuous ionisation trail can be reconstructed as two or more separate clusters. The topological algorithms try to stitch different clusters together, if e.g. they point towards the same direction or if they are in close proximity. 
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\linewidth]{figures/pandora_evd.pdf}
-    \caption{Pandora pattern recognition output of a simulated CC $\nu_{\mu}$ event with a muon, a proton and a charged pion in the final state. Each particle is reconstructed as a separate cluster and the positron coming from the $\pi^+\rightarrow\mu^+\rightarrow e^+$ decay chain is classified as a daughter of the pion. From \cite{Acciarri:2017hat}.}\label{fig:evd_pandora}
+    \caption{Pandora pattern recognition output of a simulated CC $\nu_{\mu}$ event with a muon (red), a proton (blue) and a charged pion (pink) in the final state. Each particle is reconstructed as a separate cluster and the positron coming from the $\pi^+\rightarrow\mu^+\rightarrow e^+$ decay chain is classified as a daughter of the pion. From \cite{Acciarri:2017hat}.}\label{fig:evd_pandora}
 \end{figure}
 
 Once the topological algorithms deem the clustering in each plane as complete, the 3D reconstruction algorithms take as input the clusters from the three planes and aim to reconstruct the three-dimensional objects, which in Pandora are called \emph{PFParticles} (Particle Flow Particles).
 Subsequently, a Support Vector Machine trained on Monte Carlo uses the topological and geometrical properties of the object to classify it as \emph{track} or as a \emph{shower}. 
-An important feature of the Pandora pattern recognition is its ability to create a hierarchy of reconstructed PFParticles. As an example, the reconstructed shower corresponding to a Michel electron will be considered as the daughter of the reconstructed track corresponding to the stopping muon. This capability is particularly important for the reconstruction of complex neutrino interactions, as exemplified in Figure \ref{fig:evd_pandora}.
+An important feature of the Pandora pattern recognition is its ability to create a hierarchy of reconstructed PFParticles. As an example, the reconstructed shower corresponding to a Michel electron will be considered as the daughter of the reconstructed track corresponding to the stopping muon. This capability is particularly important for the reconstruction of complex neutrino interactions, as illustrated in Figure \ref{fig:evd_pandora}.
 
-Pandora can also run in two modes: one optimised for the reconstruction of cosmic rays and one optimised for the reconstruction of neutrino interactions. These two modes are used sequentially in our analysis in order to suppress the cosmogenic background, as described in Section \ref{sec:cosmicremoval}.
+Pandora can also run in two modes: one optimised for the reconstruction of cosmic rays and delta rays, the \emph{cosmic mode}, and one optimised for the reconstruction of neutrino interactions, the \emph{neutrino mode}. These two modes are used sequentially in our analysis in order to suppress the cosmogenic background, as described in Section \ref{sec:cosmicremoval}.
