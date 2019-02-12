@@ -55,7 +55,7 @@ Figure \ref{fig:harp} shows the pion production cross-section as measured by HAR
 \caption{Pion production at a fixed angle as measured by the HARP experiment and fit with the Sanford-Wang parametrisation.}\label{fig:harp}
 \end{figure}
 
-In this case, the nominal value is considered as the central value in the covariance matrix definition of Eq. \ref{eq:covariance}.
+In this case, the nominal value is considered as the central value in the covariance matrix definition of Equation \ref{eq:covariance}.
 The flux-related uncertainty in the number of simulated selected events (no beam-off data) before the background rejection is 12.3\%.
 
 Also in this case the correlation matrix in Figure \ref{fig:corr_flux} shows that the flux systematic effect are positively correlated in the $E_{\mathrm{deposited}}$ bins, which means they generally increase of decrease the total number of neutrino interactions. 
@@ -130,7 +130,7 @@ The detector systematic uncertainties have been measured by simulating several s
 \item[Wire response.] The wire response functions are squeezed by 20\%.
 \end{description}
 
-In this case, the covariance matrix is calculated using the definition in Eq. \ref{eq:cov_det}. The fractional covariance matrix and the reconstructed energy spectrum are shown in Figure \ref{fig:frac_det} and Figure \ref{fig:reco_det}, respectively.
+In this case, the covariance matrix is calculated using the definition in Equation \ref{eq:cov_det}. The fractional covariance matrix and the reconstructed energy spectrum are shown in Figure \ref{fig:frac_det} and Figure \ref{fig:reco_det}, respectively.
 The uncertainty related to the detector systematic effects in the number of simulated selected events is 24.0\%. The limited size of the detector variation samples does not allow us to calculate the covariance matrix after the rectangular or BDTs cuts. For this reason, a flat 24.0\% detector uncertainty is applied to the simulated events not rejected by the rectangular of BDTs cuts. This high detector systematic uncertainties reflect our knowledge of the detector when the samples were generated (August 2018). However, we are now able to simulate the detector more precisely, by including e.g. a full data-driven map of the space-charge effect and the charge induction on neighbouring wires, which will lead us to significantly smaller systematic uncertainties. %Detector variation samples with a higher statistics of $\nu_e$ interactions are not currently available and the detector uncertainty for the $\nu_e$~CC0$\pi$-Np and $\nu_e$~CC categories is assumed to be 24.0\%.
 
 The details of the detector systematic uncertainties are listed in Table \ref{tab:det_bkg}. In this case, the detector variations $\sigma_{\mathrm{det}}$ are defined as:
@@ -229,17 +229,14 @@ Table \ref{tab:syst_bkg} shows the uncertainty in the number of selected events 
 \end{table}
 
 % Given the small contribution of these samples to the number of selected events (2.5\% of the total), this approximation is considered sufficient at this stage. 
-The statistical uncertainty of the data off-beam sample is 1.0\%. 
-The total uncertainty on the number of selected events, obtained with Eq. \ref{eq:cov_tot}, is 27.2~\%.
+The total uncertainty on the number of selected events before the background rejection stage, obtained with Equation \ref{eq:cov_tot}, is 28.2~\%. The statistical uncertainty on the data off-beam sample is 1.0\%. 
 
 The flux and cross-section systematic uncertainties do not show a large variation among the background categories of the BNB+cosmic sample. The smallest cross-section variation is 8.6\% for the \emph{Cosmic contaminated} and \emph{Outside fid. vol.} component, while the largest is 10.4\% for the \emph{Beam intrinsic $\nu_{\mu}$} category. The flux variations span from 9.3\% for the \emph{Cosmic} events to 12.7\% for the \emph{Beam intrinsic NC} component. The flux and cross-section variations for the \emph{Cosmic} and the \emph{Cosmic contaminated} categories refer to the simulated neutrino interaction in the event, as the cosmic themselves are obviously not affected by the neutrino cross section.
 
 The flux and cross-section uncertainties have been evaluated also for the events in the $\nu_e$ + cosmic and dirt samples. The flux (cross-section) uncertainties are 13.0\% and 10.9\% (16.8\% and 11.1\%) for the $\nu_e$~CC0$\pi$-Np and the $\nu_e$ CC events, respectively. This higher uncertainties, compared with the BNB+cosmic sample, reflect the limited $\nu_e$ cross-section measurements available. 
 
-Figure \ref{fig:sys_tot} shows the full fractional covariance and correlation matrices obtained by combining the statistical, cross-section, flux, and detector uncertainties for the $E_{\mathrm{deposited}}$ distribution before the background rejection. The covariance matrix is used to calculate the systematic uncertainties shown in Figure \ref{fig:spectrum}. 
-
 \begin{figure}[htbp]
-  \begin{center}
+\centering
     \begin{subfigure}{0.49\textwidth}
       \includegraphics[width=\linewidth]{figures/h_frac_tot.pdf}
       \caption{Fractional covariance matrix.}  \label{fig:frac_tot}
@@ -249,5 +246,7 @@ Figure \ref{fig:sys_tot} shows the full fractional covariance and correlation ma
       \caption{Correlation matrix.} \label{fig:corr_tot}
     \end{subfigure}
     \caption{Full fractional covariance (left) and correlation (right) matrices obtained by combining the statistical, cross-section, flux, and detector uncertainties for the $E_{\mathrm{deposited}}$ distribution before the background rejection.} \label{fig:sys_tot}
-	\end{center}
 \end{figure}
+
+Figure \ref{fig:sys_tot} shows the full fractional covariance and correlation matrices obtained by combining the statistical, cross-section, flux, and detector uncertainties for the $E_{\mathrm{deposited}}$ distribution before the background rejection. The covariance matrix is used to calculate the systematic uncertainties shown in Figure \ref{fig:spectrum}. 
+

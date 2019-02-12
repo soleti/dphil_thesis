@@ -32,7 +32,7 @@ The area-normalised distributions in Figure \ref{fig:nhits_integral} show that a
 
 
 \subsubsection*{Showers energy $>50$~MeV} 
-For the same reason as above, the energy of the showers associated with delta rays of Michel electrons will be peaked at low energies. We require the sum of the energies of the reconstructed showers to be above 50~MeV. In this way we reject a large fraction of the neutrino and cosmic background, without significantly affecting the number of $\nu_e$~CC0$\pi$-Np events, as shown in Figure \ref{fig:shower_energy_integral}.
+For the same reason as above, the energy of the showers associated with delta rays or Michel electrons will be peaked at low energies. We require the sum of the energies of the reconstructed showers to be above 50~MeV. In this way we reject a large fraction of the neutrino and cosmic background, without significantly affecting the number of $\nu_e$~CC0$\pi$-Np events, as shown in Figure \ref{fig:shower_energy_integral}.
 
 \begin{figure}[htbp]
 \centering
@@ -133,7 +133,7 @@ Figure \ref{fig:showerd_norm} shows the distributions of the distance between th
 \end{figure}
 
 \subsubsection*{Track proton $\chi_{p}^2 < 80$}
-It is possible to perform a $\chi^2$ test on the $dE/dx$ vs. the residual range of the reconstructed track under the hypothesis of a proton stopping in the detector, using the parametrisation of Section \ref{sec:proton_id}. Low values of the $\chi_{p}^2$ score will correspond to proton-like tracks, while a high value will correspond to a MIP-like track. Figure \ref{fig:proton_norm} shows the distributions of the $\chi_{p}^2$ score for background and signal events. Figure \ref{fig:proton_pdg} shows that the protons reconstructed as tracks are peaked around 0 as expected, while the long tail includes muon tracks, photon and electron showers misclassified as tracks, and objects with a misplaced vertex. The comparison between data and Monte Carlo shown in Figure \ref{fig:proton_pdg} and Figure \ref{fig:proton_pot} shows some discrepancies, especially for very low and very high $\chi_{p}^2$ scores. This quantity requires a careful simulation of the signal processing and a correct evaluation of the recombination effect. Our cut is in a region with a good data/Monte Carlo agreement once the systematic uncertainties are taken into account and it is as such deemed safe.
+It is possible to perform a $\chi^2$ test on the $dE/dx$ vs. the residual range of the reconstructed track under the hypothesis of a proton stopping in the detector, using the parametrisation of Section \ref{sec:proton_id}. Low values of the $\chi_{p}^2$ score will correspond to proton-like tracks, while a high value will correspond to a MIP-like track. Figure \ref{fig:proton_norm} shows the distributions of the $\chi_{p}^2$ score for background and signal events. Figure \ref{fig:proton_pdg} shows that the protons reconstructed as tracks are peaked around 0 as expected, while the long tail includes muon tracks, photon and electron showers misclassified as tracks, and objects with a misplaced vertex. The comparison between data and Monte Carlo in Figure \ref{fig:proton_pdg} and Figure \ref{fig:proton_pot} shows some discrepancies, especially for very low and very high $\chi_{p}^2$ scores. This quantity requires a careful simulation of the signal processing and a correct evaluation of the recombination effect. Our cut is in a region with a good data/Monte Carlo agreement once the systematic uncertainties are taken into account and it is as such deemed safe.
 
 \begin{figure}[htbp]
 \centering
@@ -153,7 +153,7 @@ It is possible to perform a $\chi^2$ test on the $dE/dx$ vs. the residual range 
 \end{figure}
 
 \subsubsection*{Track-shower angle $\mathrm{cos}\alpha > -0.95$}
-Electrons start producing an appreciable shower in the detector after several centimetres. In this case, the patter recognition often identifies the first part of the shower as a track-like object and the latter part of the shower as a shower-like object. 
+Electrons start producing an appreciable shower in the detector after several centimetres. In this case, the pattern recognition often identifies the first part of the shower as a track-like object and the latter part of the shower as a shower-like object. 
 Furthermore, high-energy cosmic rays can produce a shower in the detector, which will be mostly aligned to a cosmic muon track. In order to remove these mis-reconstructed events and reduce this kind of cosmogenic background we require $\mathrm{cos}\alpha > -0.95$, where $\alpha$ is the angle between the most energetic shower and the track with the lowest proton $\chi_{p}^2$ score.
 Figure \ref{fig:angle_integral} shows that there are, in proportion, more background events with a high angular separation between the tracks and the most energetic shower. This cut allows to reject these events while also ensuring that the signal events are well-reconstructed. In fact, signal events with $\mathrm{cos}\alpha \approx -1$ have almost always an electron shower reconstructed as a track-like object in the first part. The agreement shown in Figure \ref{fig:angle_pot} and Figure \ref{fig:angle_pdg} is good. Future improvements in the shower reconstruction will allow for an increased selection efficiency.
 
@@ -198,7 +198,7 @@ Both neutrino and cosmic background events have on average longer reconstructed 
 \subsubsection{Rectangular cuts selection results}
 The goal of the rectangular cuts is to isolate the $\nu_e$ CC0$\pi$-Np events and increase the purity of our selected sample. However, in order to validate our cuts and verify the agreement between data and Monte Carlo after this stage, it is necessary to select a sufficient number of data events. As mentioned before, in this analysis we require at least one data event in the bins in the $[0.2,1.9]$~GeV range, which is the energy region we are most interested into. 
 
-We select 16 data beam-on events, $2.8\pm0.6$ beam-off events, and $12.4\pm3.0$ simulated events (including $\nu_e$ and $\nu_{\mu}$ interactions), corresponding to $4.34\times10^{19}$~POT . The number of selected $\nu_e$ CC0$\pi$-Np events is $3.2\pm0.8$, which corresponds to a final efficiency of $(10.0\pm0.3~\mathrm{(stat)}\pm0.5~\text{(sys)})\%$. 
+We select 16 data beam-on events, $2.8\pm0.6$ beam-off events, and $12.4\pm3.0$ simulated events (including $\nu_e$ and $\nu_{\mu}$ interactions), corresponding to $4.34\times10^{19}$~POT. The number of selected $\nu_e$ CC0$\pi$-Np events is $3.2\pm0.8$, which gives a final efficiency of $(10.0\pm0.3~\mathrm{(stat)}\pm0.5~\text{(sys)})\%$. 
 
 The purity of the sample is defined as:
 \begin{equation}
@@ -212,7 +212,7 @@ Figure \ref{fig:purity_sel} shows the purity before and after the application of
   \caption{Purity of the selected sample before (green) and after (orange) the application of the rectangular cuts as a function of the reconstructed energy $E_{\mathrm{deposited}}$. Error bars are statistical only.}\label{fig:purity_sel}
 \end{figure}
 
-It is also possible to calculate the overall purity and the efficiency after each cut, to analyse the effect of each cut (Figure \ref{fig:effpurity_cuts}). The largest purity increase is given by the application of the proton $\chi_{p}^2$ score cut. 
+It is also possible to calculate the overall purity and the efficiency after each cut, to analyse its effec (Figure \ref{fig:effpurity_cuts}). The largest purity increase is given by the application of the proton $\chi_{p}^2$ score cut. 
 
 \begin{figure}[htbp]
 \centering

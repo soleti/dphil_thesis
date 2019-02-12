@@ -56,16 +56,16 @@ Once we have unfolded the MiniBooNE low-energy excess, it is possible to process
       \includegraphics[width=\linewidth]{figures/bdt_lee.pdf}
       \caption{BDTs cuts.}  
     \end{subfigure}
-    \caption{Energy spectrum $E_{\mathrm{deposited}}$ of the selected events stacked with the MiniBooNE low-energy excess signal in the electron hypothesis (light green). The black points represent the data with statistical uncertainties. The coloured stacked histograms represent the simulated events, with the hatched histogram corresponding to the data beam-off sample. The shaded area represents the systematic uncertainty. These distributions are identical to the ones in Figure \ref{fig:reco_bdt} and Figure \ref{fig:reco_cuts}, except for the low-energy excess signal component.} \label{fig:lee_after}
+    \caption{Energy spectrum $E_{\mathrm{deposited}}$ of the selected events stacked with the MiniBooNE low-energy excess signal in the electron hypothesis (light green). The black points represent the data with statistical uncertainties. The coloured stacked histograms represent the simulated events, with the hatched histogram corresponding to the data beam-off sample. The shaded area represents the systematic uncertainty. These distributions are identical to the ones in Figure \ref{fig:reco_cuts} and Figure \ref{fig:reco_bdt}, except for the low-energy excess signal component.} \label{fig:lee_after}
 	\end{center}
 \end{figure}
 
 
-Table \ref{tab:sensitivity} shows the expected sensitivity to the MiniBooNE low-energy excess for $13.2\times10^{20}$~POT collected by MicroBooNE. The sensitivity has been measured with a $\Delta\chi^2$ test as:
+Table \ref{tab:sensitivity} shows the expected sensitivity to the MiniBooNE low-energy excess for $13.2\times10^{20}$~POT collected by MicroBooNE. The sensitivity has been measured with a $\Delta\chi^2$ test \cite{Blennow:2013oma} as:
 \begin{equation}
-    \sigma \equiv \sqrt{\Delta\chi^2} = \sqrt{\vec{S}^{T}E^{-1}\vec{S}},
+    \sigma = \sqrt{\Delta\chi^{2}} = \sqrt{\vec{S}^{T}E^{-1}\vec{S}},
 \end{equation}
-where $\vec{S}$ is a vector of length $n$ containing the number of signal events in the $n$ bins and $E$ is the covariance matrix as defined in Eq. \ref{eq:covariance}. In the case of statistical-only significance, the covariance matrix has on only diagonal entries, corresponding to the number of background events.
+where $\vec{S}$ is a vector of length $n$ containing the number of signal events in the $n$ bins and $E$ is the covariance matrix as defined in Equation \ref{eq:covariance}. In the case of statistical-only significance, the covariance matrix has on only diagonal entries, corresponding to the number of background events.
 
 \begin{table}[htbp]
    \centering
@@ -105,7 +105,7 @@ Cosmic-ray rejection is also particularly important at low energy, where a Miche
 
 The CRT was not used in this analysis because it was not yet installed when the data sample analysed here was recorded. At as of January 2019, there are \num{5e20} POT collected without the CRT and more than \num{6e20} POT collected with the CRT. With the full approved running of MicroBooNE (\num{13.2e20} POT), we anticipate we will collect \num{8.2e20} POT with the CRT.
 
-\subsection*{Event econstruction improvements}
+\subsection*{Event reconstruction improvements}
 As shown in Section \ref{sec:ineff}, the selection inefficiency depends on several factors. In particular, a better object reconstruction will allow to recover the events where reconstruction issues did not allow to satisfy the topology requirement (13.7\% of the events do not have showers reconstructed and 3.5\% have only one shower) or in which a cosmic ray is wrongly selected as neutrino candidate (7.9\%). 
 Further improvements in reconstruction and selection can be made to reduce the cosmic contamination in the selected events (\emph{cosmic contaminated} background).
 In particular, changes in the Pandora framework have been implemented which will improve the cosmic rejection and the neutrino selection efficiency. A preliminary study on the data beam-off sample shows an improvement in the cosmic rejection by a factor of 5.
