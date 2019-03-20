@@ -77,7 +77,7 @@ Equations \ref{eq:prob} and \ref{eq:prob2} show that the amplitude of the oscill
 \begin{figure}
     \centering
     \includegraphics[width=0.7\linewidth]{figures/oscillation.pdf}
-    \caption{The $\nu_e$ survival probability $P(\nu_e\rightarrow\nu_e)$ as a function of the neutrino energy for $L=180$~km, $\Delta m^2 = 7.0 \times 10^{-5}$~ev$^2$ and $\sin^2\theta = 0.84$.}
+    \caption{The $\nu_e$ survival probability $P(\nu_e\rightarrow\nu_e)$ as a function of the neutrino energy for $L=180$~km, $\Delta m^2 = 7.0 \times 10^{-5}$~eV$^2$ and $\sin^2\theta = 0.84$.}
     \label{fig:oscillation}
 \end{figure}
 
@@ -107,12 +107,12 @@ where  $s_{ij}$ ($c_{ij}$) is an abbreviation for $\sin\theta_{ij}$ ($\cos\theta
     \sin\theta_{13}\equiv U_{e3}e^{i\delta_{CP}}.
 \end{equation}
 
-With three neutrino flavours the squared mass-splitting terms are $\Delta m_{12}^2$ and $\Delta m_{13}^2$. This cause a degeneracy in the ordering of three masses: it is possible to have $m_3 > m_2 > m_1$ (\emph{normal hierarchy}) or $m_3 > m_1 > m_2$ (\emph{inverted hierarchy}). Customarily, $\Delta m_{12}^2$ and $\Delta m_{13}^2$ are also called $(\Delta m^2)_{\mathrm{sol}}$ and $(\Delta m^2)_{\mathrm{atm}}$, respectively, since they are usually measured with "solar" and "atmospheric" neutrinos. The situation is illustrated in Figure \ref{fig:masshierarchy}.
+With three neutrino flavours the squared mass-splitting terms are $\Delta m_{12}^2$ and $\Delta m_{13}^2$. \mccorrect{Being squared mass differences, we do not know the absolute ordering of the three masses}: it is possible to have $m_3 > m_2 > m_1$ (\emph{normal hierarchy}) or $m_3 > m_1 > m_2$ (\emph{inverted hierarchy}). Customarily, $\Delta m_{12}^2$ and $\Delta m_{13}^2$ are also called $(\Delta m^2)_{\mathrm{sol}}$ and $(\Delta m^2)_{\mathrm{atm}}$, respectively, since they are usually measured with "solar" and "atmospheric" neutrinos. The situation is illustrated in Figure \ref{fig:masshierarchy}.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.75\linewidth]{figures/masshierarchy.pdf}
-    \caption{Diagram of the normal and inverted hierarchies. The colours correspond to the fraction of each distinct flavor contained in the mass eigenstate. From \cite{Cahn:2013taa}.}
+    \caption{Diagram of the normal and inverted hierarchies. The colours correspond to the fraction of each distinct flavour contained in the mass eigenstate. From \cite{Cahn:2013taa}.}
     \label{fig:masshierarchy}
 \end{figure}
 
@@ -120,7 +120,7 @@ The mass splittings also determine the $L/E$ ratio at which the oscillation prob
 \begin{equation}
      \frac{\Delta m^{2}L}{4E} = 1.267\left(\frac{L}{\mathrm{km}}\right)\left(\frac{\Delta m^2}{\mathrm{eV}^2}\right)\left(\frac{\mathrm{GeV}}{E}\right),
 \end{equation} 
-which gives for $\theta_{12}$, $\theta_{13}$, and $\theta_{23}$ a maximum oscillation probability at $\approx 10^4$~km/GeV, $\approx 10^2$~km/GeV, and $\approx 10^2$~km/GeV, respectively. For this reason, $\theta_{12}$, $\theta_{13}$, and $\theta_{23}$ are also known as the \emph{solar}, \emph{reactor}, and \emph{atmospheric} mixing angles. In the parametrisation of the $U_{\mathrm{PMNS}}$ matrix of Equation~\ref{eq:pmns}, the product of the matrices can then be written as:
+which gives for $\theta_{12}$, $\theta_{13}$, and $\theta_{23}$ a maximum oscillation probability at $\approx 10^4$~km/GeV, $\approx 10^2$~km/GeV, and $\approx 10^2$~km/GeV, respectively. The $\theta_{12}$, $\theta_{13}$, and $\theta_{23}$ mixing angles are also known as the \emph{solar}, \emph{reactor}, and \emph{atmospheric} mixing angles\mccorrect{, since they maximise the oscillation probability at the typical $L/E$ ratios for solar, reactor, and atmospheric neutrinos}. In the parametrisation of the $U_{\mathrm{PMNS}}$ matrix of Equation~\ref{eq:pmns}, the product of the matrices can then be written as:
 \begin{equation}
     U_{\mathrm{PMNS}} = U_{\mathrm{atm}} \cdot U_{\mathrm{reactor}} \cdot U_{\mathrm{sol}}.
 \end{equation}
@@ -341,7 +341,10 @@ Figure \ref{fig:ccdis_feyn} shows the Feynman diagram for this kind of interacti
 
 \end{description}
 
-This rich scenario makes the correct reconstruction of neutrino interactions very challenging for any experiment. Usually, oscillations experiments like MiniBooNE (see Section \ref{sec:miniboone}) look for CCQE interactions, whose signature in the detector is easier to identify, but which also require a precise assessment of the final-state interactions.
+This rich scenario makes the correct reconstruction of neutrino interactions very challenging for any experiment. Usually, oscillations experiments like MiniBooNE (see Section \ref{sec:miniboone}) look for CCQE interactions, whose signature in the detector is easier to identify, but which also require a precise assessment of the final-state interactions. \begin{mccorrection}
+The simulation of the nuclear behaviour after the neutrino interaction is very challenging and requires careful validation against hadronic observables, such as the number of reconstructed hadron tracks and the spectra of hadrons \cite{Golan:2012wx}.
+\end{mccorrection}
+
 
 \section{Future research efforts}
 Several experiments have shown compelling evidence for neutrino oscillations, which in turn require non-null neutrino masses. At the moment, massive neutrinos represent the only portal into BSM physics and, for this reason, neutrino physics is one of the most active sectors in particle physics. In the last decade, the parameters of the PMNS mixing matrix of neutrino flavours (see Equation~\ref{eq:pmns}) have been constrained to a precision smaller than 5\%, but some neutrino properties still need to be measured. In particular, the CP-violating phase, the neutrino mass hierarchy, and the Majorana or Dirac nature of the neutrino are all research topics actively investigated both by present and future experiments. 

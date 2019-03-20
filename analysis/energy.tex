@@ -1,7 +1,7 @@
 
 \section{Calorimetry}\label{sec:energyreco}
 \subsection{Scope of the energy reconstruction}
-In this analysis we restrict ourselves to the measurement of the deposited energy in the TPC of the visible particles in the final state of the $\nu_e$ CC0$\pi$-Np neutrino interaction. We will not attempt to reconstruct the interacting neutrino energy. Our signal has in its final state, by definition, one electron and at least one proton, with no other visible particles. The energy of the showers, expected to be from an electron, is measured by converting the reconstructed charge of all the shower-like objects into deposited energy, as described in Section \ref{sec:showerenergy}. The energy of the tracks, expected to be from protons instead, can be measured by converting the track length of the reconstructed tracks into deposited energy, using the tabulated stopping power of protons in the liquid argon, with the procedure described in \ref{sec:protonenergy}. Thus, object classification issues, such as proton classified as showers or electrons classified as tracks can have a direct effect on the energy reconstruction.
+In this analysis we restrict ourselves to the measurement of the deposited energy in the TPC of the visible particles in the final state of the $\nu_e$ CC0$\pi$-Np neutrino interaction. We will not attempt to reconstruct the interacting neutrino energy. Our signal has in its final state, by definition, one electron and at least one proton, with no other visible particles. The energy of the showers, expected to be from an electron, is measured by converting the reconstructed charge of all the shower-like objects into deposited energy, as described in Section \ref{sec:showerenergy}. The energy of the tracks, expected to be from protons instead, can be measured by converting the track length of the reconstructed tracks into deposited energy, using the tabulated stopping power of protons in the liquid argon, with the procedure described in Section \ref{sec:protonenergy}. Thus, object classification issues, such as proton classified as showers or electrons classified as tracks, can have a direct effect on the energy reconstruction.
 
 The total reconstructed energy corresponds to the sum of the reconstructed energies, corrected by the calibration factors calculated below, and is referred to as $E_{\mathrm{corr}}$. This quantity is then compared with the total kinetic energy of the particles above detection thresholds and corrected by a calibration factor to obtain an estimate of the deposited energy $E_{\mathrm{deposited}}$ (Section \ref{sec:deposited}).
 
@@ -15,8 +15,8 @@ where:
 \begin{itemize}
 
 \item the correction factor $1.01\frac{e^-}{e^{-}_{\mathrm{reco}}}$ is obtained measuring the true number of collected electrons $e^{-}$ on the wires using a sample of stopping muons, fitting the $dE/dx$ vs. residual range to values for argon as tabulated by the PDG \cite{PhysRevD.98.030001};
-\item $\frac{23.6~\mathrm{eV}}{e^-}$ is the work function for ionizing an argon atom \cite{Shibamura:1975zz};
-\item $R = 0.62$ is the recombination factor obtained with the Modified Box Model \cite{Acciarri:2013met} at MicroBooNE's electric field of 270~V/cm assuming an energy loss per length $dE/dx=2.3$~MeV/cm.
+\item $\frac{23.6~\mathrm{eV}}{e^-}$ is the work function for ionising an argon atom \cite{Shibamura:1975zz};
+\item $R = 0.62$ is the recombination factor obtained with the Modified Box Model \cite{Acciarri:2013met} at MicroBooNE electric field of 270~V/cm assuming an energy loss per length $dE/dx=2.3$~MeV/cm.
 \end{itemize}
 
 The reconstructed energy is obtained by summing the energy of each hit on the collection plane from reconstructed and electron showers with their starting point contained in the fiducial volume. %from the reconstructed showers produced by a simulated electron in the collection plane, produced by a $\nu_{e}$ CC0$\pi$-Np interaction. The starting point of the simulated electron and the starting point of the reconstructed showers are required to be within the fiducial volume. 
@@ -105,7 +105,7 @@ E_{\mathrm{reco}}^{p} = 1.00~E^{p} - 2.9~\mathrm{MeV}.
 \end{equation}
 The energy of the track, corrected by the calibration factor is then defined as:
 \begin{equation}
-E_{\mathrm{corr}}^{p} = (E_{\mathrm{reco}}^{p} + 2.9~\mathrm{MeV})/1.00
+E_{\mathrm{corr}}^{p} = (E_{\mathrm{reco}}^{p} + 2.9~\mathrm{MeV})/1.00.
 \end{equation}
 
 \begin{figure}[htbp]
@@ -126,7 +126,7 @@ E_{\mathrm{k}} = 0.98~E_{\mathrm{corr}} - 28.5~\mathrm{MeV}.
 \end{equation}
 The reconstructed visible energy, corrected by the calibration factor is then defined as:
 \begin{equation}
-E_{\mathrm{deposited}} = (E_{\mathrm{corr}} + 28.5~\mathrm{MeV})/0.98\label{eq:deposited}
+E_{\mathrm{deposited}} = (E_{\mathrm{corr}} + 28.5~\mathrm{MeV})/0.98.\label{eq:deposited}
 \end{equation}
 
 Several effects can contribute to this calibration factor: among others, the presence of regions with unresponsive wires can cause an underestimation of the deposited energy. In the future, this effect can be limited by the use of the other two planes for calorimetric measurements.
@@ -189,16 +189,16 @@ In our electromagnetic shower study, as a first step, all the hits on the collec
 Subsequently, the $dQ/dx$ for each hit is measured dividing the collected charge ($dQ$) by the pitch ($dx$) between each hit and the next one along the shower direction. The pitch corresponds to the distance in the TPC that a particle travels between its two projections  on adjacent wires, which is \emph{at least} the wire spacing (3~mm for MicroBooNE \cite{Acciarri:2016smi}). Electromagnetic showers aligned with the wire direction correspond to a much larger value of the pitch. 
 
 The $dE/dx$ is calculated from the $dQ/dx$ using the calibration factor measured in Section \ref{sec:showerenergy}, Equation~\ref{eq:calib}.
-Since the Landau distribution of the $dE/dx$ hit values has an asymmetric tail, we assign to the shower the median (and not the mean) of the $dE/dx$ hit distribution, as an estimation the most probable value. The median metric has been demonstrated in \cite{Acciarri:2016sli} to be to most robust over a variety of box lengths.
+Since the Landau distribution of the $dE/dx$ hit values has an asymmetric tail, we assign to the shower the median (and not the mean) of the $dE/dx$ hit distribution, as an estimation \mccorrect{of} the most probable value. The median metric has been demonstrated in \cite{Acciarri:2016sli} to be \mccorrect{the} most robust over a variety of box lengths.
 
 \begin{figure}[htbp]
 \centering
 \begin{overpic}[width=0.75\linewidth]{figures/dedx.pdf}
-\end{overpic}\caption{Area-normalised distributions for the measured $dE/dx$ for simulated electrons (red) and photons (blue) produced in neutrino interactions.}
+\end{overpic}\caption{Area-normalised distributions \mccorrect{of the $dE/dx$ median} for simulated electrons (red) and photons (blue) produced in neutrino interactions.}
 \label{fig:dedx_gamma_e}
 \end{figure}
 
-Figure \ref{fig:dedx_gamma_e} shows the area-normalised histograms of the $dE/dx$ in the collection plane for simulated electron and photon showers. The events below 1~MeV/cm correspond for both distributions to showers with a low number of associated hits, or where the shower was mostly aligned with the wires of the collection plane (having as such a high pitch value). Figure \ref{fig:pitch} shows the pitch distribution in the collection plane and a bi-dimensional histogram of the $dE/dx$ vs. the pitch for photon showers: events with a $dE/dx$ below 1~MeV/cm mostly correspond to a high value of the pitch. 
+Figure \ref{fig:dedx_gamma_e} shows the area-normalised histograms of the \mccorrect{median} $dE/dx$ in the collection plane for simulated electron and photon showers. The events below 1~MeV/cm correspond for both distributions to showers with a low number of associated hits, or where the shower was mostly aligned with the wires of the collection plane (having as such a high pitch value). Figure \ref{fig:pitch} shows the pitch distribution in the collection plane and a bi-dimensional histogram of the $dE/dx$ vs. the pitch for photon showers: events with a $dE/dx$ below 1~MeV/cm mostly correspond to a high value of the pitch. 
 
 \begin{figure}[htbp]
   \begin{subfigure}{0.49\textwidth}
@@ -208,7 +208,7 @@ Figure \ref{fig:dedx_gamma_e} shows the area-normalised histograms of the $dE/dx
   \end{subfigure}\hfill
   \begin{subfigure}{0.49\textwidth}
     \begin{overpic}[width=\linewidth]{figures/dedx_vs_pitch.pdf}\end{overpic}
-     \caption{Bi-dimensional histogram of the pitch vs the measured $dE/dx$ photon showers.}
+     \caption{Bi-dimensional histogram of the pitch vs. the measured $dE/dx$ photon showers.}
    \end{subfigure}
    \caption{Electromagnetic showers aligned with the wire orientation will have a large pitch value and their measured $dE/dx$ will be shifted towards low values.}\label{fig:pitch}
 \end{figure}
@@ -246,8 +246,9 @@ This capability is particularly important in the search of low-energy electron n
     \item the proton $dE/dx$ profile for protons differs from the $dE/dx$ profile for muons.
 \end{itemize}
 Being able to distinguish between proton and muon tracks is therefore essential in order to reject cosmogenic background. Events with a $\nu_{\mu}$ interaction with only a stopping muon in the final state can also be rejected with the same technique.
-
-It is possible to parametrise the relation between the theoretical $dE/dx$ of a ionisation track and its \emph{residual range} with a power-law function:
+\begin{mccorrection}
+The stopping power $dE/dx$ can be used to determine the range of the particle, by integrating the deposition until the particle is stationary, as derived in \cite{Swift:2008kt}.
+\end{mccorrection} It is then possible to parametrise the relation between the theoretical $dE/dx$ of a ionisation track and its \emph{residual range} with a power-law function:
 \begin{equation}
     \frac{dE}{dx} = A R^b,
 \end{equation}
@@ -281,7 +282,7 @@ The measured $dE/dx$ vs. $R$ profile can be compared with the theoretical expect
 \begin{figure}[htbp]
 \centering
 \begin{overpic}[width=0.75\linewidth]{figures/chi2.pdf}
-\end{overpic}\caption{Area-normalised distributions for the $\chi^2$ score in the proton hypothesis for reconstructed proton tracks (yellow) and reconstructed muon tracks (blue) in Monte Carlo simulations.}
+\end{overpic}\caption{Area-normalised distributions for the $\chi^2$ score in the proton hypothesis for reconstructed proton tracks (blue) and reconstructed muon tracks (yellow) in Monte Carlo simulations.}
 \label{fig:chi2}
 \end{figure}
 

@@ -30,8 +30,6 @@
 % This one will format for PDF output (ie equal margins, no extra blank pages):
 % \documentclass[a4paper,nobind]{ociamthesis} 
 
-
-
 %%%%% SELECT YOUR DRAFT OPTIONS
 % Three options going on here; use in any combination.  But remember to turn the first two off before
 % generating a PDF to send to the printer!
@@ -42,7 +40,7 @@
 % This highlights (in blue) corrections marked with (for words) \mccorrect{blah} or (for whole
 % paragraphs) \begin{mccorrection} . . . \end{mccorrection}.  This can be useful for sending a PDF of
 % your corrected thesis to your examiners for review.  Turn it off, and the blue disappears.
-%\correctionstrue
+% \correctionstrue
 
 
 %%%%% BIBLIOGRAPHY SETUP
@@ -107,10 +105,11 @@
 % This is a good place to dump your own LaTeX macros as they come up.
 
 % To make text superscripts shortcuts
-	\renewcommand{\th}{\textsuperscript{th}} % ex: I won 4\th place
-	\newcommand{\nd}{\textsuperscript{nd}}
-	\renewcommand{\st}{\textsuperscript{st}}
-	\newcommand{\rd}{\textsuperscript{rd}}
+	
+\renewcommand{\th}{\textsuperscript{th}} % ex: I won 4\th place
+\newcommand{\nd}{\textsuperscript{nd}}
+\renewcommand{\st}{\textsuperscript{st}}
+\newcommand{\rd}{\textsuperscript{rd}}
 
 \let\oldequation\equation
 \let\oldendequation\endequation

@@ -19,12 +19,19 @@ In order to increase the simulated statistics of our $\nu_e$ CC0$\pi$-Np events,
 Neutrino events have been generated using the GENIE Neutrino Monte Carlo generator version 2.8.6 \cite{Andreopoulos:2009rq} and cosmic rays have been generated using the CORSIKA Monte Carlo generator version 7.4003 \cite{Heck:1998vt}. Simulated secondary particle propagation employs GEANT version 4.9.6 \cite{Brun:1994aa}, and detector response simulation and reconstruction is performed with the LArSoft framework version 6.26.01.10 \cite{Church:2013hea}.
 
 \subsection{Overview of the analysis}
-The reconstruction and selection chain to identify $\nu_{e}$~CC0$\pi$-Np electron neutrino candidate events for this analysis is divided into several stages:
+The reconstruction and selection chain to identify $\nu_{e}$~CC0$\pi$-Np electron neutrino candidate events for this analysis is divided into several stages\mccorrect{, illustrated in Figure} \ref{fig:selection} \mccorrect{and described below.}
+
+\begin{figure}[htbp]
+\centering
+  \includegraphics[width=0.9\linewidth]{figures/selection.png}
+  \caption{Schematics of the $\nu_e$ CC0$\pi$-Np event selection stages, from the cosmic-ray removal to the rejection of the neutrino and cosmogenic backgrounds.}
+  \label{fig:selection}
+\end{figure}
 
 \begin{description}
-\item[Cosmic-ray removal.] In order to suppress the cosmogenic background, the first step is to rune the Pandora algorithms optimised to reconstruct and remove cosmic rays \cite{Acciarri:2017hat}. After this step, hits associated with objects deemed as cosmic-induced by several tagging algorithms, external to Pandora and described in Section \ref{sec:cosmicremoval}, are removed from the event. The remaining hit collection provides the input to the Pandora neutrino reconstruction path, which outputs a list of candidate neutrinos.
+\item[Cosmic-ray removal.] In order to suppress the cosmogenic background, the first step is to run the Pandora algorithms optimised to reconstruct and remove cosmic rays \cite{Acciarri:2017hat}. After this step, hits associated with objects deemed as cosmic-induced by several tagging algorithms, external to Pandora and described in Section \ref{sec:cosmicremoval}, are removed from the event. The remaining hit collection provides the input to the Pandora neutrino reconstruction path, which outputs a list of candidate neutrinos.
 
-\item[Optical selection.] A minimum amount of coincident photoelectrons in the optical detection system is required to be coinciding with the BNB beam window and at least one of the neutrino candidates provided by the Pandora framework must be compatible with the flash observed in the optical detection system. These requirements are described in detail in Section \ref{sec:optical_pre_cuts}.
+\item[Optical selection.] A minimum amount of photoelectrons in the optical detection system is required to be coincident with the BNB beam window and at least one of the neutrino candidates provided by the Pandora framework must be compatible with the flash observed in the optical detection system. These requirements are described in detail in Section \ref{sec:optical_pre_cuts}.
 
 \item[Electron neutrino topological pre-selection.] One of the neutrino candidates must be compatible with the topology of a $\nu_{e}$ CC0$\pi$-Np interaction. Rather than accepting strictly $N$ tracks and one shower, at least one track and at least one shower or at least two showers sharing a common vertex are accepted, due to the presence of split showers and split tracks. Multiple showers without reconstructed tracks are accepted due to a current track/shower identification inefficiency, addressed in Section \ref{sec:ineff}.
 
@@ -35,17 +42,8 @@ The reconstruction and selection chain to identify $\nu_{e}$~CC0$\pi$-Np electro
 \item[Background rejection.] The $\nu_{e}$~CC0$\pi$-Np events can be further isolated by applying a suite of cuts on kinematic, geometric, and calorimetric variables. The electromagnetic showers initiated by an electron in the final state are isolated with a cut on the $dE/dx$ value and the proton tracks are selected with a cut on the $\chi^{2}$ score of their $dE/dx$ vs. residual range profile. An alternative background-rejection strategy has also been developed using Boosted Decision Trees. These are described in Sections \ref{sec:cuts} and \ref{sec:bdt}.
 \end{description}
 
-A schematics of the event selection stages is shown in Figure \ref{fig:selection}.
-
-\begin{figure}[htbp]
-\centering
-  \includegraphics[width=0.9\linewidth]{figures/selection.png}
-  \caption{Schematics of the $\nu_e$ CC0$\pi$-Np event selection stages, from the cosmic-ray removal to the rejection of the neutrino and cosmogenic backgrounds.}
-  \label{fig:selection}
-\end{figure}
-
 \subsection{Cosmic-ray rejection}\label{sec:cosmicremoval}
-The hits in the TPC, reconstructed with the procedure described in Section \ref{sec:eventreco}, are passed to the Pandora framework for pattern recognition. %The framework can run in two different modes: one optimised for the reconstruction of cosmic rays and delta rays (\emph{cosmic mode}), and one optimised for the reconstruction of neutrino interactions (\emph{neutrino mode}).
+The hits in the TPC, reconstructed with the procedure described in Chapter \ref{sec:eventreco}, are passed to the Pandora framework for pattern recognition. %The framework can run in two different modes: one optimised for the reconstruction of cosmic rays and delta rays (\emph{cosmic mode}), and one optimised for the reconstruction of neutrino interactions (\emph{neutrino mode}).
 
 In order to reject the cosmogenic background, Pandora is first run in cosmic mode over all the reconstructed hits. This reconstruction is track-oriented, and the delta rays are reconstructed as showers and considered as daughters of the closest cosmic muon. The starting point of the reconstructed tracks in this mode is assumed to be the highest $y$ coordinate \cite{Acciarri:2017hat}.
 These reconstructed high-level objects are fed to a series of cosmic-ray tagging algorithms, which are briefly described below.
@@ -74,27 +72,27 @@ where $t_S$ ($t_E$) is the time of the track start point (end point), $t_F$ is t
 \begin{figure}[htbp]
 \centering
   \includegraphics[width=0.75\linewidth]{figures/michel_evd.png}
-  \caption{Event display of the collection plane with a muon stopping and decaying, producing a Michel electron.}
+  \caption{Event display of the collection plane with a muon stopping and decaying, producing a Michel electron. \mccorrect{Being low-energetic, it resembles a ionisation track and not an electromagnetic shower.}}
   \label{fig:michel_evd}
 \end{figure}
 
 This topology is similar to the one of an electron neutrino interaction. For this reason, stopping muons represent an important background for our analysis. 
 They are tagged in two ways:
 \begin{itemize}
-    \item a series of pattern recognition and calorimetric algorithm try to identify the correct direction of the cosmic muon track (by measuring its energy loss profile) and to verify the presence of a \emph{kink} in the trajectory, caused by the presence of the Michel electron.
+    \item a series of pattern recognition and calorimetric algorithms try to identify the correct direction of the cosmic muon track (by measuring its energy loss profile) and to verify the presence of a \emph{kink} in the trajectory, caused by the presence of the Michel electron.
     \item the multiple Coulomb scattering (MCS) angle of a stopping muon will increase as its momentum decrease, while for through-going muons it is essentially constant \cite{Abratenko:2017nki}. By fitting the track profile with the MCS hypothesis in both direction (up-going and down-going), it is possible to verify if the cosmic muon is stopping in the detector. 
 \end{itemize}
 
 \end{description}
 
-The hits associated with the tagged reconstructed objects (and to their daughters) are removed from the collection of reconstructed hits. The remaining hits are then fed to the Pandora \emph{neutrino mode} reconstruction path, which provides one or more neutrino interaction candidate per event. 
+The hits associated with the tagged reconstructed objects (and to their daughters) are removed from the collection of reconstructed hits. The remaining hits are then fed to the Pandora \emph{neutrino mode} reconstruction path, which provides one or more neutrino interaction candidates per event. 
 
 \subsection{Optical selection}\label{sec:optical_pre_cuts}
-The optical selection serves two purposes: (1) it ensures that the optical flash which triggered the detector readout is compatible with the neutrino candidates from the Pandora neutrino mode, and (2) it provides a way to discriminate between multiple Pandora neutrino candidate objects (most of which are of cosmic origin and failed the cosmic-removal stpes) by selecting the one most compatible with the flash in the optical detection system in time with the beam-gate window.
+The optical selection serves two purposes: (1) it ensures that the optical flash which triggered the detector readout is compatible with the neutrino candidates from the Pandora neutrino mode, and (2) it provides a way to discriminate between multiple Pandora neutrino candidate objects (most of which are of cosmic origin and failed the cosmic-removal steps) by selecting the one most compatible with the flash in the optical detection system in time with the beam-gate window.
 
 The optical selection algorithm consists of three major stages:
 \begin{enumerate}
-\item cuts applied to optical properties of the reconstructed flash object (number of photoelectrons a TPC charge/PMT photoelectrons ratio);
+\item cuts applied to optical properties of the reconstructed flash object (number of photoelectrons and TPC charge/PMT photoelectrons ratio);
 \item cuts on the compatibility of the reconstructed flash with the Pandora neutrino candidate (position of the flash compared with the position of the centre of the collected charge);
 \item the Pandora neutrino candidate which is most compatible with the flash is selected using a likelihood method.
 \end{enumerate}
@@ -123,7 +121,7 @@ Similar cuts are placed taking into account the width of the flash and its posit
 \label{fig:z_cut}
 \end{figure}
 
-The last rectangular cut exploits the fact that several neutrino candidates reconstructed by Pandora originate from remnants of cosmic activity which were not tagged by the cosmic-removal algorithms. Those neutrino candidates often consist in a small amount of fragmented charge, incompatible with the brightness of the flash. Placing a very conservative cut at 3.0 on the ratio between the charge in the collection plane associated to the neutrino candidate and the number of PEs reduces the signal events with a properly reconstructed flash by 1.7\%, while removing all candidates in 15.4\% of the background events (Figure \ref{fig:light_ratio}).
+The last rectangular cut exploits the fact that several neutrino candidates reconstructed by Pandora originate from remnants of cosmic activity which were not tagged by the cosmic-removal algorithms, \mccorrect{since they will look like small isolated showers or tracks}. Those neutrino candidates often consist in a small amount of fragmented charge, incompatible with the brightness of the flash. Placing a very conservative cut at 3.0 on the ratio between the charge in the collection plane associated to the neutrino candidate and the number of PEs reduces the signal events with a properly reconstructed flash by 1.7\%, while removing all candidates in 15.4\% of the background events (Figure \ref{fig:light_ratio}).
 
 \begin{figure}[htbp]
 \centering
@@ -242,10 +240,10 @@ Our current selection algorithm can fail for several reasons: in particular, we 
 \item[CC $\nu_{\mu}$ selected (4.3\%).] The event is tagged as a CC $\nu_{\mu}$ candidate by an independent selection module, described in \cite{ubxsec}. 
 \item[Not contained (10.1\%).] One of the reconstructed tracks or the starting point of one of the reconstructed showers is not contained in the fiducial volume. As expected, this fraction increases with the neutrino energy.
 \item[Cosmic selected (7.9\%).] The selected neutrino candidate has one or more reconstructed objects of cosmic origin.
-\item[1 shower (3.5\%).] The selected neutrino candidate has only one associated reconstructed shower and no track object. 
+\item[1 shower (3.5\%).] The selected neutrino candidate has only one associated reconstructed shower and no track objects. 
 \item[No showers (13.7\%).]  The selected neutrino candidate has only reconstructed track(s) associated. This is the largest contribution to the inefficiency, especially at low energies, since low-energy electrons are very challenging to reconstruct and classify as showers.
 \item[No flash (5.7\%).]  The flash collected by the optical system does not satisfy our requirements, such as the minimum number of PE, location of the flash and flash hypothesis (Section \ref{sec:optical_pre_cuts}).
-\item[No data products (0.7\%).] The Pandora pattern recognition did not identify any neutrion candidate.
+\item[No data products (0.7\%).] The Pandora pattern recognition did not identify any neutrino candidate.
 \end{description}
 
 Figure \ref{fig:ineff} shows a stacked histogram of the true neutrino energy for the $\nu_e$~CC0$\pi$-Np generated events, divided into the categories described above. The events without a reconstructed shower are the dominant inefficiency at low energy. Low-energy showers correspond in general to a smaller number of reconstructed hits, which makes the pattern recognition more challenging \cite{Acciarri:2017hat}. The fraction of events where at least one reconstructed object is not contained in the detector (\emph{not contained} in the legend) increases with the energy. This is expected, since the probability to have large electromagnetic showers split in two or more object increases, and these objects can have a vertex reconstructed outside the fiducial volume. The \emph{passed} category (filled grey histogram) corresponds to the efficiency plot shown in Figure \ref{fig:effpurity}.
@@ -317,7 +315,7 @@ Table \ref{tab:result} shows a summary of the selection algorithm results, with 
 
 \end{table}
 
-At this point, all selected events have a neutrino interaction candidate with one or more tracks and one or more showers associated with the interaction vertex. Since we use two different methods to measure the energy of the tracks and the energy of the showers (see Section \ref{sec:energyreco}), it is necessary to verify the agreement between the shower multiplicity and track multiplicity distributions in data and Monte Carlo. Figure \ref{fig:multiplicity} shows that the two distributions agree within the systematic uncertainties, whose evaluation is described in Section \ref{sec:systematics}.
+At this point, all selected events have a neutrino interaction candidate with one or more tracks and one or more showers associated with the interaction vertex. Since we use two different methods to measure the energy of the tracks and the energy of the showers (see Section \ref{sec:energyreco}), it is necessary to verify the agreement between the shower multiplicity and track multiplicity distributions in data and Monte Carlo. Figure \ref{fig:multiplicity} shows that the two distributions agree within the systematic uncertainties, whose evaluation is described in Chapter \ref{sec:systematics}.
 
 \begin{figure}[htbp]
 \centering
@@ -334,7 +332,7 @@ At this point, all selected events have a neutrino interaction candidate with on
 
 The agreement between data and simulation is also verified in the angular distributions of the reconstructed showers objects, shown in Figure \ref{fig:thetaphi}. As expected, the neutrino distributions are mostly constant as a function of the azimuthal angle $\phi$ and peaked at low inclination angle $\theta$ values, since the interactions are mostly forward going. The inclination angle $\theta$ distribution agrees within the uncertainties both for shape and normalisation. The azimuthal angle $\phi$ distribution shows a slight disagreement around $\phi = 0^{\circ}$ and $\phi = \pm180^{\circ}$. This is caused by an imprecise signal simulation that predominantly affects tracks moving exactly towards or away from the anode \cite{Adams:2018gbi}. This effect is taken into account in the Dynamic Induced Charge detector systematic sample (Section \ref{sec:systematics}). 
 
-Figure \ref{fig:thetaphi_pdg} shows the angular distributions classified according to the primary particle that generated the shower (in the case of a Michel electron the shower is placed in the muon category). Each entry in the histogram correspond to a reconstructed shower, so it is possible to have more than one entry per event. As expected, the $\theta$ distribution is peaked at low angles, since neutrino interactions are mostly forward going. The $\phi$ distribution is mainly flat for neutrino-induced particles (electrons, photons) and with two peaks at $\pm90^{\circ}$ for mostly-vertical cosmic-induced particles (mainly muons). In this case, the data points correspond to the bin-by-bin statistical subtraction of the beam-on and beam-off entries.
+Figure \ref{fig:thetaphi_pdg} shows the angular distributions classified according to the primary particle that generated the shower (in the case of a Michel electron the shower is placed in the muon category). Each entry in the histogram corresponds to a reconstructed shower, so it is possible to have more than one entry per event. As expected, the $\theta$ distribution is peaked at low angles, since neutrino interactions are mostly forward going. The $\phi$ distribution is mainly flat for neutrino-induced particles (electrons, photons) and with two peaks at $\pm90^{\circ}$ for mostly-vertical cosmic-induced particles (mainly muons). In this case, the data points correspond to the bin-by-bin statistical subtraction of the beam-on and beam-off entries.
 
 \begin{figure}[htbp]
 \centering
@@ -380,6 +378,6 @@ A small fraction of the data events was also visually inspected: Figure \ref{fig
   \caption{Event 3710, Subrun 74, Run 5906}
 \end{subfigure}
 
-  \caption{Event displays of the collection plane of three $\nu_{e}$-like data events selected by our algorithm. The gaps are caused by the presence of missing wires. The red lines correspond to reconstructed track-like objects and the green cones correspond to reconstructed shower-like objects. }
+  \caption{Event displays of the collection plane of three $\nu_{e}$-like data events selected by our algorithm. The gaps are caused by the presence of dead or unresponsive wires. The red lines correspond to reconstructed track-like objects and the green cones correspond to reconstructed shower-like objects. }
   \label{fig:evds}
 \end{figure}

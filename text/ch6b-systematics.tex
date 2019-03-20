@@ -4,11 +4,11 @@
 In this chapter we will describe and evaluate the main systematic uncertainties which affect the selection of $\nu_e$~CC0$\pi$-Np events and the sensitivity to the low-energy excess of electron-like events.
 
 \section{Introduction}
-In this analysis, the systematic uncertainties which affect the measurements of the quantities described in Section \ref{sec:methodology} can be divided into three main categories: 
+In this analysis, the systematic uncertainties which affect the measurements of the quantities described in Section \ref{sec:methodology} can be divided into three main categories.
 \begin{description}
 \item[Flux simulation.] The amount of $\nu_{\mu}$ and $\nu_{e}$ reaching the MicroBooNE detector is evaluated by an independent simulation of the neutrino flux of the BNB, used also in the MiniBooNE experiment. This simulation is affected by uncertainties which need to be taken into account.
 
-\item[Cross-section modelling.] Our Monte Carlo simulation relies on the neutrino generator provided by the GENIE collaboration \cite{Andreopoulos:2009rq}. This generator can be configured to use different physics models, which can affect the relative abundance and the energy of the particles in the final state.
+\item[Cross-section modelling.] Our Monte Carlo simulation relies on the neutrino generator provided by the GENIE collaboration \cite{Andreopoulos:2009rq}. This generator can be configured to use different physics models and interaction parameters \mccorrect{(e.g. axial mass in a CCQE interaction, cross-section normalisation factors, etc.)}, which can affect the relative abundance and the energy of the particles in the final state. The parameters and the physics models are described in detail in the GENIE Physics Manual \cite{Andreopoulos:2015wxa}.
 
 \item[Detector simulation.] The detector response (noise removal, signal processing, hit reconstruction) must be carefully simulated in order to achieve a good agreement between data and Monte Carlo in the reconstructed quantities used for background rejection. Several detector parameters are not perfectly understood and the effect of these uncertainties must be assessed. 
 \end{description}
@@ -38,7 +38,7 @@ The linear correlation matrix $\rho$ is defined as:
     \rho_{ij} = \frac{E_{ij}}{\sqrt{E_{ii}E_{jj}}}.
 \end{equation}
 This matrix provides a measure of the correlation of the uncertainty between the bin $i$ and the bin $j$. The value of $\rho_{ij}$ can be between -1 (completely anti-correlated) and +1 (completely correlated). The elements on the diagonal will have by definition $\rho_{ii}=+1$. 
-Positive correlation is usually caused by effects which change the overall number of events (e.g. the magnitude of the neutrino flux): in this case the increase of events in the bin $i$ will correspond to an increase of events in the bin $j$ (and vice-versa). Negative correlation is instead caused by which change the shape of the distribution and keep the number of events constant: in this case the increase of events in the bin $i$ will correspond to a decrease of events in the bin $j$ (and vice-versa).
+Positive correlation is usually caused by effects which change the overall number of events (e.g. the magnitude of the neutrino flux): in this case the increase of events in the bin $i$ will correspond to an increase of events in the bin $j$ (and vice-versa). Negative correlation is instead caused by effects which change the shape of the distribution and keep the number of events constant: in this case the increase of events in the bin $i$ will correspond to a decrease of events in the bin $j$ (and vice-versa).
 
 \section{Flux systematic uncertainties}
 MicroBooNE is using the same simulation of the BNB flux developed by the MiniBooNE collaboration. The different contributions to the systematic uncertainties of this simulation are thoroughly described in \cite{AguilarArevalo:2008yp} and summarised in Section \ref{sec:flux}.
@@ -88,7 +88,7 @@ Also in this case the correlation matrix in Figure \ref{fig:corr_flux} shows tha
 In order to estimate the cross-section systematic uncertainties, the standard GENIE parameters described in the Chapter 9 of the GENIE User Manual \cite{Andreopoulos:2015wxa} are simultaneously varied within their uncertainties in $N_{u} = 100$ simulated universes. The correlation between the parameters is accounted for internally by GENIE. A calculated \emph{weight} gets assigned to each universe, which is applied when filling the histograms of the reconstructed quantities. The uncertainties shown here do not include systematic effects associated with Random Phase Approximation (RPA) and with Meson Exchange Current (MEC) interactions. RPA refers to long-range multi-nucleon correlations which suppress the neutrino-nucleon cross-section at low-exchanged momentum $Q^2$ \cite{Nieves:2011pp}. MEC interactions involve the scatter between the neutrino and a correlated pair of nucleons (\emph{2p-2h}) \cite{Bodek:2011ps}. These two systematic effects will be quantified in a future version of the analysis.
 
 Figure \ref{fig:eff_genie} shows the central value of the $\nu_{e}$ CC0$\pi$-Np selection efficiency and the corresponding value for each GENIE variation universe. The variation in this case is expected to be small, since we are essentially dividing two distributions (passed and total) with similar weights. Figure \ref{fig:reco_genie} and Figure \ref{fig:frac_genie} show that the variations in the reconstructed energy spectrum are larger at lower energies, which is the energy region most affected by the GENIE parameters uncertainties. The GENIE-related uncertainty in the number of simulated selected events (no beam-off data) before the background rejection is 7.9\%.
-The correlation matrix in Figure \ref{fig:corr_genie} shows that the bins are mostly positively correlated. This means that the variations of the GENIE parameters has in our case mostly a normalisation effect (i.e. they change the total number of events). 
+The correlation matrix in Figure \ref{fig:corr_genie} shows that the bins are mostly positively correlated. This means that the variations of the GENIE parameters have in our case mostly a normalisation effect (i.e. they change the total number of events). 
 
 \begin{figure}[htbp]
   \begin{center}
@@ -113,7 +113,7 @@ The correlation matrix in Figure \ref{fig:corr_genie} shows that the bins are mo
 \end{figure}
 
 \section{Detector systematic uncertainties}\label{sec:detector_sys}
-The detector systematic uncertainties have been measured by simulating several samples where a single detector parameter is varied by its estimated $\pm1\sigma$ uncertainty or where a different physics model is used. The detector variations taken into consideration are:
+The detector systematic uncertainties have been measured by simulating several samples where a single detector parameter is varied by its estimated $\pm1\sigma$ uncertainty or where a different physics model is used. The detector variations taken into consideration are described below.
 \begin{description}
 \item[Space-charge effect.] The $x$-dependence of the space-charge effect is estimated with a data-driven procedure and its magnitude is scaled by 0.7.
 \item[Dynamic Induced Charge.] Improved simulation of the induction of charge on the neighbouring wires.
@@ -131,7 +131,7 @@ The detector systematic uncertainties have been measured by simulating several s
 \end{description}
 
 In this case, the covariance matrix is calculated using the definition in Equation \ref{eq:cov_det}. The fractional covariance matrix and the reconstructed energy spectrum are shown in Figure \ref{fig:frac_det} and Figure \ref{fig:reco_det}, respectively.
-The uncertainty related to the detector systematic effects in the number of simulated selected events is 24.0\%. The limited size of the detector variation samples does not allow us to calculate the covariance matrix after the rectangular or BDTs cuts. For this reason, a flat 24.0\% detector uncertainty is applied to the simulated events not rejected by the rectangular of BDTs cuts. This high detector systematic uncertainties reflect our knowledge of the detector when the samples were generated (August 2018). However, we are now able to simulate the detector more precisely, by including e.g. a full data-driven map of the space-charge effect and the charge induction on neighbouring wires, which will lead us to significantly smaller systematic uncertainties. %Detector variation samples with a higher statistics of $\nu_e$ interactions are not currently available and the detector uncertainty for the $\nu_e$~CC0$\pi$-Np and $\nu_e$~CC categories is assumed to be 24.0\%.
+The uncertainty related to the detector systematic effects in the number of simulated selected events is 24.0\%. The limited size of the detector variation samples does not allow us to calculate the covariance matrix after the rectangular or BDTs cuts. For this reason, a flat 24.0\% detector uncertainty is applied to the simulated events not rejected by the rectangular or BDTs cuts. These high detector systematic uncertainties reflect our knowledge of the detector when the samples were generated (August 2018). However, we are now able to simulate the detector more precisely, by including e.g. a full data-driven map of the space-charge effect and the charge induction on neighbouring wires, which will lead us to significantly smaller systematic uncertainties. %Detector variation samples with a higher statistics of $\nu_e$ interactions are not currently available and the detector uncertainty for the $\nu_e$~CC0$\pi$-Np and $\nu_e$~CC categories is assumed to be 24.0\%.
 
 The details of the detector systematic uncertainties are listed in Table \ref{tab:det_bkg}. In this case, the detector variations $\sigma_{\mathrm{det}}$ are defined as:
 \begin{equation}

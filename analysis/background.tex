@@ -212,7 +212,7 @@ Figure \ref{fig:purity_sel} shows the purity before and after the application of
   \caption{Purity of the selected sample before (green) and after (orange) the application of the rectangular cuts as a function of the reconstructed energy $E_{\mathrm{deposited}}$. Error bars are statistical only.}\label{fig:purity_sel}
 \end{figure}
 
-It is also possible to calculate the overall purity and the efficiency after each cut, to analyse its effec (Figure \ref{fig:effpurity_cuts}). The largest purity increase is given by the application of the proton $\chi_{p}^2$ score cut. 
+It is also possible to calculate the overall purity and the efficiency after each cut, to analyse its effect (Figure \ref{fig:effpurity_cuts}). The largest purity increase is given by the application of the proton $\chi_{p}^2$ score cut. 
 
 \begin{figure}[htbp]
 \centering
@@ -244,7 +244,7 @@ The angular distributions of the reconstructed showers are shown in Figure \ref{
   \label{fig:angle_cuts}
 \end{figure}
 
-It is also possible to take a look at selected background events, in order to check where our rectangular cuts failed. Figure \ref{fig:evd_bkg_ccpi0} shows a CC$\pi^0$ selected event, which belongs to the \emph{Beam intrinsic $\nu_{\mu}$} category. In this case, the muon in the final state of the CC interaction stops after $\sim20$~cm and decays producing a Michel electron. In this case, the muon was classified by the pattern recognition as a shower: its $dE/dx$ is around 2~MeV/cm and it starts ionising at the interaction vertex, so it is not rejected by the shower-gap cut. 
+It is also possible to take a look at selected background events, in order to check where our rectangular cuts failed. Figure \ref{fig:evd_bkg_ccpi0} shows a CC$\pi^0$ selected event, which belongs to the \emph{Beam intrinsic $\nu_{\mu}$} category. In this case, the muon in the final state of the CC interaction stops after $\sim20$~cm and decays producing a Michel electron. The muon was classified by the pattern recognition as a shower: its $dE/dx$ is around 2~MeV/cm and it starts ionising at the interaction vertex, so it is not rejected by the shower-gap cut. 
 Figure \ref{fig:evd_bkg_ncpi0} shows a selected NC$\pi^0$ event (\emph{Beam intrinsic NC} category). Here, one photon from the $\pi^0\rightarrow\gamma\gamma$ decay pair-produced within 3~mm the interaction vertex, so it shows as a shower attached to the interaction vertex. The pair-production was also very asymmetric, so the measured $dE/dx$ was around 2~MeV/cm.
 
 \begin{figure}[htbp]
@@ -274,7 +274,7 @@ A classical decision tree algorithm can be divided into four stages, as listed i
     \item Sort signal and background events by each variable.
     \item Select the variable and splitting value with the best separation.
     \item Produce two \emph{nodes}, one containing the events passing the selection and one the events failing the selection. Each node has a defined purity, measured as the fraction of signal events in the node.
-    \item Repeat iteratively until the stopping condition is reached. The same variable can be used multiple times. The terminal node is called \emph{signal leaf} if it contains mostly signal events or \emph{background leaf} if it contains mostly background events.
+    \item Repeat iteratively until the stopping condition \mccorrect{(described below)} is reached. The same variable can be used multiple times. The terminal node is called \emph{signal leaf} if it contains mostly signal events or \emph{background leaf} if it contains mostly background events.
 \end{enumerate}
 
 In this analysis, the separation is measured using the Gini coefficient $G$, defined as:
@@ -283,7 +283,7 @@ In this analysis, the separation is measured using the Gini coefficient $G$, def
 \end{equation}
 where $P$ is the purity of the node and $W_i$ is the weight of the $i$ event. The best separation is chosen as the one which minimises the $G_{\mathrm{x}}+G_{\mathrm{y}}$ sum, where $x$ and $y$ are the two new nodes of the tree.
 
-The decision to stop the iteration can depend on multiple conditions: (1) a minimum size of the leaf can be required for statistical significance, (2) the events are perfectly classified (purity of the leaf is 1 or 0), (3) the purity cannot be improved with any choice of the splitting value, or (4) the tree depth reaches a maximum value. 
+The decision to stop the iteration (\mccorrect{the \emph{stopping condition}}) can depend on multiple conditions: (1) a minimum size of the leaf can be required for statistical significance, (2) the events are perfectly classified (purity of the leaf is 1 or 0), (3) the purity cannot be improved with any choice of the splitting value, or (4) the tree depth reaches a maximum value. 
 Usually, the decision tree is produced with a set of simulated events called \emph{training sample} and then applied to an independent set called \emph{test sample}.
 For a single event in the test sample, the decision tree score corresponds to the purity of the leaf where the event ends up. 
 
@@ -323,12 +323,12 @@ In order to maximise our separation power, in this analysis we trained three dif
 
 The variables used are the same in all three BDTs and they correspond to the ones described in Section \ref{sec:cuts}, plus the angular and spatial distributions of the reconstructed tracks and showers. The BDT has been trained on 600 trees, using the Gini coefficient to measure the splitting power, requiring at least 5\% of the training events in each terminal node, and using the AdaBoost boosting algorithm. The training has been performed with the TMVA toolkit \cite{Hocker:2007ht}. 
 
-The classification power of the BDTs can be compared by looking at the Receiver Operating Characteristic (ROC) curves, which shows the background-rejection power as a function of the signal efficiency. Figure \ref{fig:roc} shows the ROC curves for our three BDTs, in the case of samples with 1000 signal events and 1000 background events. The best-performing BDT is the \emph{Cosmic BDT}. This is expected, since cosmic rays have greatly different angular, topological, and kinematic distributions when compared with neutrino interactions. 
+The classification power of the BDTs can be compared by looking at the Receiver Operating Characteristic (ROC) curves, which show the background-rejection power as a function of the signal efficiency. Figure \ref{fig:roc} shows the ROC curves for our three BDTs, in the case of samples with 1000 signal events and 1000 background events. The best-performing BDT is the \emph{Cosmic BDT}. This is expected, since cosmic rays have greatly different angular, topological, and kinematic distributions when compared with neutrino interactions. 
 
 \begin{figure}[htbp]
 \centering
   \includegraphics[width=0.75\linewidth]{figures/roc.pdf}
-  \caption{ROC curves for the three BDTs used in this analysis, showing the background-rejection power as a function of the signal efficiency in a sample with 1000 signal events and 1000 background events.}\label{fig:roc}
+  \caption{ROC curves for the three BDTs used in this analysis, showing the background-rejection power as a function of the signal efficiency in a sample with 1000 signal events and 1000 background events. \mccorrect{The points correspond to the signal efficiency and background-rejection coordinates of the cut applied to each BDT score.}}\label{fig:roc}
 \end{figure}
 
 The least powerful BDT is the \emph{Neutral-current BDT}. This is because NC events with $\pi^0$ production are the most difficult events to reject. As we have seen in Section \ref{sec:dedx}, photons which undergo very asymmetric pair-production can have a $dE/dx$ around $2$~MeV. When one of the photons of the $\pi^0\rightarrow\gamma\gamma$ decay escapes the detector or is not reconstructed, and the other one pair-produces asymmetrically near the interaction vertex, the event becomes basically indistinguishable from a $\nu_e$~CC0$\pi$-Np interaction.
@@ -356,13 +356,28 @@ In order to maximise our $\nu_e$ CC0$\pi$-Np purity and have at least one event 
 \begin{equation}
     \text{Cosmic BDT} > 0.21,~~~\text{Neutral-current BDT} > 0.18,~~~\text{CC }\nu_{\mu}\text{ BDT} > 0.17.
 \end{equation}
+\begin{mccorrection}
+The background rejection power and the selection efficiency corresponding to each BDT cut are shown in Figure \ref{fig:roc}.
+\end{mccorrection}
 
-We select 11 data beam-on events, $0.5\pm0.13$ beam-off events, and $9.5\pm2.3$ simulated events (both $\nu_e$ and $\nu_{\mu}$), corresponding to $4.34\times10^{19}$~POT. The number of selected $\nu_e$ CC0$\pi$-Np events is $4.4\pm1.2$, which corresponds to a final efficiency of $(13.0\pm0.3~\mathrm{(stat)}\pm0.5~\text{(sys)})\%$. The final purity of the sample is $44.3\%$, around twice the one obtained with the rectangular cuts (Figure \ref{fig:purity_bdt}).
+We select 11 data beam-on events, $0.5\pm0.13$ beam-off events, and $9.5\pm2.3$ simulated events (both $\nu_e$ and $\nu_{\mu}$), corresponding to $4.34\times10^{19}$~POT. The number of selected $\nu_e$ CC0$\pi$-Np events is $4.4\pm1.2$, which corresponds to a final efficiency of $(13.0\pm0.3~\mathrm{(stat)}\pm0.5~\text{(sys)})\%$. The final purity of the sample is $44.3\%$, around twice the one obtained with the rectangular cuts (Figure \ref{fig:purity_bdt}). \mccorrect{The final efficiency with the BDTs is $13.0\%$, compared with the $9.5\%$ obtained with the rectangular cuts. A comparison between the efficiency as a function of the true neutrino energy is shown in Figure} \ref{fig:eff_after}.
 A summary of the selected events with both methods is shown in Table \ref{tab:overview}.
+
+\begin{figure}[htbp]
+\centering
+  \includegraphics[width=0.75\linewidth]{figures/eff_comparison.pdf}
+  \caption{Selection efficiency as a function of true neutrino energy after the application of the rectangular cuts (orange), and after the application of the BDTs (purple). Error bars are statistical only.}\label{fig:eff_after}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+  \includegraphics[width=0.75\linewidth]{figures/purity_bdt.pdf}
+  \caption{Purity of the sample after the event selection (green), after the application of the rectangular cuts (orange), and after the application of the BDTs (purple) as a function of the reconstructed energy $E_{\mathrm{deposited}}$. Error bars are statistical only.}\label{fig:purity_bdt}
+\end{figure}
 
 \begin{table}[htbp]
    \centering
-      \caption{Summary of selected events in simulation and data with rectangular and BDTs cuts for a MicroBooNE exposure of $4.34\times10^{19}$~POT. The uncertainties on the simulated events are caused by systematic effects described in Section \ref{sec:systematics}. Uncertainties on the data events are statistical only.}\label{tab:overview}
+      \caption{Summary of selected events in simulation and data with rectangular and BDTs cuts for a MicroBooNE exposure of $4.34\times10^{19}$~POT. The uncertainties on the simulated events are caused by systematic effects described in Section \ref{sec:systematics}. Uncertainties on the data events are statistical only. Numbers are rounded up to the first decimal digit.}\label{tab:overview}
    \begin{tabular}{
    p{0.27\linewidth}
    >{\raggedleft\arraybackslash}p{0.16\linewidth}
@@ -376,7 +391,7 @@ A summary of the selected events with both methods is shown in Table \ref{tab:ov
      $\nu_e$~CC & $0.8\pm0.2$ & $1.5\pm0.4$ \\
      Beam intrinsic $\nu_{\mu}$ & $4.5\pm1.5$ & $1.7\pm0.6$ \\
      Beam intrinsic NC & $2.8\pm0.9$ & $1.4\pm0.5$ \\
-     Outside fid. vol. & $0.1\pm0.0$ & 0 \\
+     Outside fid. vol. & $0.1\pm0.0$ & $0.0\pm0.0$ \\
      Cosmic & $0.6\pm0.1$ & $0.2\pm0.1$ \\
      Cosmic contaminated & $0.4\pm0.1$ & $0.2\pm0.1$ \\
      \midrule
@@ -385,13 +400,6 @@ A summary of the selected events with both methods is shown in Table \ref{tab:ov
      \bottomrule
    \end{tabular}
 \end{table}
-
-
-\begin{figure}[htbp]
-\centering
-  \includegraphics[width=0.75\linewidth]{figures/purity_bdt.pdf}
-  \caption{Purity of the sample after the event selection (green), after the application of the rectangular cuts (orange), and after the application of the BDTs (purple) as a function of the reconstructed energy $E_{\mathrm{deposited}}$. Error bars are statistical only.}\label{fig:purity_bdt}
-\end{figure}
 
 The distribution of the reconstructed energy spectrum $E_{\mathrm{deposited}}$ after the application of the three BDT cuts is shown in Figure \ref{fig:reco_bdt}. The angular distributions of the reconstructed showers are shown in Figure \ref{fig:angle_bdt}. 
 
@@ -417,7 +425,7 @@ The distribution of the reconstructed energy spectrum $E_{\mathrm{deposited}}$ a
 
 \subsection{Interaction types}
 It is also possible to categorise the selected events according to the neutrino interaction which produced the final-state particles. Figure \ref{fig:interaction} shows the selected events after the rectangular and BTDs cuts as a function of the GENIE interaction type. 
-As expected, the majority of $\nu_e$~CC0$\pi$-Np events were produced by a quasi-elastic interaction, while the NC and CC $\nu_{\mu}$ background come mainly from resonant interaction. A significant component of electron neutrinos also interacted via Meson-Exchange Current. This interaction involves the scatter between the neutrino and a correlated pair of nucleons and is accompanied by a 2-nucleon emission from the primary vertex (instead of a single nucleon emission from CCQE interactions). This phenomenological effect is often also called \emph{2 particle-2 hole} (2p-2h) \cite{Katori:2013eoa}.
+As expected, the majority of $\nu_e$~CC0$\pi$-Np events were produced by a quasi-elastic interaction, while the NC and CC $\nu_{\mu}$ background come mainly from resonant interactions. A significant component of electron neutrinos also interacted via Meson-Exchange Current. This interaction involves the scatter between the neutrino and a correlated pair of nucleons and is accompanied by a 2-nucleon emission from the primary vertex (instead of a single nucleon emission from CCQE interactions). This phenomenological effect is often also called \emph{2 particle-2 hole} (2p-2h) \cite{Katori:2013eoa}.
 
 \begin{figure}[htbp]
 \centering
